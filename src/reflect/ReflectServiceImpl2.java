@@ -1,4 +1,4 @@
-package reflect;import sun.security.jca.GetInstance;
+package reflect; 
 
 /**
  * ReflectServiceImpl2是包含参数的类
