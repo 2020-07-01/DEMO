@@ -16,7 +16,9 @@ public class ReflectServiceImpl {
 		ReflectServiceImpl object = null;
 		String path = "com.ReflectServiceImpl";
 		try {
-			//通过forName()方法获取对象
+			/*forName(String className):返回与具有给定字符串名称的类或接口关联的类对象。
+			 * newInstance()：创建由这个类对象表示的类的新实例
+			 */
 			object = (ReflectServiceImpl) Class.forName(path).newInstance();
 			
 		} catch (Exception e) {
