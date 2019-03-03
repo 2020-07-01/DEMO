@@ -27,13 +27,16 @@ public class Main2 {
 		role.setRoleName("role_name_1");
 		role.setNote("note_1");
 		
+		//此处使用匿名类的方式
 		SessionCallback callback = new SessionCallback<Role>() {
 
 			@Override
 			public Role execute(RedisOperations operations) throws DataAccessException {
-				 operations.boundValueOps("role_1").set(role);
+				 
+				operations.boundValueOps("role_1").set(role);
+				//返回的是一个Role对象
 				 return  (Role)operations.boundValueOps("role_1").get();
-		}
+			}
 		};
 		
 		Role  saveRole = (Role) redisTemplate.execute(callback);
