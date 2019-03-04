@@ -17,9 +17,9 @@ public class Main2 {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("test1/applicationContext.xml");
 		 
-		 System.out.println(applicationContext);
+		System.out.println(applicationContext);
 	 
-		  
+
 		RedisTemplate redisTemplate = applicationContext.getBean(RedisTemplate.class);
 		
 		Role role = new Role();
@@ -27,22 +27,25 @@ public class Main2 {
 		role.setRoleName("role_name_1");
 		role.setNote("note_1");
 		
-		//此处使用匿名类的方式
+		/*此处使用匿名类的方式
+		 * SessionCallback是一个接口，不能直接用来创建实例对象
+		 */
 		SessionCallback callback = new SessionCallback<Role>() {
 
 			@Override
+			//此方法是SessionCallback接口的方法
 			public Role execute(RedisOperations operations) throws DataAccessException {
 				 
 				operations.boundValueOps("role_1").set(role);
 				//返回的是一个Role对象
-				 return  (Role)operations.boundValueOps("role_1").get();
+				 return  (Role) operations.boundValueOps("role_1").get();
 			}
 		};
 		
+		//给定执行的操作
 		Role  saveRole = (Role) redisTemplate.execute(callback);
+		//输出value值
 		System.out.println(saveRole.getId());
-		
-	 
 	}
 
 }
