@@ -13,7 +13,11 @@ import org.springframework.web.context.annotation.ApplicationScope;
 
 /**
  * 测试有序集合
+ * 有序集合和无需集合的区别是：对于每一个元素除了值之外，他还会多一个分数，分数是一个浮点数。再Java中使用的是双精度的
+ * Redis就可以支持对分数进行排序
+ * 和无序集合一样，对于每一个元素是唯一的，但是对于分数有可能一样
  * 在测试前需要将键值serializer修改为字符串序列化器StringRedisSerializer
+ * 
  * @author qiang
  *
  */

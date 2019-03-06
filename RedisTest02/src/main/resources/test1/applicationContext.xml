@@ -35,7 +35,7 @@
 	 </bean>
 	 
 	<!-- 配置序列化器 -->
-	<bean id="jdkSerializationRedisSerializer" class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+<!-- 	<bean id="jdkSerializationRedisSerializer" class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/> -->
 	<bean id="stringRedisSerializer" class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
 	 	
 	<!-- 配置RedisTemplate
@@ -45,10 +45,9 @@
 	 -->
 	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
 		<!-- 设置默认的序列化器 -->
-		<property name="defaultSerializer" ref="stringRedisSerializer"/>
 		<property name="connectionFactory" ref="connectionFactory"></property>
 		<property name="keySerializer" ref="stringRedisSerializer"></property>
-		<property name="valueSerializer" ref="jdkSerializationRedisSerializer"></property>
+		<property name="valueSerializer" ref="stringRedisSerializer"></property>
 	</bean>
 	
 </beans> 

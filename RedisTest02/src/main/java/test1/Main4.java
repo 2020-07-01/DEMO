@@ -13,6 +13,8 @@ import com.mysql.jdbc.SingleByteCharsetConverter;
 
 /**
  * 哈希结构的操作小程序
+ * 哈希结构类似于map一样，一个对象里面有很多键值对，特别适合存储对象
+ * 可以指定默认的字符串序列化器，也可以使用Hash指定的序列化器：hashKeySerializer和hashValueSerializer
  * @author qiang
  *
  */
@@ -28,13 +30,19 @@ public class Main4 {
 		map.put("f1", "value1");
 		map.put("f2", "value2");
 		
-		//相当于hmset命令
+		//相当于hmset命令，设值多个键值对
 		redisTemplate.opsForHash().putAll(key, map);
-		//相当于hmset命令
+		//相当于hmset命令，设置单个键值对
 		redisTemplate.opsForHash().putIfAbsent(key, "f3", "6");
 		//输出value值
 		printValueForHash(redisTemplate,key,"f3");
-		//判断hash结构中是否存在file字段
+		//判断hash结构中是否存在file字段，相当于hexists key files
+		boolean exits = redisTemplate.opsForHash().hasKey(key, "f3");
+		System.out.println(exits);
+		
+		//相当于hgetall命令,获取所有hash结构中的键值对
+		Map keyValMap = redisTemplate.opsForHash().entries(key);
+		
 		
 		
 	}
