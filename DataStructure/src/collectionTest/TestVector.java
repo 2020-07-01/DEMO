@@ -1,16 +1,14 @@
 package collectionTest;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Stack;
 import java.util.Vector;
 
 public class TestVector {
 	public static void main(String[] args) {
 		
-		Collection vector = new Vector<>();
-		vector.add(1);
 		
+		Vector vector = new Vector<>();
+		vector.add(1);
 		
 		//在其基础之上增加了出栈和入栈的操作
 		Stack stack = new Stack<>();
