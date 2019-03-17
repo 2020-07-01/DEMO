@@ -16,7 +16,7 @@ public class TestString03 {
 		
 		String string = string2 + string2;
 		
-		int a = getIndexOf();
+//		int a = getIndexOf();
 	}
 
 	private static int getIndexOf(String a,String b) {
