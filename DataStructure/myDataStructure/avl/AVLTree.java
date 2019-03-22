@@ -53,7 +53,7 @@ public class AVLTree<E extends Comparable<E>> extends BST<E> {
 
 	// 如果必要将该元素到根的路径上的结点进行平衡
 	public void balancePath(E e) {
-
+		
 	}
 	//返回结点的平衡因子
 	private int balanceFactor(AVLTreeNode<E> node) {
