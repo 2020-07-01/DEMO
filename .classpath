@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="DataStructure/it_project"/>
+	<classpathentry kind="src" path="DataStructure/myDataStructure"/>
+	<classpathentry kind="src" path="DataStructure/src"/>
+	<classpathentry kind="src" path="JavaTest/src"/>
+	<classpathentry kind="src" path="MyInterceptor/src"/>
+	<classpathentry kind="src" path="RedisTest01/src"/>
+	<classpathentry kind="src" path="RedisTest02/src/main/java"/>
+	<classpathentry kind="src" path="TestJavaReflect/src"/>
+	<classpathentry kind="src" path="TestProxy/src"/>
+	<classpathentry kind="lib" path="RedisTest01/lib/jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="RedisTest01/lib/spring-data-redis-2.1.5.RELEASE.jar"/>
+	<classpathentry kind="output" path="DataStructure/bin"/>
+</classpath>
