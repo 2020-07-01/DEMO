@@ -1,4 +1,4 @@
-package com; 
+package javaReflect; 
 
 /**
  * ReflectServiceImpl2是包含参数的类

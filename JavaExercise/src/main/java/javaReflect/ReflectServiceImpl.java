@@ -1,4 +1,4 @@
-package com;
+package javaReflect;
 /**
  * 	ReflectServiceImpl是一个无参数的类对象
  * 	通过反射配置信息构建对象：无参数类的反射生成实例
