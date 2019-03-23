@@ -1,2 +1,2 @@
 # JavaExercise
-Java基础：反射、JDK动态代理
+Java基础知识的练习，包括常用的数据结构、动态代理、反射等
