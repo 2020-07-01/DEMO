@@ -1,20 +1,15 @@
 package dataStructure.binaryHeap;
 
- 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import javax.xml.transform.sax.SAXTransformerFactory;
-import javax.xml.ws.FaultAction;
- 
-
 /**
- * 最大堆的实现:父节点的键值总是大于或等于任何一个子节点的键值
- * 使用数组实现MaxHeap
+ * 最大堆的实现:父节点的键值总是大于或等于任何一个子节点的键值 使用数组实现MaxHeap
+ * 
  * @author qiang
  *
  */
-public class MaxHeap<E extends Comparable<E>>{
+public class MaxHeap<E extends Comparable<E>> {
 
 	private ArrayList<E> data;
 	private static final int DEFAULT_CAPACITY = 10;// 默认的大小
@@ -27,27 +22,28 @@ public class MaxHeap<E extends Comparable<E>>{
 	public MaxHeap(int capacity) {
 		this.data = new ArrayList<E>(capacity);
 	}
-	//将数组转换为堆
-	//从最后一个非叶子节点开始，执行下沉操作
+
+	/*
+	 * 将数组转化为堆右多种方式： 此处使用插入的方式
+	 */
 	public MaxHeap(E[] array) {
-		data = new ArrayList<>(Arrays.asList(array));
-		int i = 1 ;
-		for(int k = parent(data.size()-i);i<data.size();i++)
-			 shifdown(k);
+		this.data = new ArrayList<>();
+		// 进行插入操作
+		for (int i = 0; i < array.length; i++)
+			insert(array[i]);
+
 	}
- 
-	 
-	
+
 	/*
 	 * 添加元素,从数组的0位置开始添加 首先将元素添加到数组的最后，然后进行堆化，即上滤
 	 */
-	public void Insert(E x) {
+	public void insert(E x) {
 		data.add(x);// 添加到末尾
 		int curIndex = data.size() - 1;// 插入的节点的下标
 		shifup(curIndex);
 	}
-	
-	//节点上浮
+
+	// 节点上浮
 	public void shifup(int curIndex) {
 		// 当前节点不是根节点，并且当前节点的值比父节点的值大
 		while (curIndex > 0 && (data.get(parent(curIndex)).compareTo(data.get(curIndex)) < 0)) {
@@ -67,7 +63,7 @@ public class MaxHeap<E extends Comparable<E>>{
 	 */
 	public E remove() {
 		E max = findMax();
-		swop(0, getSize()-1);
+		swop(0, getSize() - 1);
 		data.remove(data.size() - 1);
 
 		shifdown(0);
@@ -75,25 +71,25 @@ public class MaxHeap<E extends Comparable<E>>{
 		return max;
 	}
 
-	//节点下沉
-	public void  shifdown(int cur) {
-		//liftchild存在
-		while(leftChild(cur) < getSize()) {
+	// 节点下沉
+	public void shifdown(int cur) {
+		// liftchild存在
+		while (leftChild(cur) < getSize()) {
 			int j = leftChild(cur);
-			//如果右节点存在，并且右节点大于左节点的值
-			if(rightChild(j) < getSize() && data.get(j).compareTo(data.get(j+1)) < 0) {
+			// 如果右节点存在，并且右节点大于左节点的值
+			if (rightChild(j) < getSize() && data.get(j).compareTo(data.get(j + 1)) < 0) {
 				j = rightChild(cur);
 			}
-			//如果当前节点的值大于子节点,则退出
-			if(data.get(cur).compareTo(data.get(j)) > 0) {
-				 break;
+			// 如果当前节点的值大于子节点,则退出
+			if (data.get(cur).compareTo(data.get(j)) > 0) {
+				break;
 			}
 
 			swop(cur, j);
 			cur = j;
 		}
 	}
-	
+
 	// 获取堆元素的数量
 	public int getSize() {
 		return data.size();
@@ -108,24 +104,23 @@ public class MaxHeap<E extends Comparable<E>>{
 	public int rightChild(int index) {
 		return index * 2 + 2;
 	}
-	
-	//父节点的下标
+
+	// 父节点的下标
 	public int parent(int index) {
-		return (index-1)/2;
+		return (index - 1) / 2;
 	}
-	
-	//取出最大的元素
+
+	// 取出最大的元素
 	public E findMax() {
-		if(data.size() == 0)
+		if (data.size() == 0)
 			throw new IllegalArgumentException("Can not findMax when heap is empty");
 		return data.get(0);
 	}
-	
-	//交换值
-	public void swop(int a,int b) {
+
+	// 交换值
+	public void swop(int a, int b) {
 		E temp = data.get(a);
 		data.set(a, data.get(b));
 		data.set(b, temp);
 	}
- 	
 }
