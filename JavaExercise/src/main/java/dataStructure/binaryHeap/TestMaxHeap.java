@@ -7,7 +7,7 @@ package dataStructure.binaryHeap;
  */
 public class TestMaxHeap {
 	public static void main(String[] args) {
-		MaxHeap<Integer> maxHeap = new MaxHeap<>();
+/*		MaxHeap<Integer> maxHeap = new MaxHeap<>();
 
 		maxHeap.insert(41);
 		maxHeap.insert(44);
@@ -34,7 +34,16 @@ public class TestMaxHeap {
 		while (!maxHeap1.isEmpty()) {
 			System.out.print(maxHeap1.remove() + " "); // 从大到小输出
 		}
+*/
+		
+		//对无序数组进行堆排序然后输出
+		Integer[] array1 = { 433, 534, 6536, 534, 553, 756, 43,54,5,3424,5,65,6,7,67,5,8,54,5,43,5};
+		MaxHeap<Integer> maxHeap2 = new MaxHeap<>(array1);
+		maxHeap2.sortHeap();
 
+		while (!maxHeap2.isEmpty()) {
+			System.out.print(maxHeap2.remove() + " "); // 从大到小输出
+		}
 	}
 
 }

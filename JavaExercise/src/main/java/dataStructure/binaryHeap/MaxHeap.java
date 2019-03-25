@@ -1,7 +1,8 @@
 package dataStructure.binaryHeap;
 
+ 
 import java.util.ArrayList;
-import java.util.Arrays;
+ 
 
 /**
  * 最大堆的实现:父节点的键值总是大于或等于任何一个子节点的键值 使用数组实现MaxHeap
@@ -58,6 +59,22 @@ public class MaxHeap<E extends Comparable<E>> {
 		return data.isEmpty();
 	}
 
+	/*
+	 * 堆排序：每次删除最大的元素来完成排序
+	 */
+	public void sortHeap() {
+		
+		 //创建链表接收元素
+		ArrayList<E> temp = new ArrayList<>();
+		while(!data.isEmpty()) {
+			temp.add(remove());
+		}
+		
+		for(int i = 0;i< temp.size();i++)
+		{
+			data.add(temp.get(i));
+		}
+	}
 	/*
 	 * 删除节点一般从根节点开始，然后将最后一个节点移动到根节点的位置，最后进行节点的下沉，保持堆的结构
 	 */
