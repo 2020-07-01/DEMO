@@ -8,7 +8,7 @@ import java.util.Stack;
  * @author: caiji
  * @date: 2019年4月12日 上午10:20:16
  */
-public class Mian0412 {
+public class Main0412 {
 
 	/*
 	 * 
