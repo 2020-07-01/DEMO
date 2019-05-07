@@ -15,7 +15,7 @@ public class MainThread {
         ChildThread t2 = new ChildThread("thread2");
         t2.setName("thread2");
         Thread.sleep(9000);//main线程进入睡眠状态
-        t1.start();  
+        t1.start();  //启动线程
         t2.start();  
   
         System.out.println("parent thread over ");  
