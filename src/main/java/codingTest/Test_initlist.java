@@ -9,11 +9,13 @@ package codingTest;
 //子类
 public class Test_initlist extends A{
 
+	static String string = printStr1("子类的静态变量");
+	
 	static {
 		System.out.println("子类的静态代码块");
 	}
 	 
-	static String string = printStr1("子类的静态变量");
+	 
 	
 	String string1 = printStr1("子类的非静态变量");
 	
@@ -37,16 +39,25 @@ public class Test_initlist extends A{
 
 //创建一个父类
 class A {
+	{
+		System.out.println("父类的构造代码块");
+	}
+
 	static {
 		System.out.println("父类的静态代码块");
 	}
+	
+ 
 
 	public A() {
 		System.out.println("父类的构造方法");
 	}
 	
 	String string = printStr("父类的非静态变量");
+	
+	
 	static String string1 = printStr("父类的静态变量");
+	
 	public void TestMain() {
 		System.out.println("父类的非静态代码块");
 	}
