@@ -14,8 +14,7 @@ public class TestRunnable implements Runnable {
 		ExecutorService executorService = Executors.newCachedThreadPool();
 
 		for (int i = 0; i < 5; i++) {
-			// executor方法中的参数是Runnable
-			// executorService.execute(new TestRunnable());
+			 
 			executorService.submit(new TestRunnable());
 			System.out.println(i);
 		}

@@ -1,57 +1,39 @@
 package thread.lock;
 
-import java.util.ArrayList;
+import java.awt.Frame;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * lock()方法测试：获取锁，如果锁被其他线程获取则进行等待
- * @author qiang
- *
- */
-public class TestLock {
-	private ArrayList<Integer> arrayList = new ArrayList<Integer>();
-	Lock lock = new ReentrantLock();//将lock声明为类的属性
-	public void insert(Thread thread) {
-		 
-		
-		lock.lock();// 获取一个锁
-		try {
-			System.out.println(thread.getName() + "得到了锁");
-			for (int i = 0; i < 5; i++) {
-				arrayList.add(i);
-			}
-		} catch (Exception e) {
+import org.omg.CORBA.PUBLIC_MEMBER;
+import org.omg.CosNaming.NamingContextExtPackage.AddressHelper;
 
-			// TODO: handle exception
-		} finally {
-			System.out.println(thread.getName() + "得到了释放");
-			lock.unlock();// 释放锁
+public class TestLock implements Runnable {
+	
+	private Lock lock = new ReentrantLock();
+
+	int a = 0;
+	public void run() {
+		//上锁
+		lock.lock();
+		for (int i = 0; i < 1000; i++) {
+			System.out.println("当前线程名： " + Thread.currentThread().getName() + " ,i = " + i);
 		}
-
+		//释放锁
+		lock.unlock();
 	}
+	
 
 	public static void main(String[] args) {
-		final TestLock test = new TestLock();
-		new Thread() {
-			public void run() {
-				test.insert(Thread.currentThread());
-			};
-		}.start();
-
-		new Thread() {
-			public void run() {
-				test.insert(Thread.currentThread());
-			};
-		}.start();
+		TestLock myReenrantLock = new TestLock();
 		
-		
-		int s = 0;
-		for(int i = 0;i<=50;i++)
-		{
-			s =i+ s;
-		}
-		System.out.println(s);
+		//创建三个线程
+		Thread thread1 = new Thread(myReenrantLock);
+		Thread thread2 = new Thread(myReenrantLock);
+		Thread thread3 = new Thread(myReenrantLock);
+		Thread thread4 = new Thread(myReenrantLock);
+		thread1.start();
+		thread2.start();
+		//thread3.start();
+		//thread4.start();
 	}
-
 }
