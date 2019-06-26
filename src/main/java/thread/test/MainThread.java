@@ -19,8 +19,9 @@ public class MainThread {
 	}
 
 	public static void main(String[] args) {
+	}
 
-		ReentrantLock lock = new ReentrantLock();
+		/*ReentrantLock lock = new ReentrantLock();
 		Condition condition = lock.newCondition();
 
 		Thread thread1 = new Thread() {
@@ -72,5 +73,5 @@ public class MainThread {
 		}
 
 	}
-
+*/
 }

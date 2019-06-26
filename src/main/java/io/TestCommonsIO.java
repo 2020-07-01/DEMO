@@ -1,7 +1,6 @@
 package io;
 
 import java.io.File;
-import org.apache.commons.io.FileUtils;
 
 /**
  * @ClassName:  TestCommonsIO   
@@ -14,7 +13,7 @@ public class TestCommonsIO {
 	public static void main(String[] args) {
 
 		//目录大小
-		long len = FileUtils.sizeOf(new File("src/main/java/io"));
-		System.out.println(len);
+		//long len = FileUtils.sizeOf(new File("src/main/java/io"));
+		//System.out.println(len);
 	}
 }

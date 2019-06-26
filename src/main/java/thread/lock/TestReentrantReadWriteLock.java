@@ -27,20 +27,20 @@ public class TestReentrantReadWriteLock {
 
 	}
 
-	public static void main(String[] args) {
-		TestReentrantReadWriteLock test = new TestReentrantReadWriteLock();
-
-		new Thread() {
-			public void run() {
-				test.get(Thread.currentThread());
-			};
-		}.start();
-
-		new Thread() {
-			public void run() {
-				test.get(Thread.currentThread());
-			};
-		}.start();
-	}
+//	public static void main(String[] args) {
+//		TestReentrantReadWriteLock test = new TestReentrantReadWriteLock();
+//
+//		new Thread() {
+//			public void run() {
+//				test.get(Thread.currentThread());
+//			};
+//		}.start();
+//
+//		new Thread() {
+//			public void run() {
+//				test.get(Thread.currentThread());
+//			};
+//		}.start();
+//	}
 
 }

@@ -27,7 +27,7 @@ public class TestCollections {
 		//使用默认方法进行排序，结果为升序
 		Collections.sort(list);
 		System.out.println("对元素进行排序：也可以使用自定义的构造器");
-		list.forEach(System.out::println);
+		//list.forEach(System.out::println);
 
 		/*
 		 * reverse():对集合中的元素进行反转
