@@ -25,7 +25,7 @@ public class TestArrays {
 		//对可迭代的每个元素执行给定的操作，直到处理完所有的元素或者发生异常为止
 		//list.forEach(System.out::print);//lambda的缩写形式
 		System.out.println("\n" + "lambda表达式：");
-		//list.forEach(e -> System.out.print(e));//lambda表达式
+		list.forEach(e -> System.out.print(e));//lambda表达式
 
 		/*
 		 * fill()：用指定的元素填充整个数组(会替换掉数组中原来的元素)
@@ -52,12 +52,12 @@ public class TestArrays {
 
 		String[] data3 = { "1", "5", "3", "87", "0" };
 		//实现降序排序，返回-1放左边，1放右边，0保持不变
-		/*Arrays.sort(data3, (str1, str2) -> {
+		Arrays.sort(data3, (str1, str2) -> {
 			if (str1.compareTo(str2) > 0)
 				return -1;
 			else
 				return 1;
-		});*/
+		});
 		System.out.println(Arrays.asList(data3).toString());
 
 		System.out.println("对数组内指定范围内的元素进行排序：");
