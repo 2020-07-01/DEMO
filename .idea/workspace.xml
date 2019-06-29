@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/coding/Test_String/Test5.java" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/Test_Bit_Operation/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/Test_Bit_Operation/Test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/Test_String/Test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/Test_String/Test3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/Test_String/Test4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/Test_String/Test5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/coding/Test_Bit_Operation/Test2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="330">
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -100,53 +92,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coding" type="462c0819:PsiDirectoryNode" />
-              <item name="Test_Bit_Operation" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -154,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -265,6 +212,7 @@
       <workItem from="1561614836915" duration="6484000" />
       <workItem from="1561627586312" duration="3785000" />
       <workItem from="1561634215085" duration="546000" />
+      <workItem from="1561640061716" duration="535000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -287,16 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1561560684953</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="coding">
+      <created>1561640118359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561640118359</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11438000" />
+    <option name="totallyTimeSpent" value="11973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="34" width="1850" height="1046" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3289773" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33693182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -332,7 +287,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代码规范" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
+    <MESSAGE value="coding" />
+    <option name="LAST_COMMIT_MESSAGE" value="coding" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Runnable.java">
@@ -400,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coding/Test_Bit_Operation/Test2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="330">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
