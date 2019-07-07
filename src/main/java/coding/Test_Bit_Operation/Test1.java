@@ -2,7 +2,7 @@ package coding.Test_Bit_Operation;
 
 /**
  * @ProjectName: JavaExercise
- * @ClassName: Test1
+ * @ClassName: TestInterface
  * @Author: qiang
  * @Description: 如何进行位运算
  * @Date: 2019/6/27 下午6:59

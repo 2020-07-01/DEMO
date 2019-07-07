@@ -2,7 +2,7 @@ package coding.Test_String;
 
 /**
  * @ProjectName: JavaExercise
- * @ClassName: Test1
+ * @ClassName: TestInterface
  * @Author: qiang
  * @Description: 将一个句子中的单词进行反转
  * @Date: 2019/6/26 下午9:38
