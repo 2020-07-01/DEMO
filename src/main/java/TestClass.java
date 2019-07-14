@@ -27,7 +27,7 @@ public class TestClass {
         TestClass t = new TestClass("123");
 
         t.show();
-        System.out.println("测试");
+        System.out.println("测试ceshi");
     }
 
 
