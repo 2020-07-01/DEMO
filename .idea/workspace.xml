@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testExtend/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testExtend/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testExtend/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testExtend/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testExtend/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/ParentClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/ParentInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/TestEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/TestInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/TestInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test2/TimePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coding/testInterface/test2/TimeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lambda/LambdaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coding/TestJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coding/TestJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coding/Test_Bit_Operation/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coding/Test_Bit_Operation/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coding/Test_String/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coding/Test_String/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/javaExercise/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/javaExercise/AppTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,7 +37,7 @@
     <favorites_list name="JavaExercise" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,6 +81,8 @@
         <option value="$PROJECT_DIR$/src/main/java/coding/testInterface/test1/TestInterfaceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/coding/testInterface/test2/TimeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/coding/testInterface/test2/TimePrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lambda/LengthComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lambda/LambdaTest.java" />
       </list>
     </option>
   </component>
@@ -154,7 +132,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -171,7 +185,8 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -190,13 +205,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TimeTest">
-    <configuration name="Manager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="coding.testExtend.Manager" />
+  <component name="RunManager" selected="Application.LambdaTest">
+    <configuration name="LambdaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lambda.LambdaTest" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="coding.testExtend.*" />
+          <option name="PATTERN" value="lambda.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -258,11 +273,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LambdaTest" />
         <item itemvalue="Application.TimeTest" />
         <item itemvalue="Application.TestInterfaceImpl" />
         <item itemvalue="Application.TestEmployee" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Manager" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +302,9 @@
       <workItem from="1562428552087" duration="69000" />
       <workItem from="1562428714625" duration="44000" />
       <workItem from="1562464506144" duration="6418000" />
-      <workItem from="1562475765624" duration="12174000" />
+      <workItem from="1562475765624" duration="12363000" />
+      <workItem from="1562507982679" duration="2099000" />
+      <workItem from="1563116001890" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -324,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561820864790</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="coding">
+      <created>1562506433585</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562506433585</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46202000" />
+    <option name="totallyTimeSpent" value="48504000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -342,8 +366,8 @@
   <component name="ToolWindowManager">
     <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.27002966" visible="true" weight="0.22172453" />
-      <window_info id="Structure" order="1" sideWeight="0.72997034" side_tool="true" weight="0.22172453" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.268546" visible="true" weight="0.2256439" />
+      <window_info id="Structure" order="1" sideWeight="0.731454" side_tool="true" weight="0.2256439" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -351,7 +375,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32951945" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49886364" visible="true" weight="0.22883295" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49886364" weight="0.22883295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -681,6 +705,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
           <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="1249" column="24" selection-start-line="1249" selection-start-column="24" selection-end-line="1249" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lambda/LambdaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
