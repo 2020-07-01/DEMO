@@ -28,6 +28,7 @@ public class TestClass {
 
         t.show();
         System.out.println("测试ceshi");
+        System.out.println("测试");
     }
 
 
