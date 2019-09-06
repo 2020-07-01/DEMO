@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/innerClass/InnerClassTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/innerClass/InnerClsssTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/TestL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/test/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/test/MainThread.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,10 +42,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/innerClass/InnerClassTest1.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="279">
+              <caret line="21" selection-start-line="24" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,6 +60,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -103,6 +105,7 @@
         <option value="$PROJECT_DIR$/src/main/java/innerClass/InnerClsssTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/innerClass/InnerClassTest1.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java" />
       </list>
     </option>
   </component>
@@ -152,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -179,24 +181,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="innerClass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,7 +193,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/thread" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -231,7 +220,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestClass">
+  <component name="RunManager" selected="Application.ConverterUtil">
+    <configuration name="ConverterUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="transformImage.ConverterUtil" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="transformImage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InnerClassTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="innerClass.InnerClassTest1" />
       <module name="JavaExercise" />
@@ -266,19 +268,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestInterfaceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="coding.testInterface.test1.TestInterfaceImpl" />
-      <module name="JavaExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="coding.testInterface.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TimeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="coding.testInterface.test2.TimeTest" />
       <module name="JavaExercise" />
@@ -296,16 +285,16 @@
       <item itemvalue="Application.InnerClassTest1" />
       <item itemvalue="Application.LambdaTest" />
       <item itemvalue="Application.TestClass" />
-      <item itemvalue="Application.TestInterfaceImpl" />
       <item itemvalue="Application.TimeTest" />
+      <item itemvalue="Application.ConverterUtil" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConverterUtil" />
         <item itemvalue="Application.TestClass" />
         <item itemvalue="Application.InnerClassTest1" />
         <item itemvalue="Application.LambdaTest" />
         <item itemvalue="Application.TimeTest" />
-        <item itemvalue="Application.TestInterfaceImpl" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +322,10 @@
       <workItem from="1562475765624" duration="12363000" />
       <workItem from="1562507982679" duration="2099000" />
       <workItem from="1563116001890" duration="1116000" />
-      <workItem from="1563589674165" duration="12739000" />
+      <workItem from="1563589674165" duration="13020000" />
+      <workItem from="1564066522126" duration="1629000" />
+      <workItem from="1564138315509" duration="18000" />
+      <workItem from="1567773169250" duration="244000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -405,11 +397,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563117070530</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="代码规范">
+      <created>1563619558328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563619558330</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62345000" />
+    <option name="totallyTimeSpent" value="64517000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -421,10 +420,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="33" width="1850" height="1047" extended-state="7" />
-    <editor active="true" />
+    <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.26773456" visible="true" weight="0.22956327" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.26773456" visible="true" weight="0.24132138" />
       <window_info id="Structure" order="1" sideWeight="0.7322655" side_tool="true" weight="0.22956327" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -433,7 +431,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32951945" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49886364" visible="true" weight="0.35240275" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49832028" weight="0.35240275" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -442,7 +440,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32837528" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32885087" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50113636" side_tool="true" weight="0.5476773" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5016797" side_tool="true" weight="0.35240275" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32837528" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24972005" />
@@ -490,10 +488,10 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="代码规范" />
     <MESSAGE value="coding" />
     <MESSAGE value="ceshi" />
-    <option name="LAST_COMMIT_MESSAGE" value="ceshi" />
+    <MESSAGE value="代码规范" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -814,20 +812,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/proxy/HelloWorldImpl1.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestClass.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/innerClass/InnerClassTest1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="240">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/innerClass/InnerClassTest1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="279">
+          <caret line="21" selection-start-line="24" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
