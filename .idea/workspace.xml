@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/TestL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/test/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/test/MainThread.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/juc_sync/cyclicBarrier/TestCycliBarrier.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,10 +38,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/juc_sync/cyclicBarrier/TestCycliBarrier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="21" selection-start-line="24" selection-end-line="29" />
+            <state relative-caret-position="36">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,6 +102,11 @@
         <option value="$PROJECT_DIR$/src/main/java/innerClass/InnerClassTest1.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/juc_sync/semaphore/TestSemaphore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/juc_sync/countDownLatch/TestJoin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thread/monry/Bank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thread/money/Bank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/juc_sync/cyclicBarrier/TestCycliBarrier.java" />
       </list>
     </option>
   </component>
@@ -181,6 +182,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="juc_sync" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -206,6 +215,10 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="coding.testInterface" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/thread" />
+      <recent name="$PROJECT_DIR$/src/main/java/juc_sync" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -325,7 +338,7 @@
       <workItem from="1563589674165" duration="13020000" />
       <workItem from="1564066522126" duration="1629000" />
       <workItem from="1564138315509" duration="18000" />
-      <workItem from="1567773169250" duration="244000" />
+      <workItem from="1567773169250" duration="509000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -404,11 +417,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563619558330</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="闭锁CountDownLatch学习">
+      <created>1567773601542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567773601542</updated>
+    </task>
+    <task id="LOCAL-00013" summary="信号量机制Semaphore学习">
+      <created>1567773656802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567773656802</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64517000" />
+    <option name="totallyTimeSpent" value="64782000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -491,7 +518,9 @@
     <MESSAGE value="coding" />
     <MESSAGE value="ceshi" />
     <MESSAGE value="代码规范" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
+    <MESSAGE value="闭锁CountDownLatch学习" />
+    <MESSAGE value="信号量机制Semaphore学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="信号量机制Semaphore学习" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -825,8 +854,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformImage/ConverterUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="21" selection-start-line="24" selection-end-line="29" />
+        <state relative-caret-position="243">
+          <caret line="19" selection-start-line="24" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/juc_sync/semaphore/TestSemaphore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thread/money/Bank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/juc_sync/countDownLatch/TestJoin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/juc_sync/cyclicBarrier/TestCycliBarrier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
