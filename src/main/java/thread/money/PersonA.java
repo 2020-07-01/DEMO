@@ -1,7 +1,5 @@
 package thread.money;
 
-import monry.Bank;
-
 /**
  * @Author: qiang
  * @Description: ATM取钱
