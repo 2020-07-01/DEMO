@@ -25,12 +25,18 @@ public class Main0925 {
 
 			}
 		}
+
+
+
 		return new int[]{-1, -1};
 	}
 
+	//主函数
 	public static void main(String[] args) {
 		int[] array = {1, 2, 3, 4, 5, 43, 41, 21};
 		int[] temp = twoSum(array, 9);
 		System.out.println("[" + temp[0] + "," + temp[1] + "]");
 	}
+
+
 }
