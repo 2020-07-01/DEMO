@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="反射的学习">
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/array/Main0925.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/array/Main0925.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/array/Main0925.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,37 +35,12 @@
     <favorites_list name="JavaExercise" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/leetcode/array/Main0925.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-              <folding>
-                <element signature="e#33891#33892#0" expanded="true" />
-                <element signature="e#33919#33920#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/util/Stack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+            <state relative-caret-position="432">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -180,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -227,7 +201,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,6 +343,7 @@
       <workItem from="1568370842660" duration="4308000" />
       <workItem from="1569294909325" duration="263000" />
       <workItem from="1569410569987" duration="7797000" />
+      <workItem from="1569756622838" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -480,7 +454,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85803000" />
+    <option name="totallyTimeSpent" value="85861000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -492,10 +466,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.26544622" weight="0.2700081" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.26544622" visible="true" weight="0.2698768" />
       <window_info id="Structure" order="1" sideWeight="0.73455375" side_tool="true" weight="0.26147816" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -651,42 +625,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1501" column="15" selection-start-line="1501" selection-start-column="15" selection-end-line="1501" selection-end-column="15" />
-          <folding>
-            <element signature="e#58481#58482#0" expanded="true" />
-            <element signature="e#58518#58519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/util/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-          <folding>
-            <element signature="e#33891#33892#0" expanded="true" />
-            <element signature="e#33919#33920#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/lang/String.java" />
+    <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/util/Stack.java" />
+    <entry file="jar://D:/jdk_8u112/jdk/src.zip!/java/lang/Integer.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/leetcode/array/Main0925.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="432">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>

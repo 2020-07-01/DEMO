@@ -22,6 +22,7 @@ public class Main0925 {
 					int[] temp = {i, j};
 					return temp;
 				}
+
 			}
 		}
 		return new int[]{-1, -1};
