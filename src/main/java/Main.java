@@ -1,9 +1,6 @@
-
-import java.awt.event.KeyListener;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-
+import javax.management.relation.RelationNotFoundException;
+import java.security.SecureRandom;
+import java.util.Random;
 
 /**
  * @author :qiang
@@ -13,21 +10,15 @@ import java.util.LinkedList;
  */
 public class Main {
 
+    public static void method(int... item) {
+        System.out.println(item);
+    }
+
+
     public static void main(String[] args) throws Exception {
-        LinkedList linkedList = new LinkedList();
-        linkedList.add(1);
-        linkedList.add(2);
-        linkedList.add(3);
-        linkedList.add(4);
 
-
-        Iterator iterator = linkedList.iterator();
-        iterator.forEachRemaining(item -> System.out.println(item));
-        HashSet hashSet = new HashSet();
-
-
-
-        System.out.println();
+        method();
 
     }
+
 }
