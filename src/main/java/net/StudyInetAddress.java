@@ -9,6 +9,8 @@ import java.util.Arrays;
  * @date :2019/10/8 下午1:04
  * @description :ip地址获取测试
  * @other :
+ * <p>
+ * InetAddress：表示ip地址协议
  */
 public class StudyInetAddress {
 
@@ -44,7 +46,7 @@ public class StudyInetAddress {
 
         //返回一个包含ip地址的字节数组
         byte[] ipByte = localhostAddress.getAddress();
-        System.out.println("ip地址字节数组："+Arrays.toString(ipByte));
+        System.out.println("ip地址字节数组：" + Arrays.toString(ipByte));
     }
 
 }
