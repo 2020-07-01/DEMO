@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="泛型的学习">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/client_server/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/client_server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/client_server/UDPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/client_server/UDPServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/url_uri/StudyURL.java" afterDir="false" />
+    <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/DirList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/url_uri/StudyURLConnection.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/temp/A.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/temp/B.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/temp/C.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/temp/D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/StudyInetAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/StudyInetAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/StudyServerSocket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/StudySocket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/url_uri/StudyURL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/url_uri/StudyURL.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,17 +44,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/url_uri/StudyURL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+            <state relative-caret-position="471">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/net/URL.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/url_uri/StudyURLConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="809" column="18" selection-start-line="809" selection-start-column="18" selection-end-line="809" selection-end-column="18" />
+            <state relative-caret-position="231">
+              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/net/URLConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="158" column="3" lean-forward="true" selection-start-line="158" selection-start-column="3" selection-end-line="158" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/DirList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/StudyInetAddress.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/io/FilenameFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -84,8 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/test/Note.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/Instrument.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/Music.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/Wind.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
@@ -134,7 +168,9 @@
         <option value="$PROJECT_DIR$/src/main/java/net/client_server/UDPServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/client_server/UDPClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/url_uri/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/DirList.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/url_uri/StudyURL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/url_uri/StudyURLConnection.java" />
       </list>
     </option>
   </component>
@@ -169,9 +205,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="33" />
-    <option name="width" value="960" />
-    <option name="height" value="1047" />
+    <option name="x" value="235" />
+    <option name="y" value="79" />
+    <option name="width" value="1401" />
+    <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -183,6 +220,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,8 +268,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,7 +279,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -269,20 +306,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StudyURL">
-    <configuration name="ArrayOfGenerics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="array.ArrayOfGenerics" />
-      <module name="JavaExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.StudyURLConnection">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.client_server.Client" />
       <module name="JavaExercise" />
@@ -311,6 +335,19 @@
     </configuration>
     <configuration name="StudyURL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.url_uri.StudyURL" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.url_uri.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudyURLConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.url_uri.StudyURLConnection" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
@@ -351,11 +388,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StudyURLConnection" />
         <item itemvalue="Application.StudyURL" />
         <item itemvalue="Application.UDPClient" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.ArrayOfGenerics" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +448,10 @@
       <workItem from="1570847258901" duration="2048000" />
       <workItem from="1570849619439" duration="496000" />
       <workItem from="1570850507797" duration="2006000" />
-      <workItem from="1570884767602" duration="5239000" />
+      <workItem from="1570884767602" duration="6362000" />
+      <workItem from="1570945477000" duration="614000" />
+      <workItem from="1570949994282" duration="1640000" />
+      <workItem from="1570975614453" duration="2817000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -602,7 +642,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570778749878</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="socket服务端与客户端学习">
+      <created>1570892720427</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1570892720427</updated>
+    </task>
+    <task id="LOCAL-00029" summary="代码规范">
+      <created>1570892784718</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1570892784718</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -611,7 +665,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168048000" />
+    <option name="totallyTimeSpent" value="174242000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -624,9 +678,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="33" width="1920" height="1047" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.2631579" visible="true" weight="0.21551724" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2631579" visible="true" weight="0.2262931" />
       <window_info id="Structure" order="1" sideWeight="0.7368421" side_tool="true" weight="0.21551724" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -635,7 +688,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32951945" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49832028" visible="true" weight="0.35125858" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49832028" visible="true" weight="0.35125858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -673,14 +726,15 @@
     <MESSAGE value="手写双向链表LinkedList" />
     <MESSAGE value="控制执行流程" />
     <MESSAGE value="基本数据类型" />
-    <MESSAGE value="代码规范" />
     <MESSAGE value="java网络编程学习" />
     <MESSAGE value="泛型中的擦除！！！" />
     <MESSAGE value="异常的学习" />
     <MESSAGE value="泛型的学习" />
     <MESSAGE value="泛型边界的学习" />
     <MESSAGE value="泛型通配符的学习-脑壳疼" />
-    <option name="LAST_COMMIT_MESSAGE" value="泛型通配符的学习-脑壳疼" />
+    <MESSAGE value="socket服务端与客户端学习" />
+    <MESSAGE value="代码规范" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -692,29 +746,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/exception/TestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/typeInfo/Null.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/typeInfo/Person.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/generics/Automobile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/generics/Holder1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/generics/Holder2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
@@ -970,13 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/StudyInetAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/net/DatagramPacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -1031,24 +1055,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/uri_url.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/uri_url.java" />
+    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/net/URL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="146">
+          <caret line="808" column="7" lean-forward="true" selection-start-line="808" selection-start-column="7" selection-end-line="808" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/io/FilenameFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/StudyInetAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/DirList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/url_uri/StudyURL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        <state relative-caret-position="471">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/net/URL.java">
+    <entry file="uml://JAVA/java.net.URLConnection">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>java.net.URLConnection</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">java.net.URLConnection</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-351.0" y="-140.5" />
+          <SelectedNodes>
+            <node>java.net.URLConnection</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/net/URLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="809" column="18" selection-start-line="809" selection-start-column="18" selection-end-line="809" selection-end-column="18" />
+        <state relative-caret-position="327">
+          <caret line="158" column="3" lean-forward="true" selection-start-line="158" selection-start-column="3" selection-end-line="158" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/url_uri/StudyURLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
