@@ -1,4 +1,4 @@
-package dataStructure.myLinkedList;
+package dataStructure.list.myArrayList;
 
 /**
  * @author :qiang

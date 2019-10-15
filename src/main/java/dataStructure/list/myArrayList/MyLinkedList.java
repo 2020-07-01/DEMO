@@ -1,7 +1,6 @@
-package dataStructure.myLinkedList;
+package dataStructure.list.myArrayList;
 
 
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**

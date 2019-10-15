@@ -1,5 +1,7 @@
 package dataStructure.collections;
 
+import java.awt.*;
+import java.security.cert.CollectionCertStoreParameters;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -49,6 +51,10 @@ public class TestCollections {
 		//将索引为1和2处的元素进行交换
 		Collections.swap(list2, 1, 2);
 		System.out.println("交换后的元素：\n" + list2);
+
+
+
+
 
 	}
 
