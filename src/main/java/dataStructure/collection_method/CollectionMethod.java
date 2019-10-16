@@ -1,4 +1,4 @@
-package dataStructure.collection;
+package dataStructure.collection_method;
 
 
 import java.util.ArrayList;
