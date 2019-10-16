@@ -1,10 +1,6 @@
-package container;
+package dataStructure;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author :qiang
@@ -42,6 +38,8 @@ public class Unsupported {
         Collection<String> collection = new ArrayList(list);
         System.out.println(collection);
         collection.add("1");
+
+
     }
 
     public static void main(String[] args) {
@@ -52,6 +50,13 @@ public class Unsupported {
         System.out.println(list.size());
 
         test("msg", list);
+
+        /**
+         * 返回元素不可改变的集合
+         *
+         */
+        List<String> arrayList = Collections.unmodifiableList(list);
+        arrayList.set(0,"1");
     }
 
 }
