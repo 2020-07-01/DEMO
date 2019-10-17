@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb1b9777-3088-4141-b019-26de44275c5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Groundhog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/MapEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Prediction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SlowMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SpringDetector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/set/SortedSetDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/set/TypesForSets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort_algorithm/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort_algorithm/InsertSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort_algorithm/ShellSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/container/Unsupported.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/Unsupported.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/container/fillContainer/CollectionData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/fillContainer/CollectionData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/container/fillContainer/FillingLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/fillContainer/FillingLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/container/fillContainer/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/fillContainer/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/container/fillContainer/MapData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/fillContainer/MapData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/container/fillContainer/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/fillContainer/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/collection/CollectionMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/collection_method/CollectionMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/collection/UnSupported.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/collection_method/UnSupported.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/sort/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/sort/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/sort/QuickSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/sort/Sort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/temp/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/temp/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/temp/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/temp/D.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,109 +45,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/TypesForSets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/SortedSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/SortedSetDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#397#405#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Groundhog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Prediction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SpringDetector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#473#495#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SlowMap.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sort_algorithm/ShellSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+            <state relative-caret-position="302">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
-                <element signature="e#885#901#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/MapEntry.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sort_algorithm/BubbleSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="174">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/Random.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sort_algorithm/InsertSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+            <state relative-caret-position="324">
+              <caret line="29" column="17" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -175,9 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/generics/Manipulator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/generics/Generic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/generics/ListOfGenerics.java" />
         <option value="$PROJECT_DIR$/src/main/java/generics/border/Dimension.java" />
         <option value="$PROJECT_DIR$/src/main/java/generics/border/HasColor.java" />
         <option value="$PROJECT_DIR$/src/main/java/generics/border/Colored.java" />
@@ -226,6 +142,9 @@
         <option value="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SpringDetector.java" />
         <option value="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/MapEntry.java" />
         <option value="$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SlowMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sort_algorithm/BubbleSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sort_algorithm/InsertSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sort_algorithm/ShellSort.java" />
       </list>
     </option>
   </component>
@@ -275,6 +194,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,25 +235,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-              <item name="hashcode" type="462c0819:PsiDirectoryNode" />
+              <item name="sort_algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,7 +282,46 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SlowMap">
+  <component name="RunManager" selected="Application.ShellSort">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort_algorithm.BubbleSort" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort_algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort_algorithm.InsertSort" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort_algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShellSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort_algorithm.ShellSort" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort_algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SlowMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dataStructure.map.hashcode.SlowMap" />
       <module name="JavaExercise" />
@@ -388,51 +335,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortedSetDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataStructure.set.SortedSetDemo" />
-      <module name="JavaExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dataStructure.set.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringDetector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dataStructure.map.hashcode.SpringDetector" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dataStructure.map.hashcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypesForSets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataStructure.set.TypesForSets" />
-      <module name="JavaExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dataStructure.set.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unsupported" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="container.Unsupported" />
-      <module name="JavaExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="container.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -456,11 +364,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShellSort" />
+        <item itemvalue="Application.BubbleSort" />
+        <item itemvalue="Application.InsertSort" />
         <item itemvalue="Application.SlowMap" />
         <item itemvalue="Application.SpringDetector" />
-        <item itemvalue="Application.SortedSetDemo" />
-        <item itemvalue="Application.TypesForSets" />
-        <item itemvalue="Application.Unsupported" />
       </list>
     </recent_temporary>
   </component>
@@ -525,6 +433,7 @@
       <workItem from="1571106018988" duration="3696000" />
       <workItem from="1571121153491" duration="510000" />
       <workItem from="1571144127567" duration="14908000" />
+      <workItem from="1571238526358" duration="6272000" />
     </task>
     <task id="LOCAL-00001" summary="代码规范">
       <created>1561560191726</created>
@@ -757,7 +666,35 @@
       <option name="project" value="LOCAL" />
       <updated>1571149658806</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Collection接口方法测试">
+      <created>1571238604890</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1571238604890</updated>
+    </task>
+    <task id="LOCAL-00035" summary="填充集合的几种方式">
+      <created>1571238638198</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1571238638198</updated>
+    </task>
+    <task id="LOCAL-00036" summary="hashCode和equals方法测试">
+      <created>1571238677557</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1571238677557</updated>
+    </task>
+    <task id="LOCAL-00037" summary="不能对集合底层进行修改的方法，不支持的操作">
+      <created>1571238747648</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1571238747648</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -766,7 +703,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194331000" />
+    <option name="totallyTimeSpent" value="200603000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -781,7 +718,7 @@
     <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.26201373" visible="true" weight="0.24580067" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.26201373" visible="true" weight="0.21780515" />
       <window_info id="Structure" order="1" sideWeight="0.73798627" side_tool="true" weight="0.24580067" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -790,7 +727,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32951945" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49832028" visible="true" weight="0.40846682" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49832028" visible="true" weight="0.22768879" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -817,8 +754,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="coding" />
-    <MESSAGE value="ceshi" />
     <MESSAGE value="闭锁CountDownLatch学习" />
     <MESSAGE value="信号量机制Semaphore学习" />
     <MESSAGE value="栅栏CycliBarrier的学习" />
@@ -840,7 +775,11 @@
     <MESSAGE value="容器的填充方式" />
     <MESSAGE value="容器操作" />
     <MESSAGE value="非支持操作的bug学习" />
-    <option name="LAST_COMMIT_MESSAGE" value="非支持操作的bug学习" />
+    <MESSAGE value="Collection接口方法测试" />
+    <MESSAGE value="填充集合的几种方式" />
+    <MESSAGE value="hashCode和equals方法测试" />
+    <MESSAGE value="不能对集合底层进行修改的方法，不支持的操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="不能对集合底层进行修改的方法，不支持的操作" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -852,36 +791,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/client_server/UDPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/client_server/UDPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/client_server/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/client_server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -991,20 +900,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/CollectionData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/Generator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/CollectionData.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/collections/TestCollections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
@@ -1012,41 +909,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/collections/FillingLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/StringAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/FillingLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/MapData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/collections/FillingLists.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/StringAddress.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/FillingLists.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/Pair.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/fillContainer/MapData.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/collection_method/CollectionMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
@@ -1088,16 +955,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/container/Unsupported.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/container/Unsupported.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/fillContainer/FillingLists.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1120,37 +978,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/HashType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/SetType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/TypesForSets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/HashType.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/SetType.java" />
     <entry file="uml://JAVA/java.util.SortedSet">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1164,7 +993,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="104.5" y="159.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="105.0" y="159.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -1172,28 +1001,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/TypesForSets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2490">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/SortedSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="2490">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/set/SortedSetDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="630">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#397#405#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Groundhog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="570">
           <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Prediction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SpringDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/MapEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1204,40 +1069,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/Prediction.java">
+    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SpringDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#473#495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/MapEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="3750">
+          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dataStructure/map/hashcode/SlowMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="447">
           <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sort_algorithm/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sort_algorithm/InsertSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sort_algorithm/ShellSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding>
-            <element signature="e#885#901#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
