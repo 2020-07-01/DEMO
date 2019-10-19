@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 
- * @ClassName: TestArrays
+ * @ClassName: TestArraysMethod
  * @Description:测试Arrays类 Arrays类是Java API中提供的类，在Java.util包中，此类包含用来操作数组的各种方法。
  * @ Arrays类是不能被实例化的，是单例模式
  * @author: caiji

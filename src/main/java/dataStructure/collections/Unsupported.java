@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure.collections;
 
 import java.util.*;
 
