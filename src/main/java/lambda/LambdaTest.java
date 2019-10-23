@@ -22,9 +22,7 @@ public class LambdaTest {
         Arrays.sort(planets);
         System.out.println("排序后输出：" + Arrays.toString(planets));
         System.out.println("sort by length:");
-        Arrays.sort(planets, (first, second) ->
-                first.length() - second.length()
-        );
+        Arrays.sort(planets, (first, second) -> first.length() - second.length());
 
         System.out.println("通过长度进行排序：" + Arrays.toString(planets));
 

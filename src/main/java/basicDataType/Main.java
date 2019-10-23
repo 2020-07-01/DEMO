@@ -8,9 +8,15 @@ package basicDataType;
  */
 public class Main {
 
+
     public static void main(String[] args) {
 
         /**
+         * 整型的范围与运行java代码的机器无关，因此不需要考虑平台的移植性带来的问题
+         */
+
+        /**
+         * 浮点型默认为double类型
          * 将高精度的数据类型转换为低精度的数据类型需要进行显示转换
          * 并且进行截尾操作
          */
@@ -36,6 +42,24 @@ public class Main {
          * 在对集本数据类型进行运算时,只要类型比int小,则在运算之前这些值都会转换为int类型
          * 如果要将其转换为原来的数据类型,将会造成信息丢失
          */
+
+        //从jdk1.7开始，可以在数字字面量中添加下划线
+        int d = 1_0000_0000;
+
+        /**
+         * NaN:表示不是一个数字
+         */
+        System.out.println(Double.NaN);
+
+        //判断是否为一个数字
+        System.out.println(Double.isNaN(123));
+
+        /**
+         * 浮点数无法用于不接受误差的金融计算中，因为在计算机中都是使用二进制表示
+         * 二进制无法精确的表示1/10
+         * 类似于十进制无法表示1/3
+         */
+        System.out.println(2.0 - 1.1);
 
 
     }

@@ -12,7 +12,7 @@ public class ShellSort {
 
     public static void main(String[] args) {
 
-        int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] array = {10, 9, 8, 7, 4554, 65, 6, 5, 4, 3, 2, 1};
 
         /**
          * 先进行分组，然后对每个分组进行插入排序
@@ -37,10 +37,8 @@ public class ShellSort {
 
                             array[k + 1] = array[k];
                             array[k] = temp;
-
                         }
                     }
-
                 }
             }
         }

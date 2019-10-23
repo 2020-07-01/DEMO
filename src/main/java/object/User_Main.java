@@ -10,6 +10,12 @@ import java.util.HashSet;
  */
 public class User_Main {
 
+    static int i = 0;
+
+    public static void method() {
+        System.out.println("静态方法");
+    }
+
     public static void main(String[] args) {
 
         //创建User类的对象
@@ -31,8 +37,16 @@ public class User_Main {
             System.out.println(item.toString());
         }
 
+        /**
+         * 对象可以调用类的静态方法
+         * 但是对象不可以调用静态变量
+         */
 
+        User_Main user_main = new User_Main();
+        user_main.method();
+        //user_main.i;//
     }
+
     /**
      * 结果：
      * 24
@@ -41,5 +55,4 @@ public class User_Main {
      * hashSet的元素个数：1
      * name:yuqiang  age:24
      */
-
 }
