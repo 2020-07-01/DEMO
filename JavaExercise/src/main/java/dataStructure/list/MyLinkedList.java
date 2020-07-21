@@ -1,4 +1,4 @@
-package dataStructure.list.myArrayList;
+package dataStructure.list;
 
 
 import java.util.NoSuchElementException;
