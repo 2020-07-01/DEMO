@@ -20,6 +20,7 @@ public class TestComparator implements Comparator<TestComparator> {
 		return str;
 	}
 
+	@Override
 	public int compare(TestComparator domain1, TestComparator domain2) {
 		if (domain1.getStr().compareTo(domain2.getStr()) > 0)
 			return 1;

@@ -1,9 +1,7 @@
 package lambda;
 
-import javax.swing.*;
-import java.util.Arrays;
-import java.util.Date;
-
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author :qiang
@@ -13,28 +11,46 @@ import java.util.Date;
  */
 public class LambdaTest {
 
+    /**
+     * 代码更加紧凑
+     * 可以为方法传递函数作为参数
+     * @param args
+     */
     public static void main(String[] args) {
 
-        String[] planets = new String[]{"Mercury", "Venus", "Earth", "Mars"};
-        System.out.println("排序前输出：" + Arrays.toString(planets));
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("1fas");
+        arrayList.add("2fa");
+        arrayList.add("3fasfas");
+        arrayList.add("4fasfas");
 
-        //进行排序
-        Arrays.sort(planets);
-        System.out.println("排序后输出：" + Arrays.toString(planets));
-        System.out.println("sort by length:");
-        Arrays.sort(planets, (first, second) -> first.length() - second.length());
+        //排序
+        Collections.sort(arrayList,(a,b)->{
+            if(a.length() > b.length()){
+                return 1;
+            } else if (a.length() < b.length()){
+                return -1;
+            }else {
+                return 0;
+            }
+        });
 
-        System.out.println("通过长度进行排序：" + Arrays.toString(planets));
+        arrayList.forEach(p->{
+            System.out.println(p);
+        });
 
 
-        Timer t = new Timer(1000, (event) ->
-                System.out.println("the time is :"+ new Date())
-        );
-        t.start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("此为匿名函数!");
+            }
+        }).start();
 
-        JOptionPane.showConfirmDialog(null,"Quit!");
 
-        System.exit(0);
+        new Thread(()->{
+            System.out.println("此为lambda表达式匿名函数!");
+        }).start();
 
     }
 }

@@ -1,9 +1,7 @@
 package dataStructure.list;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * @author yq
@@ -64,14 +62,19 @@ public class ArrayListTest {
         System.out.println("Iterator遍历耗时:"+(System.currentTimeMillis()-startTime4)+"mm");
 
 
-        ArrayList<Integer> arrayList1 = new ArrayList<>();
-        arrayList1.add(1);
-        arrayList1.add(2);
-        arrayList1.add(3);
+        //获取流
+        Stream<Integer> stream = arrayList.stream();
+        //forEach遍历
+        stream.forEach(p->{
+            System.out.println(p);
+        });
 
-        for (Integer item: arrayList1) {
-            arrayList1.remove(item);
-        }
+
+
+
+
+
+
 
 
     }

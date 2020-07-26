@@ -20,23 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf275164-21ef-4197-87c8-4e93269f0e67" name="Default Changelist" comment="基本类型转换">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/list/ArrayListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashMap/HashMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iterator/ListIteratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stream/ListStreamTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/list/myArrayList/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/list/Link.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/list/myArrayList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/list/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/map/hashMap/Hash.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dataStructure/list/myArrayList/Link.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dataStructure/list/myArrayList/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dataStructure/list/myArrayList/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dataStructure/map/hashMap/Hash.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comparator_comparable/TestComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comparator_comparable/TestComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/list/ArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/list/ArrayListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lambda/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lambda/LambdaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/comparator_comparable/TestComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/comparator_comparable/TestComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lambda/LambdaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lambda/LambdaTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +74,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Ocean" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -91,7 +82,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="Application.ArrayListTest">
+  <component name="RunManager" selected="Application.LambdaTest">
     <configuration name="ArrayListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dataStructure.list.ArrayListTest" />
       <module name="JavaExercise" />
@@ -118,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinalString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="string.FinalString" />
+    <configuration name="LambdaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lambda.LambdaTest" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="string.*" />
+          <option name="PATTERN" value="lambda.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,19 +122,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="ListIteratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iterator.ListIteratorTest" />
       <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListStreamTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stream.ListStreamTest" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LambdaTest" />
+        <item itemvalue="Application.ListStreamTest" />
+        <item itemvalue="Application.ListIteratorTest" />
         <item itemvalue="Application.ArrayListTest" />
         <item itemvalue="Application.CovertBaseDataType" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.FinalString" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +174,8 @@
       <workItem from="1593609122140" duration="14000" />
       <workItem from="1593915456691" duration="8453000" />
       <workItem from="1595331121129" duration="2166000" />
-      <workItem from="1595342183650" duration="767000" />
+      <workItem from="1595342183650" duration="1109000" />
+      <workItem from="1595738945098" duration="9672000" />
     </task>
     <task id="LOCAL-00001" summary="基本类型转换">
       <created>1593939814337</created>
@@ -172,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593939814337</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="集合遍历">
+      <created>1595343011729</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595343011729</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,33 +211,43 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基本类型转换" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本类型转换" />
+    <MESSAGE value="集合遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="集合遍历" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1593525626618">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="644" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595748202424">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state x="644" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595748202424" />
+    <state x="632" y="-933" key="FileChooserDialogImpl" timestamp="1595749968294">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="632" y="-933" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595749968294" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593525626618" />
-    <state width="1237" height="214" key="GridCell.Tab.0.bottom" timestamp="1595333063346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="236" key="GridCell.Tab.0.bottom" timestamp="1595751726589">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="236" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595751726589" />
     <state width="1237" height="214" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595333063346" />
-    <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593940171419" />
-    <state width="1237" height="214" key="GridCell.Tab.0.center" timestamp="1595333063346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="176" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595343307136" />
+    <state width="1877" height="236" key="GridCell.Tab.0.center" timestamp="1595751726589">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="236" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595751726589" />
     <state width="1237" height="214" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595333063346" />
-    <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593940171418" />
-    <state width="1237" height="214" key="GridCell.Tab.0.left" timestamp="1595333063346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="176" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595343307136" />
+    <state width="1877" height="236" key="GridCell.Tab.0.left" timestamp="1595751726589">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="236" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595751726589" />
     <state width="1237" height="214" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595333063346" />
-    <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593940171418" />
-    <state width="1237" height="214" key="GridCell.Tab.0.right" timestamp="1595333063346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="176" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595343307136" />
+    <state width="1877" height="236" key="GridCell.Tab.0.right" timestamp="1595751726589">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="236" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595751726589" />
     <state width="1237" height="214" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595333063346" />
-    <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593940171418" />
+    <state width="1237" height="176" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595343307136" />
     <state x="228" y="84" width="825" height="441" key="Registry" timestamp="1593918206958">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -228,17 +257,20 @@
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595331756831" />
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593525633307" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593939833758">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595343026652">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593939833758" />
-    <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1593915797287">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595343026652" />
+    <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1595744846571">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595744846571" />
     <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1593915797287" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1593918160760">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup" timestamp="1595752333558">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595752333558" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595744702559" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1593918160760" />
   </component>
 </project>
