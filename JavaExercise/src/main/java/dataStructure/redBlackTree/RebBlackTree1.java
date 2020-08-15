@@ -160,50 +160,52 @@ public class RebBlackTree1<T extends Comparable<T>> {
 
 
     /**
-     * 以x节点进行左旋操作
+     * 以node节点进行左旋操作
      *
-     * @param x
+     * @param node
      */
-    private void leftRotate(Node<T> x) {
+    private void leftRotate(Node<T> node) {
 
         //x节点的右节点
-        Node<T> y = x.right;
+        Node<T> x = node.right;
         //x的右节点为y节点的左节点
-        x.right = y.left;
-        y.left.parent = x;
+        node.right = x.left;
+        node.parent = x;
+        x.left.parent = node;
+        x.parent = node.parent;
+        x.left = node;
+
         //设置y节点的父节点
-        if (x.parent != null) {
-            if (x == x.parent.right) {
-                x.parent.right = y;
+        if (node.parent != null) {
+            if (node == node.parent.right) {
+                node.parent.right = x;
             } else {
-                x.parent.left = y;
+                node.parent.left = x;
             }
         } else {
-            this.root = y;
+            this.root = x;
         }
     }
 
 
     /**
-     * 以y节点进行右旋操作
-     *
-     * @param y
+     * 以node节点进行右旋操作
+     * @param node
      */
-    private void rightRotate(Node<T> y) {
+    private void rightRotate(Node<T> node) {
+        Node<T> x = node.left;
+        x.parent = node.parent;
+        x.right.parent = node;
+        node.left = x.right;
+        node.parent = x;
 
-        //x节点的左节点
-        Node<T> x = y.left;
-        //x节点的左节点为y节点的右节点
-        y.left = x.right;
-        x.right.parent = y;
-        //y节点的父节点
-        if (y.parent != null) {
+        if (node.parent != null) {
             //如果y节点本来为右节点
             //则父节点的右节点为x
-            if (y == y.parent.right) {
-                y.parent.right = x;
+            if (node == node.parent.right) {
+                node.parent.right = x;
             } else {
-                y.parent.left = x;
+                node.parent.left = x;
             }
         } else {
             this.root = x;
