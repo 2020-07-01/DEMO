@@ -1,15 +1,18 @@
-package binary_search_tree;
-
-import java.util.Stack;
+package dataStructure.binary_search_tree;
 
 /**
+ * @author yq
  * @program: BinarySortTree
- * @description: 二叉树的实现
+ * @description: 二叉搜索树的实现
  * @create: 2019-12-28 09:55
  **/
 public class BinarySortTree {
 
-    //创建根节点
+
+
+
+
+   /* //创建根节点
     private Node rootNode;
 
     //查找二叉排序树中是否存在key值
@@ -62,7 +65,7 @@ public class BinarySortTree {
         return null;
     }
 
-    /**
+    *//**
      * 删除节点
      * 1.节点的右子树为空的情况-》用节点的左子树替换此节点
      * 2.节点的左子树为空的情况-》用节点的右子树替换此节点
@@ -70,7 +73,7 @@ public class BinarySortTree {
      *
      * @param key
      * @return
-     */
+     *//*
     public void delete(int key) {
         delete(rootNode, key);
     }
@@ -190,5 +193,5 @@ public class BinarySortTree {
         bst.InorderResursive();
         System.out.println("后序递归遍历：");
         bst.postOrderResursive();
-    }
+    }*/
 }
