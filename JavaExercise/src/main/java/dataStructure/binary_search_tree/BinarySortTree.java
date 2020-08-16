@@ -6,192 +6,121 @@ package dataStructure.binary_search_tree;
  * @description: 二叉搜索树的实现
  * @create: 2019-12-28 09:55
  **/
-public class BinarySortTree {
+public class BinarySortTree<T extends Comparable> {
 
-
-
-
-
-   /* //创建根节点
-    private Node rootNode;
-
-    //查找二叉排序树中是否存在key值
-    public boolean containsKey(int key) {
-        Node current = rootNode;
-        while (current != null) {
-            if (current.getValue() == key) {
-                return true;
-            } else if (key < current.getValue()) {
-                current = current.getLeft();
-            } else {
-                current = current.getRight();
-            }
-        }
-        return false;
-    }
-
-    //向二叉排序树中插入节点
-    public void insert(int key) {
-        Node p = rootNode;
-        Node prev = null;
-        while (p != null) {
-            prev = p;
-            if (key < p.getValue()) {
-                p = p.getLeft();
-            } else if (key > p.getValue()) {
-                p = p.getRight();
-            } else
-                return;//当遇到的相同的值时结束循环
-        }
-        if (rootNode == null) {
-            rootNode = new Node(key);
-        } else if (key < prev.getValue()) {
-            prev.setLeft(new Node(key));
-        } else prev.setRight(new Node(key));
-    }
-
-    //根据key获取节点
-    private Node getNode(int key) {
-        Node nodeKey = rootNode;
-        while (nodeKey != null) {
-            if (key < nodeKey.getValue()) {
-                nodeKey = nodeKey.getLeft();
-            } else if (key > nodeKey.getValue()) {
-                nodeKey = nodeKey.getRight();
-            } else {
-                return new Node(key);
-            }
-        }
-        return null;
-    }
-
-    *//**
-     * 删除节点
-     * 1.节点的右子树为空的情况-》用节点的左子树替换此节点
-     * 2.节点的左子树为空的情况-》用节点的右子树替换此节点
-     * 3.节点的左右子树均不为空-》找出删除节点的后继节点进行替换，然后删除
+    /**
+     * 性质：
+     * 1、二叉搜索树、二叉排序树、二叉查找树
+     * 2、若任意节点的左子树不为空，则左子树上的节点不大于父节点
+     * 3、若任意节点的右子树不为空，则右子树的上的节点不小于父节点
+     * 4、左子树和右子树也是一颗二叉搜索树
      *
-     * @param key
-     * @return
-     *//*
-    public void delete(int key) {
-        delete(rootNode, key);
+     * 时间复杂度分析：n-logn
+     */
+
+    //根节点
+    Node<T> root;
+
+    //节点数
+    int size;
+
+    BinarySortTree(){
+
     }
 
-    private boolean delete(Node node, int key) {
-        //如果根节点为空则返回false
-        if (node == null) {
-            return false;
+
+    static class Node<T extends Comparable> {
+
+        T value;
+        Node<T> left;
+        Node<T> right;
+
+        Node(T value) {
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
+    /**
+     * 插入节点
+     *
+     * @param value
+     */
+    public void insert(T value) {
+
+        if (value == null) {
+            throw new NullPointerException();
+        }
+
+        Node<T> x = this.root;
+        Node<T> parent = null;
+        int cmp;
+        while (x != null) {
+            parent = x;
+            cmp = value.compareTo(x.value);
+            if (cmp < 0) {
+                x = x.left;
+            } else {
+                x = x.right;
+            }
+        }
+        Node<T> newNode = new Node<>(value);
+        //不为根节点
+        if (parent != null) {
+            int n = value.compareTo(parent.value);
+            if (n < 0) {
+                parent.left = newNode;
+            } else {
+                parent.right = newNode;
+            }
         } else {
-            if (key == node.getValue()) {
-                return delete(node);
-            } else if (key < node.getValue()) {
-                return delete(node.getLeft(), key);
-            } else {
-                return delete(node.getRight(), key);
-            }
+            //设置为根节点
+            this.root = newNode;
         }
+        size++;
     }
 
-    private boolean delete(Node node) {
-        Node temp = null;
-        if (node.getRight() == null) {//如果右子树为空
-            node = node.getLeft();
-        } else if (node.getLeft() == null) {//如果左子树为空
-            node = node.getRight();
-        } else {//左右子树均不为空,转向左子树，然后向右走向尽头
-            temp = node;
-            Node s = node;
-            s = s.getLeft();
-            while (s.getRight() != null) {
-                temp = s;//父节点
-                s = s.getRight();
-            }
-            node.setValue(s.getValue());
-            if (temp == node) {
-                temp.setLeft(s.getLeft());
-            } else {
-                temp.setRight((s.getLeft()));
-            }
+
+    /**
+     * 获取元素数量
+     */
+    public int size(){
+        return size;
+    }
+
+
+    /**
+     * 中序遍历
+     */
+    public void order(){
+        if(this.root == null){
+            throw new NullPointerException();
         }
-        return true;
+        Node<T> node = this.root;
+        order(node);
     }
 
-    //中序非递归遍历二叉树
-    public void nrInOrderTraverse() {
-        Stack<Node> stack = new Stack<>();
-        Node node = rootNode;
-
-        while (node != null || !stack.isEmpty()) {
-            while (node != null) {
-                stack.push(node);
-                node = node.getLeft();
-            }
-            node = stack.pop();
-            System.out.print(node.getValue() + "  ");
-            node = node.getRight();
+    private void order(Node<T> node){
+        if(node != null){
+            order(node.left);
+            System.out.print(node.value + "  ");
+            order(node.right);
         }
-        System.out.println();
-    }
-
-    //先序递归遍历二叉树
-    public void preOrderResursive() {
-        preOrderResursive(rootNode);
-        System.out.println();
-    }
-
-    private void preOrderResursive(Node node) {
-        if (node == null) {
-            return;
-        }
-        System.out.print(node.getValue() + " ");
-        preOrderResursive(node.getLeft());
-        preOrderResursive(node.getRight());
-    }
-
-    //中序递归遍历二叉树
-    public void InorderResursive() {
-        InorderResursive(rootNode);
-        System.out.println();
-    }
-
-    private void InorderResursive(Node node) {
-        if (node == null) {
-            return;
-        }
-        InorderResursive(node.getLeft());
-        System.out.print(node.getValue() + " ");
-        InorderResursive(node.getRight());
-    }
-
-    //后序递归遍历二叉树
-    public void postOrderResursive() {
-        postOrderResursive(rootNode);
-        System.out.println();
-    }
-
-    private void postOrderResursive(Node node) {
-        if (node == null) {
-            return;
-        }
-        postOrderResursive(node.getLeft());
-        postOrderResursive(node.getRight());
-        System.out.print(node.getValue() + " ");
     }
 
     public static void main(String[] args) {
-        int[] num = {45, 12, 37, 24, 3, 53, 100, 61, 55, 90, 78};
-        BinarySortTree bst = new BinarySortTree();
-        for (int i = 0; i < num.length; i++) {
-            bst.insert(num[i]);
-        }
-        bst.nrInOrderTraverse();
 
-        System.out.println("先序递归遍历：");
-        bst.preOrderResursive();
-        System.out.println("中序递归遍历：");
-        bst.InorderResursive();
-        System.out.println("后序递归遍历：");
-        bst.postOrderResursive();
-    }*/
+        int[] arrays = new int[]{109,2,3,4,9,12,13,41,346,54,13,21,654,7,5};
+
+        BinarySortTree binarySortTree = new BinarySortTree();
+
+        for(int i = 0;i<arrays.length;i++){
+            binarySortTree.insert(arrays[i]);
+        }
+
+        binarySortTree.order();
+    }
+
+
 }
