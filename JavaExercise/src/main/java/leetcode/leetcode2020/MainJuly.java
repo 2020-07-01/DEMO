@@ -1,14 +1,8 @@
-package leetcode_2020;
+package leetcode.leetcode2020;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import com.sun.xml.internal.bind.v2.util.EditDistance;
-
-import java.math.BigInteger;
-import java.net.Inet4Address;
-import java.security.spec.RSAOtherPrimeInfo;
 import java.util.*;
 
-public class Main_july {
+public class MainJuly {
 
 
     /**
@@ -537,7 +531,7 @@ public class Main_july {
 */
     public static void main(String[] args) {
 
-        Main_july main_july = new Main_july();
+        MainJuly main_july = new MainJuly();
         int[] nums = {126, 183, 259, 31, 145, 202, 221, 278, 50, 107, 164, 12, 88, -7, 240, 69};
         int[] nums1 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         int[] nums2 = {-2, 1};
