@@ -1,6 +1,9 @@
 package leetcode.leetcode2020;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
 
 /**
  * @author yq
@@ -405,7 +408,7 @@ public class MainAugust {
                     l1 = l1.next;
                 } else {
                     ListNode node = new ListNode(l1.val + temp);
-                    result.next  = node;
+                    result.next = node;
                     result = result.next;
                     temp = 0;
                     l1 = l1.next;
@@ -425,7 +428,7 @@ public class MainAugust {
                     l2 = l2.next;
                 } else {
                     ListNode node = new ListNode(l2.val + temp);
-                    result.next  = node;
+                    result.next = node;
                     result = result.next;
                     temp = 0;
                     l2 = l2.next;
@@ -433,7 +436,7 @@ public class MainAugust {
             }
         }
 
-        if(temp == 1){
+        if (temp == 1) {
             ListNode node = new ListNode(1);
             result.next = node;
             result = result.next;
@@ -445,13 +448,14 @@ public class MainAugust {
     /**
      * 无重复字符的最长子串
      * 借助额外空间
+     *
      * @param s
      * @return
      */
     public int lengthOfLongestSubstring(String s) {
         int[] m = new int[128];
         int len = 0;
-        for(int i = 0, j = 0; j < s.length(); j++){
+        for (int i = 0, j = 0; j < s.length(); j++) {
             //如果此字符重复则返回此字符出现的位置
             i = Math.max(m[s.charAt(j)], i);
             //获取最大长度
@@ -466,41 +470,210 @@ public class MainAugust {
     /**
      * 最长回文子串
      * 暴力解法
+     *
      * @param s
      * @return
      */
     public String longestPalindrome(String s) {
 
-        if(s.length() < 2){
+        if (s.length() < 2) {
             return s;
         }
         int begin = 0;
         int maxLen = 1;//一个字符也是回文串
         char[] chars = s.toCharArray();
-        for(int i = 1;i<s.length();i++){
-            for(int j = 0;j<i;j++){
-                if(i - j + 1 > maxLen && isPalindrome(chars,j,i)){
-                    maxLen = i-j+1;
+        for (int i = 1; i < s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (i - j + 1 > maxLen && isPalindrome(chars, j, i)) {
+                    maxLen = i - j + 1;
                     begin = j;
                 }
             }
         }
 
-        return s.substring(begin,begin+maxLen);
+        return s.substring(begin, begin + maxLen);
 
     }
 
     //判断是否为回文串
-    public boolean isPalindrome(char[] chars,int left,int right){
+    public boolean isPalindrome(char[] chars, int left, int right) {
 
         while (left < right) {
-            if(chars[left] != chars[right]){
+            if (chars[left] != chars[right]) {
                 return false;
             }
             left++;
             right--;
         }
         return true;
+    }
+
+    /**
+     * 青蛙跳台阶问题
+     * <p>
+     * 递归法求解 采用hashmap进行优化
+     *
+     * @param n
+     * @return
+     */
+    public int numWays(int n) {
+
+        return numWays(n - 1, new HashMap<Integer, Integer>()) + numWays(n - 2, new HashMap<Integer, Integer>());
+    }
+
+
+    private int numWays(int n, HashMap<Integer, Integer> hashMap) {
+
+        if (n < 2) {
+            return 1;
+        }
+
+        if (n == 2) {
+            return 2;
+        }
+
+        if (hashMap.containsKey(n)) {
+            return hashMap.get(n);
+        }
+        int fib1 = fib(n - 1, hashMap) % constant;
+        hashMap.put(n - 1, fib1);
+        int fib2 = fib(n - 2, hashMap) % constant;
+        hashMap.put(n - 2, fib2);
+        int result = (fib1 + fib2) % constant;
+        hashMap.put(n, result);
+        return result;
+
+    }
+
+    /**
+     * 青蛙跳台阶问题
+     * 转化为斐波那契求f(n)的值
+     * 动态规划思想求解：将一个大问题划分为若干个子问题，但是各个子问题之间是相互依赖的
+     *
+     * @param n
+     * @return
+     */
+    public int numWays1(int n) {
+        if (n < 2) {
+            return 1;
+        }
+
+        if (n == 2) {
+            return 2;
+        }
+
+        int[] db = new int[n + 1];
+        db[0] = 1;
+        db[1] = 1;
+        db[2] = 2;
+        for (int i = 2; i <= n; i++) {
+            db[i] = (db[i - 1] + db[i - 2]) % constant;
+        }
+        return db[n] % constant;
+    }
+
+
+    /**
+     * 有效的括号
+     * O(n)
+     *
+     * @param s
+     * @return
+     */
+    public boolean isValid(String s) {
+
+        if (s.length() < 1) {
+            return true;
+        }
+
+        /**
+         * ASCII  [] {}     ()
+         */
+
+        Stack<Character> stack = new Stack<>();
+        stack.push(s.charAt(0));
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                continue;
+            }
+            if (stack.isEmpty()) {
+                stack.push(s.charAt(i));
+            } else {
+                if (flag(stack.peek(), s.charAt(i))) {
+                    stack.pop();
+                } else {
+                    stack.push(s.charAt(i));
+                }
+            }
+        }
+        if (stack.isEmpty()) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+    private boolean flag(char c1, char c2) {
+
+        if (Math.abs(c1 - c2) == 1 || Math.abs(c1 - c2) == 2) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * 暴力解法
+     * 进行有效括号的替换
+     *
+     * @param s
+     * @return
+     */
+    public boolean isValid1(String s) {
+        s.replace(" ", "");
+        if (s.length() == 0) {
+            return true;
+        }
+        boolean flag = true;
+        while (flag) {
+
+            if (s.contains("{}")) {
+                s = s.replace("{}", "");
+                continue;
+            } else if (s.contains("()")) {
+                s = s.replace("()", "");
+            } else if (s.contains("[]")) {
+                s = s.replace("[]", "");
+            } else {
+                flag = false;
+            }
+            System.out.println(s);
+        }
+        if (s.length() == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 判断环形链表
+     * @param head
+     * @return
+     */
+    public boolean hasCycle(ListNode head) {
+
+        Set set = new HashSet();
+        while (head != null){
+            if(set.contains(head)){
+                return true;
+            }else {
+             set.add(head);
+             head = head.next;
+            }
+        }
+        return false;
     }
 
 
@@ -511,26 +684,28 @@ public class MainAugust {
         int val;
         ListNode next;
 
-        ListNode(int x) {
+       /* ListNode(int x) {
             val = x;
-        }
+        }*/
+
+        ListNode(int x) {
+          val = x;
+          next = null;
+      }
+
+
     }
-
-
-
 
     public static void main(String[] args) {
         MainAugust main_august = new MainAugust();
         //int[][] mums = new int[][]{{1,   4,  7, 11, 15},{2,   5,  8, 12, 19},{3,   6,  9, 16, 22},{10, 13, 14, 17, 24},{18, 21, 23, 26, 30}};
         int[][] nums = new int[0][0];
 
-
-
-
-
         String s = "afasf";
         int[] array = new int[128];
-        System.out.println((int)s.charAt(3));
+
+
+        System.out.println(main_august.isValid1(" "));
 
     }
 }
