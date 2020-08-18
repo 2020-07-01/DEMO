@@ -659,21 +659,98 @@ public class MainAugust {
 
     /**
      * 判断环形链表
+     *
      * @param head
      * @return
      */
     public boolean hasCycle(ListNode head) {
 
         Set set = new HashSet();
-        while (head != null){
-            if(set.contains(head)){
+        while (head != null) {
+            if (set.contains(head)) {
                 return true;
-            }else {
-             set.add(head);
-             head = head.next;
+            } else {
+                set.add(head);
+                head = head.next;
             }
         }
         return false;
+    }
+
+    /**
+     * 打印从1到最大的n位数
+     * 大数越界，应该考虑使用String来表示
+     *
+     * @param n
+     * @return
+     */
+    public int[] printNumbers(int n) {
+
+        int max = (int) Math.pow(10, n);
+        int[] result = new int[max];
+        for (int i = 1; i < max; i++) {
+            result[i - 1] = i;
+        }
+        return result;
+
+    }
+
+    /**
+     * 109. 有序链表转换二叉搜索树
+     * 分治法
+     *
+     * @param head
+     * @return
+     */
+    public TreeNode sortedListToBST(ListNode head) {
+        TreeNode root = buildTree(head,null);
+        return root;
+    }
+
+    public TreeNode buildTree(ListNode left,ListNode right){
+        if(left == right){
+            return null;
+        }
+
+        ListNode mid = getMid(left,right);
+        TreeNode root = new TreeNode(mid.val);
+        root.left = buildTree(left,mid);
+        root.right = buildTree(mid.next,right);
+
+        return root;
+    }
+
+    public ListNode getMid(ListNode left, ListNode right){
+        //走两步和走一步
+        ListNode fast = left;
+        ListNode slat = left;
+        while (fast != right && fast.next != right){
+            fast = fast.next;
+            fast = fast.next;
+            slat = slat.next;
+        }
+        return slat;
+    }
+
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+
+        }
     }
 
 
@@ -684,14 +761,30 @@ public class MainAugust {
         int val;
         ListNode next;
 
-       /* ListNode(int x) {
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+
+
+        /*int val;
+        ListNode next;
+
+       *//* ListNode(int x) {
             val = x;
-        }*/
+        }*//*
 
         ListNode(int x) {
-          val = x;
-          next = null;
-      }
+            val = x;
+            next = null;
+        }*/
 
 
     }
