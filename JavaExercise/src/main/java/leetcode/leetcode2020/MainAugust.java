@@ -1,9 +1,6 @@
 package leetcode.leetcode2020;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author yq
@@ -733,6 +730,89 @@ public class MainAugust {
     }
 
 
+    /**
+     * 647. 回文子串
+     * 暴力解法
+     * 时间复杂度  n的3次方
+     * @param s
+     * @return
+     */
+    public int countSubstrings(String s) {
+
+        int count = 0;
+        for(int i = 1;i<=s.length();i++){
+            for(int j = 0;j<i;j++){
+                if(isPalindromeString(s.substring(j,i))){
+                    count++;
+                    System.out.println(s.substring(j,i) + "  " + count);
+
+                }
+            }
+        }
+
+        return count;
+    }
+
+    private boolean isPalindromeString(String string){
+
+        int left = 0;
+        int right = string.length()-1;
+        while (left < right){
+            if(string.charAt(left) != string.charAt(right)){
+                return false;
+            }
+            left ++ ;
+            right --;
+        }
+        return true;
+    }
+
+
+    /**
+     * 647. 回文子串
+     * 中心拓展法 需要分为回文串为偶数还是奇书
+     * @param s
+     * @return
+     */
+    public int countSubstrings1(String s) {
+
+        int count = 0;
+
+        for(int i = 0;i<s.length()-1;i++){
+            int left = i;
+            int right = i;
+            count = count + mix(s,i,i+1);
+            count = count + mix(s,i,i);
+        }
+        return count+1;
+    }
+
+    private int mix(String string,int left,int right){
+        int count = 0;
+        while (string.charAt(left) == string.charAt(right)){
+            count++;
+            System.out.println(string.substring(left,right+1) + "-" +count);
+            left--;
+            right++;
+            if(left == -1 || right == string.length()){
+                return count;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * 647. 回文子串
+     * 动态规划算法 使用数组存储子回文串的下标
+     * @param s
+     * @return
+     */
+    public int countSubstrings2(String s) {
+
+
+        return 0;
+    }
+
     class TreeNode {
         int val;
         TreeNode left;
@@ -798,7 +878,7 @@ public class MainAugust {
         int[] array = new int[128];
 
 
-        System.out.println(main_august.isValid1(" "));
+        System.out.println(main_august.countSubstrings1("aba"));
 
     }
 }
