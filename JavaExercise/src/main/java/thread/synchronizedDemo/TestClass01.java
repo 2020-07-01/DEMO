@@ -1,4 +1,4 @@
-package thread.testSynchronized;
+package thread.synchronizedDemo;
 
 public class TestClass01 implements Runnable {
 	private int number;

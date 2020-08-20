@@ -8,9 +8,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(Integer.MAX_VALUE);//2的31次方-1
+        Main main = new Main();
+        main.test();
+    }
 
-        int i = 1 << 31;
-        System.out.println(i);
+
+    public void test() {
+
+        Class c = this.getClass();
+        System.out.println(c.getName());
+
+        Class clazz = super.getClass();
+        System.out.println(clazz.getName());
     }
 }

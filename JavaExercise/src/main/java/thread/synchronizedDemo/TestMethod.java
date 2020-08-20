@@ -1,4 +1,4 @@
-package thread.testSynchronized;
+package thread.synchronizedDemo;
 
 /**
  * 测试Synchronized
