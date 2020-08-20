@@ -1,6 +1,9 @@
 package leetcode.leetcode2020;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
 
 /**
  * @author yq
@@ -700,28 +703,28 @@ public class MainAugust {
      * @return
      */
     public TreeNode sortedListToBST(ListNode head) {
-        TreeNode root = buildTree(head,null);
+        TreeNode root = buildTree(head, null);
         return root;
     }
 
-    public TreeNode buildTree(ListNode left,ListNode right){
-        if(left == right){
+    public TreeNode buildTree(ListNode left, ListNode right) {
+        if (left == right) {
             return null;
         }
 
-        ListNode mid = getMid(left,right);
+        ListNode mid = getMid(left, right);
         TreeNode root = new TreeNode(mid.val);
-        root.left = buildTree(left,mid);
-        root.right = buildTree(mid.next,right);
+        root.left = buildTree(left, mid);
+        root.right = buildTree(mid.next, right);
 
         return root;
     }
 
-    public ListNode getMid(ListNode left, ListNode right){
+    public ListNode getMid(ListNode left, ListNode right) {
         //走两步和走一步
         ListNode fast = left;
         ListNode slat = left;
-        while (fast != right && fast.next != right){
+        while (fast != right && fast.next != right) {
             fast = fast.next;
             fast = fast.next;
             slat = slat.next;
@@ -734,17 +737,18 @@ public class MainAugust {
      * 647. 回文子串
      * 暴力解法
      * 时间复杂度  n的3次方
+     *
      * @param s
      * @return
      */
     public int countSubstrings(String s) {
 
         int count = 0;
-        for(int i = 1;i<=s.length();i++){
-            for(int j = 0;j<i;j++){
-                if(isPalindromeString(s.substring(j,i))){
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (isPalindromeString(s.substring(j, i))) {
                     count++;
-                    System.out.println(s.substring(j,i) + "  " + count);
+                    System.out.println(s.substring(j, i) + "  " + count);
 
                 }
             }
@@ -753,16 +757,16 @@ public class MainAugust {
         return count;
     }
 
-    private boolean isPalindromeString(String string){
+    private boolean isPalindromeString(String string) {
 
         int left = 0;
-        int right = string.length()-1;
-        while (left < right){
-            if(string.charAt(left) != string.charAt(right)){
+        int right = string.length() - 1;
+        while (left < right) {
+            if (string.charAt(left) != string.charAt(right)) {
                 return false;
             }
-            left ++ ;
-            right --;
+            left++;
+            right--;
         }
         return true;
     }
@@ -771,6 +775,7 @@ public class MainAugust {
     /**
      * 647. 回文子串
      * 中心拓展法 需要分为回文串为偶数还是奇书
+     *
      * @param s
      * @return
      */
@@ -778,23 +783,23 @@ public class MainAugust {
 
         int count = 0;
 
-        for(int i = 0;i<s.length()-1;i++){
+        for (int i = 0; i < s.length() - 1; i++) {
             int left = i;
             int right = i;
-            count = count + mix(s,i,i+1);
-            count = count + mix(s,i,i);
+            count = count + mix(s, i, i + 1);
+            count = count + mix(s, i, i);
         }
-        return count+1;
+        return count + 1;
     }
 
-    private int mix(String string,int left,int right){
+    private int mix(String string, int left, int right) {
         int count = 0;
-        while (string.charAt(left) == string.charAt(right)){
+        while (string.charAt(left) == string.charAt(right)) {
             count++;
-            System.out.println(string.substring(left,right+1) + "-" +count);
+            System.out.println(string.substring(left, right + 1) + "-" + count);
             left--;
             right++;
-            if(left == -1 || right == string.length()){
+            if (left == -1 || right == string.length()) {
                 return count;
             }
         }
@@ -804,6 +809,7 @@ public class MainAugust {
     /**
      * 647. 回文子串
      * 动态规划算法 使用数组存储子回文串的下标
+     *
      * @param s
      * @return
      */
@@ -811,6 +817,67 @@ public class MainAugust {
 
 
         return 0;
+    }
+
+
+    /**
+     * 101. 对称二叉树
+     *
+     * @param root
+     * @return
+     */
+    public boolean isSymmetric(TreeNode root) {
+
+        return check(root, root);
+    }
+
+    private boolean check(TreeNode left, TreeNode right) {
+        if (left == null && right == null) {
+            return true;
+        }
+        if (left == null || right == null) {
+            return false;
+        }
+        return left.val == right.val && check(left.left, right.right) && check(left.right, right.left);
+    }
+
+    /**
+     * 19. 删除链表的倒数第N个节点
+     * 快慢指针法
+     * @param head
+     * @param n
+     * @return
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+
+        ListNode pre = new ListNode(0);
+        pre.next = head;
+
+        ListNode left = pre;
+        ListNode right = pre;
+
+        while (n > 0){
+            right =  right.next;
+            n--;
+        }
+
+        while (right.next != null){
+            left = left.next;
+            right = right.next;
+        }
+        left.next = left.next.next;
+
+        return pre.next;
+    }
+
+
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
     class TreeNode {
@@ -834,41 +901,6 @@ public class MainAugust {
     }
 
 
-    /**
-     * 节点
-     */
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-
-        /*int val;
-        ListNode next;
-
-       *//* ListNode(int x) {
-            val = x;
-        }*//*
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }*/
-
-
-    }
-
     public static void main(String[] args) {
         MainAugust main_august = new MainAugust();
         //int[][] mums = new int[][]{{1,   4,  7, 11, 15},{2,   5,  8, 12, 19},{3,   6,  9, 16, 22},{10, 13, 14, 17, 24},{18, 21, 23, 26, 30}};
@@ -877,10 +909,8 @@ public class MainAugust {
         String s = "afasf";
         int[] array = new int[128];
 
-
-        System.out.println(main_august.countSubstrings1("aba"));
-
     }
+
 }
 
 
