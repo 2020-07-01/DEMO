@@ -844,6 +844,7 @@ public class MainAugust {
     /**
      * 19. 删除链表的倒数第N个节点
      * 快慢指针法
+     *
      * @param head
      * @param n
      * @return
@@ -856,18 +857,62 @@ public class MainAugust {
         ListNode left = pre;
         ListNode right = pre;
 
-        while (n > 0){
-            right =  right.next;
+        while (n > 0) {
+            right = right.next;
             n--;
         }
 
-        while (right.next != null){
+        while (right.next != null) {
             left = left.next;
             right = right.next;
         }
         left.next = left.next.next;
 
         return pre.next;
+    }
+
+    /**
+     * 剑指 Offer 53 - II. 0～n-1中缺失的数字
+     *
+     * @param nums
+     * @return
+     */
+    public int missingNumber(int[] nums) {
+
+        //[0,1] 长度为2 n为3 则缺失2
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i) {
+                return i;
+            }
+        }
+        return nums.length;
+    }
+
+    /**
+     * 剑指 Offer 53 - II. 0～n-1中缺失的数字
+     * 此题含义缺的数字是数组放不下的
+     * 二分法查找
+     * @param nums
+     * @return
+     */
+    public int missingNumber1(int[] nums) {
+
+        //[0,1] 长度为2 n为3 则缺失2
+
+        int left = 0;
+        int right = nums.length-1;
+        int mid = (left + right)/2;
+        while (left <= right){
+
+            //说明缺失的数字在后面
+            if(nums[mid] == mid){
+                left = mid + 1;
+            }else {
+                right = mid - 1;
+            }
+        }
+        return nums[mid];
     }
 
 
