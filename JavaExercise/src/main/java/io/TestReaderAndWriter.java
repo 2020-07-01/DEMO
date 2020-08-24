@@ -1,10 +1,6 @@
 package io;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 
 /**
@@ -15,7 +11,7 @@ import java.io.IOException;
  */
 public class TestReaderAndWriter {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		//创建源
 		String path = "src/main/java/io/temp3.txt";
 		//创建字符缓冲流,并指定缓冲流的大小
@@ -43,6 +39,7 @@ public class TestReaderAndWriter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 
 	}
 

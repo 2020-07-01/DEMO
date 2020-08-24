@@ -1,9 +1,6 @@
 package leetcode.leetcode2020;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author yq
@@ -913,6 +910,109 @@ public class MainAugust {
             }
         }
         return nums[mid];
+    }
+
+    /**
+     * 判定字符是否唯一
+     * @param n
+     * @return
+     */
+    public int sumNums(int n) {
+        boolean flag = n > 0 && (n+=sumNums(n-1)) > 0 ;
+        return n;
+    }
+
+    /**
+     * 139. 单词拆分
+     * 动态规划
+     * @param s
+     * @param wordDict
+     * @return
+     */
+    public boolean wordBreak(String s, List<String> wordDict) {
+
+        Set<String> set = new TreeSet<>(wordDict);
+        boolean[] dp = new boolean[s.length()+1];
+        //表示前n个字符串是否可拆分
+        dp[0] = true;
+        /**
+         * 当i为s.length时判断 s.length-1是否可以拆分
+         */
+        for(int i = 1;i<=s.length();i++){
+            for(int j = 0;j<i;j++){
+                //如果前i个字符串可拆分
+                if(dp[j] && set.contains(s.substring(j,i))){
+                    dp[j] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+
+    /**
+     * 104. 二叉树的最大深度
+     * BFS 递归  DFS
+     * @param root
+     * @return
+     */
+    public int maxDepth(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int count = 0;
+        LinkedList<TreeNode> queue = new LinkedList();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            //添加一层的节点
+            int size = queue.size();
+            while(size > 0){
+                TreeNode node = queue.removeFirst();
+                if(node.left != null){
+                    queue.add(node.left);
+                }
+                if(node.right != null){
+                    queue.add(node.right);
+                }
+                size--;
+            }
+            count++;
+        }
+        return count;
+    }
+
+
+    /**
+     * 104. 二叉树的最大深度
+     * DFS
+     * @param root
+     * @return
+     */
+    public int maxDepth1(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int count = 0;
+        Stack<TreeNode> stack = new Stack();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            //添加一层的节点
+            int size = stack.size();
+            Stack newStack = new Stack();
+            while(size > 0){
+                TreeNode node = stack.pop();
+                if(node.left != null){
+                    newStack.push(node.left);
+                }
+                if(node.right != null){
+                    newStack.push(node.right);
+                }
+                size--;
+            }
+            stack = newStack;
+            count++;
+        }
+        return count;
     }
 
 
