@@ -890,6 +890,7 @@ public class MainAugust {
      * 剑指 Offer 53 - II. 0～n-1中缺失的数字
      * 此题含义缺的数字是数组放不下的
      * 二分法查找
+     *
      * @param nums
      * @return
      */
@@ -898,14 +899,14 @@ public class MainAugust {
         //[0,1] 长度为2 n为3 则缺失2
 
         int left = 0;
-        int right = nums.length-1;
-        int mid = (left + right)/2;
-        while (left <= right){
+        int right = nums.length - 1;
+        int mid = (left + right) / 2;
+        while (left <= right) {
 
             //说明缺失的数字在后面
-            if(nums[mid] == mid){
+            if (nums[mid] == mid) {
                 left = mid + 1;
-            }else {
+            } else {
                 right = mid - 1;
             }
         }
@@ -914,17 +915,19 @@ public class MainAugust {
 
     /**
      * 判定字符是否唯一
+     *
      * @param n
      * @return
      */
     public int sumNums(int n) {
-        boolean flag = n > 0 && (n+=sumNums(n-1)) > 0 ;
+        boolean flag = n > 0 && (n += sumNums(n - 1)) > 0;
         return n;
     }
 
     /**
      * 139. 单词拆分
      * 动态规划
+     *
      * @param s
      * @param wordDict
      * @return
@@ -932,16 +935,16 @@ public class MainAugust {
     public boolean wordBreak(String s, List<String> wordDict) {
 
         Set<String> set = new TreeSet<>(wordDict);
-        boolean[] dp = new boolean[s.length()+1];
+        boolean[] dp = new boolean[s.length() + 1];
         //表示前n个字符串是否可拆分
         dp[0] = true;
         /**
          * 当i为s.length时判断 s.length-1是否可以拆分
          */
-        for(int i = 1;i<=s.length();i++){
-            for(int j = 0;j<i;j++){
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
                 //如果前i个字符串可拆分
-                if(dp[j] && set.contains(s.substring(j,i))){
+                if (dp[j] && set.contains(s.substring(j, i))) {
                     dp[j] = true;
                     break;
                 }
@@ -953,25 +956,26 @@ public class MainAugust {
     /**
      * 104. 二叉树的最大深度
      * BFS 递归  DFS
+     *
      * @param root
      * @return
      */
     public int maxDepth(TreeNode root) {
-        if(root == null){
+        if (root == null) {
             return 0;
         }
         int count = 0;
         LinkedList<TreeNode> queue = new LinkedList();
         queue.add(root);
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             //添加一层的节点
             int size = queue.size();
-            while(size > 0){
+            while (size > 0) {
                 TreeNode node = queue.removeFirst();
-                if(node.left != null){
+                if (node.left != null) {
                     queue.add(node.left);
                 }
-                if(node.right != null){
+                if (node.right != null) {
                     queue.add(node.right);
                 }
                 size--;
@@ -985,26 +989,27 @@ public class MainAugust {
     /**
      * 104. 二叉树的最大深度
      * DFS
+     *
      * @param root
      * @return
      */
     public int maxDepth1(TreeNode root) {
-        if(root == null){
+        if (root == null) {
             return 0;
         }
         int count = 0;
         Stack<TreeNode> stack = new Stack();
         stack.push(root);
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             //添加一层的节点
             int size = stack.size();
             Stack newStack = new Stack();
-            while(size > 0){
+            while (size > 0) {
                 TreeNode node = stack.pop();
-                if(node.left != null){
+                if (node.left != null) {
                     newStack.push(node.left);
                 }
-                if(node.right != null){
+                if (node.right != null) {
                     newStack.push(node.right);
                 }
                 size--;
@@ -1016,7 +1021,87 @@ public class MainAugust {
     }
 
 
-    class ListNode {
+    /**
+     * 剑指 Offer 06. 从尾到头打印链表
+     * 可以使用辅助栈法
+     *
+     * @param head
+     * @return
+     */
+    public int[] reversePrint(ListNode head) {
+
+        ListNode cur = new ListNode(0);
+        cur = head;
+        int size = 0;
+        while (cur != null) {
+            cur = cur.next;
+            size++;
+        }
+
+        int[] arrays = new int[size];
+        cur = head;
+        while (cur != null) {
+            arrays[size - 1] = cur.val;
+            cur = cur.next;
+            size--;
+        }
+        return arrays;
+
+    }
+
+    /**
+     * 94. 二叉树的中序遍历
+     * 递归实现
+     * 时间复杂度为n
+     * 空间复杂度最坏为n  平均为logn
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversal(TreeNode root) {
+
+        List<Integer> list = new ArrayList<>();
+        order(root, list);
+
+        return list;
+    }
+
+    private void order(TreeNode treeNode, List<Integer> list) {
+        if (treeNode != null) {
+            order(treeNode.left, list);
+            list.add(treeNode.val);
+            order(treeNode.right, list);
+        }
+    }
+
+
+    /**
+     * 二叉搜索树搜索时间复杂度平均为logn，最坏为n
+     * 建立二叉搜索数据的时间复杂度为n
+     */
+
+    /**
+     * 98. 验证二叉搜索树
+     *  中序遍历比较大小
+     * @param root
+     * @return
+     */
+
+    public boolean isValidBST(TreeNode root) {
+
+        List<Integer> list = new ArrayList<>();
+        order(root, list);
+
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i - 1) < list.get(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -1025,7 +1110,7 @@ public class MainAugust {
         }
     }
 
-    class TreeNode {
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -1036,13 +1121,6 @@ public class MainAugust {
         TreeNode(int val) {
             this.val = val;
         }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-
-        }
     }
 
 
@@ -1051,8 +1129,29 @@ public class MainAugust {
         //int[][] mums = new int[][]{{1,   4,  7, 11, 15},{2,   5,  8, 12, 19},{3,   6,  9, 16, 22},{10, 13, 14, 17, 24},{18, 21, 23, 26, 30}};
         int[][] nums = new int[0][0];
 
-        String s = "afasf";
-        int[] array = new int[128];
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(3);
+        ListNode node4 = new ListNode(4);
+        ListNode node5 = new ListNode(5);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+
+        TreeNode treeNode2 = new TreeNode(2);
+        TreeNode treeNode1 = new TreeNode(1);
+        TreeNode treeNode3 = new TreeNode(3);
+
+
+        treeNode2.left = treeNode1;
+        treeNode2.right = treeNode3;
+
+
+        System.out.println(main_august.isValidBST(treeNode2));
+
+
+        //System.out.println(Arrays.toString(main_august.reversePrint(node1)));
 
     }
 

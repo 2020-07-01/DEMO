@@ -22,39 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf275164-21ef-4197-87c8-4e93269f0e67" name="Default Changelist" comment="map的遍历方式">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/FileJavaApiDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/covertUtils/CovertBaseDataType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/list/ArrayListTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/list/Link.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/list/MyLinkedList$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/list/MyLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/map/MapDemo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/map/hashMap/HashMapTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/redBlackTree/RebBlackTree1$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/redBlackTree/RebBlackTree1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/redBlackTree/RedBlackTree$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataStructure/redBlackTree/RedBlackTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/iterator/ListIteratorTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/lambda/LambdaTest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/stream/ListStreamTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="bf275164-21ef-4197-87c8-4e93269f0e67" name="Default Changelist" comment="更换idea">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/binary_search_tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/binary_search_tree/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/TestReaderAndWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/TestReaderAndWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/leetcode2020/MainAugust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/leetcode2020/MainAugust.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/binary_search_tree/BinarySortTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/binary_search_tree/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/binary_search_tree/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/TestReaderAndWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/TestReaderAndWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sort_algorithm/BubbleSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sort_algorithm/InsertSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sort_algorithm/ShellSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/testSynchronized/TestClass01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/testSynchronized/TestMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/testSynchronized/TestSy01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/leetcode2020/MainAugust$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/leetcode2020/MainAugust$ListNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/leetcode2020/MainAugust$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/leetcode2020/MainAugust$TreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/leetcode2020/MainAugust.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/leetcode2020/MainAugust.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +62,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/application/maven/apache-maven-3.6.3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../application/maven/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\application\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -113,7 +87,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.MainAugust">
     <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dataStructure.binary_search_tree.BinarySearchTree" />
       <module name="JavaExercise" />
@@ -160,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reflect.ReflectDemo" />
+    <configuration name="MainAugust" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainAugust" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="reflect.*" />
+          <option name="PATTERN" value="leetcode.leetcode2020.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainAugust" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="Application.FileJavaApiDemo" />
         <item itemvalue="Application.BinarySearchTree" />
-        <item itemvalue="Application.ReflectDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -385,13 +359,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基本类型转换" />
@@ -447,11 +420,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598270770657" />
-    <state width="430" height="466" key="DebuggerActiveHint" timestamp="1598164032082">
+    <state width="430" height="466" key="DebuggerActiveHint" timestamp="1598362797906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="645" height="713" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597663913907" />
-    <state width="430" height="466" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1598164032082" />
+    <state width="430" height="466" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1598362797906" />
     <state x="238" y="-990" key="DiffContextDialog" timestamp="1595752482631">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -461,54 +434,54 @@
     </state>
     <state x="632" y="-933" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1595752520939" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598270526104" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1598270602387">
+    <state width="1237" height="189" key="GridCell.Tab.0.bottom" timestamp="1598362861728">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597925104187" />
     <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565734" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598270602387" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1598270602387">
+    <state width="1237" height="189" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598362861728" />
+    <state width="1237" height="189" key="GridCell.Tab.0.center" timestamp="1598362861728">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597925104187" />
     <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565733" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598270602387" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1598270602386">
+    <state width="1237" height="189" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598362861728" />
+    <state width="1237" height="189" key="GridCell.Tab.0.left" timestamp="1598362861728">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597925104187" />
     <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565733" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598270602386" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1598270602387">
+    <state width="1237" height="189" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598362861728" />
+    <state width="1237" height="189" key="GridCell.Tab.0.right" timestamp="1598362861728">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597925104187" />
     <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565734" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598270602387" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1598230565734">
+    <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598362861728" />
+    <state width="1237" height="189" key="GridCell.Tab.1.bottom" timestamp="1598362861729">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="376" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597665340898" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565734" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598183425348" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1598230565734">
+    <state width="1237" height="189" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598362861729" />
+    <state width="1237" height="189" key="GridCell.Tab.1.center" timestamp="1598362861729">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="376" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597665340898" />
     <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565734" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1598183425348" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1598230565734">
+    <state width="1237" height="189" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1598362861729" />
+    <state width="1237" height="189" key="GridCell.Tab.1.left" timestamp="1598362861729">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="376" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597665340897" />
     <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565734" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1598183425347" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1598230565734">
+    <state width="1237" height="189" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1598362861729" />
+    <state width="1237" height="189" key="GridCell.Tab.1.right" timestamp="1598362861729">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="376" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597665340898" />
     <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1598230565734" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1598183425348" />
+    <state width="1237" height="189" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1598362861729" />
     <state x="228" y="84" width="825" height="441" key="Registry" timestamp="1593918206958">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -532,6 +505,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="329" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1598270371397" />
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598363508176">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1598363508176" />
     <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1598070967752">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -546,18 +523,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="28" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1597562733889" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1597560703628">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1598362592864">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1597145556252" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595744702559" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1597560703628" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1598362592864" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://D:/application/jdk1.8/jdk1.8.0_111/src.zip!/java/util/AbstractCollection.java</url>
+          <url>jar://$PROJECT_DIR$/../../../application/jdk1.8/jdk1.8.0_111/src.zip!/java/util/AbstractCollection.java</url>
           <line>453</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -671,7 +648,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JavaExercise$MainAugust.ic" NAME="MainAugust Coverage Results" MODIFIED="1597841511676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JavaExercise$MainAugust.ic" NAME="MainAugust Coverage Results" MODIFIED="1598359263126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>leetcode.leetcode2020.*</FILTER>
     </SUITE>
   </component>
