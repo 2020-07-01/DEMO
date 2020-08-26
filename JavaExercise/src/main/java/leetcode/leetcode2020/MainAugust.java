@@ -1082,7 +1082,8 @@ public class MainAugust {
 
     /**
      * 98. 验证二叉搜索树
-     *  中序遍历比较大小
+     * 中序遍历比较大小
+     *
      * @param root
      * @return
      */
@@ -1099,6 +1100,92 @@ public class MainAugust {
         }
         return true;
     }
+
+
+    /**
+     * 剑指 Offer 58 - I. 翻转单词顺序
+     * 倒叙 遍历
+     * 时间复杂度 n
+     * 空间复杂度 n
+     *
+     * @param s
+     * @return
+     */
+    public String reverseWords(String s) {
+        s = s.trim();
+        if (s.length() == 0) {
+            return "";
+        }
+
+        String[] strings = s.split(" ");
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = strings.length - 1; i >= 0; i--) {
+            if (!strings[i].equals("")) {
+                stringBuilder.append(strings[i]);
+                stringBuilder.append(" ");
+            }
+        }
+        return stringBuilder.subSequence(0, stringBuilder.length() - 1).toString();
+    }
+
+    /**
+     * 剑指 Offer 58 - I. 翻转单词顺序
+     * 双指针法
+     *
+     * @param s
+     * @return
+     */
+    public String reverseWords1(String s) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        s = s.trim();
+        if (s.length() == 0) {
+            return "";
+        }
+        int left = s.length() - 1;
+        int right = s.length() - 1;
+
+        while (left >= 0) {
+
+            while (left >= 0 && s.charAt(left) != ' ') {
+                left--;
+            }
+            stringBuilder.append(s.substring(left + 1, right + 1));
+            stringBuilder.append(" ");
+
+            while (left >= 0 && s.charAt(left) == ' ') {
+                left--;
+            }
+            right = left;
+        }
+        return stringBuilder.toString().trim();
+    }
+
+
+    /**
+     * 114. 二叉树展开为链表
+     * @param root
+     */
+    public void flatten(TreeNode root) {
+
+        TreeNode treeNode = new TreeNode();
+        TreeNode head = treeNode.right;
+
+        orderTree(root,head);
+
+    }
+
+
+    private void orderTree(TreeNode treeNode, TreeNode head) {
+        if (treeNode != null) {
+            orderTree(treeNode.left, head);
+            TreeNode newNode = new TreeNode(treeNode.val);
+            head.right = newNode;
+            head  =head.right;
+            orderTree(treeNode.right, head);
+        }
+    }
+
 
 
     static class ListNode {
@@ -1121,6 +1208,12 @@ public class MainAugust {
         TreeNode(int val) {
             this.val = val;
         }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
 
@@ -1129,6 +1222,8 @@ public class MainAugust {
         //int[][] mums = new int[][]{{1,   4,  7, 11, 15},{2,   5,  8, 12, 19},{3,   6,  9, 16, 22},{10, 13, 14, 17, 24},{18, 21, 23, 26, 30}};
         int[][] nums = new int[0][0];
 
+
+        System.out.println(main_august.reverseWords1("   f     g "));
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
         ListNode node3 = new ListNode(3);
@@ -1148,13 +1243,13 @@ public class MainAugust {
         treeNode2.right = treeNode3;
 
 
-        System.out.println(main_august.isValidBST(treeNode2));
+        //System.out.println(main_august.isValidBST(treeNode2));
 
 
         //System.out.println(Arrays.toString(main_august.reversePrint(node1)));
 
+
     }
 
 }
-
 
