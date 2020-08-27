@@ -1164,6 +1164,7 @@ public class MainAugust {
 
     /**
      * 114. 二叉树展开为链表
+     *
      * @param root
      */
     public void flatten(TreeNode root) {
@@ -1171,9 +1172,90 @@ public class MainAugust {
         TreeNode treeNode = new TreeNode();
         TreeNode head = treeNode.right;
 
-        orderTree(root,head);
+        orderTree(root, head);
 
     }
+
+
+    /**
+     * 剑指 Offer 56 - II. 数组中数字出现的次数 II
+     * hashMap辅助
+     * 时间复杂度 n
+     * 空间复杂度 n
+     *
+     * @param nums
+     * @return
+     */
+    public int singleNumber(int[] nums) {
+
+        if (nums.length == 0) {
+            return 0;
+        }
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.get(nums[i]) == null) {
+                hashMap.put(nums[i], 1);
+            } else if (hashMap.get(nums[i]) == 2) {
+                hashMap.remove(nums[i]);
+            } else {
+                hashMap.put(nums[i], 2);
+            }
+        }
+
+        return hashMap.keySet().iterator().next();
+    }
+
+
+    /**
+     * 78. 子集
+     * 依次进行遍历，每添加一个元素，将已有的子集添加该元素后组成新的子集
+     * 时间和空间复杂度 2的n次方
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+        // 1 2 3
+        List<List<Integer>> lists = new ArrayList<>();
+        List<Integer> list0 = new ArrayList<>();
+        list0.add(nums[0]);
+        lists.add(list0);
+        for (int i = 1; i < nums.length; i++) {
+            List<List<Integer>> temp = new ArrayList<>(lists);
+            for (int j = 0; j < temp.size(); j++) {
+                List<Integer> list = new ArrayList<>(temp.get(j));
+                list.add(nums[i]);
+                lists.add(list);
+            }
+            List<Integer> num = new ArrayList<>();
+            num.add(nums[i]);
+            lists.add(num);
+        }
+        return lists;
+    }
+
+
+    /**
+     * 78. 子集
+     * 回溯法
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> subsets1(int[] nums) {
+
+        List<List<Integer>> res = new ArrayList<>();
+        backtrack(0,nums,res,new ArrayList<Integer>());
+        return res;
+    }
+
+    private void backtrack(int i, int[] nums, List<List<Integer>> res, ArrayList<Integer> tmp) {
+        res.add(new ArrayList<>(tmp));
+        for (int j = i; j < nums.length; j++) {
+            tmp.add(nums[j]);
+            backtrack(j + 1, nums, res, tmp);
+            tmp.remove(tmp.size() - 1);
+        }
+    }
+
 
 
     private void orderTree(TreeNode treeNode, TreeNode head) {
@@ -1181,11 +1263,10 @@ public class MainAugust {
             orderTree(treeNode.left, head);
             TreeNode newNode = new TreeNode(treeNode.val);
             head.right = newNode;
-            head  =head.right;
+            head = head.right;
             orderTree(treeNode.right, head);
         }
     }
-
 
 
     static class ListNode {
@@ -1222,8 +1303,11 @@ public class MainAugust {
         //int[][] mums = new int[][]{{1,   4,  7, 11, 15},{2,   5,  8, 12, 19},{3,   6,  9, 16, 22},{10, 13, 14, 17, 24},{18, 21, 23, 26, 30}};
         int[][] nums = new int[0][0];
 
+        int[] arrays = new int[]{1, 2, 3};
+        System.out.println(main_august.subsets1(arrays));
 
-        System.out.println(main_august.reverseWords1("   f     g "));
+
+        //System.out.println(main_august.reverseWords1("   f     g "));
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
         ListNode node3 = new ListNode(3);
@@ -1249,6 +1333,8 @@ public class MainAugust {
         //System.out.println(Arrays.toString(main_august.reversePrint(node1)));
 
 
+        System.out.println(3 & 3);
+        System.out.println(3 & 4);
     }
 
 }
