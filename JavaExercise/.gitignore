@@ -9,3 +9,5 @@
 *.pyc
 *.class
 *.xml
+
+/target/
