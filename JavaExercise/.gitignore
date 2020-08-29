@@ -1,6 +1,4 @@
-/target/
-
-### IntelliJ IDEA ###
+###ignore this file ###
 .idea
 *.iws
 *.iml
@@ -9,5 +7,5 @@
 *.pyc
 *.class
 *.xml
-
 /target/
+
