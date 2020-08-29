@@ -1269,6 +1269,74 @@ public class MainAugust {
     }
 
 
+    /**
+     * 剑指 Offer 22. 链表中倒数第k个节点
+     * 双指针法
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode getKthFromEnd(ListNode head, int k) {
+
+        if(head == null){
+            return null;
+        }
+        int i = 1;
+        ListNode cur = new ListNode(0);
+        cur = head;
+        while (i < k){
+            i++;
+            cur = cur.next;
+        }
+        while (cur.next != null){
+            head = head.next;
+            cur = cur.next;
+        }
+        return head;
+    }
+
+    /**
+     * 剑指 Offer 22. 链表中倒数第k个节点
+     * 辅助栈
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode getKthFromEnd1(ListNode head, int k) {
+
+        if(head == null){
+         return null;
+        }
+        Stack<ListNode> stack = new Stack();
+        while (head.next != null){
+            stack.push(head);
+            head = head.next;
+        }
+        int i = 1;
+        while (i<k){
+            stack.pop();
+            i++;
+        }
+        return stack.pop();
+    }
+
+
+    /**
+     * 1528. 重新排列字符串
+     * @param s
+     * @param indices
+     * @return
+     */
+    public String restoreString(String s, int[] indices) {
+
+        StringBuffer stringBuffer = new StringBuffer(s);
+
+        for(int i = 0;i<s.length();i++){
+            stringBuffer.setCharAt(indices[i],s.charAt(i));
+        }
+        return stringBuffer.toString();
+    }
+
     static class ListNode {
         int val;
         ListNode next;
