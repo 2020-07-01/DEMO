@@ -1237,13 +1237,14 @@ public class MainAugust {
     /**
      * 78. 子集
      * 回溯法
+     *
      * @param nums
      * @return
      */
     public List<List<Integer>> subsets1(int[] nums) {
 
         List<List<Integer>> res = new ArrayList<>();
-        backtrack(0,nums,res,new ArrayList<Integer>());
+        backtrack(0, nums, res, new ArrayList<Integer>());
         return res;
     }
 
@@ -1255,7 +1256,6 @@ public class MainAugust {
             tmp.remove(tmp.size() - 1);
         }
     }
-
 
 
     private void orderTree(TreeNode treeNode, TreeNode head) {
@@ -1272,23 +1272,24 @@ public class MainAugust {
     /**
      * 剑指 Offer 22. 链表中倒数第k个节点
      * 双指针法
+     *
      * @param head
      * @param k
      * @return
      */
     public ListNode getKthFromEnd(ListNode head, int k) {
 
-        if(head == null){
+        if (head == null) {
             return null;
         }
         int i = 1;
         ListNode cur = new ListNode(0);
         cur = head;
-        while (i < k){
+        while (i < k) {
             i++;
             cur = cur.next;
         }
-        while (cur.next != null){
+        while (cur.next != null) {
             head = head.next;
             cur = cur.next;
         }
@@ -1298,22 +1299,23 @@ public class MainAugust {
     /**
      * 剑指 Offer 22. 链表中倒数第k个节点
      * 辅助栈
+     *
      * @param head
      * @param k
      * @return
      */
     public ListNode getKthFromEnd1(ListNode head, int k) {
 
-        if(head == null){
-         return null;
+        if (head == null) {
+            return null;
         }
         Stack<ListNode> stack = new Stack();
-        while (head.next != null){
+        while (head.next != null) {
             stack.push(head);
             head = head.next;
         }
         int i = 1;
-        while (i<k){
+        while (i < k) {
             stack.pop();
             i++;
         }
@@ -1323,6 +1325,7 @@ public class MainAugust {
 
     /**
      * 1528. 重新排列字符串
+     *
      * @param s
      * @param indices
      * @return
@@ -1331,13 +1334,59 @@ public class MainAugust {
 
         StringBuffer stringBuffer = new StringBuffer(s);
 
-        for(int i = 0;i<s.length();i++){
-            stringBuffer.setCharAt(indices[i],s.charAt(i));
+        for (int i = 0; i < s.length(); i++) {
+            stringBuffer.setCharAt(indices[i], s.charAt(i));
         }
         return stringBuffer.toString();
     }
 
 
+    /**
+     * 剑指 Offer 24. 反转链表
+     * 时间复杂度 n
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reverseList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode node = new ListNode(head.val);
+        head = head.next;
+        while (head != null) {
+            ListNode temp = new ListNode(head.val);
+            temp.next = node;
+            node = temp;
+            head = head.next;
+        }
+        return node;
+    }
+
+    /**
+     * 剑指 Offer 24. 反转链表
+     * 栈辅助
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reverseList1(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        Stack<ListNode> stack = new Stack();
+        while (head != null) {
+            stack.push(head);
+            head = head.next;
+        }
+        ListNode node = new ListNode(stack.pop().val);
+        while (!stack.empty()) {
+            ListNode listNode = new ListNode(stack.pop().val);
+            node.next = listNode;
+            node = node.next;
+        }
+        return node;
+    }
 
 
     static class ListNode {
