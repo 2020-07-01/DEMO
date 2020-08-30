@@ -293,6 +293,10 @@ public class SortTool {
     }
 
 
+    /**
+     * 基数排序
+     * @param nums
+     */
     public static void radixSort(int[] nums) {
         if (nums.length == 0 || nums == null) {
             return;
@@ -333,13 +337,12 @@ public class SortTool {
         return arrays;
     }
 
-
     public static void main(String[] args) {
 
         int[] array1 = {89, 4, 20, 34, 655, 768, 6, 789, 0, 980, 2342, 2, 21, 1};
         int[] array = {29, 25, 3, 49, 42, 9, 37, 21, 43};
         SortTool sortTool = new SortTool();
-        radixSort(array);
+        mergeSort(array1);
         System.out.println(Arrays.toString(array));
     }
 
