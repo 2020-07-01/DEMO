@@ -1,4 +1,4 @@
-package designMode.singlePattern.demo1;
+package designMode.singlePattern;
 
 /**
  * @author yq
@@ -10,11 +10,14 @@ public class JavaDemo {
 
         for(int i = 0;i < 10;i++){
             new Thread(()->{
-                Singleton singleton = Singleton.getInstance();
+                Singleton1 singleton = Singleton1.getInstance();
                 singleton.print();
                 System.out.println(singleton.toString());
 
             }).start();
         }
+
+
+
     }
 }

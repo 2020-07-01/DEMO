@@ -1,8 +1,10 @@
-package designMode.factoryMode;
+package designMode.factoryMode.simple;
 
 /**
  * @author yq
  * @date 2020/8/22 13:48
+ *
+ * 简单工厂 静态工厂  遵循开闭原则
  *
  * 静态工厂模式的设计
  * 1、当接口要追加子类时，必须对工厂类Factory进行修改

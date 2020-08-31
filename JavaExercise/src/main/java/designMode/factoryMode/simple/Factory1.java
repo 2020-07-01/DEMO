@@ -1,4 +1,4 @@
-package designMode.factoryMode.demo2;
+package designMode.factoryMode.simple;
 
 /**
  * 工厂类
