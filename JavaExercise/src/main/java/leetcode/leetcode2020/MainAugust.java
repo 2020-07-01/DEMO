@@ -1210,6 +1210,7 @@ public class MainAugust {
      * 78. 子集
      * 依次进行遍历，每添加一个元素，将已有的子集添加该元素后组成新的子集
      * 时间和空间复杂度 2的n次方
+     *
      * @param nums
      * @return
      */
@@ -1386,6 +1387,65 @@ public class MainAugust {
             node = node.next;
         }
         return node;
+    }
+
+    /**
+     * 剑指 Offer 54. 二叉搜索树的第k大节点
+     *
+     * @param root
+     * @param k
+     * @return
+     */
+    public int kthLargest(TreeNode root, int k) {
+        if (root == null) {
+            return 0;
+        }
+        List<TreeNode> list = new ArrayList();
+        order1(root, list);
+        if (list.size() < k) {
+            return 0;
+        }
+        int index = list.size() - k;
+        return list.get(index).val;
+    }
+
+    private void order1(TreeNode node, List list) {
+        if (node != null) {
+            order(node.left, list);
+            list.add(node);
+            order(node.right, list);
+        }
+    }
+
+    /**
+     * 剑指 Offer 54. 二叉搜索树的第k大节点
+     * 中旬遍历的倒序
+     *
+     * @param root
+     * @param k
+     * @return
+     */
+    int result;
+    int count;
+    public int kthLargest2(TreeNode root, int k) {
+        if (root == null) {
+            return 0;
+        }
+        count = k;
+        order2(root);
+        return result;
+    }
+
+    private void order2(TreeNode node) {
+        if (node != null) {
+            order2(node.right);
+            if (count == 1) {
+                result = node.val;
+                return;
+            }
+            count--;
+            order2(node.left);
+        }
     }
 
 
