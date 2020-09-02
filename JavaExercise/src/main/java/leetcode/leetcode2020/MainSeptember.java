@@ -119,6 +119,32 @@ public class MainSeptember {
     }
 
 
+    /**
+     * 剑指 Offer 56 - I. 数组中数字出现的次数
+     * 空间复杂度 O(1)
+     * 时间复杂度 O(n)
+     * @param nums
+     * @return
+     */
+    public int[] singleNumbers(int[] nums) {
+        int num = 0;
+        for(int i = 0;i<nums.length;i++){
+            num = num ^ nums[i];
+        }
+        //获取位数不相同的数
+        int A = 0;
+        int B = 0;
+        int C = num & (-num);
+        for(int i = 0;i<nums.length;i++){
+            if((C & nums[i]) == 1){
+                A  = A ^ nums[i];
+            }else {
+                B = B ^ nums[i];
+            }
+        }
+        return new int[]{A,B};
+    }
+
     class ListNode {
         int val;
         ListNode next;
@@ -139,4 +165,9 @@ public class MainSeptember {
         }
     }
 
+
+    public static void main(String[] args) {
+
+        System.out.println((12) & (-7));
+    }
 }

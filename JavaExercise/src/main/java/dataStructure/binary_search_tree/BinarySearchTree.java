@@ -210,13 +210,12 @@ public class BinarySearchTree<T extends Comparable> {
 
         size--;
     }
-
     /**
      * 二叉搜索树的最大深度
-     * BFS 计算出队列的次数
-     *
-     * @return
      */
+
+
+
     public int maxDepth() {
         return deptha(this.root);
     }
@@ -256,13 +255,16 @@ public class BinarySearchTree<T extends Comparable> {
         return (m > n ? n : m) + 1;
     }
 
+    /**
+     * 深度优先遍历就是前中后序遍历
+     */
 
     /**
      * 深度优先遍历
      * 递归实现
      * 根节点->左节点->右节点
-     * 深度优先遍历是从上上往下进行遍历，直到叶子节点
-     * 前序遍历的的顺序与深度优先遍历相同，但是是从叶子节点往根节点进行遍历
+     *
+     *
      */
     public void DFS(){
         List<T> list = new ArrayList<>();
