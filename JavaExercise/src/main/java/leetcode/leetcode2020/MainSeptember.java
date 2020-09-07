@@ -1,7 +1,6 @@
 package leetcode.leetcode2020;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * @ClassName : MainSeptember
@@ -404,6 +403,105 @@ public class MainSeptember {
             }
         }
         return num;
+    }
+
+    /**
+     * 234. 回文链表
+     * 辅助栈
+     * 时间复杂度 O(n)
+     * 空间复杂度 O(n)
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome(ListNode head) {
+
+        Stack<ListNode> stack = new Stack<>();
+        while (head != null) {
+            if (!stack.empty() && stack.peek().val == head.val) {
+                stack.pop();
+            } else {
+                stack.push(head);
+            }
+        }
+
+        if (stack.empty()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 234. 回文链表
+     * 双指针法
+     * 1、将链表复制到数组中 时间复杂度为O(n)
+     * 2、双指针法遍历链表 时间复杂度O(n/2) 即O(n)
+     * <p>
+     * O(2n) 即 O(n)
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome1(ListNode head) {
+        List<ListNode> list = new ArrayList<>();
+        while (head != null) {
+            list.add(head);
+            head = head.next;
+        }
+
+        int left = 0;
+        int right = list.size() - 1;
+
+        while (left <= right) {
+            if (list.get(left).val != list.get(right).val) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+
+    /**
+     * 234. 回文链表
+     * <p>
+     * 快慢指针法
+     * 反转后半部分链表
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome2(ListNode head) {
+        ListNode front = new ListNode(head.next.val);
+        ListNode back = new ListNode(head.val);
+        //找到前半部分边表的尾部
+        while (front.next.next != null) {
+            back = back.next;
+            front = front.next.next;
+        }
+        //判断奇偶
+        if (front.next != null) {
+            back = back.next;
+        }
+        //反转后半部分链表
+        ListNode tail = new ListNode(back.val);
+        back = back.next;
+        while (back != null) {
+            ListNode temp = new ListNode(back.val);
+            temp.next = tail;
+            tail = temp;
+            back = back.next;
+        }
+
+        //前后遍历
+        while (tail != null) {
+            if (head.val != tail.val) {
+                return false;
+            }
+        }
+        return true;
     }
 
 
