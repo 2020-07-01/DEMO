@@ -505,6 +505,122 @@ public class MainSeptember {
     }
 
 
+    /**
+     * 剑指 Offer 50. 第一个只出现一次的字符
+     * 时间复杂度 O(n)
+     *
+     * @param s
+     * @return
+     */
+    public char firstUniqChar(String s) {
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        int i = 0;
+        while (i < s.length()) {
+            hashMap.put(s.charAt(i), hashMap.getOrDefault(s.charAt(i), 0) + 1);
+        }
+        i = 0;
+        while (i < s.length()) {
+            if (hashMap.get(s.charAt(i)) == 1) {
+                return s.charAt(i);
+            }
+        }
+        return ' ';
+    }
+
+
+    /**
+     * 剑指 Offer 50. 第一个只出现一次的字符
+     * 有序哈希表
+     *
+     * @param s
+     * @return
+     */
+    public char firstUniqChar1(String s) {
+
+        LinkedHashMap<Character, Integer> linkedHashMap = new LinkedHashMap<>();
+        int i = 0;
+        while (i < s.length()) {
+            linkedHashMap.put(s.charAt(i), linkedHashMap.getOrDefault(s.charAt(i), 0) + 1);
+        }
+        //遍历哈希表
+        for (Map.Entry<Character, Integer> entry : linkedHashMap.entrySet()) {
+            if (entry.getValue() == 1) {
+                return entry.getKey();
+            }
+        }
+        return ' ';
+    }
+
+    /**
+     * 14. 最长公共前缀
+     * 暴力解法
+     * 时间复杂度O(m*n*m)
+     *
+     * @param strs
+     * @return
+     */
+    public String longestCommonPrefix(String[] strs) {
+
+        if (strs.length == 0) {
+            return "";
+        }
+        String strs0 = strs[0];
+
+        int i = 0;
+        while (i < strs0.length()) {
+
+            int j = 0;
+            while (j < strs.length) {
+                if (strs[j].length() <= i) {
+                    return strs0.substring(0, i);
+                }
+                if (strs0.charAt(i) != strs[i].charAt(j)) {
+                    return strs0.substring(0, i);
+                }
+                j++;
+            }
+
+            i++;
+        }
+        return strs0;
+    }
+
+    /**
+     * 14. 最长公共前缀
+     * 优化
+     * 一次遍历数组
+     * 时间复杂度O(m*n)
+     * @param strs
+     * @return
+     */
+    public String longestCommonPrefix1(String[] strs) {
+        if(strs.length == 0){
+            return "";
+        }
+        String strs0 = strs[0];
+        String publicString = strs0;
+        int i = 1;
+        while (i<strs.length){
+            String temp = strs[i];
+            //与publicString求公共前缀
+            int length = publicString.length() < temp.length() ? publicString.length() : temp.length();
+            publicString = publicString.substring(0,length);
+            int j = 0;
+            while (j < length){
+                if(publicString.charAt(j) != temp.charAt(j)){
+                    publicString = publicString.substring(0,j);
+                    break;
+                }
+                j++;
+            }
+            i++;
+            if(publicString.length() == 0){
+                return "";
+            }
+        }
+        return publicString;
+    }
+
     class ListNode {
         int val;
         ListNode next;
@@ -529,10 +645,17 @@ public class MainSeptember {
     public static void main(String[] args) {
 
         int[] arrays = new int[]{1, 2, 3, 2, 2, 2, 5, 4, 2};
+        int[] array = new int[10];
+
+        System.out.println(Arrays.toString(array));
+
+
         MainSeptember main = new MainSeptember();
         int i = 10;
         int m = i + '2';
 
-        System.out.println(main.addDigits1(3865));
+        Integer integer = 11;
+        Integer integer1 = 11;
+
     }
 }
