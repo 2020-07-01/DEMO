@@ -530,7 +530,7 @@ public class MainSeptember {
 
     /**
      * 剑指 Offer 50. 第一个只出现一次的字符
-     *
+     * <p>
      * 有序哈希表
      *
      * @param s
@@ -591,36 +591,166 @@ public class MainSeptember {
      * 优化
      * 一次遍历数组
      * 时间复杂度O(m*n)
+     *
      * @param strs
      * @return
      */
     public String longestCommonPrefix1(String[] strs) {
-        if(strs.length == 0){
+        if (strs.length == 0) {
             return "";
         }
         String strs0 = strs[0];
         String publicString = strs0;
         int i = 1;
-        while (i<strs.length){
+        while (i < strs.length) {
             String temp = strs[i];
             //与publicString求公共前缀
             int length = publicString.length() < temp.length() ? publicString.length() : temp.length();
-            publicString = publicString.substring(0,length);
+            publicString = publicString.substring(0, length);
             int j = 0;
-            while (j < length){
-                if(publicString.charAt(j) != temp.charAt(j)){
-                    publicString = publicString.substring(0,j);
+            while (j < length) {
+                if (publicString.charAt(j) != temp.charAt(j)) {
+                    publicString = publicString.substring(0, j);
                     break;
                 }
                 j++;
             }
             i++;
-            if(publicString.length() == 0){
+            if (publicString.length() == 0) {
                 return "";
             }
         }
         return publicString;
     }
+
+    /**
+     * 剑指 Offer 40. 最小的k个数
+     * 排序
+     *
+     * @param arr
+     * @param k
+     * @return
+     */
+    public int[] getLeastNumbers(int[] arr, int k) {
+
+        if (arr.length <= k) {
+            return arr;
+        }
+
+        Arrays.sort(arr);
+
+        int[] result = Arrays.copyOf(arr, k);
+        return result;
+    }
+
+    /**
+     * 剑指 Offer 40. 最小的k个数
+     * 维护最大堆
+     * @param arr
+     * @param k
+     *
+     * @return
+     */
+    public int[] getLeastNumbers1(int[] arr, int k) {
+        //创建大根堆
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>((v1, v2) -> v2 - v1);
+        for (int i = 0; i < arr.length; i++) {
+            if (queue.size() < k) {
+                queue.add(arr[i]);
+            } else if (arr[i] < queue.peek()) {
+                queue.poll();
+                queue.add(arr[i]);
+            }
+        }
+        int index = 0;
+        int[] result = new int[k];
+        for (Integer num : queue) {
+            result[index++] = num;
+        }
+
+        return result;
+    }
+
+
+    /**
+     * 剑指 Offer 11. 旋转数组的最小数字
+     * 条件：递增排序
+     * @param numbers
+     * @return
+     */
+    public int minArray(int[] numbers) {
+        if(numbers.length == 1){
+            return numbers[0];
+        }
+        if(numbers == null || numbers.length == 0){
+            return 0;
+        }
+        if(numbers[0] > numbers[numbers.length/2]){
+            //从前往后找
+            for(int i = 0;i<numbers.length-1;i++){
+                if(numbers[i] > numbers[i+1]){
+                    return numbers[i+1];
+                }
+            }
+            return numbers[numbers.length-1];
+        }else {
+            //从后往前找
+            for(int i = numbers.length-1;i>0;i--){
+                if(numbers[i] < numbers[i-1]){
+                    return numbers[i];
+                }
+            }
+            return numbers[0];
+        }
+    }
+
+
+    /**
+     * 剑指 Offer 11. 旋转数组的最小数字
+     * 一次遍历
+     * 时间复杂度O(n)
+     * @param numbers
+     * @return
+     */
+    public int minArray1(int[] numbers) {
+        if(numbers.length == 1){
+            return numbers[0];
+        }
+        if(numbers == null || numbers.length == 0){
+            return 0;
+        }
+
+        int mix = Integer.MAX_VALUE;
+        for(int i = 0;i<numbers.length;i++){
+            mix = mix < numbers[i] ? mix : numbers[i];
+        }
+        return mix;
+    }
+
+
+    /**
+     * 剑指 Offer 11. 旋转数组的最小数字
+     * @param numbers
+     * @return
+     */
+    public int minArray2(int[] numbers) {
+
+
+            int low = 0;
+            int high = numbers.length - 1;
+            while (low < high) {
+                int pivot = low + (high - low) / 2;
+                if (numbers[pivot] < numbers[high]) {
+                    high = pivot;
+                } else if (numbers[pivot] > numbers[high]) {
+                    low = pivot + 1;
+                } else {
+                    high -= 1;
+                }
+            }
+            return numbers[low];
+    }
+
 
     class ListNode {
         int val;
@@ -645,7 +775,7 @@ public class MainSeptember {
 
     public static void main(String[] args) {
 
-        int[] arrays = new int[]{1, 2, 3, 2, 2, 2, 5, 4, 2};
+        int[] arrays = new int[]{3, 4, 3, 5, 1, 2};
         int[] array = new int[10];
 
         System.out.println(Arrays.toString(array));
@@ -658,5 +788,7 @@ public class MainSeptember {
         Integer integer = 11;
         Integer integer1 = 11;
 
+
+        System.out.println(main.minArray(arrays));
     }
 }
