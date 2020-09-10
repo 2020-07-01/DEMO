@@ -646,9 +646,9 @@ public class MainSeptember {
     /**
      * 剑指 Offer 40. 最小的k个数
      * 维护最大堆
+     *
      * @param arr
      * @param k
-     *
      * @return
      */
     public int[] getLeastNumbers1(int[] arr, int k) {
@@ -675,28 +675,29 @@ public class MainSeptember {
     /**
      * 剑指 Offer 11. 旋转数组的最小数字
      * 条件：递增排序
+     *
      * @param numbers
      * @return
      */
     public int minArray(int[] numbers) {
-        if(numbers.length == 1){
+        if (numbers.length == 1) {
             return numbers[0];
         }
-        if(numbers == null || numbers.length == 0){
+        if (numbers == null || numbers.length == 0) {
             return 0;
         }
-        if(numbers[0] > numbers[numbers.length/2]){
+        if (numbers[0] > numbers[numbers.length / 2]) {
             //从前往后找
-            for(int i = 0;i<numbers.length-1;i++){
-                if(numbers[i] > numbers[i+1]){
-                    return numbers[i+1];
+            for (int i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i] > numbers[i + 1]) {
+                    return numbers[i + 1];
                 }
             }
-            return numbers[numbers.length-1];
-        }else {
+            return numbers[numbers.length - 1];
+        } else {
             //从后往前找
-            for(int i = numbers.length-1;i>0;i--){
-                if(numbers[i] < numbers[i-1]){
+            for (int i = numbers.length - 1; i > 0; i--) {
+                if (numbers[i] < numbers[i - 1]) {
                     return numbers[i];
                 }
             }
@@ -709,19 +710,20 @@ public class MainSeptember {
      * 剑指 Offer 11. 旋转数组的最小数字
      * 一次遍历
      * 时间复杂度O(n)
+     *
      * @param numbers
      * @return
      */
     public int minArray1(int[] numbers) {
-        if(numbers.length == 1){
+        if (numbers.length == 1) {
             return numbers[0];
         }
-        if(numbers == null || numbers.length == 0){
+        if (numbers == null || numbers.length == 0) {
             return 0;
         }
 
         int mix = Integer.MAX_VALUE;
-        for(int i = 0;i<numbers.length;i++){
+        for (int i = 0; i < numbers.length; i++) {
             mix = mix < numbers[i] ? mix : numbers[i];
         }
         return mix;
@@ -730,27 +732,82 @@ public class MainSeptember {
 
     /**
      * 剑指 Offer 11. 旋转数组的最小数字
+     *
      * @param numbers
      * @return
      */
     public int minArray2(int[] numbers) {
 
 
-            int low = 0;
-            int high = numbers.length - 1;
-            while (low < high) {
-                int pivot = low + (high - low) / 2;
-                if (numbers[pivot] < numbers[high]) {
-                    high = pivot;
-                } else if (numbers[pivot] > numbers[high]) {
-                    low = pivot + 1;
-                } else {
-                    high -= 1;
-                }
+        int low = 0;
+        int high = numbers.length - 1;
+        while (low < high) {
+            int pivot = low + (high - low) / 2;
+            if (numbers[pivot] < numbers[high]) {
+                high = pivot;
+            } else if (numbers[pivot] > numbers[high]) {
+                low = pivot + 1;
+            } else {
+                high -= 1;
             }
-            return numbers[low];
+        }
+        return numbers[low];
     }
 
+    /**
+     * 剑指 Offer 52. 两个链表的第一个公共节点
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA == null || headB == null){
+            return null;
+        }
+        ListNode A = new ListNode(headA.val);
+        A = headA;
+        ListNode B = new ListNode(headB.val);
+        B = headB;
+
+        int aLength = 0;
+        int bLength = 0;
+
+        while (A != null) {
+            aLength++;
+            A = A.next;
+        }
+
+        while (B != null) {
+            bLength++;
+            B = B.next;
+        }
+
+        int AB = aLength > bLength ? (aLength - bLength) : (bLength - aLength);
+        A = headA;
+        B = headB;
+        if (aLength > bLength) {
+            while (AB != 0) {
+                A = A.next;
+                AB--;
+            }
+        } else {
+            while (AB != 0) {
+                B = B.next;
+                AB--;
+            }
+        }
+        //一一比较
+        int min = Math.min(aLength,bLength);
+        while (min-- > 0){
+            if(A == B){
+                return A;
+            }
+            A = A.next;
+            B = B.next;
+        }
+        return null;
+    }
 
     class ListNode {
         int val;
@@ -787,8 +844,9 @@ public class MainSeptember {
 
         Integer integer = 11;
         Integer integer1 = 11;
-
-
-        System.out.println(main.minArray(arrays));
+int a = 10;
+int b = 7;
+int c = (a > b) ? (a-b) : (b-a);
+        System.out.println(c);
     }
 }
