@@ -762,7 +762,7 @@ public class MainSeptember {
      * @return
      */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if(headA == null || headB == null){
+        if (headA == null || headB == null) {
             return null;
         }
         ListNode A = new ListNode(headA.val);
@@ -798,9 +798,9 @@ public class MainSeptember {
             }
         }
         //一一比较
-        int min = Math.min(aLength,bLength);
-        while (min-- > 0){
-            if(A == B){
+        int min = Math.min(aLength, bLength);
+        while (min-- > 0) {
+            if (A == B) {
                 return A;
             }
             A = A.next;
@@ -808,6 +808,99 @@ public class MainSeptember {
         }
         return null;
     }
+
+    /**
+     * 剑指 Offer 27. 二叉树的镜像
+     * 每个节点的左子树与右子树相互换掉
+     * 时间复杂度为n
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        TreeNode treeNode = new TreeNode(root.val);
+        treeNode = root;
+        turn(treeNode);
+        return root;
+    }
+
+    private void turn(TreeNode treeNode) {
+        if (treeNode != null) {
+            if (treeNode.left != null && treeNode.right != null) {
+                TreeNode temp = treeNode.left;
+                treeNode.left = treeNode.right;
+                treeNode.right = temp;
+            } else if (treeNode.left != null && treeNode.right == null) {
+                treeNode.right = treeNode.left;
+                treeNode.left = null;
+            } else if (treeNode.left == null && treeNode.right != null) {
+                treeNode.left = treeNode.right;
+                treeNode.right = null;
+            }
+
+            turn(treeNode.left);
+            turn(treeNode.right);
+        }
+    }
+
+
+    /**
+     * 剑指 Offer 27. 二叉树的镜像
+     * 每个节点的左子树与右子树相互换掉
+     * 代码优化
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree1(TreeNode root) {
+
+        if(root == null){
+         return null;
+        }
+        TreeNode right = mirrorTree1(root.left);
+        TreeNode left = mirrorTree1(root.right);
+        root.left = right;
+        root.right = left;
+        return root;
+    }
+
+    /**
+     * 剑指 Offer 27. 二叉树的镜像
+     * 迭代法
+     * 广度优先遍历法解决
+     * 依次弹出节点，将其子节点互换之后再入队列
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree2(TreeNode root) {
+
+        if(root == null){
+            return null;
+        }
+
+        LinkedList<TreeNode> queue = new LinkedList();
+        queue.addFirst(root);
+
+        while (!queue.isEmpty()){
+            TreeNode node = queue.removeFirst();
+            TreeNode left = node.left;
+            TreeNode right = node.right;
+            node.left = right;
+            node.right = left;
+            if(left != null){
+                queue.addFirst(left);
+            }
+            if(right != null){
+                queue.addFirst(right);
+            }
+        }
+        return root;
+    }
+
+
 
     class ListNode {
         int val;
@@ -844,9 +937,9 @@ public class MainSeptember {
 
         Integer integer = 11;
         Integer integer1 = 11;
-int a = 10;
-int b = 7;
-int c = (a > b) ? (a-b) : (b-a);
+        int a = 10;
+        int b = 7;
+        int c = (a > b) ? (a - b) : (b - a);
         System.out.println(c);
     }
 }
