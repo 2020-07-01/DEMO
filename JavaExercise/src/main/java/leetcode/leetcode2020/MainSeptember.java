@@ -813,6 +813,7 @@ public class MainSeptember {
      * 剑指 Offer 27. 二叉树的镜像
      * 每个节点的左子树与右子树相互换掉
      * 时间复杂度为n
+     *
      * @param root
      * @return
      */
@@ -850,13 +851,14 @@ public class MainSeptember {
      * 剑指 Offer 27. 二叉树的镜像
      * 每个节点的左子树与右子树相互换掉
      * 代码优化
+     *
      * @param root
      * @return
      */
     public TreeNode mirrorTree1(TreeNode root) {
 
-        if(root == null){
-         return null;
+        if (root == null) {
+            return null;
         }
         TreeNode right = mirrorTree1(root.left);
         TreeNode left = mirrorTree1(root.right);
@@ -872,35 +874,180 @@ public class MainSeptember {
      * 依次弹出节点，将其子节点互换之后再入队列
      * 时间复杂度O(n)
      * 空间复杂度O(n)
+     *
      * @param root
      * @return
      */
     public TreeNode mirrorTree2(TreeNode root) {
 
-        if(root == null){
+        if (root == null) {
             return null;
         }
 
         LinkedList<TreeNode> queue = new LinkedList();
         queue.addFirst(root);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode node = queue.removeFirst();
             TreeNode left = node.left;
             TreeNode right = node.right;
             node.left = right;
             node.right = left;
-            if(left != null){
+            if (left != null) {
                 queue.addFirst(left);
             }
-            if(right != null){
+            if (right != null) {
                 queue.addFirst(right);
             }
         }
         return root;
     }
 
+    /**
+     * 剑指 Offer 68 - II. 二叉树的最近公共祖先
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
+        if (root == null || root == p || root == q) {
+            return root;
+        }
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        if (left == null) {
+            return right;
+        }
+        if (right == null) {
+            return left;
+        }
+        return root;
+    }
+
+    /**
+     * 最近公共祖先
+     * 待优化
+     * 利用HashMap和Set
+     * @param treeNode
+     * @param hashMap
+     * @param p
+     * @param q
+     * @param result
+     */
+    private void commonAncestor(TreeNode treeNode, HashMap<Integer, Set<Integer>> hashMap, TreeNode p, TreeNode q, TreeNode result) {
+        if (treeNode != null) {
+            commonAncestor(treeNode.left, hashMap, p, q, result);
+            commonAncestor(treeNode.right, hashMap, p, q, result);
+
+            //添加
+            if (treeNode.left == null && treeNode.right == null) {
+                Set<Integer> set = new HashSet<>();
+                set.add(treeNode.val);
+                hashMap.put(treeNode.val, set);
+            } else {
+                Set<Integer> leftSet = hashMap.get(treeNode.left.val);
+                Set<Integer> rightSet = hashMap.get(treeNode.right.val);
+                Set<Integer> set = new HashSet<>();
+                if (leftSet != null) {
+                    set.addAll(leftSet);
+                }
+                if (rightSet != null) {
+                    set.addAll(rightSet);
+                }
+                System.out.println(set);
+                hashMap.put(treeNode.val, set);
+                //判断
+                if (set.contains(p.val) && set.contains(q.val)) {
+                    result.val = treeNode.val;
+                    return;
+
+                }
+            }
+        }
+    }
+
+    /**
+     * 剑指 Offer 35. 复杂链表的复制
+     * 链表的深拷贝
+     * @param head
+     * @return
+     */
+    public Node copyRandomList(Node head) {
+
+        if(head == null){
+            return null;
+        }
+        HashMap<Node,Node> map = new HashMap<>();
+        Node cur = head;
+        while (cur != null){
+            Node node = new Node(cur.val);
+            map.put(cur,node);//老节点:新节点
+            cur = cur.next;
+        }
+        cur = head;
+        while (cur != null){
+            map.get(cur).next = map.get(cur.next);
+            map.get(cur).random = map.get(cur.random);
+            cur = cur.next;
+        }
+        return map.get(head);
+    }
+
+    /**
+     * 剑指 Offer 35. 复杂链表的复制
+     * 原地修改法
+     * @param head
+     * @return
+     */
+    public Node copyRandomList1(Node head) {
+
+        if(head == null){
+            return null;
+        }
+
+        Node cur = head;
+        //复制链表
+        while (cur != null){
+            Node copy = new Node(cur.val);
+            Node next = cur.next;
+            cur.next = copy;
+            copy.next = next;
+            cur = cur.next;
+        }
+        //随机节点复制
+        cur = head;
+        while (cur != null){
+            if(cur.random != null){
+                Node random = new Node(cur.random.val);
+                cur.next.random = random;
+            }
+            cur = cur.next.next;
+        }
+        //去除原来的节点
+        cur = head;
+        while (cur != null){
+            Node newNode = cur.next;
+            newNode.next = newNode.next.next;
+        }
+        return head.next;
+    }
+
+
+
+    class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
+    }
 
     class ListNode {
         int val;
