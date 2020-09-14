@@ -931,6 +931,7 @@ public class MainSeptember {
      * 最近公共祖先
      * 待优化
      * 利用HashMap和Set
+     *
      * @param treeNode
      * @param hashMap
      * @param p
@@ -972,23 +973,24 @@ public class MainSeptember {
     /**
      * 剑指 Offer 35. 复杂链表的复制
      * 链表的深拷贝
+     *
      * @param head
      * @return
      */
     public Node copyRandomList(Node head) {
 
-        if(head == null){
+        if (head == null) {
             return null;
         }
-        HashMap<Node,Node> map = new HashMap<>();
+        HashMap<Node, Node> map = new HashMap<>();
         Node cur = head;
-        while (cur != null){
+        while (cur != null) {
             Node node = new Node(cur.val);
-            map.put(cur,node);//老节点:新节点
+            map.put(cur, node);//老节点:新节点
             cur = cur.next;
         }
         cur = head;
-        while (cur != null){
+        while (cur != null) {
             map.get(cur).next = map.get(cur.next);
             map.get(cur).random = map.get(cur.random);
             cur = cur.next;
@@ -999,18 +1001,19 @@ public class MainSeptember {
     /**
      * 剑指 Offer 35. 复杂链表的复制
      * 原地修改法
+     *
      * @param head
      * @return
      */
     public Node copyRandomList1(Node head) {
 
-        if(head == null){
+        if (head == null) {
             return null;
         }
 
         Node cur = head;
         //复制链表
-        while (cur != null){
+        while (cur != null) {
             Node copy = new Node(cur.val);
             Node next = cur.next;
             cur.next = copy;
@@ -1019,8 +1022,8 @@ public class MainSeptember {
         }
         //随机节点复制
         cur = head;
-        while (cur != null){
-            if(cur.random != null){
+        while (cur != null) {
+            if (cur.random != null) {
                 Node random = new Node(cur.random.val);
                 cur.next.random = random;
             }
@@ -1028,14 +1031,12 @@ public class MainSeptember {
         }
         //去除原来的节点
         cur = head;
-        while (cur != null){
+        while (cur != null) {
             Node newNode = cur.next;
             newNode.next = newNode.next.next;
         }
         return head.next;
     }
-
-
 
     class Node {
         int val;
@@ -1049,6 +1050,124 @@ public class MainSeptember {
         }
     }
 
+
+    /**
+     * 剑指 Offer 38. 字符串的排列
+     * 排列组合
+     * 回溯法：其中需要进行交换元素，完成回溯
+     * 从第一位元素开始，固定元素，其他元素进行交换，递归
+     *
+     * @param s
+     * @return
+     */
+    public String[] permutation(String s) {
+
+        if (s == null || s.length() == 0) {
+            return new String[]{};
+        }
+        ArrayList<String> res = new ArrayList<>();
+        char[] chars = s.toCharArray();
+        findPermutation(res, chars, 0);
+        return res.toArray(new String[res.size()]);
+    }
+
+    private void findPermutation(ArrayList<String> res, char[] chars, int i) {
+        //到头 添加
+        if(i == chars.length-1){
+            //此时的chars 已交换过
+            res.add(String.valueOf(chars));
+            return;
+        }
+
+        HashSet<Character> set = new HashSet<>();
+
+        //依次固定每一层，让后面的元素依次进行交换
+        for(int x = i;x < chars.length;x++){
+            if(set.contains(chars[x])){
+                continue;
+            }
+            set.add(chars[x]);
+            //进行元素的交换
+            swap(chars,x,i);
+            /**
+             * i = 0时
+             * 1，2，3 / 2，1，3 / 3，2，1
+             * 到下一层
+             */
+            findPermutation(res,chars,i+1);
+            /**
+             * 此时到第二层 i = 2 固定 2 每次交换后面的元素
+             * 1，2，3  / 2，1，3
+             * 1，2，3，4   / 2，1，4，3 （如果为4个元素）
+             */
+            //交换回来，继续下一个元素
+            swap(chars,x,i);
+
+        }
+
+
+    }
+
+    private void swap(char[] chars, int i, int j) {
+        char temp = chars[i];
+        chars[i] = chars[j];
+        chars[j] = temp;
+    }
+
+
+    List<String> list = new ArrayList<>();
+    //为了让递归函数添加结果方便，定义到函数之外，这样无需带到递归函数的参数列表中
+    char[] c;
+    //同；但是其赋值依赖c，定义声明分开
+    public String[] permutation1(String s) {
+        c = s.toCharArray();
+        //从第一层开始递归
+        dfs(0);
+        return list.toArray(new String[list.size()]);
+        //将字符串数组ArrayList转化为String类型数组
+    }
+
+    private void dfs(int x) {
+        //当递归函数到达第三层，就返回，因为此时第二第三个位置已经发生了交换
+        if (x == c.length - 1) {
+            list.add(String.valueOf(c));//将字符数组转换为字符串
+            return;
+        }
+        //为了防止同一层递归出现重复元素
+        HashSet<Character> set = new HashSet<>();
+        //这里就很巧妙了,第一层可以是a,b,c那么就有三种情况，这里i = x,正巧dfs(0)，正好i = 0开始
+        // 当第二层只有两种情况，dfs(1）i = 1开始
+        for (int i = x; i < c.length; i++){
+            //发生剪枝，当包含这个元素的时候，直接跳过
+            if (set.contains(c[i])){
+                continue;
+            }
+            set.add(c[i]);
+            //交换元素，这里很是巧妙，当在第二层dfs(1),x = 1,那么i = 1或者 2， 要不是交换1和1，要不交换1和2
+            swap(i,x);
+            //进入下一层递归
+            dfs(x + 1);
+            //返回时交换回来，这样保证到达第1层的时候，一直都是abc。这里捋顺一下，开始一直都是abc，那么第一位置总共就3个位置
+            //分别是a与a交换，这个就相当于 x = 0, i = 0;
+            //     a与b交换            x = 0, i = 1;
+            //     a与c交换            x = 0, i = 2;
+            //就相当于上图中开始的三条路径
+            //第一个元素固定后，每个引出两条路径,
+            //     b与b交换            x = 1, i = 1;
+            //     b与c交换            x = 1, i = 2;
+            //所以，结合上图，在每条路径上标注上i的值，就会非常容易好理解了
+            swap(i,x);
+        }
+    }
+
+    private void swap(int i, int x) {
+        char temp = c[i];
+        c[i] = c[x];
+        c[x] = temp;
+    }
+
+
+
     class ListNode {
         int val;
         ListNode next;
@@ -1057,7 +1176,6 @@ public class MainSeptember {
             val = x;
         }
     }
-
 
     public class TreeNode {
         int val;
@@ -1069,24 +1187,11 @@ public class MainSeptember {
         }
     }
 
-
     public static void main(String[] args) {
 
-        int[] arrays = new int[]{3, 4, 3, 5, 1, 2};
-        int[] array = new int[10];
-
-        System.out.println(Arrays.toString(array));
-
+        int[] arrays = new int[]{1, 2, 3};
 
         MainSeptember main = new MainSeptember();
-        int i = 10;
-        int m = i + '2';
-
-        Integer integer = 11;
-        Integer integer1 = 11;
-        int a = 10;
-        int b = 7;
-        int c = (a > b) ? (a - b) : (b - a);
-        System.out.println(c);
+        System.out.println(Arrays.toString(main.permutation("aab")));
     }
 }
