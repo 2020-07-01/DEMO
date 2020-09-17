@@ -1073,7 +1073,7 @@ public class MainSeptember {
 
     private void findPermutation(ArrayList<String> res, char[] chars, int i) {
         //到头 添加
-        if(i == chars.length-1){
+        if (i == chars.length - 1) {
             //此时的chars 已交换过
             res.add(String.valueOf(chars));
             return;
@@ -1082,27 +1082,26 @@ public class MainSeptember {
         HashSet<Character> set = new HashSet<>();
 
         //依次固定每一层，让后面的元素依次进行交换
-        for(int x = i;x < chars.length;x++){
-            if(set.contains(chars[x])){
+        for (int x = i; x < chars.length; x++) {
+            if (set.contains(chars[x])) {
                 continue;
             }
             set.add(chars[x]);
             //进行元素的交换
-            swap(chars,x,i);
+            swap(chars, x, i);
             /**
              * i = 0时
              * 1，2，3 / 2，1，3 / 3，2，1
              * 到下一层
              */
-            findPermutation(res,chars,i+1);
+            findPermutation(res, chars, i + 1);
             /**
              * 此时到第二层 i = 2 固定 2 每次交换后面的元素
              * 1，2，3  / 2，1，3
              * 1，2，3，4   / 2，1，4，3 （如果为4个元素）
              */
             //交换回来，继续下一个元素
-            swap(chars,x,i);
-
+            swap(chars, x, i);
         }
 
 
@@ -1118,6 +1117,7 @@ public class MainSeptember {
     List<String> list = new ArrayList<>();
     //为了让递归函数添加结果方便，定义到函数之外，这样无需带到递归函数的参数列表中
     char[] c;
+
     //同；但是其赋值依赖c，定义声明分开
     public String[] permutation1(String s) {
         c = s.toCharArray();
@@ -1137,14 +1137,14 @@ public class MainSeptember {
         HashSet<Character> set = new HashSet<>();
         //这里就很巧妙了,第一层可以是a,b,c那么就有三种情况，这里i = x,正巧dfs(0)，正好i = 0开始
         // 当第二层只有两种情况，dfs(1）i = 1开始
-        for (int i = x; i < c.length; i++){
+        for (int i = x; i < c.length; i++) {
             //发生剪枝，当包含这个元素的时候，直接跳过
-            if (set.contains(c[i])){
+            if (set.contains(c[i])) {
                 continue;
             }
             set.add(c[i]);
             //交换元素，这里很是巧妙，当在第二层dfs(1),x = 1,那么i = 1或者 2， 要不是交换1和1，要不交换1和2
-            swap(i,x);
+            swap(i, x);
             //进入下一层递归
             dfs(x + 1);
             //返回时交换回来，这样保证到达第1层的时候，一直都是abc。这里捋顺一下，开始一直都是abc，那么第一位置总共就3个位置
@@ -1156,7 +1156,7 @@ public class MainSeptember {
             //     b与b交换            x = 1, i = 1;
             //     b与c交换            x = 1, i = 2;
             //所以，结合上图，在每条路径上标注上i的值，就会非常容易好理解了
-            swap(i,x);
+            swap(i, x);
         }
     }
 
@@ -1165,6 +1165,107 @@ public class MainSeptember {
         c[i] = c[x];
         c[x] = temp;
     }
+
+
+    /**
+     * 剑指 Offer 21. 调整数组顺序使奇数位于偶数前面
+     * 双指针法
+     * 时间复杂度O(n)
+     *
+     * @param nums
+     * @return
+     */
+    public int[] exchange(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return new int[]{};
+        }
+
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left < right) {
+
+            while (nums[left] % 2 != 0 && left < right) {
+                left++;
+            }
+
+            while (nums[right] % 2 == 0 && left < right) {
+                right--;
+            }
+
+            if (left < right) {
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+            }
+            left++;
+            right--;
+        }
+        return nums;
+    }
+
+
+    /**
+     * 剑指 Offer 21. 调整数组顺序使奇数位于偶数前面
+     * 借用外部存储空间
+     * @param nums
+     * @return
+     */
+
+    /**
+     * 剑指 Offer 57 - II. 和为s的连续正数序列
+     * 双指针法/滑动窗口
+     *
+     * 待优化
+     * @param target
+     * @return
+     */
+    public int[][] findContinuousSequence(int target) {
+
+        //优化
+         List<int[]> res = new ArrayList<>();
+
+
+        List<List<Integer>> lists = new ArrayList<>();
+        int left = 1;
+        int right = 1;
+
+        while (left <= right && right < target) {
+            int[] nums = new int[right - left + 1];
+            int temp = 0;
+            int index = 0;
+            for (int i = left; i <= right; i++) {
+                temp = temp + i;
+                nums[index++] = i;
+            }
+            if (temp < target) {
+                right++;
+            }
+            if (temp > target) {
+                left++;
+            }
+            if (temp == target) {
+                //List<Integer> list = Arrays.asList(nums);
+                res.add(nums);
+                //lists.add(list);
+                left++;
+                right++;
+            }
+        }
+
+        /*int[][] result = new int[lists.size()][0];
+        for (int i = 0; i < lists.size(); i++) {
+            List<Integer> list = lists.get(i);
+            int[] temp = new int[list.size()];
+            for (int j = 0; j< list.size(); j++) {
+                temp[j] = list.get(j);
+            }
+            result[i] = temp;
+        }*/
+         return res.toArray(new int[0][]);
+    }
+
 
 
 
@@ -1189,9 +1290,9 @@ public class MainSeptember {
 
     public static void main(String[] args) {
 
-        int[] arrays = new int[]{1, 2, 3};
+        int[] arrays = new int[]{1, 2, 4, 3};
 
         MainSeptember main = new MainSeptember();
-        System.out.println(Arrays.toString(main.permutation("aab")));
+        System.out.println(Arrays.deepToString(main.findContinuousSequence(15)));
     }
 }
