@@ -14,8 +14,9 @@ public class Volatile_Cancle implements Runnable {
 
 	private final List<BigInteger> primes = new ArrayList<BigInteger>();
 
-	private volatile boolean canceled;// 取消标志状态。默认为true
+	private  volatile boolean canceled;// 取消标志状态。默认为true
 
+	@Override
 	public void run() {
 		BigInteger p = BigInteger.ONE;// 设置常量为1
 
