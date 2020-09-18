@@ -1216,15 +1216,16 @@ public class MainSeptember {
     /**
      * 剑指 Offer 57 - II. 和为s的连续正数序列
      * 双指针法/滑动窗口
-     *
+     * <p>
      * 待优化
+     *
      * @param target
      * @return
      */
     public int[][] findContinuousSequence(int target) {
 
         //优化
-         List<int[]> res = new ArrayList<>();
+        List<int[]> res = new ArrayList<>();
 
 
         List<List<Integer>> lists = new ArrayList<>();
@@ -1263,10 +1264,162 @@ public class MainSeptember {
             }
             result[i] = temp;
         }*/
-         return res.toArray(new int[0][]);
+        return res.toArray(new int[0][]);
     }
 
+    /**
+     * 剑指 Offer 29. 顺时针打印矩阵
+     * 待优化
+     * @param matrix
+     * @return
+     */
+    public int[] spiralOrder(int[][] matrix) {
+        if (matrix == null || matrix.length == 0) {
+            return new int[0];
+        }
 
+        //存储元素
+        List<Integer> list = new ArrayList<>();
+        //存储下标
+        HashMap<Integer,List<Integer>> hashMap = new HashMap();
+        List<Integer> index = new ArrayList<>();
+        hashMap.put(0,index);
+        right(list, hashMap,matrix, 0, 0);
+
+       return list.stream().mapToInt(Integer::valueOf).toArray();
+    }
+
+    //向右
+    public void right(List<Integer> list, HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
+        if(index1 < 0 || index1 >= matrix.length){
+            return;
+        }
+        if(index2 < 0 || index2 >= matrix[index1].length){
+            return;
+        }
+        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+            return;
+        }
+        int length = matrix[index1].length;
+        while (index2 < length) {
+            if(hashMap.get(index1) != null){
+                List<Integer> indexs = hashMap.get(index1);
+                if(indexs.contains(index2)){
+                    break;
+                }else {
+                    list.add(matrix[index1][index2]);
+                    indexs.add(index2);
+                    hashMap.put(index1,indexs);
+                }
+            }else {
+                List<Integer> indexs = new ArrayList<>();
+                indexs.add(index2);
+                hashMap.put(index1,indexs);
+                list.add(matrix[index1][index2]);
+            }
+            index2++;
+        }
+        down(list,hashMap,matrix,++index1,--index2);
+
+    }
+
+    //向下
+    public void down(List<Integer> list,HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
+        if(index1 < 0 || index1 >= matrix.length){
+            return;
+        }
+        if(index2 < 0 || index2 >= matrix[index1].length){
+            return;
+        }
+        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+            return;
+        }
+        int length = matrix.length;
+        while (index1 < length) {
+            if(hashMap.get(index1) != null){
+                List<Integer> indexs = hashMap.get(index1);
+                if(indexs.contains(index2)){
+                    break;
+                }else {
+                    list.add(matrix[index1][index2]);
+                    indexs.add(index2);
+                    hashMap.put(index1,indexs);
+                }
+            }else {
+                List<Integer> indexs = new ArrayList<>();
+                indexs.add(index2);
+                hashMap.put(index1,indexs);
+                list.add(matrix[index1][index2]);
+            }
+            index1++;
+        }
+        left(list,hashMap,matrix,--index1,--index2);
+    }
+
+    //向左
+    public void left(List<Integer> list,HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
+        if(index1 < 0 || index1 >= matrix.length){
+            return;
+        }
+        if(index2 < 0 || index2 >= matrix[index1].length){
+            return;
+        }
+        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+            return;
+        }
+        while (index2 >= 0) {
+            if(hashMap.get(index1) != null){
+                List<Integer> indexs = hashMap.get(index1);
+                if(indexs.contains(index2)){
+                    break;
+                }else {
+                    list.add(matrix[index1][index2]);
+                    indexs.add(index2);
+                    hashMap.put(index1,indexs);
+                }
+            }else {
+                List<Integer> indexs = new ArrayList<>();
+                indexs.add(index2);
+                hashMap.put(index1,indexs);
+                list.add(matrix[index1][index2]);
+            }
+            index2--;
+        }
+        up(list,hashMap,matrix,--index1,++index2);
+    }
+
+    //向上
+    public void up(List<Integer> list,HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
+        if(index1 < 0 || index1 >= matrix.length){
+            return;
+        }
+        if(index2 < 0 || index2 >= matrix[index1].length){
+            return;
+        }
+        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+            return;
+        }
+        while (index1 >= 0 && !hashMap.get(index1).contains(index2)) {
+            if(hashMap.get(index1) != null){
+                List<Integer> indexs = hashMap.get(index1);
+                if(indexs.contains(index2)){
+                    break;
+                }else {
+                    list.add(matrix[index1][index2]);
+                    indexs.add(index2);
+                    hashMap.put(index1,indexs);
+                }
+            }else {
+                List<Integer> indexs = new ArrayList<>();
+                indexs.add(index2);
+                hashMap.put(index1,indexs);
+                list.add(matrix[index1][index2]);
+            }
+            index1--;
+        }
+
+        right(list,hashMap,matrix,++index1,++index2);
+    }
 
 
     class ListNode {
@@ -1290,9 +1443,13 @@ public class MainSeptember {
 
     public static void main(String[] args) {
 
-        int[] arrays = new int[]{1, 2, 4, 3};
+        int[][] arrays = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+
+
+        int[][] arrays1 = new int[][]{{4},{4},{5}};
+
 
         MainSeptember main = new MainSeptember();
-        System.out.println(Arrays.deepToString(main.findContinuousSequence(15)));
+        System.out.println(Arrays.toString(main.spiralOrder(arrays)));
     }
 }
