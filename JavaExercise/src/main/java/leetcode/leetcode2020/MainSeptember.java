@@ -1270,6 +1270,7 @@ public class MainSeptember {
     /**
      * 剑指 Offer 29. 顺时针打印矩阵
      * 待优化
+     *
      * @param matrix
      * @return
      */
@@ -1281,144 +1282,215 @@ public class MainSeptember {
         //存储元素
         List<Integer> list = new ArrayList<>();
         //存储下标
-        HashMap<Integer,List<Integer>> hashMap = new HashMap();
+        HashMap<Integer, List<Integer>> hashMap = new HashMap();
         List<Integer> index = new ArrayList<>();
-        hashMap.put(0,index);
-        right(list, hashMap,matrix, 0, 0);
+        hashMap.put(0, index);
+        right(list, hashMap, matrix, 0, 0);
 
-       return list.stream().mapToInt(Integer::valueOf).toArray();
+        return list.stream().mapToInt(Integer::valueOf).toArray();
     }
 
     //向右
-    public void right(List<Integer> list, HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
-        if(index1 < 0 || index1 >= matrix.length){
+    public void right(List<Integer> list, HashMap<Integer, List<Integer>> hashMap, int[][] matrix, int index1, int index2) {
+        if (index1 < 0 || index1 >= matrix.length) {
             return;
         }
-        if(index2 < 0 || index2 >= matrix[index1].length){
+        if (index2 < 0 || index2 >= matrix[index1].length) {
             return;
         }
-        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+        if (hashMap.get(index1) != null && hashMap.get(index1).contains(index2)) {
             return;
         }
         int length = matrix[index1].length;
         while (index2 < length) {
-            if(hashMap.get(index1) != null){
+            if (hashMap.get(index1) != null) {
                 List<Integer> indexs = hashMap.get(index1);
-                if(indexs.contains(index2)){
+                if (indexs.contains(index2)) {
                     break;
-                }else {
+                } else {
                     list.add(matrix[index1][index2]);
                     indexs.add(index2);
-                    hashMap.put(index1,indexs);
+                    hashMap.put(index1, indexs);
                 }
-            }else {
+            } else {
                 List<Integer> indexs = new ArrayList<>();
                 indexs.add(index2);
-                hashMap.put(index1,indexs);
+                hashMap.put(index1, indexs);
                 list.add(matrix[index1][index2]);
             }
             index2++;
         }
-        down(list,hashMap,matrix,++index1,--index2);
+        down(list, hashMap, matrix, ++index1, --index2);
 
     }
 
     //向下
-    public void down(List<Integer> list,HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
-        if(index1 < 0 || index1 >= matrix.length){
+    public void down(List<Integer> list, HashMap<Integer, List<Integer>> hashMap, int[][] matrix, int index1, int index2) {
+        if (index1 < 0 || index1 >= matrix.length) {
             return;
         }
-        if(index2 < 0 || index2 >= matrix[index1].length){
+        if (index2 < 0 || index2 >= matrix[index1].length) {
             return;
         }
-        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+        if (hashMap.get(index1) != null && hashMap.get(index1).contains(index2)) {
             return;
         }
         int length = matrix.length;
         while (index1 < length) {
-            if(hashMap.get(index1) != null){
+            if (hashMap.get(index1) != null) {
                 List<Integer> indexs = hashMap.get(index1);
-                if(indexs.contains(index2)){
+                if (indexs.contains(index2)) {
                     break;
-                }else {
+                } else {
                     list.add(matrix[index1][index2]);
                     indexs.add(index2);
-                    hashMap.put(index1,indexs);
+                    hashMap.put(index1, indexs);
                 }
-            }else {
+            } else {
                 List<Integer> indexs = new ArrayList<>();
                 indexs.add(index2);
-                hashMap.put(index1,indexs);
+                hashMap.put(index1, indexs);
                 list.add(matrix[index1][index2]);
             }
             index1++;
         }
-        left(list,hashMap,matrix,--index1,--index2);
+        left(list, hashMap, matrix, --index1, --index2);
     }
 
     //向左
-    public void left(List<Integer> list,HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
-        if(index1 < 0 || index1 >= matrix.length){
+    public void left(List<Integer> list, HashMap<Integer, List<Integer>> hashMap, int[][] matrix, int index1, int index2) {
+        if (index1 < 0 || index1 >= matrix.length) {
             return;
         }
-        if(index2 < 0 || index2 >= matrix[index1].length){
+        if (index2 < 0 || index2 >= matrix[index1].length) {
             return;
         }
-        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+        if (hashMap.get(index1) != null && hashMap.get(index1).contains(index2)) {
             return;
         }
         while (index2 >= 0) {
-            if(hashMap.get(index1) != null){
+            if (hashMap.get(index1) != null) {
                 List<Integer> indexs = hashMap.get(index1);
-                if(indexs.contains(index2)){
+                if (indexs.contains(index2)) {
                     break;
-                }else {
+                } else {
                     list.add(matrix[index1][index2]);
                     indexs.add(index2);
-                    hashMap.put(index1,indexs);
+                    hashMap.put(index1, indexs);
                 }
-            }else {
+            } else {
                 List<Integer> indexs = new ArrayList<>();
                 indexs.add(index2);
-                hashMap.put(index1,indexs);
+                hashMap.put(index1, indexs);
                 list.add(matrix[index1][index2]);
             }
             index2--;
         }
-        up(list,hashMap,matrix,--index1,++index2);
+        up(list, hashMap, matrix, --index1, ++index2);
     }
 
     //向上
-    public void up(List<Integer> list,HashMap<Integer,List<Integer>> hashMap,int[][] matrix, int index1, int index2) {
-        if(index1 < 0 || index1 >= matrix.length){
+    public void up(List<Integer> list, HashMap<Integer, List<Integer>> hashMap, int[][] matrix, int index1, int index2) {
+        if (index1 < 0 || index1 >= matrix.length) {
             return;
         }
-        if(index2 < 0 || index2 >= matrix[index1].length){
+        if (index2 < 0 || index2 >= matrix[index1].length) {
             return;
         }
-        if(hashMap.get(index1) != null && hashMap.get(index1).contains(index2)){
+        if (hashMap.get(index1) != null && hashMap.get(index1).contains(index2)) {
             return;
         }
         while (index1 >= 0 && !hashMap.get(index1).contains(index2)) {
-            if(hashMap.get(index1) != null){
+            if (hashMap.get(index1) != null) {
                 List<Integer> indexs = hashMap.get(index1);
-                if(indexs.contains(index2)){
+                if (indexs.contains(index2)) {
                     break;
-                }else {
+                } else {
                     list.add(matrix[index1][index2]);
                     indexs.add(index2);
-                    hashMap.put(index1,indexs);
+                    hashMap.put(index1, indexs);
                 }
-            }else {
+            } else {
                 List<Integer> indexs = new ArrayList<>();
                 indexs.add(index2);
-                hashMap.put(index1,indexs);
+                hashMap.put(index1, indexs);
                 list.add(matrix[index1][index2]);
             }
             index1--;
         }
 
-        right(list,hashMap,matrix,++index1,++index2);
+        right(list, hashMap, matrix, ++index1, ++index2);
+    }
+
+
+    /**
+     * 剑指 Offer 49. 丑数
+     * 待优化 没理解
+     * @param n
+     * @return
+     */
+    public int nthUglyNumber(int n) {
+        if(n<=0) {
+            return 0;//题目中没有规定n一定大于0，当n的输入值不符合要求时，返回0
+        }
+        int[] ugly = new int[n];
+        ugly[0]=1;
+        int index2=0,index3=0,index5=0,i =1;
+        while(i<n){
+            ugly[i] = Math.min(ugly[index2]*2,Math.min(ugly[index3]*3,ugly[index5]*5));
+            //丑数之间的间隔不大，每次找到的index2，index3，index5的值都小于i;
+            while(ugly[index2]*2<=ugly[i]){index2++;}//注意包括等号
+            while(ugly[index3]*3<=ugly[i]){index3++;}
+            while(ugly[index5]*5<=ugly[i]){index5++;}
+            i++;
+        }
+        return ugly[n-1];
+    }
+
+    //暴力解法，思路清晰，但时间复杂度很高会导致时间超限
+    public int nthUglyNumber2(int n) {
+        if(n<=0) {
+            return 0;
+        }
+        int num = 0;
+        int count = 0;
+        while(count<n){
+            num++;
+            if(isUgly(num)) {
+                count++;
+            }
+        }
+        return num;
+    }
+    public boolean isUgly(int num){
+        while(num%2==0){num=num/2;}
+        while(num%3==0){num=num/3;}
+        while(num%5==0){num=num/5;}
+        return num==1?true:false;
+    }
+
+
+    /**
+     * 215. 数组中的第K个最大元素
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int findKthLargest(int[] nums, int k) {
+
+        if(nums == null || nums.length == 0){
+            return  0;
+        }
+
+        if(nums.length < k){
+            return 0;
+        }
+
+        Arrays.sort(nums);
+
+        return nums[nums.length-k];
+
+
     }
 
 
@@ -1443,13 +1515,14 @@ public class MainSeptember {
 
     public static void main(String[] args) {
 
-        int[][] arrays = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        int[][] arrays = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
 
-        int[][] arrays1 = new int[][]{{4},{4},{5}};
+        int[][] arrays1 = new int[][]{{4}, {4}, {5}};
 
 
         MainSeptember main = new MainSeptember();
-        System.out.println(Arrays.toString(main.spiralOrder(arrays)));
+        //System.out.println(Arrays.toString(main.spiralOrder(arrays)));
+        System.out.println(main.nthUglyNumber(10));
     }
 }
