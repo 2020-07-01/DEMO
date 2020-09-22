@@ -1,5 +1,6 @@
 package leetcode.leetcode2020;
 
+import java.math.BigInteger;
 import java.util.*;
 
 /**
@@ -1426,73 +1427,245 @@ public class MainSeptember {
     /**
      * 剑指 Offer 49. 丑数
      * 待优化 没理解
+     *
      * @param n
      * @return
      */
     public int nthUglyNumber(int n) {
-        if(n<=0) {
+        if (n <= 0) {
             return 0;//题目中没有规定n一定大于0，当n的输入值不符合要求时，返回0
         }
         int[] ugly = new int[n];
-        ugly[0]=1;
-        int index2=0,index3=0,index5=0,i =1;
-        while(i<n){
-            ugly[i] = Math.min(ugly[index2]*2,Math.min(ugly[index3]*3,ugly[index5]*5));
+        ugly[0] = 1;
+        int index2 = 0, index3 = 0, index5 = 0, i = 1;
+        while (i < n) {
+            ugly[i] = Math.min(ugly[index2] * 2, Math.min(ugly[index3] * 3, ugly[index5] * 5));
             //丑数之间的间隔不大，每次找到的index2，index3，index5的值都小于i;
-            while(ugly[index2]*2<=ugly[i]){index2++;}//注意包括等号
-            while(ugly[index3]*3<=ugly[i]){index3++;}
-            while(ugly[index5]*5<=ugly[i]){index5++;}
+            while (ugly[index2] * 2 <= ugly[i]) {
+                index2++;
+            }//注意包括等号
+            while (ugly[index3] * 3 <= ugly[i]) {
+                index3++;
+            }
+            while (ugly[index5] * 5 <= ugly[i]) {
+                index5++;
+            }
             i++;
         }
-        return ugly[n-1];
+        return ugly[n - 1];
     }
 
     //暴力解法，思路清晰，但时间复杂度很高会导致时间超限
     public int nthUglyNumber2(int n) {
-        if(n<=0) {
+        if (n <= 0) {
             return 0;
         }
         int num = 0;
         int count = 0;
-        while(count<n){
+        while (count < n) {
             num++;
-            if(isUgly(num)) {
+            if (isUgly(num)) {
                 count++;
             }
         }
         return num;
     }
-    public boolean isUgly(int num){
-        while(num%2==0){num=num/2;}
-        while(num%3==0){num=num/3;}
-        while(num%5==0){num=num/5;}
-        return num==1?true:false;
+
+    public boolean isUgly(int num) {
+        while (num % 2 == 0) {
+            num = num / 2;
+        }
+        while (num % 3 == 0) {
+            num = num / 3;
+        }
+        while (num % 5 == 0) {
+            num = num / 5;
+        }
+        return num == 1 ? true : false;
     }
 
 
     /**
      * 215. 数组中的第K个最大元素
+     *
      * @param nums
      * @param k
      * @return
      */
     public int findKthLargest(int[] nums, int k) {
 
-        if(nums == null || nums.length == 0){
-            return  0;
-        }
-
-        if(nums.length < k){
+        if (nums == null || nums.length == 0) {
             return 0;
         }
-
+        if (nums.length < k) {
+            return 0;
+        }
         Arrays.sort(nums);
-
-        return nums[nums.length-k];
-
-
+        return nums[nums.length - k];
     }
 
+
+    /**
+     * 剑指 Offer 67. 把字符串转换成整数
+     * 太难了
+     *
+     * @param str
+     * @return
+     */
+    public int strToInt(String str) {
+
+        if (str == null || str.trim().length() == 0) {
+            return 0;
+        }
+        str = str.trim();
+        if (str.charAt(0) < (int) '0' && str.charAt(0) > (int) '9' && str.charAt(0) != (int) '-' && str.charAt(0) != (int) '+') {
+            return 0;
+        }
+        int index = 0;
+        StringBuilder stringBuilder = new StringBuilder();
+        if (str.charAt(0) == '-' || str.charAt(0) == '+') {
+            index = 1;
+        }
+
+        while (index < str.length()) {
+            if (str.charAt(index) >= (int) '0' && str.charAt(index) <= (int) '9') {
+                stringBuilder.append(str.charAt(index));
+            } else {
+                break;
+            }
+            if (stringBuilder.toString().replace('0', ' ').trim().length() == 0) {
+                stringBuilder = new StringBuilder();
+            }
+            if (stringBuilder.toString().length() > 12) {
+                break;
+            }
+            index++;
+        }
+        if (str.charAt(0) == '-' || str.charAt(0) == '+') {
+            stringBuilder = new StringBuilder(str.charAt(0) + stringBuilder.toString());
+        }
+
+        //判断只有一位的情况
+        if (stringBuilder.length() == 0 || stringBuilder.toString().equals("+") || stringBuilder.toString().equals("-")) {
+            return 0;
+        }
+        //判断超过Integer极值的情况
+        BigInteger bigInteger = new BigInteger(stringBuilder.toString());
+        if (bigInteger.longValue() > Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
+        } else if (bigInteger.longValue() < Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        } else {
+            return bigInteger.intValue();
+        }
+    }
+
+    /**
+     * 剑指 Offer 67. 把字符串转换成整数
+     * 一次遍历完成
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param str
+     * @return
+     */
+    public int strToInt1(String str) {
+        char[] c = str.trim().toCharArray();
+        if (c.length == 0) {
+            return 0;
+        }
+        int res = 0;
+        /**
+         * 2147483647
+         * 214748364
+         */
+        int bndry = Integer.MAX_VALUE / 10;
+        int i = 1;
+        //判断首字符很巧妙
+        int sign = 1;
+        if (c[0] == '-') {
+            sign = -1;
+        } else if (c[0] != '+') {
+            i = 0;
+        }
+        for (int j = i; j < c.length; j++) {
+            if (c[j] < '0' || c[j] > '9') {
+                break;
+            }
+            if (res > bndry || res == bndry && c[j] > '7') {
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            res = res * 10 + (c[j] - '0');
+        }
+        return sign * res;
+    }
+
+    /**
+     * 剑指 Offer 16. 数值的整数次方
+     * 会超出时间限制
+     * @param x
+     * @param n
+     * @return
+     */
+    public double myPow(double x, int n) {
+
+        double result = 1;
+        if (n > 0) {
+            for (int i = 0; i < n; i++) {
+                result = result * x;
+            }
+            return result;
+        } else if (n == 0) {
+            return 1;
+        } else {
+            for (int i = 0; i < -n; i++) {
+                result = result * x;
+            }
+            return 1 / result;
+        }
+    }
+
+    /**
+     * 剑指 Offer 16. 数值的整数次方
+     * 递归法解决，每次进行双重执行
+     * 时间复杂度logn
+     * @param x
+     * @param n
+     * @return
+     */
+    public double myPow1(double x, int n) {
+        if(n == 0){
+            return 1;
+        }
+        if(n < 0){
+            return 1 / x * myPow1(1/x,-n-1);
+        }
+        //根据n为奇偶数分不同情况
+        //n/2 为降低时间复杂度
+        return (n % 2 == 0) ? myPow1(x * x,n/2) : x * myPow1(x * x,n/2);
+    }
+
+    /**
+     * 剑指 Offer 16. 数值的整数次方
+     * 非递归方式解决  每次进行双重执行
+     * 时间复杂度logn
+     * @param x
+     * @param n
+     * @return
+     */
+    public double myPow2(double x, int n) {
+        /**
+         * 每次循环执行两次，减少时间复杂度
+         */
+        double res = 1;
+        for(int i = n;i != 0;i/=2,x*=x){
+            if(i % 2 != 0){
+                res = res * x;
+            }
+        }
+        return n > 0 ? res : 1/res;
+
+    }
 
     class ListNode {
         int val;
@@ -1523,6 +1696,10 @@ public class MainSeptember {
 
         MainSeptember main = new MainSeptember();
         //System.out.println(Arrays.toString(main.spiralOrder(arrays)));
-        System.out.println(main.nthUglyNumber(10));
+        System.out.println(main.myPow(2.00000, -2));
+
+
+
+
     }
 }
