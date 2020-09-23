@@ -1648,6 +1648,7 @@ public class MainSeptember {
     /**
      * 剑指 Offer 16. 数值的整数次方
      * 非递归方式解决  每次进行双重执行
+     * 二分法
      * 时间复杂度logn
      * @param x
      * @param n
@@ -1664,9 +1665,61 @@ public class MainSeptember {
             }
         }
         return n > 0 ? res : 1/res;
-
     }
 
+    /**
+     * 剑指 Offer 44. 数字序列中某一位的数字
+     * 会超出内存限制
+     * @param n
+     * @return
+     */
+    public int findNthDigit(int n) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i = 0;i<Integer.MAX_VALUE;i++){
+            stringBuilder = stringBuilder.append(i);
+            if(stringBuilder.length() > n){
+                return stringBuilder.toString().charAt(n) - '0';
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 剑指 Offer 44. 数字序列中某一位的数字
+     * 时间超过限制
+     * @param n
+     * @return
+     */
+    public int findNthDigit1(int n) {
+
+        LinkedList<Integer> queue = new LinkedList<>();
+        queue.addFirst(0);
+        int i = 0;
+        while (i <= n){
+            String string = Integer.valueOf(i).toString();
+            int j = 0;
+            while (j < string.length()){
+                queue.addLast(string.charAt(j) - '0');
+                j++;
+            }
+            queue.removeFirst();
+            i++;
+        }
+        return queue.removeFirst();
+    }
+
+
+    /**
+     * 剑指 Offer 44. 数字序列中某一位的数字
+     * 找规律吧
+     * @param n
+     * @return
+     */
+    /*public int findNthDigit1(int n) {
+
+
+    }*/
     class ListNode {
         int val;
         ListNode next;
@@ -1696,7 +1749,7 @@ public class MainSeptember {
 
         MainSeptember main = new MainSeptember();
         //System.out.println(Arrays.toString(main.spiralOrder(arrays)));
-        System.out.println(main.myPow(2.00000, -2));
+        System.out.println(main.findNthDigit1(11));
 
 
 
