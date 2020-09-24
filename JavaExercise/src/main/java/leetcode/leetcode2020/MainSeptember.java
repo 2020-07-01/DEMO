@@ -1603,6 +1603,7 @@ public class MainSeptember {
     /**
      * 剑指 Offer 16. 数值的整数次方
      * 会超出时间限制
+     *
      * @param x
      * @param n
      * @return
@@ -1629,20 +1630,21 @@ public class MainSeptember {
      * 剑指 Offer 16. 数值的整数次方
      * 递归法解决，每次进行双重执行
      * 时间复杂度logn
+     *
      * @param x
      * @param n
      * @return
      */
     public double myPow1(double x, int n) {
-        if(n == 0){
+        if (n == 0) {
             return 1;
         }
-        if(n < 0){
-            return 1 / x * myPow1(1/x,-n-1);
+        if (n < 0) {
+            return 1 / x * myPow1(1 / x, -n - 1);
         }
         //根据n为奇偶数分不同情况
         //n/2 为降低时间复杂度
-        return (n % 2 == 0) ? myPow1(x * x,n/2) : x * myPow1(x * x,n/2);
+        return (n % 2 == 0) ? myPow1(x * x, n / 2) : x * myPow1(x * x, n / 2);
     }
 
     /**
@@ -1650,6 +1652,7 @@ public class MainSeptember {
      * 非递归方式解决  每次进行双重执行
      * 二分法
      * 时间复杂度logn
+     *
      * @param x
      * @param n
      * @return
@@ -1659,26 +1662,27 @@ public class MainSeptember {
          * 每次循环执行两次，减少时间复杂度
          */
         double res = 1;
-        for(int i = n;i != 0;i/=2,x*=x){
-            if(i % 2 != 0){
+        for (int i = n; i != 0; i /= 2, x *= x) {
+            if (i % 2 != 0) {
                 res = res * x;
             }
         }
-        return n > 0 ? res : 1/res;
+        return n > 0 ? res : 1 / res;
     }
 
     /**
      * 剑指 Offer 44. 数字序列中某一位的数字
      * 会超出内存限制
+     *
      * @param n
      * @return
      */
     public int findNthDigit(int n) {
 
         StringBuilder stringBuilder = new StringBuilder();
-        for(int i = 0;i<Integer.MAX_VALUE;i++){
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
             stringBuilder = stringBuilder.append(i);
-            if(stringBuilder.length() > n){
+            if (stringBuilder.length() > n) {
                 return stringBuilder.toString().charAt(n) - '0';
             }
         }
@@ -1688,6 +1692,7 @@ public class MainSeptember {
     /**
      * 剑指 Offer 44. 数字序列中某一位的数字
      * 时间超过限制
+     *
      * @param n
      * @return
      */
@@ -1696,10 +1701,10 @@ public class MainSeptember {
         LinkedList<Integer> queue = new LinkedList<>();
         queue.addFirst(0);
         int i = 0;
-        while (i <= n){
+        while (i <= n) {
             String string = Integer.valueOf(i).toString();
             int j = 0;
-            while (j < string.length()){
+            while (j < string.length()) {
                 queue.addLast(string.charAt(j) - '0');
                 j++;
             }
@@ -1709,17 +1714,100 @@ public class MainSeptember {
         return queue.removeFirst();
     }
 
+    /**
+     * 剑指 Offer 42. 连续子数组的最大和
+     * 暴力解法
+     * 时间复杂度为O(n2)
+     * 空间复杂度为O(1)
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int j = 0;
+        int max = nums[0];
+        while (j < nums.length) {
+            int temp = 0;
+            for (int i = j; i >= 0; i--) {
+                temp = temp + nums[i];
+                max = Math.max(max, temp);
+            }
+            j++;
+        }
+        return max;
+    }
+
+
+    /**
+     * 剑指 Offer 42. 连续子数组的最大和
+     * 时间复杂度为O(n)
+     * 空间复杂度为O(1)
+     * 动态规划思想
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray1(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int res = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            //当索引存储此索引之前的最大值
+            /**
+             * 如果前面的值小于0
+             * 重新开始
+             */
+            nums[i] += Math.max(nums[i - 1], 0);
+            res = Math.max(res, nums[i]);
+        }
+        return res;
+    }
+
+
+    /**
+     * 剑指 Offer 42. 连续子数组的最大和
+     * 时间复杂度为O(n)
+     * 空间复杂度为O(1)
+     * 贪心算法
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray2(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum = sum + nums[i];
+            max = Math.max(max, sum);
+            if (sum < 0) {
+                sum = 0;
+            }
+        }
+        return max;
+    }
 
     /**
      * 剑指 Offer 44. 数字序列中某一位的数字
      * 找规律吧
-     * @param n
+     *
+     * @param
      * @return
      */
     /*public int findNthDigit1(int n) {
 
 
     }*/
+
+
+
     class ListNode {
         int val;
         ListNode next;
@@ -1743,16 +1831,12 @@ public class MainSeptember {
 
         int[][] arrays = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
+        int[] nums = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
         int[][] arrays1 = new int[][]{{4}, {4}, {5}};
 
-
         MainSeptember main = new MainSeptember();
         //System.out.println(Arrays.toString(main.spiralOrder(arrays)));
-        System.out.println(main.findNthDigit1(11));
-
-
-
-
+        System.out.println(main.maxSubArray(nums));
     }
 }
