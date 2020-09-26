@@ -1805,6 +1805,155 @@ public class MainSeptember {
 
 
     }*/
+    public ListNode swapPairs(ListNode head) {
+
+        ListNode left = new ListNode(head.val);
+        ListNode right = new ListNode(head.val);
+
+        if (left.next != null && left.next.next != null) {
+            right = right.next.next;
+        }
+
+        head = left.next;
+
+        while (right != null) {
+            ListNode first = new ListNode(left.val);
+            left.next = first;
+            first.next = right;
+            left = right;
+            if (right.next != null) {
+                right = right.next.next;
+            }
+        }
+        return head;
+    }
+
+    class NumArray {
+        /**
+         * 存储前面的和
+         */
+        private int[] dp;
+
+        /**
+         * 303. 区域和检索 - 数组不可变
+         * 动态规划
+         *
+         * @param nums
+         */
+        public NumArray(int[] nums) {
+
+            dp = new int[nums.length + 1];
+            dp[0] = 0;
+            for (int i = 1; i < dp.length; i++) {
+                dp[i] = dp[i - 1] + nums[i - 1];
+            }
+        }
+
+        public int sumRange(int i, int j) {
+            return dp[j + 1] - dp[i];
+        }
+    }
+
+    /**
+     * 198.打家劫舍
+     * 动态规划解法
+     * <p>
+     * 先用数学思维分析题意
+     * 找出可能出现的情况
+     *
+     * @param nums
+     * @return
+     */
+    public int rob(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        /**
+         * 存储当前下标处所能获取到的最大值
+         */
+        int[] dp = new int[nums.length];
+
+        /**
+         * case1:只有一个元素
+         */
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        /**
+         * case2:有两个元素，选最大值
+         */
+        if (nums.length == 2) {
+            return nums[0] > nums[1] ? nums[0] : nums[1];
+        }
+        dp[0] = nums[0];
+        dp[1] = Math.max(dp[0], nums[1]);//取最大值
+
+        /**
+         * case3:取第k个元素 ： 不取第k个元素
+         */
+        for (int i = 2; i < nums.length; i++) {
+            dp[i] = Math.max(nums[i] + dp[i - 1], dp[i - 1]);
+        }
+        return dp[dp.length - 1];
+    }
+
+    /**
+     * 198.打家劫舍
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * 动态规划优化法
+     *
+     * @param nums
+     * @return
+     */
+    public int rob1(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        /**
+         * case1:只有一个元素
+         */
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        /**
+         * case2:有两个元素，选最大值
+         */
+        if (nums.length == 2) {
+            return nums[0] > nums[1] ? nums[0] : nums[1];
+        }
+
+        int first = nums[0];
+        int second = Math.max(first, nums[1]);//取最大值
+
+        /**
+         * case3:取第k个元素 ： 不取第k个元素
+         */
+        for (int i = 2; i < nums.length; i++) {
+            int temp = second;
+            second = Math.max(nums[i] + first, second);
+            first = second;
+        }
+        return second;
+
+    }
+
+    /**
+     * 1108. IP 地址无效化
+     *
+     * @param address
+     * @return
+     */
+    public String defangIPaddr(String address) {
+
+        if (address == null) {
+            return null;
+        }
+        String string = address.replace(".", "[.]");
+        return string;
+    }
+
 
 
 
