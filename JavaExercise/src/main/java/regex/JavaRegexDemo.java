@@ -27,9 +27,28 @@ public class JavaRegexDemo {
         return string.matches(regex1);
     }
 
+    /**
+     * 替换匹配到的第一个字符串
+     * + : 表示匹配前面的子表达式一次或者多次
+     * * : 表示匹配前面的子表达式零次或者多次，没有匹配到也属于匹配成功
+     *
+     * @return
+     */
+    public static void regexTest2() {
+
+        String string = "fffas?fafa1213213s";
+        string = string.replaceFirst("[0-9]*", "*");
+        String string1 = "gds6362322n312n321n321n213213211";
+        string1 = string1.replaceFirst("\\d+", "*");
+        System.out.println(string1);
+        System.out.println(string);
+
+    }
+
 
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexTest1());
+        JavaRegexDemo.regexTest2();
+
     }
 
 }
