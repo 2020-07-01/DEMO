@@ -1955,7 +1955,110 @@ public class MainSeptember {
     }
 
 
+    /**
+     * 面试题 16.17. 连续数列 最大值
+     * 时间复杂度O(n)
+     * 动态规划
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray5(int[] nums) {
 
+        if (nums == null || nums.length == 0) {
+            return Integer.MIN_VALUE;
+        }
+
+        int max = Integer.MIN_VALUE;
+
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+
+            if (sum > 0) {
+                sum = sum + nums[i];
+            } else {
+                sum = nums[i];
+            }
+
+            max = Math.max(max, sum);
+        }
+        return max;
+    }
+
+
+    /**
+     * 暴力解法
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray6(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return Integer.MIN_VALUE;
+        }
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            int sum = 0;
+            for (int j = i; j >= 0; j--) {
+
+                sum = sum + nums[j];
+                max = Math.max(max, sum);
+            }
+        }
+        return max;
+    }
+
+    /**
+     * 1576. 替换所有的问号
+     * 暴力解法
+     *
+     * @param s
+     * @return
+     */
+    public String modifyString(String s) {
+
+        if (s == null) {
+            return null;
+        }
+        if (s.length() == 1 && s.equals("?")) {
+            return "a";
+        }
+
+        int i = 0;
+        while (i < s.length()) {
+            if (s.charAt(i) == '?') {
+                //最左边
+                if (i == 0) {
+                    for (int p = 'a'; p < 'z'; p++) {
+                        if ((char)p != s.charAt(i + 1)) {
+                            s = s.replaceFirst("/?", String.valueOf(p));
+                            break;
+                        }
+                    }
+                }
+                //最右边
+                else if (i == s.length() - 1) {
+                    for (int p = 'a'; p < 'z'; p++) {
+                        if ((char)p != s.charAt(i - 1)) {
+                            s = s.replaceFirst("/?", String.valueOf(p));
+                            break;
+                        }
+                    }
+                } else {
+                    //中间
+                    for (int p = 'a'; p < 'z'; p++) {
+                        if ((char)p != s.charAt(i - 1) && p != s.charAt(i + 1)) {
+                             s = s.replaceFirst("/?", String.valueOf(p));
+                            break;
+                        }
+                    }
+                }
+            }
+            i++;
+        }
+        return s;
+    }
 
     class ListNode {
         int val;
@@ -1980,12 +2083,12 @@ public class MainSeptember {
 
         int[][] arrays = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
-        int[] nums = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int[] nums = new int[]{-2, 1, -3, 4, -1, 2, 12321, 31, 3, 13, 21, 3, 12, 321, 31, -5, 4};
 
         int[][] arrays1 = new int[][]{{4}, {4}, {5}};
 
         MainSeptember main = new MainSeptember();
         //System.out.println(Arrays.toString(main.spiralOrder(arrays)));
-        System.out.println(main.maxSubArray(nums));
+        System.out.println(main.modifyString("????????????????????????????????????????????????????????????"));
     }
 }
