@@ -2031,7 +2031,7 @@ public class MainSeptember {
                 //最左边
                 if (i == 0) {
                     for (int p = 'a'; p < 'z'; p++) {
-                        if ((char)p != s.charAt(i + 1)) {
+                        if ((char) p != s.charAt(i + 1)) {
                             s = s.replaceFirst("/?", String.valueOf(p));
                             break;
                         }
@@ -2040,7 +2040,7 @@ public class MainSeptember {
                 //最右边
                 else if (i == s.length() - 1) {
                     for (int p = 'a'; p < 'z'; p++) {
-                        if ((char)p != s.charAt(i - 1)) {
+                        if ((char) p != s.charAt(i - 1)) {
                             s = s.replaceFirst("/?", String.valueOf(p));
                             break;
                         }
@@ -2048,8 +2048,8 @@ public class MainSeptember {
                 } else {
                     //中间
                     for (int p = 'a'; p < 'z'; p++) {
-                        if ((char)p != s.charAt(i - 1) && p != s.charAt(i + 1)) {
-                             s = s.replaceFirst("/?", String.valueOf(p));
+                        if ((char) p != s.charAt(i - 1) && p != s.charAt(i + 1)) {
+                            s = s.replaceFirst("/?", String.valueOf(p));
                             break;
                         }
                     }
@@ -2059,6 +2059,119 @@ public class MainSeptember {
         }
         return s;
     }
+
+
+    /**
+     * 面试题 17.16. 按摩师
+     * 遍历数组+动态规划
+     *
+     * @param nums
+     * @return
+     */
+    public int massage(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        if (nums.length == 2) {
+            return nums[0] > nums[1] ? nums[0] : nums[1];
+        }
+
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[1], dp[0]);
+
+        for (int i = 2; i < nums.length; i++) {
+
+            if (nums[i] + dp[i - 2] > dp[i - 1]) {
+                dp[i] = dp[i - 2] + nums[i];
+            } else {
+                dp[i] = dp[i - 1];
+            }
+        }
+        return dp[nums.length - 1];
+    }
+
+    /**
+     * 面试题 17.16. 按摩师
+     * 动态规划：优化算法
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param nums
+     * @return
+     */
+    public int massage1(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
+            return nums[0];
+        }
+
+        int first = nums[0];
+        int second = Math.max(first, nums[1]);
+
+        for (int i = 2; i < nums.length; i++) {
+            int temp = second;
+            second = Math.max(first + nums[i], second);
+            //往前递推
+            first = temp;
+        }
+        return second;
+    }
+
+    /**
+     * 392. 判断子序列
+     * 双指针法
+     * 时间复杂度O(m+n) (操作的次数)
+     * 空间复杂度O(1)
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isSubsequence(String s, String t) {
+        if (s == null || s.length() == 0) {
+            return true;
+        }
+        if (t == null || t.length() == 0) {
+            return false;
+        }
+        int index = 0;
+        for (int i = 0; i < t.length(); i++) {
+            if (t.charAt(i) == s.charAt(index)) {
+                index++;
+            }
+            if (index == s.length()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 392. 判断子序列
+     * 动态规划解法
+     * 空间换时间
+     * 当s有k个时，需要遍历k次t数组
+     * 先对t字符串进行预处理
+     * 然后依次判断s
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isSubsequence1(String s, String t) {
+
+
+
+
+    }
+
+
 
     class ListNode {
         int val;
