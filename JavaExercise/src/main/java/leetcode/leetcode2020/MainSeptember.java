@@ -2153,24 +2153,6 @@ public class MainSeptember {
         return false;
     }
 
-    /**
-     * 392. 判断子序列
-     * 动态规划解法
-     * 空间换时间
-     * 当s有k个时，需要遍历k次t数组
-     * 先对t字符串进行预处理
-     * 然后依次判断s
-     * @param s
-     * @param t
-     * @return
-     */
-    public boolean isSubsequence1(String s, String t) {
-
-
-
-
-    }
-
 
 
     class ListNode {
