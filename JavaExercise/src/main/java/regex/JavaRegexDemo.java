@@ -42,12 +42,74 @@ public class JavaRegexDemo {
         string1 = string1.replaceFirst("\\d+", "*");
         System.out.println(string1);
         System.out.println(string);
+    }
+
+    /**
+     * 判断是否包含数字
+     * [0-9] \d
+     *  *一次或者多次
+     * {n} n为非负整数，匹配前面的表达式n次
+     *
+     *
+     * 包含数字则数字前后为0或多个字符
+     */
+    public static boolean regexTest3() {
+        /**
+         * 匹配多次
+         */
+        String string = "313213";
+        String regex = "^\\d*$";
+        /**
+         * //只匹配一次
+         */
+        String string1 = "1";
+        String regex1 = "[0-9]";
+        /**
+         * 匹配前面的表达式指定次数
+         * 逗号(,) 至少匹配4次
+         */
+        String string2 = "131";
+        String regex2 = "[0-9]{4,}";
+        /**
+         * 匹配子表达式
+         * .表示匹配除换行符之外的任何单个字符
+         */
+        String string3 = "34fas2rfsq343212fas3";
+        String regex3 = ".*[0-9]{4,}.*";
+
+        return string3.matches(regex3);
+    }
+
+    /**
+     * 是否包含11位数字
+     *
+     * @return
+     */
+    public static boolean regexTest4(){
+
+        String string = "rew11111312321111111werwe";
+        String regex = ".*[0-9]{11}.*";
+        return string.matches(regex);
+    }
+
+    /**
+     * 是否包含字母
+     * {}:一般表示匹配的字符的长度
+     * []:一般表示匹配的字符的范围，在不指定次数时，默认只匹配单个
+     * @return
+     */
+    public static boolean regexTest5(){
+
+        String string = "fsrawaf";
+        String regex = ".*[a-z].*";
+
+        return string.matches(regex);
 
     }
 
 
     public static void main(String[] args) {
-        JavaRegexDemo.regexTest2();
+        System.out.println(JavaRegexDemo.regexTest5());
 
     }
 
