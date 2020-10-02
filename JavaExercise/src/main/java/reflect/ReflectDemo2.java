@@ -23,6 +23,12 @@ public class ReflectDemo2 {
         Constructor constructor = clazz.getDeclaredConstructor();
         Object object1 = constructor.newInstance();
 
+        /**
+         * 获取所有的字段
+         * 但是这些字段是无序的
+         */
+        clazz.getDeclaredFields();
+
 
     }
 }
