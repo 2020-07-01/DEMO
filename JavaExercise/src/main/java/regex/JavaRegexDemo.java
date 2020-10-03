@@ -47,10 +47,10 @@ public class JavaRegexDemo {
     /**
      * 判断是否包含数字
      * [0-9] \d
-     *  *一次或者多次
+     * *一次或者多次
      * {n} n为非负整数，匹配前面的表达式n次
-     *
-     *
+     * <p>
+     * <p>
      * 包含数字则数字前后为0或多个字符
      */
     public static boolean regexTest3() {
@@ -85,7 +85,7 @@ public class JavaRegexDemo {
      *
      * @return
      */
-    public static boolean regexTest4(){
+    public static boolean regexTest4() {
 
         String string = "rew11111312321111111werwe";
         String regex = ".*[0-9]{11}.*";
@@ -96,9 +96,10 @@ public class JavaRegexDemo {
      * 是否包含字母
      * {}:一般表示匹配的字符的长度
      * []:一般表示匹配的字符的范围，在不指定次数时，默认只匹配单个
+     *
      * @return
      */
-    public static boolean regexTest5(){
+    public static boolean regexTest5() {
 
         String string = "fsrawaf";
         String regex = ".*[a-z].*";
@@ -108,8 +109,31 @@ public class JavaRegexDemo {
     }
 
 
+    /**
+     * 包含第10集
+     * {1,2} 匹配的字符长度1或者2
+     * {}：匹配的字符串为花括号前直到特殊字符
+     *
+     * @return
+     */
+    public static boolean regexTest6() {
+
+        String string = "重启第1集";
+        String regex = ".*第[0-9]{1,2}集.*";
+
+        /**
+         * 包含汉字"重启"
+         */
+        String string1 = "重启第1集";
+        String regex1 = ".*重启{1,2}.*";
+
+        return string1.matches(regex1);
+
+    }
+
+
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexTest5());
+        System.out.println(JavaRegexDemo.regexTest6());
 
     }
 
