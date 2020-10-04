@@ -128,12 +128,41 @@ public class JavaRegexDemo {
         String regex1 = ".*重启{1,2}.*";
 
         return string1.matches(regex1);
-
     }
 
+    /**
+     * 包含字母或者数字
+     * | : 两个选择中的一个
+     * @return
+     */
+    public static boolean regexTest7(){
+        String string = "%%";
+        String regex = ".*[0-9].*|.*[a-zA-z].*";
+
+        /**
+         * 仅由字母组成，不包含空格等其他字符
+         */
+        String string1 = "qeqweQEqw";
+        String regex2 = "[a-zA-Z]{1,}";
+        String regex3 = "[a-zA-Z]+";
+        return string1.matches(regex3);
+    }
+
+    /**
+     * 验证手机号
+     * 1.长度11位
+     * 2.全为数字
+     * @return
+     */
+    public static boolean regexTest8(){
+       String string = "11111111111";
+       String regex = "^[0-9]{11}$";
+
+       return string.matches(regex);
+    }
 
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexTest6());
+        System.out.println(JavaRegexDemo.regexTest7());
 
     }
 
