@@ -1,5 +1,7 @@
 package leetcode.leetcode2020;
 
+import java.util.HashMap;
+
 /**
  * @ClassName : MainOctober
  * @Author : yq
@@ -170,6 +172,91 @@ public class MainOctober {
         }
     }
 
+    /**
+     * 面试题 08.01. 三步问题
+     * 与楼梯两步走相同
+     * dp[i] = dp[i-1]+dp[i-2]+dp[i-3]
+     * 动态规划算法
+     * @param n
+     * @return
+     */
+    public int waysToStep(int n) {
+
+        if (n == 0) {
+            return 1;
+        }
+        if (n == 1 || n == 2) {
+            return n;
+        }
+        if (n == 3) {
+            return 4;
+        }
+
+        long one = 1;
+        long two = 2;
+        long three = 4;
+
+        for (int i = 4; i <= n; i++) {
+            long temp2 = two;
+            long temp3 = three;
+            three = (one + two + three) % 1000000007;
+            one = temp2;
+            two = temp3;
+        }
+        return (int) three;
+    }
+
+    /**
+     * 345. 反转字符串中的元音字母
+     * 双指针法 与快速排序法类似
+     * 时间复杂度O(n)
+     *
+     * @param s
+     * @return
+     */
+    public String reverseVowels(String s) {
+
+        if (s == null || s.length() == 0) {
+            return s;
+        }
+
+        HashMap hashMap = new HashMap();
+        hashMap.put('a', 'a');
+        hashMap.put('e', 'e');
+        hashMap.put('i', 'i');
+        hashMap.put('o', 'o');
+        hashMap.put('u', 'u');
+        hashMap.put('A', 'A');
+        hashMap.put('E', 'E');
+        hashMap.put('I', 'I');
+        hashMap.put('O', 'O');
+        hashMap.put('U', 'U');
+        int start = 0;
+        int end = s.length() - 1;
+        char[] chars = s.toCharArray();
+        while (start < end) {
+
+            while (!hashMap.containsKey(chars[start]) && start < end) {
+                start++;
+            }
+
+            while (!hashMap.containsKey(chars[end]) && start < end) {
+                end--;
+            }
+
+            if (start < end) {
+                char temp = chars[start];
+                chars[start] = chars[end];
+                chars[end] = temp;
+            }
+            end--;
+            start++;
+
+        }
+
+        return String.valueOf(chars);
+
+    }
 
     public static void main(String[] args) {
 
@@ -179,6 +266,6 @@ public class MainOctober {
 
         mainOctober.merge(array, 3, array1, 3);
 
-        //System.out.println(mainOctober.minCostClimbingStairs(array1));
+        System.out.println(mainOctober.reverseVowels("asfaoishadj"));
     }
 }
