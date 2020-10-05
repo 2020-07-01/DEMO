@@ -133,9 +133,10 @@ public class JavaRegexDemo {
     /**
      * 包含字母或者数字
      * | : 两个选择中的一个
+     *
      * @return
      */
-    public static boolean regexTest7(){
+    public static boolean regexTest7() {
         String string = "%%";
         String regex = ".*[0-9].*|.*[a-zA-z].*";
 
@@ -152,17 +153,29 @@ public class JavaRegexDemo {
      * 验证手机号
      * 1.长度11位
      * 2.全为数字
+     *
      * @return
      */
-    public static boolean regexTest8(){
-       String string = "11111111111";
-       String regex = "^[0-9]{11}$";
+    public static boolean regexTest8() {
+        String string = "11111111111";
+        String regex = "^[0-9]{11}$";
 
-       return string.matches(regex);
+        return string.matches(regex);
+    }
+
+    /**
+     * {n,m}:最少匹配n次，最多匹配m次
+     *
+     * @return
+     */
+    public static boolean regexTest9() {
+        String string = "3fa12af43ab2112";
+        String regex = ".*[0-9]{3,4}.*";
+        return string.matches(regex);
     }
 
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexTest7());
+        System.out.println(JavaRegexDemo.regexTest9());
 
     }
 

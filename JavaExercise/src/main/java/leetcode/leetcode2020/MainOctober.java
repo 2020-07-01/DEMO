@@ -1,5 +1,6 @@
 package leetcode.leetcode2020;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 
 /**
@@ -177,6 +178,7 @@ public class MainOctober {
      * 与楼梯两步走相同
      * dp[i] = dp[i-1]+dp[i-2]+dp[i-3]
      * 动态规划算法
+     *
      * @param n
      * @return
      */
@@ -253,19 +255,171 @@ public class MainOctober {
             start++;
 
         }
-
         return String.valueOf(chars);
+    }
 
+    /**
+     * 28. 实现 strStr()
+     * 时间复杂度O(n) 会超时
+     *
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr(String haystack, String needle) {
+
+        if (haystack == null || haystack.length() == 0) {
+            return -1;
+        }
+        if (needle == null || needle.length() == 0) {
+            return 0;
+        }
+        int index = 0;
+        while (index < haystack.length() - needle.length() + 1) {
+
+            //如果首字母相同则开始比较
+            if (haystack.charAt(index) == needle.charAt(0)) {
+                if (haystack.substring(index, index + needle.length()).equals(needle)) {
+                    return index;
+                }
+            } else {
+                index++;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 28. 实现 strStr()
+     * 时间复杂度O(n)
+     *
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr1(String haystack, String needle) {
+        int L = needle.length(), n = haystack.length();
+        int start = 0;
+        while (start < n - L + 1) {
+            if (haystack.substring(start, start + L).equals(needle)) {
+                return start;
+            }
+            start++;
+        }
+
+        return -1;
+    }
+
+    /**
+     * 28. 实现 strStr()
+     * 暴力算法
+     * 时间复杂度O((n-l)l)
+     *
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr2(String haystack, String needle) {
+
+        int N = haystack.length();
+        int L = needle.length();
+        int left = 0;
+        int right = left + L;
+
+        while (left < N - L + 1) {
+            right = left + L;
+            //此处可使用for循环进行比较
+            if (haystack.substring(left, right).equals(needle)) {
+                return left;
+            }
+            left++;
+        }
+        return -1;
+    }
+
+
+    /**
+     * 1491. 去掉最低工资和最高工资后的工资平均值
+     * 一次遍历获取最大值和最小值
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param salary
+     * @return
+     */
+    public double average(int[] salary) {
+
+        /**
+         * 一趟遍历获取获取最大值和最小值
+         * 并计算sum
+         */
+        int sum = 0;
+        int max = salary[0];
+        int min = salary[0];
+        for (int i = 0; i < salary.length; i++) {
+
+            sum = sum + salary[i];
+            max = max > salary[i] ? max : salary[i];
+            min = min < salary[i] ? min : salary[i];
+        }
+        BigDecimal bigDecimal = new BigDecimal(sum - max - min);
+
+        bigDecimal.divide(new BigDecimal(salary.length - 2));
+        return bigDecimal.setScale(5, BigDecimal.ROUND_HALF_UP).doubleValue();
+    }
+
+
+    /**
+     * 976. 三角形的最大周长
+     * 2，3，3，6 类似这种情况，直接舍弃最后一位
+     *
+     * @param A
+     * @return
+     */
+    public int largestPerimeter(int[] A) {
+        if (A.length == 3) {
+            if (A[0] + A[1] > A[2] && A[0] + A[2] > A[1] && A[1] + A[2] > A[0]) {
+                return A[0] + A[2] + A[1];
+            } else {
+                return 0;
+            }
+        }
+        if (A.length < 3) {
+            return 0;
+        }
+        /**
+         * 冒泡排序
+         */
+        for (int i = A.length - 1; i >= 0; i--) {
+
+            for (int j = 0; j < i; j++) {
+                if (A[j] > A[j + 1]) {
+                    int temp = A[j];
+                    A[j] = A[j + 1];
+                    A[j + 1] = temp;
+                }
+            }
+        }
+
+        for (int i = A.length - 3; i >= 0; --i) {
+            if (A[i] + A[i + 1] > A[i + 2]) {
+                return A[i] + A[i + 1] + A[i + 2];
+            }
+
+        }
+
+        return 0;
     }
 
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
-        int[] array = new int[]{1, 2, 3, 0, 0, 0};
+        int[] array = new int[]{2, 1, 312, 312, 321, 3, 123, 213, 33, 54, 35, 6, 5676, 65, 3, 41, 2, 1, 3, 4, 54, 321, 2};
         int[] array1 = new int[]{2, 5, 8};
 
-        mainOctober.merge(array, 3, array1, 3);
 
-        System.out.println(mainOctober.reverseVowels("asfaoishadj"));
+        System.out.println(mainOctober.largestPerimeter(array));
+        double m = -0.00;
+        System.out.println(m);
     }
 }
