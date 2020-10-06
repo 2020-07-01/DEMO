@@ -1,0 +1,11 @@
+###ignore this file ###
+.idea
+*.iws
+*.iml
+*.ipr
+*log.*
+*.pyc
+*.class
+*.xml
+/target/
+

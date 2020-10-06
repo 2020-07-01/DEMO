@@ -20,7 +20,276 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/array/ArrayOfGenerics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/array/ClassParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/array/MultidimensionalPrimitiveArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/array/TestArraysMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/b_plus_tree/Btree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/b_plus_tree/KeyAndValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/b_plus_tree/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/basicDataType/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/basicDataType/TestBigInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/callback_function/example1/MyCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/callback_function/example1/MyCallInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/callback_function/example2/Callback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/callback_function/example2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/cloneable/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/cloneable/TestCloneable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/comparator_comparable/TestComparable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/comparator_comparable/TestComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/comparator_comparable/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/comparator_comparable/employee/TestEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/controllerExecutionProcess/BreakandContinue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/controllerExecutionProcess/MainFor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/covertUtils/CovertBaseDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/Bits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/arrays/TestArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/binaryHeap/MaxHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/binaryHeap/TestMaxHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/binary_search_tree/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/collection_method/CollectionMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/collection_method/UnSupported.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/collections/TestCollections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/collections/Unsupported.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/fillContainer/CollectionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/fillContainer/FillingLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/fillContainer/Generator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/fillContainer/MapData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/fillContainer/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/find/FullPermutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/find/TestFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/list/ArrayListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/list/Link.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/list/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/CanonicalMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/MapDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/hashMap/HashMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/hashcode/Groundhog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/hashcode/MapEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/hashcode/Prediction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/hashcode/SlowMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/map/hashcode/SpringDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/performanceTest/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/performanceTest/TestParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/redBlackTree/RebBlackTree1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/redBlackTree/RedBlackTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/set/SortedSetDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/set/TypesForSets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/HuaWeiFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/HuaWeiPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/HuaWeiRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/JavaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/PhoneProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/ProductFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/RouterProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/XiaoMiFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/XiaoMiPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/abstractFactory/XiaoMiRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/CarFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/JavaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/Tesla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/TeslaFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/WuLing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/method/WuLingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/Factory1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/IMessage1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/IMessage2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/JavaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/JavaDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/NetMessage1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/factoryMode/simple/NetMessage2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/JavaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/CartoonCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/EnumClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/OzWitch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/Shrubbery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/StudyValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/Enums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/TypeFood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/redGreenYellow/Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/redGreenYellow/TrafficLight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/exception/InheritingExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/exception/MultipleReturns.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/exception/SimpleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/exception/TestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/findALgorithm/FindAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/ArrayMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Automobile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/ErasedTypeEquivalence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/GenericMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/GenericVarargs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Hasf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Holder1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Holder2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/ListOfGenerics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/Manipulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/New.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/border/Colored.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/border/ColoredDimension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/border/Dimension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/border/HasColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/CompilerIntelligence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/CovariantArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/GenericsAndCovariance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/Jonathan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/DirList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/FileJavaApiDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestCommonsIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestFileStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestFilterStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestObjectStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestPrintWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/TestReaderAndWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/temp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/temp1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/temp2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/temp3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/temp4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/temp5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/iterator/ListIteratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/ReflectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/ReflectServiceImpl2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/ReflectServiceImpl3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/reflect/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/reflectEmployee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/reflectEmployee/TestEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/student/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/javaReflect/student/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/juc_sync/countDownLatch/TestCountDownLatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/juc_sync/countDownLatch/TestJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/juc_sync/cyclicBarrier/TestCycliBarrier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/juc_sync/semaphore/TestSemaphore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/lambda/InnerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/lambda/LambdaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/CalculateElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/FindNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/MatrixMultiplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/MergeArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/MoveElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/PlusOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/RemoveElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/SearchInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/SortArrayByParityII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/SortedElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/ThirdMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/Transpose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/TureORFalse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/array/easy/TwoSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/hash/easy/ContainsNearbyDuplicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/hash/easy/CountPrimes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/hash/easy/FindErrorNums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/hash/easy/IsHappy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/hash/easy/SingleNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/hash/easy/TwoSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainAugust.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainJuly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainSeptember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/linked/MergeTwoLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/linked/easy/ReverseList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/sort/easy/Intersection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/stack/easy/MinStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/stack/easy/MinStack1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/string/AddBinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/string/IsPalindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/string/RepeatedSubstringPattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/string/ReverseString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/string/easy/FindTheDifference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/twoPointers/MergeArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/StudyInetAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/UDPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/UDPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/url_uri/StudyURL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/url_uri/StudyURLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/object/HashCode_Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/object/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/object/User_Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/HelloWorldImpl1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/JdkProxyExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/ReflectDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/ReflectDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/regex/JavaRegexDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rmi/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rmi/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rmi/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rpc/CalculateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rpc/CalculateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rpc/People.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rpc/RpcConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rpc/RpcFramework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/rpc/RpcProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/serializable/JavaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/serializable/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/sort_algorithm/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/sort_algorithm/InsertSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/sort_algorithm/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/sort_algorithm/SelectSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/sort_algorithm/SortTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/stream/ListStreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/string/FinalString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/string/JavaStringDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/string/RegularExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/string/TestStringMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/cancel_close/InterruptTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/cancel_close/InterruptTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/cancel_close/TestFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/cancel_close/Volatile_Cancle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/executor/TestCallable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/executor/TestRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/lock/LockDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/lock/LockDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/lock/TestCondition_Lock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/lock/TestLockInterruptibly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/lock/TestReentrantReadWriteLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/lock/TestTryLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/money/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/money/PersonA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/money/PersonB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/money/ThreadMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/runable_callbale/TestCallable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/runable_callbale/TestRunnbale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/synchronizedDemo/MyThreadDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/synchronizedDemo/MyThreadDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/synchronizedDemo/TestClass01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/synchronizedDemo/TestMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/synchronizedDemo/TestSy01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/testvolatile/VolatileDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/testvolatile/VolatileDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/threadDemo/DeadLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/threadDemo/MyThreadDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/threadDemo/MyThreadDemo3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DEMO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DEMO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +327,44 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaExercise/JavaExercise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="profiler.jvm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3908046" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="basicDataType.Main" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="basicDataType.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="JavaExercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_FIELDS" />
@@ -80,6 +381,7 @@
       <updated>1598780700406</updated>
       <workItem from="1598780701831" duration="3354000" />
       <workItem from="1601627238587" duration="36266000" />
+      <workItem from="1601992998188" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -95,7 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598780941804</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="代码结构调整">
+      <created>1601993280702</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601993280702</updated>
+    </task>
+    <task id="LOCAL-00004" summary="代码结构调整">
+      <created>1601993288539</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601993288539</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,33 +432,38 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="结构调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="结构调整" />
+    <MESSAGE value="代码结构调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码结构调整" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser" timestamp="1601967998023">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601967998023" />
-    <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1601627269071">
+    <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1601993101669">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1601627269071" />
+    <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993101669" />
     <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1598785761766">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598785761766" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1598780948145">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1601993761538">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1598780948145" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601993761538" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601993301518">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601993301518" />
     <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1601953509363">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1601953509363" />
-    <state x="35" y="0" key="new project wizard" timestamp="1601628184424">
+    <state x="35" y="0" key="new project wizard" timestamp="1601993456314">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1601628184424" />
+    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1601993456314" />
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup" timestamp="1601969721576">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
