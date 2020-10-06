@@ -2,6 +2,7 @@ package leetcode.leetcode2020;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName : MainOctober
@@ -411,6 +412,205 @@ public class MainOctober {
         return 0;
     }
 
+    /**
+     * 844. 比较含退格的字符串
+     * 超出内存限制
+     *
+     * @param S
+     * @param T
+     * @return
+     */
+    public boolean backspaceCompare(String S, String T) {
+
+
+        String string1 = new String();
+
+        int s1 = S.length() - 1;
+        while (s1 >= 0) {
+            if (S.charAt(s1) == '#') {
+                s1 = s1 - 1;
+            } else {
+                string1 = string1 + S.charAt(s1);
+            }
+            s1--;
+        }
+
+        String string2 = new String();
+        int t2 = T.length() - 1;
+        while (t2 >= 0) {
+            if (T.charAt(t2) == '#') {
+                t2 = t2 - 1;
+            } else {
+                string2 = string2 + T.charAt(t2);
+            }
+        }
+        return string1.equals(string2);
+
+    }
+
+    /**
+     * 844. 比较含退格的字符串
+     * 未解决
+     *
+     * @param S
+     * @param T
+     * @return
+     */
+    public boolean backspaceCompare1(String S, String T) {
+
+        int s = S.length() - 1;
+        int t = T.length() - 1;
+
+        while (s >= 0 && t >= 0) {
+            while (S.charAt(s) == '#') {
+                s = s - 2;
+            }
+
+            while (T.charAt(t) == '#') {
+                t = t - 2;
+            }
+
+            if (S.charAt(s) != T.charAt(t)) {
+                return false;
+            }
+        }
+
+        if (s > 0 || t > 0) {
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
+     * 1576. 替换所有的问号
+     *
+     * @param s
+     * @return
+     */
+    public String modifyString(String s) {
+
+        char[] chars = s.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '?') {
+                char ahead = i == 0 ? ' ' : chars[i - 1];
+                char behind = i == chars.length - 1 ? ' ' : chars[i + 1];
+
+                char j = 'a';
+                while (j == ahead || j == behind) {
+                    j++;
+                }
+                chars[i] = j;
+            }
+        }
+        return new String(chars);
+    }
+
+
+    /**
+     * 面试题 17.10. 主要元素
+     * 时间复杂度O(n)
+     *
+     * @param nums
+     * @return
+     */
+    public int majorityElement(int[] nums) {
+
+        int maxSum = 0;
+        int item = 0;
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (maxSum < (hashMap.getOrDefault(nums[i], 0) + 1)) {
+                maxSum = hashMap.getOrDefault(nums[i], 0) + 1;
+                item = nums[i];
+                hashMap.put(nums[i], maxSum);
+            } else {
+                hashMap.put(nums[i], hashMap.getOrDefault(nums[i], 0) + 1);
+            }
+        }
+
+        if (maxSum > nums.length / 2) {
+            return item;
+        } else {
+            return -1;
+        }
+
+    }
+
+    /**
+     * 1450. 在既定时间做作业的学生人数
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param startTime
+     * @param endTime
+     * @param queryTime
+     * @return
+     */
+    public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
+        int sum = 0;
+        int index = 0;
+        while (index < startTime.length) {
+            if (startTime[index] <= queryTime && endTime[index] >= queryTime) {
+                sum++;
+            }
+        }
+        return sum;
+    }
+
+
+    /**
+     * 1512. 好数对的数目
+     * 暴力算法时间复杂度O(n2)
+     * 空间复杂度O(1)
+     *
+     * @param nums
+     * @return
+     */
+    public int numIdenticalPairs(int[] nums) {
+        if (nums.length < 2) {
+            return 0;
+        }
+        int sum = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j] && i < j) {
+                    sum++;
+                }
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * 1512. 好数对的数目
+     * 借用赋值空间
+     * 计算公式：v(v-1)/2
+     * 世家复杂度O(n)
+     * 孔家复杂度O(n)
+     *
+     * @param nums
+     * @return
+     */
+    public int numIdenticalPairs1(int[] nums) {
+
+        Map<Integer, Integer> hashMap = new HashMap();
+
+        for (int i = 0; i < nums.length; i++) {
+            hashMap.put(nums[i], hashMap.getOrDefault(nums[i], 0) + 1);
+        }
+        int sum = 0;
+        for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
+            int temp = entry.getValue() * (entry.getValue() - 1) / 2;
+            sum = sum + temp;
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
@@ -418,7 +618,6 @@ public class MainOctober {
         int[] array1 = new int[]{2, 5, 8};
 
 
-        System.out.println(mainOctober.largestPerimeter(array));
         double m = -0.00;
         System.out.println(m);
     }

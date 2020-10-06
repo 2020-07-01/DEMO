@@ -174,8 +174,18 @@ public class JavaRegexDemo {
         return string.matches(regex);
     }
 
+    /**
+     * 匹配问号 ？
+     * @return
+     */
+    public static boolean regexText10(){
+        String string = "af";
+        String regex = "[?]{1}";
+        return string.matches(regex);
+    }
+
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexTest9());
+        System.out.println(JavaRegexDemo.regexText10());
 
     }
 
