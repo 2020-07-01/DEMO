@@ -1,6 +1,7 @@
 package leetcode.leetcode2020;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -611,14 +612,99 @@ public class MainOctober {
         return sum;
     }
 
+    /**
+     * 1365. 有多少小于当前数字的数字
+     * 排序 + 映射
+     * 时间复杂度 O(nlogn)
+     * 空间复杂度 O(n)
+     * <p>
+     * 1.暴力算法
+     * 2.计数排序
+     *
+     * @param nums
+     * @return
+     */
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+
+        int[] temp = new int[nums.length];
+        System.arraycopy(nums, 0, temp, 0, nums.length);
+        //排序nLogn
+        Arrays.sort(nums);
+        //遍历数组 n
+        int[] arrays = new int[nums.length];
+        arrays[0] = 0;
+        HashMap<Integer, Integer> hashMap = new HashMap();
+        hashMap.put(nums[0], 0);
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                arrays[i] = arrays[i - 1];
+                hashMap.put(nums[i], arrays[i]);
+            } else {
+                arrays[i] = i;
+                hashMap.put(nums[i], arrays[i]);
+            }
+        }
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = hashMap.get(temp[i]);
+        }
+
+        return temp;
+    }
+
+
+    /**
+     * 1365. 有多少小于当前数字的数字
+     * 计数排序思想
+     * 1.找到最大值
+     * 2.计数每个元素出现的次数
+     * 3.遍历通，计算小于当前元素的个数（dp）
+     * 4.获取小于当前元素的元素个数
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param nums
+     * @return
+     */
+    public int[] smallerNumbersThanCurrent1(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return nums;
+        }
+        //获取最大值
+        int max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            max = max > nums[i] ? max : nums[i];
+        }
+
+        int[] bucket = new int[max + 1];
+
+        for (int i = 0; i < nums.length; i++) {
+            bucket[nums[i]] = bucket[nums[i]] + 1;
+        }
+        int temp = bucket[0];
+        bucket[0] = 0;
+
+        for (int i = 1; i < bucket.length; i++) {
+            int temp1 = bucket[i];
+            bucket[i] = temp + bucket[i - 1];
+            temp = temp1;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+
+            nums[i] = bucket[nums[i]];
+        }
+        return nums;
+    }
+
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
         int[] array = new int[]{2, 1, 312, 312, 321, 3, 123, 213, 33, 54, 35, 6, 5676, 65, 3, 41, 2, 1, 3, 4, 54, 321, 2};
-        int[] array1 = new int[]{2, 5, 8};
+        int[] array1 = new int[]{8, 1, 2, 2, 3};
 
 
-        double m = -0.00;
-        System.out.println(m);
+        System.out.println(Arrays.toString(mainOctober.smallerNumbersThanCurrent1(array1)));
     }
 }
