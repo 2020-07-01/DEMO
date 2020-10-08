@@ -1,6 +1,9 @@
 package leetcode.leetcode2020;
 
+import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
+
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -698,13 +701,140 @@ public class MainOctober {
     }
 
 
+    /**
+     * 80. 删除排序数组中的重复项 II
+     * <p>
+     * 双指针法+原地删除
+     *
+     * @param nums
+     * @return
+     */
+    public int removeDuplicates(int[] nums) {
+
+        /**
+         * 1.借助HashMap
+         * 2.暴力解法
+         * 3.计数法
+         */
+        int left = 0;
+        int right = 2;
+
+        int sum = nums.length;
+        while (right < sum) {
+            if (nums[left] == nums[right]) {
+                System.arraycopy(nums, right + 1, nums, right, nums.length - right - 1);
+                sum--;
+            } else {
+                left++;
+                right++;
+            }
+        }
+
+        return sum;
+    }
+
+
+    /**
+     * 80. 删除排序数组中的重复项 II
+     * 原地覆盖
+     *
+     * @param nums
+     * @return
+     */
+    public int removeDuplicates1(int[] nums) {
+
+        int i = 0;
+        for (int n : nums) {
+            if (i < 2 || n > nums[i - 2]) {
+                nums[i++] = n;
+            }
+        }
+        return i;
+
+    }
+
+
+    /**
+     * 287. 寻找重复数
+     * 1.暴力解法 时间复杂度O(n2) 空间复杂度O(1)
+     * 2.HashMap 时间复杂度O(n) 空间复杂度O(n)
+     * 3.快慢指针法
+     * HashMap
+     * 时间复杂度O(1)
+     * 空间复杂度O(n)
+     *
+     * @param nums
+     * @return
+     */
+    public int findDuplicate(int[] nums) {
+
+        int repeatNum = 0;
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.get(nums[i]) != null) {//判断时间复杂度O(1)
+                return nums[i];
+            } else {
+                hashMap.put(nums[i], nums[i]);
+            }
+        }
+
+        return repeatNum;
+    }
+
+    /**
+     * 287. 寻找重复数
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param nums
+     * @return
+     */
+    public int findDuplicate1(int[] nums) {
+
+        Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                return nums[i];
+            }
+        }
+        return -1;
+
+    }
+
+    /**
+     * 287. 寻找重复数
+     * 快慢指针法
+     * 将数组看作一个链表
+     *
+     * @param nums
+     * @return
+     */
+    public int findDuplicate2(int[] nums) {
+
+        int left = 0;
+        int right = 0;
+        while (left != right) {
+            left = nums[left];
+            right = nums[nums[right]];
+        }
+        //left = right时 存在环
+
+        left = 0;
+        while (left != right) {
+            left = nums[left];
+            right = nums[right];
+        }
+        return left;
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
         int[] array = new int[]{2, 1, 312, 312, 321, 3, 123, 213, 33, 54, 35, 6, 5676, 65, 3, 41, 2, 1, 3, 4, 54, 321, 2};
-        int[] array1 = new int[]{8, 1, 2, 2, 3};
+        int[] array1 = new int[]{1, 2, 2, 2, 2, 2, 2, 3, 3, 4, 5, 8, 9, 10};
 
 
-        System.out.println(Arrays.toString(mainOctober.smallerNumbersThanCurrent1(array1)));
+        System.out.println(mainOctober.findDuplicate2(array1));
     }
 }

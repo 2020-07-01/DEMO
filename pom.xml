@@ -8,9 +8,25 @@
     <artifactId>DEMO</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <name>DEMO</name>
+
     <modules>
         <module>JavaExercise</module>
+        <module>Spring-Demo</module>
     </modules>
 
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!--spring-boot依赖-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </parent>
 
 </project>

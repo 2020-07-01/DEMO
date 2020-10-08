@@ -20,10 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/SpringDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/regex/JavaRegexDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/regex/JavaRegexDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +77,20 @@
     <property name="project.structure.side.proportion" value="0.3908046" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.JavaRegexDemo">
+    <configuration name="JavaRegexDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="regex.JavaRegexDemo" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="regex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainOctober" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainOctober" />
       <module name="JavaExercise" />
@@ -89,6 +106,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaRegexDemo" />
         <item itemvalue="Application.MainOctober" />
       </list>
     </recent_temporary>
@@ -111,6 +129,8 @@
       <workItem from="1601627238587" duration="36266000" />
       <workItem from="1601992998188" duration="922000" />
       <workItem from="1601994250734" duration="6927000" />
+      <workItem from="1602146865478" duration="217000" />
+      <workItem from="1602147111613" duration="10052000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -184,54 +204,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993101669" />
-    <state width="436" height="438" key="DebuggerActiveHint" timestamp="1602081636665">
+    <state width="436" height="438" key="DebuggerActiveHint" timestamp="1602163604713">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="436" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1602081636665" />
+    <state width="436" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1602163604713" />
     <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1598785761766">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598785761766" />
-    <state width="1237" height="118" key="GridCell.Tab.0.bottom" timestamp="1602084406818">
+    <state width="1237" height="118" key="GridCell.Tab.0.bottom" timestamp="1602168631711">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602084406818" />
-    <state width="1237" height="118" key="GridCell.Tab.0.center" timestamp="1602084406818">
+    <state width="1237" height="118" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
+    <state width="1237" height="118" key="GridCell.Tab.0.center" timestamp="1602168631711">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602084406818" />
-    <state width="1237" height="118" key="GridCell.Tab.0.left" timestamp="1602084406818">
+    <state width="1237" height="118" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
+    <state width="1237" height="118" key="GridCell.Tab.0.left" timestamp="1602168631711">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602084406818" />
-    <state width="1237" height="118" key="GridCell.Tab.0.right" timestamp="1602084406818">
+    <state width="1237" height="118" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
+    <state width="1237" height="118" key="GridCell.Tab.0.right" timestamp="1602168631711">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602084406818" />
-    <state width="1237" height="181" key="GridCell.Tab.1.bottom" timestamp="1602084373108">
+    <state width="1237" height="118" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
+    <state width="1237" height="14" key="GridCell.Tab.1.bottom" timestamp="1602166064417">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="181" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602084373108" />
-    <state width="1237" height="181" key="GridCell.Tab.1.center" timestamp="1602084373108">
+    <state width="1237" height="14" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
+    <state width="1237" height="14" key="GridCell.Tab.1.center" timestamp="1602166064417">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="181" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1602084373108" />
-    <state width="1237" height="181" key="GridCell.Tab.1.left" timestamp="1602084373108">
+    <state width="1237" height="14" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
+    <state width="1237" height="14" key="GridCell.Tab.1.left" timestamp="1602166064417">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="181" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1602084373108" />
-    <state width="1237" height="181" key="GridCell.Tab.1.right" timestamp="1602084373108">
+    <state width="1237" height="14" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
+    <state width="1237" height="14" key="GridCell.Tab.1.right" timestamp="1602166064417">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="181" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1602084373108" />
+    <state width="1237" height="14" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
     <state x="221" y="84" key="IDE.errors.dialog" timestamp="1601993903121">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="84" key="IDE.errors.dialog/0.0.1280.680@0.0.1280.680" timestamp="1601993903121" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1601993761538">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1602147082249">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601993761538" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602147082249" />
     <state x="471" y="210" key="VCS.EditChangelistDialog" timestamp="1601993816859">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -244,10 +264,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1601953509363" />
-    <state x="35" y="0" key="new project wizard" timestamp="1601993456314">
+    <state x="35" y="0" key="new project wizard" timestamp="1602146989210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1601993456314" />
+    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1602146989210" />
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup" timestamp="1601969721576">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -268,23 +288,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>628</line>
+          <line>631</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>646</line>
+          <line>649</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>671</line>
+          <line>674</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>689</line>
+          <line>692</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
+          <line>732</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
+          <line>723</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
+          <line>727</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

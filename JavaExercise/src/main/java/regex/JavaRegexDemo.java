@@ -184,8 +184,36 @@ public class JavaRegexDemo {
         return string.matches(regex);
     }
 
+
+    /**
+     * 匹配所包含字段中的任意一个
+     * 匹配包含的任意一个字符
+     * [yuqiang]
+     * @return
+     */
+    public static boolean regexText11(){
+        String string = "414qwert";
+        String regex = "^.*[yuqiang].*$";
+        return  string.matches(regex);
+    }
+
+    /**
+     * 不包含指定字符
+     * 匹配未包含的任意字符
+     * [^yuqiang]
+     * @return
+     */
+    public static boolean regexText12(){
+
+        String string = "yuqiang";
+        String regex = ".*[^yuqiang].*";
+        return string.matches(regex);
+    }
+
+
+
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexText10());
+        System.out.println(JavaRegexDemo.regexText12());
 
     }
 
