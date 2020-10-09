@@ -828,13 +828,92 @@ public class MainOctober {
         return left;
     }
 
+    /**
+     * 剑指 Offer 47. 礼物的最大价值
+     * 二维数据组问题
+     * 动态规划思想
+     * 时间复杂度O(m*n)
+     * 空间复杂度O(1)
+     *
+     * @param grid
+     * @return
+     */
+    public int maxValue(int[][] grid) {
+
+        int row = grid.length;
+        int col = grid[0].length;
+
+        for (int i = 0; i < row; i++) {
+
+            for (int j = 0; j < col; j++) {
+
+                if (i == 0 && j == 0) {
+                    continue;
+                } else if (i == 0) {
+                    grid[i][j] = grid[i][j] + grid[i][j - 1];
+                } else if (j == 0) {
+                    grid[i][j] = grid[i][j] + grid[i - 1][j];
+                } else {
+                    grid[i][j] = grid[i][j] + Math.max(grid[i - 1][j], grid[i][j - 1]);
+                }
+            }
+        }
+
+        return grid[row - 1][col - 1];
+    }
+
+    /**
+     * 面试题 17.11. 单词距离
+     * 双指针法
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param words
+     * @param word1
+     * @param word2
+     * @return
+     */
+    public int findClosest(String[] words, String word1, String word2) {
+
+        if (words == null || words.length == 0) {
+            return 0;
+        }
+        int left = 0;
+        int right = 0;
+        int min = words.length;
+        while (left < words.length && right < words.length) {
+            while (left < words.length && !words[left].equals(word1)) {
+                left++;
+            }
+
+            while (right < words.length && !words[right].equals(word2)) {
+                right++;
+            }
+            if (left < words.length && right < words.length) {
+                if (left > right) {
+                    min = Math.min(min, (left - right));
+                    right++;
+                } else {
+                    min = Math.min(min, (right - left));
+                    left++;
+                }
+            } else {
+                return min;
+            }
+        }
+
+        return min;
+    }
+
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
         int[] array = new int[]{2, 1, 312, 312, 321, 3, 123, 213, 33, 54, 35, 6, 5676, 65, 3, 41, 2, 1, 3, 4, 54, 321, 2};
         int[] array1 = new int[]{1, 2, 2, 2, 2, 2, 2, 3, 3, 4, 5, 8, 9, 10};
 
+        String[] strings = new String[]{"ig", "as", "dt", "hnv", "b", "vr", "wbh", "ga", "wjv", "sq", "zf", "lhu", "y", "j", "sn", "zr", "woo", "mtr", "gw", "erj", "xqe", "p", "bl", "amo", "j", "p", "awf", "rmk", "nx", "qkj", "ub", "apk", "v", "tuq", "vci", "rrs", "wt", "y", "m", "jtn", "vxr", "x", "c", "lmn", "hpr", "t", "ab", "uf", "kp", "e", "q", "o", "jpm", "u", "glv", "nbl", "fqr", "v", "z", "nzk", "f", "kzu", "fje", "tzk", "f", "v", "mbf", "r", "t", "x", "uj", "hye", "po", "a", "zo", "xz", "r", "y", "ct", "j", "ac", "ctq", "ol", "nz", "f", "mwd", "aoc", "ve", "vmd", "bf", "mu", "pu", "fz", "jl", "lv", "yrl", "hzg", "jx", "vfx", "mdi", "td", "mqm", "nc", "l", "ln", "w", "q", "h", "uk", "upd", "v", "zo", "fbj", "pnt", "he", "qm", "l", "feb", "w", "e", "g", "r", "w", "uq", "ks", "pf", "x", "f", "lf", "buq", "zo", "gwr", "t", "q", "k", "p", "meo", "j", "w", "z", "p", "ek", "n", "ynn", "xka", "kk", "x", "nux", "rk", "ho", "xhu", "gf", "w", "w", "ekr", "eha", "prq", "sk", "hxm", "q", "ovg", "t", "mt", "mjz", "fe", "e", "e", "a", "l", "j", "zt", "hy", "h", "i", "dvu", "o", "dt", "h", "ir", "u", "ys", "ae", "etr", "rc", "urw", "d", "jbj", "qh", "td", "qpt", "v", "p", "k", "lc", "k", "xk", "kr", "jb", "cq", "gg", "hv", "h", "a", "izm", "tzh", "gf", "by", "ktw", "qny", "am", "m", "cd", "fjb", "e", "uk", "c", "agb", "hfk", "s", "qkk", "ika", "wc", "zh", "pt", "z", "ecm", "zjf", "pv", "ik", "r", "el", "wc", "qv", "n", "eg", "jl", "d", "bx", "zf", "ndk", "qvv", "v", "rc", "ce", "bh", "gq", "lnk", "f", "ffz", "mb", "hc", "id", "wvu", "sp", "r", "j", "wix", "es", "avg", "s", "yl", "jj", "f", "st", "shb", "b", "cwt", "iqc", "u", "cz", "cs", "p", "xy", "y", "m", "vy", "sq", "tt", "t", "lx", "vwf", "pvk", "qb", "j", "jrw", "q", "sam", "ke", "aay", "z", "qwu", "dph", "wv", "jkq", "ify", "mnk", "ulq", "s", "huj", "k", "c", "f", "bpi", "i", "yak", "mi", "myr", "g", "bcf", "uo", "pyp", "urt", "eja", "mck", "c", "x", "xsd", "cwk", "p", "qb", "aj", "cxp", "gfe", "fz", "lcx", "g", "kb", "q", "kar", "rge", "epw", "l", "t", "wk", "v", "oh", "sw", "eqv", "mdl", "edx", "dqi", "y", "i", "z", "vqy", "lzj", "cl", "m", "pzl", "z", "kip", "oxw", "kmw", "mgq", "bnn", "pty", "vji", "d", "wcv", "ck", "s", "qwh", "u", "dpp", "o", "dy", "c", "rrz", "obm", "cr", "sap", "k", "j", "nzs", "sc", "a", "xn", "i", "omy", "ui", "szk", "cau", "pgv", "r", "p", "wz", "d", "sd", "kys", "jp", "fxi", "ioo", "b", "i", "vq", "lg", "oo", "k", "os", "rd", "tlf", "db", "a", "qj", "g", "pv", "dh", "zoc", "lv", "o", "ejm", "x", "gx", "xr", "wuh", "ur", "pw", "mza", "ne", "cb", "gc", "zvm", "mxt", "hhd", "f", "a", "ia", "ggt", "ir", "e", "gk", "k", "q", "okn", "e", "vp", "pcu", "nd", "ddo", "ia", "ck", "fx", "fhk", "obc", "b", "os", "x", "sm", "yfe", "uz", "dmo", "x", "s", "sw", "xnh", "c", "za", "bjb", "xhv", "sg", "r", "bz", "s", "wnb", "trv", "qhh", "v", "ycz", "ysa", "cjo", "yrf", "hho", "adi", "tg", "dmb", "j", "y", "zi", "sun", "f", "iq", "qvk", "rp", "fn", "zr", "e", "s", "fic", "v", "x", "yw", "a", "wt", "img", "s", "x", "cx", "gkz", "q", "o", "cu", "bdk", "wq", "ln", "r", "z", "vcu", "kbx", "d", "v", "pu", "cr", "y", "qt", "wv", "jsg", "fcp", "p", "v", "nw", "y", "h", "y", "li", "ad", "tuv", "sqd", "cki", "l", "sd", "xof", "k", "zza", "w", "muc", "e", "wwz", "i", "v", "zg", "pam", "ig", "zpb", "vl", "v", "pe", "m", "p", "vu", "utm", "kgl", "z", "qyn", "f", "op", "onh", "h", "yj", "zeu", "zgc", "g", "qr", "q", "lh", "eq", "d", "bg", "fdj", "cel", "jo", "qy", "ce", "xzd", "vwi", "exq", "miz", "yoa", "ofk", "szr", "s", "huf", "jv", "w", "fr", "eoj", "my", "zm", "j", "sf", "dfj", "e", "t", "raj", "r", "qm", "z", "v", "zn", "c", "ywz", "b", "ag", "x", "z", "a", "q", "xup", "wl", "njp", "x", "b", "ao", "h", "xa", "aq", "m", "g", "gsl", "t", "vya", "hag", "otz", "q", "rcq", "hj", "ng", "bzy", "dit", "h", "u", "cl", "oyb", "fuu", "qlt", "qdr", "hki", "ts", "y", "po", "ljb", "cx", "l", "gf", "p", "vr", "d", "rp", "pt", "j", "ar", "o", "uz", "r", "aj", "cd", "x", "sl", "iwd", "rgd", "b", "u", "t", "knn", "ba", "gl", "wek", "wgp", "v", "gb", "aml", "a", "kg", "dp", "fnm", "iru", "ga", "ght", "xd", "yf", "h", "rr", "go", "thi", "va", "h", "wtx", "p", "hbm", "g", "l", "k", "fp", "sn", "ph", "gz", "y", "e", "qg", "qgi", "v", "fzt", "y", "ztn", "rbe", "gq", "oc", "bga", "hi", "b", "j", "r", "wn", "m", "pa", "p", "b", "ch", "ul", "nf", "ye", "bnl", "t", "n", "e", "g", "rhk", "u", "h", "g", "dyz", "d", "vrd", "km", "z", "biq", "ya", "x", "tv", "um", "e", "n", "yay", "ywk", "jj", "di", "r", "m", "ll", "vaj", "o", "w", "uim", "tga", "lhf", "m", "smj", "eva", "l", "sn", "te", "hvh", "yxf", "i", "ak", "p", "x", "cfo", "kmp", "ffg", "a", "zm", "p", "ftz", "o", "cp", "arj", "oir", "to", "e", "cv", "hfb", "n", "nw", "dad", "uq", "lwo", "sl", "vpc", "wb", "p", "rs", "o", "hmd", "om", "cve", "j", "sqa", "o", "l", "sr", "zx", "pg", "iwi", "j", "hvf", "x", "hy", "ph", "dgd", "sv", "qc", "lpw", "ui", "k", "l", "wf", "wf", "jsb", "z", "ri", "qt", "qng", "ki", "o", "pfx", "sl", "v", "dmp", "h", "sp", "x", "vlb", "lyx", "tt", "u", "lsr", "uu", "x", "br", "iqo", "pj", "b", "k", "n", "fe", "jl", "zhr", "k", "a", "k", "zn", "ti", "ni", "gg", "f", "au", "bvm", "hi", "oc", "t", "un", "t", "xk", "qqg", "ger", "vyu", "tz", "mlj", "ui", "p", "jlr", "po", "jh", "yc", "t", "w", "l", "z", "ym", "ks", "co", "k", "hl", "x", "kh", "lnx", "vw", "u", "qtp", "zm", "kkk", "rm", "jj", "rnn", "ub", "ics", "w", "qr", "ke", "rw", "ywi", "vs", "p", "fq", "qy", "llt", "nx", "t", "o", "pu", "o", "kea", "dz", "x", "rw", "bpi", "hug", "gr", "xwf", "mo", "pbe", "d", "ov", "rs", "ltz", "ta", "l", "wal", "vsz", "ql", "eku", "j", "llf", "gfk", "uvg", "mv", "v", "kyx", "kvo", "a", "aha", "nr", "hja", "wo", "txu", "cp", "jxn", "s", "eo", "i", "ozd", "c", "d", "a", "ik", "vf", "bxt", "gxb", "zj", "bsb", "zqz", "jb", "n", "nm", "q", "m", "cy", "wwx", "ff", "xkp", "pfl", "fjo", "or", "go", "ol", "bf", "w", "bma", "vjc", "us", "u", "wag", "xqc", "av", "oqz", "k", "tqk", "n", "gk", "go", "e", "xae", "oh", "if", "t", "n", "xz", "fx", "wau", "g"};
 
-        System.out.println(mainOctober.findDuplicate2(array1));
+        System.out.println(mainOctober.findClosest(strings, "jsb", "uvg"));
     }
 }

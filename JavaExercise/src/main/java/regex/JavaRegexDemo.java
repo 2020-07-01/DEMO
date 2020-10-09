@@ -1,5 +1,8 @@
 package regex;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * @ClassName : JavaRegexDemo
  * @Author : yq
@@ -176,9 +179,10 @@ public class JavaRegexDemo {
 
     /**
      * 匹配问号 ？
+     *
      * @return
      */
-    public static boolean regexText10(){
+    public static boolean regexTest10() {
         String string = "af";
         String regex = "[?]{1}";
         return string.matches(regex);
@@ -189,32 +193,50 @@ public class JavaRegexDemo {
      * 匹配所包含字段中的任意一个
      * 匹配包含的任意一个字符
      * [yuqiang]
+     *
      * @return
      */
-    public static boolean regexText11(){
+    public static boolean regexTest11() {
         String string = "414qwert";
         String regex = "^.*[yuqiang].*$";
-        return  string.matches(regex);
+        return string.matches(regex);
     }
 
     /**
      * 不包含指定字符
      * 匹配未包含的任意字符
      * [^yuqiang]
+     *
      * @return
      */
-    public static boolean regexText12(){
+    public static boolean regexTest12() {
 
         String string = "yuqiang";
         String regex = ".*[^yuqiang].*";
         return string.matches(regex);
     }
 
+    /**
+     * \b: 匹配单词边界
+     * @return
+     */
+    public static void regexTest13() {
+        String str="(中文问号？123???英文)问号?我是华丽[的制表符\t]我是华丽{的空格符 我是华丽}的换行符\n";
+        String rex="\\b";
+
+        Pattern pattern=Pattern.compile(rex);
+
+        String [] result=pattern.split(str);
+
+        for(String string:result){
+            System.out.println("分割的字符串:"+"["+string+"]");
+        }
+
+    }
 
 
     public static void main(String[] args) {
-        System.out.println(JavaRegexDemo.regexText12());
-
+        JavaRegexDemo.regexTest13();
     }
 
 }
