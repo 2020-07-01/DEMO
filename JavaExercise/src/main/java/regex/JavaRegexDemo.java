@@ -218,25 +218,57 @@ public class JavaRegexDemo {
 
     /**
      * \b: 匹配单词边界
+     *
      * @return
      */
     public static void regexTest13() {
-        String str="(中文问号？123???英文)问号?我是华丽[的制表符\t]我是华丽{的空格符 我是华丽}的换行符\n";
-        String rex="\\b";
+        String str = "(中文问号？123???英文)问号?我是华丽[的制表符\t]我是华丽{的空格符 我是华丽}的换行符\n";
+        String rex = "\\b";
 
-        Pattern pattern=Pattern.compile(rex);
+        Pattern pattern = Pattern.compile(rex);
 
-        String [] result=pattern.split(str);
+        String[] result = pattern.split(str);
 
-        for(String string:result){
-            System.out.println("分割的字符串:"+"["+string+"]");
+        for (String string : result) {
+            System.out.println("分割的字符串:" + "[" + string + "]");
         }
+    }
 
+    /**
+     * 是否包含3位数字
+     */
+    public static void regexTest14() {
+
+        String string = "12414和2421";
+        String regex = ".*[0-9]{9,}.*";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(string);
+        boolean flag = matcher.matches();
+        System.out.println(flag);
+    }
+
+    /**
+     * 是否包含.mp4
+     * .:匹配文本点 ，前面需要添加文本转义字符\
+     */
+    public static void regexTest15() {
+
+        String string = "12414和2421.1mp4";
+        String regex = ".*\\.mp4.*";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(string);
+        boolean flag = matcher.matches();
+        System.out.println("flag:" + flag);
+        int groupCount = matcher.groupCount();
+        System.out.println("groupCount:" + groupCount);
     }
 
 
+
     public static void main(String[] args) {
-        JavaRegexDemo.regexTest13();
+        JavaRegexDemo.regexTest15();
     }
 
 }

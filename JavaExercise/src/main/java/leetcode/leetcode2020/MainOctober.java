@@ -4,9 +4,7 @@ import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @ClassName : MainOctober
@@ -905,6 +903,150 @@ public class MainOctober {
         return min;
     }
 
+    /**
+     * 86. 分隔链表
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param head
+     * @param x
+     * @return
+     */
+    public ListNode partition(ListNode head, int x) {
+
+        ListNode listNode1 = new ListNode(0);
+        ListNode left = listNode1;
+
+        ListNode listNode2 = new ListNode(0);
+        ListNode right = listNode2;
+
+        while (head != null) {
+            if (head.val < x) {
+                ListNode temp = new ListNode(head.val);
+                left.next = temp;
+                left = left.next;
+            } else {
+                ListNode temp = new ListNode(head.val);
+                right.next = temp;
+                right = right.next;
+            }
+            head = head.next;
+        }
+
+        /**
+         * 在不创建新的节点时
+         * 设置哑节点
+         * 将最后一个节点的next节点指向null
+         * 防止环形链表的出现
+         */
+
+        left.next = listNode2.next;
+        return listNode1.next;
+    }
+
+
+    /**
+     * 面试题 02.04. 分割链表
+     * 双指针原地修改
+     * 此题目示例答案与预期值不一样
+     *
+     * @param head
+     * @param x
+     * @return
+     */
+    public ListNode partition1(ListNode head, int x) {
+
+        ListNode listNode1 = new ListNode(0);
+        ListNode left = listNode1;
+
+        ListNode listNode2 = new ListNode(0);
+        ListNode right = listNode2;
+
+        while (head != null) {
+            if (head.val < x) {
+                left.next = head;
+                left = left.next;
+            } else {
+                right.next = head;
+                right = right.next;
+            }
+            head = head.next;
+        }
+
+        /**
+         * 在不创建新的节点时
+         * 设置哑节点
+         * 将最后一个节点的next节点指向null
+         * 防止环形链表的出现
+         */
+        right.next = null;
+        left.next = listNode2.next;
+        return listNode1.next;
+    }
+
+    /**
+     * 142. 环形链表 II
+     * 哈希表法
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle(ListNode head) {
+
+        Set<ListNode> set = new HashSet<>();
+        while (head != null) {
+            if (set.contains(head)) {
+                return head;
+            } else {
+                set.add(head);
+            }
+            head = head.next;
+        }
+        return null;
+    }
+
+
+    /**
+     * 142. 环形链表 II
+     * 慢指针法
+     * 在任何时刻，快指针走过的路程为慢指针的两倍
+     * 当快慢指针相遇时
+     * 此时快指针在环内有可能已走过多圈
+     * 定义第三个节点从头开始，与满指针遍历，当他们相遇时为入环点
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle1(ListNode head) {
+
+        //慢指针
+        ListNode node1 = head;
+        //快指针
+        ListNode node2 = head;
+
+        while (node2 != null) {
+            node1 = node1.next;
+            if (node2.next != null) {
+                node2 = node2.next.next;
+            } else {
+                return null;
+            }
+
+            if (node1 == node2) {
+                //寻找入口点
+                ListNode p = head;
+                while (p != node1) {
+                    p = p.next;
+                    node1 = node1.next;
+                }
+                return p;
+            }
+
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
 
