@@ -1163,6 +1163,107 @@ public class MainOctober {
         return ans;
     }
 
+
+    /**
+     * 1351. 统计有序矩阵中的负数
+     * 暴力算法
+     * 时间复杂度O(n)
+     *
+     * @param grid
+     * @return
+     */
+    public int countNegatives(int[][] grid) {
+
+        int sum = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (grid[i][j] < 0) {
+                    sum++;
+                }
+            }
+        }
+
+        return sum;
+
+    }
+
+    /**
+     * 1351. 统计有序矩阵中的负数
+     * 利用二分查找  找到第一个小于0的索引
+     *
+     * @param grid
+     * @return
+     */
+    public int countNegatives1(int[][] grid) {
+
+        int sum = 0;
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                //最后一个元素大于0
+                if (grid[i][grid[i].length - 1] >= 0) {
+                    break;//跳出循环
+                }
+                //第一个元素小于0
+                if (grid[i][j] < 0) {
+                    sum = sum + grid[i].length;
+                    break;
+                }
+                //第一个元素大于0.最后一个元素小于0
+                //找到第一个小于0的索引
+                if (grid[i][j] >= 0 && grid[i][grid[i].length - 1] < 0) {
+                    int left = j;
+                    int right = grid[i].length - 1;
+                    while (left < right) {
+
+                        int mid = left + (right - left) / 2;
+
+                        if (grid[i][mid] >= 0) {
+                            left = mid + 1;
+                        } else {
+                            //前一个不是负数
+                            if (grid[i][mid - 1] >= 0) {
+                                left = mid;
+                                break;
+                            }
+                            right = mid;
+                        }
+                    }
+
+                    sum = sum + (grid[i].length - left);
+                    break;
+                }
+            }
+        }
+        return sum;
+    }
+
+
+    /**
+     * 面试题 01.07. 旋转矩阵
+     * 旋转90度
+     * 使用辅助数组
+     * aNew[i][j] = a[a.length-1-j][i]
+     *
+     * @param matrix
+     */
+    public void rotate(int[][] matrix) {
+
+        int n = matrix.length;
+        int[][] matrix_new = new int[n][n];
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                matrix_new[j][n - i - 1] = matrix[i][j];
+            }
+        }
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                matrix[i][j] = matrix_new[i][j];
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
@@ -1171,7 +1272,8 @@ public class MainOctober {
 
         String[] strings = new String[]{"looked", "just", "like", "her", "brother"};
 
+        int[][] arrays3 = new int[][]{{4, 3, 3, 1, 1}, {1, 0, 0, -1, -1}, {-2, -2, -2, -2, -3}, {-2, -2, -2, -3, -3}, {-3, -3, -3, -3, -3}};
 
-        //System.out.println(mainOctober.respace(strings,"jesslookedjustliketimherbrother"));
+        System.out.println(mainOctober.countNegatives1(arrays3));
     }
 }
