@@ -1240,6 +1240,74 @@ public class MainOctober {
 
 
     /**
+     * 739. 每日温度
+     * 暴力解法
+     * 时间复杂度O(n2)
+     * 空间复杂度O(n)
+     * @param T
+     * @return
+     */
+    public int[] dailyTemperatures(int[] T) {
+
+        int[] reslut = new int[T.length];
+        HashMap<Integer, Integer> hashMap = new HashMap();
+
+        for (int i = T.length - 1; i >= 0; i--) {
+            int cur = T[i];
+            int j = i + 1;
+            while (j < T.length) {
+                if (T[j] > cur) {
+                    reslut[i] = j - i;
+                    break;
+                }
+                j++;
+            }
+
+            if(j == T.length){
+                reslut[i] = 0;
+            }
+        }
+        return reslut;
+    }
+
+    /**
+     * 739. 每日温度
+     * 此种方法时间超过限制
+     * @param T
+     * @return
+     */
+    public int[] dailyTemperatures1(int[] T) {
+
+        int[] reslut = new int[T.length];
+        HashMap<Integer, Integer> hashMap = new HashMap();
+
+        for (int i = T.length - 1; i >= 0; i--) {
+            int cur = T[i];
+            int j = i + 1;
+            while (j < T.length) {
+
+                if (T[j] > cur) {
+                    reslut[i] = j - i;
+                    break;
+                }else {
+                    if(hashMap.get(T[j]) == 0){
+                        reslut[i] = 0;
+                        break;
+                    }else {
+                        j++;
+                    }
+                }
+            }
+            if(j == T.length){
+                reslut[i] = 0;
+            }
+            hashMap.put(T[i],j-i);
+        }
+        return reslut;
+    }
+
+
+    /**
      * 面试题 01.07. 旋转矩阵
      * 旋转90度
      * 使用辅助数组
@@ -1274,6 +1342,6 @@ public class MainOctober {
 
         int[][] arrays3 = new int[][]{{4, 3, 3, 1, 1}, {1, 0, 0, -1, -1}, {-2, -2, -2, -2, -3}, {-2, -2, -2, -3, -3}, {-3, -3, -3, -3, -3}};
 
-        System.out.println(mainOctober.countNegatives1(arrays3));
+        System.out.println(mainOctober.dailyTemperatures1(array));
     }
 }
