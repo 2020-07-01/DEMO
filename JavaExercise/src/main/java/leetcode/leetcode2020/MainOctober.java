@@ -5,6 +5,7 @@ import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.*;
+import java.util.regex.Matcher;
 
 /**
  * @ClassName : MainOctober
@@ -1244,6 +1245,7 @@ public class MainOctober {
      * 暴力解法
      * 时间复杂度O(n2)
      * 空间复杂度O(n)
+     *
      * @param T
      * @return
      */
@@ -1263,7 +1265,7 @@ public class MainOctober {
                 j++;
             }
 
-            if(j == T.length){
+            if (j == T.length) {
                 reslut[i] = 0;
             }
         }
@@ -1273,6 +1275,7 @@ public class MainOctober {
     /**
      * 739. 每日温度
      * 此种方法时间超过限制
+     *
      * @param T
      * @return
      */
@@ -1289,19 +1292,19 @@ public class MainOctober {
                 if (T[j] > cur) {
                     reslut[i] = j - i;
                     break;
-                }else {
-                    if(hashMap.get(T[j]) == 0){
+                } else {
+                    if (hashMap.get(T[j]) == 0) {
                         reslut[i] = 0;
                         break;
-                    }else {
+                    } else {
                         j++;
                     }
                 }
             }
-            if(j == T.length){
+            if (j == T.length) {
                 reslut[i] = 0;
             }
-            hashMap.put(T[i],j-i);
+            hashMap.put(T[i], j - i);
         }
         return reslut;
     }
@@ -1332,6 +1335,148 @@ public class MainOctober {
 
     }
 
+
+    /**
+     * 771. 宝石与石头
+     * <p>
+     * 时间复杂度O(m+n)
+     * 空间复杂度O(m)
+     *
+     * @param J
+     * @param S
+     * @return
+     */
+    public int numJewelsInStones(String J, String S) {
+
+        //此处可使用HashSet减少空间
+        HashMap<Character, String> hashMap = new HashMap();
+
+        int index = 0;
+        while (index < J.length()) {
+            hashMap.put(J.charAt(index), "true");
+            index++;
+        }
+
+        index = 0;
+        int sum = 0;
+        while (index < S.length()) {
+            if (hashMap.containsKey(S.charAt(index))) {
+                sum++;
+            }
+            index++;
+        }
+        return sum;
+    }
+
+    /**
+     * 771. 宝石与石头
+     * 时间复杂度O(n)
+     *
+     * @param J
+     * @param S
+     * @return
+     */
+    public int numJewelsInStones1(String J, String S) {
+
+        int sum = 0;
+        int index = 0;
+        while (index < S.length()) {
+            if (J.contains(String.valueOf(S.charAt(index)))) {
+                sum++;
+            }
+            index++;
+        }
+        return sum;
+    }
+
+    /**
+     * 面试题 10.05. 稀疏数组搜索
+     * 退化为线性表
+     *
+     * @param words
+     * @param s
+     * @return
+     */
+    public int findString(String[] words, String s) {
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(s)) {
+                return i;
+            }
+        }
+        return -1;
+
+    }
+
+    /**
+     * 69. x 的平方根
+     * 二分法
+     *
+     * @param x
+     * @return
+     */
+    public int mySqrt(int x) {
+
+        if (x == 0) {
+            return 0;
+        }
+        if (x == 1) {
+            return 1;
+        }
+
+        int left = 0;
+        int right = x;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (Math.pow(mid, 2) > x) {
+                if (Math.pow((mid - 1), 2) < x) {
+                    return mid - 1;
+                }
+                right = mid;
+            } else if (Math.pow(mid, 2) < x) {
+                if (Math.pow((mid + 1), 2) > x) {
+                    return mid;
+                }
+                left = mid;
+            } else {
+                return mid;
+            }
+        }
+        //负数
+        return -1;
+    }
+
+    /**
+     * 69. x 的平方根
+     * <p>
+     * 优化后的二分查找法
+     *
+     * @param x
+     * @return
+     */
+    public int mySqrt1(int x) {
+        if (x == 0) {
+            return 0;
+        }
+        if (x == 1) {
+            return 1;
+        }
+        int left = 0;
+        int right = x;
+        int result = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (Math.pow(mid, 2) <= x) {
+                result = mid;
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
@@ -1342,6 +1487,8 @@ public class MainOctober {
 
         int[][] arrays3 = new int[][]{{4, 3, 3, 1, 1}, {1, 0, 0, -1, -1}, {-2, -2, -2, -2, -3}, {-2, -2, -2, -3, -3}, {-3, -3, -3, -3, -3}};
 
-        System.out.println(mainOctober.dailyTemperatures1(array));
+        System.out.println(mainOctober.mySqrt1(313));
+
+
     }
 }
