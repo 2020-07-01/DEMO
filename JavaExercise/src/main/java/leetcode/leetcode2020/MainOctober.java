@@ -1477,17 +1477,131 @@ public class MainOctober {
         return result;
     }
 
+    /**
+     * 718. 最长重复子数组
+     * 暴力解法
+     * 遍历A
+     * 再依次遍历B
+     * 比较最长公共前缀
+     * <p>
+     * 超出时间限制
+     * 时间复杂度O(n3)
+     *
+     * @param A
+     * @param B
+     * @return
+     */
+    public int findLength(int[] A, int[] B) {
+
+        int max = 0;
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < B.length; j++) {
+                int k = 0;
+                while ((i + k) < A.length && (j + k) < B.length) {
+                    if (A[i + k] == B[j + k]) {
+                        k++;
+                    } else {
+                        break;
+                    }
+                }
+                max = Math.max(max, k);
+            }
+        }
+        return max;
+    }
+
+
+    /**
+     * 718. 最长重复子数组
+     * 动态规划算法
+     * 时间复杂度O(m*n)
+     *
+     * @param A
+     * @param B
+     * @return
+     */
+    public int findLength1(int[] A, int[] B) {
+
+        int[][] dp = new int[A.length + 1][B.length + 1];
+        int max = 0;
+        int a = A.length;
+        int b = B.length;
+        for (int i = a - 1; i >= 0; i--) {
+
+            for (int j = b - 1; j >= 0; j--) {
+                /**
+                 * 二维数组存储dp结果
+                 * 从后往前遍历
+                 */
+                dp[i][j] = A[i] == B[j] ? (dp[i + 1][j + 1] + 1) : 0;
+                max = Math.max(max, dp[i][j]);
+            }
+        }
+        return max;
+    }
+
+
+    /**
+     * 718. 最长重复子数组
+     * 滑动窗口
+     * 时间复杂度O((m+n) * min(m,n))
+     * @param A
+     * @param B
+     * @return
+     */
+    public int findLength2(int[] A, int[] B) {
+
+        int max = 0;
+        /**
+         * A依次与B对齐的最大公共值
+         * B依次与A对齐的最大公共值
+         */
+
+        //A依次与B对齐
+        for (int i = 0; i < B.length; i++) {
+            int k = 0;
+            int length = Math.min(A.length, (B.length - i));
+            for (int p = 0; p < length; p++) {
+                if (A[p] == B[i + p]) {
+                    k++;
+                } else {
+                    k = 0;
+                }
+                max = Math.max(max, k);
+            }
+
+        }
+
+        //B依次与A对齐
+        for (int i = 0; i < A.length; i++) {
+
+            int k = 0;
+            int length = Math.min(B.length, (A.length - i));
+            for (int p = 0; p < length; p++) {
+                if (B[p] == A[i + p]) {
+                    k++;
+                } else {
+                    k = 0;
+                }
+                max = Math.max(max, k);
+            }
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
-        int[] array = new int[]{2, 1, 312, 312, 321, 3, 123, 213, 33, 54, 35, 6, 5676, 65, 3, 41, 2, 1, 3, 4, 54, 321, 2};
-        int[] array1 = new int[]{1, 2, 2, 2, 2, 2, 2, 3, 3, 4, 5, 8, 9, 10};
+        int[] array = new int[]{1, 2, 3, 2, 1};
+        int[] array1 = new int[]{3, 2, 1, 4, 7};
 
         String[] strings = new String[]{"looked", "just", "like", "her", "brother"};
 
         int[][] arrays3 = new int[][]{{4, 3, 3, 1, 1}, {1, 0, 0, -1, -1}, {-2, -2, -2, -2, -3}, {-2, -2, -2, -3, -3}, {-3, -3, -3, -3, -3}};
 
-        System.out.println(mainOctober.mySqrt1(313));
+
+        System.out.println(mainOctober.findLength2(array, array1));
 
 
     }
