@@ -3,6 +3,7 @@ package leetcode.leetcode2020;
 import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -1545,6 +1546,7 @@ public class MainOctober {
      * 718. 最长重复子数组
      * 滑动窗口
      * 时间复杂度O((m+n) * min(m,n))
+     *
      * @param A
      * @param B
      * @return
@@ -1590,6 +1592,148 @@ public class MainOctober {
         return max;
     }
 
+
+    /**
+     * 454. 四数相加 II
+     * Map
+     * 时间复杂度O(n2)
+     *
+     * @param A
+     * @param B
+     * @param C
+     * @param D
+     * @return
+     */
+    public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
+
+        HashMap<Integer, Integer> map = new HashMap();
+
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+
+            for (int j = 0; j < B.length; j++) {
+                map.put(A[i] + B[j], map.getOrDefault(A[i] + B[j], 0) + 1);
+            }
+        }
+
+        for (int i = 0; i < C.length; i++) {
+            for (int j = 0; j < D.length; j++) {
+                int temp = -(C[i] + D[j]);
+                if (map.containsKey(temp)) {
+                    sum = sum + map.get(temp);
+                }
+            }
+        }
+        return sum;
+    }
+
+
+    /**
+     * 445. 两数相加 II
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+        StringBuilder stringBuilder1 = new StringBuilder();
+        StringBuilder stringBuilder2 = new StringBuilder();
+
+        while (l1 != null) {
+            stringBuilder1.append(l1.val);
+            l1 = l1.next;
+        }
+
+        while (l2 != null) {
+            stringBuilder2.append(l2.val);
+            l2 = l2.next;
+        }
+
+        BigInteger bigInteger = new BigInteger(stringBuilder1.toString());
+
+        BigInteger result = bigInteger.add(new BigInteger(stringBuilder2.toString()));
+        String string = result.toString();
+
+        Integer index = 0;
+        ListNode node = new ListNode(0);
+        ListNode cur = node;
+        while (index < string.length()) {
+
+            ListNode temp = new ListNode(string.charAt(index) - '0');
+            cur.next = temp;
+            cur = cur.next;
+            index++;
+        }
+
+        return node.next;
+    }
+
+
+    /**
+     * 445. 两数相加 II
+     * 辅助栈法
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
+
+
+        Stack<Integer> stack1 = new Stack<>();
+        Stack<Integer> stack2 = new Stack<>();
+
+        while (l1 != null) {
+            stack1.push(l1.val);
+            l1 = l1.next;
+        }
+
+        while (l2 != null) {
+            stack2.push(l2.val);
+            l2 = l2.next;
+        }
+
+        ListNode cur = null;
+        int mod = 0;
+        while (!stack1.empty() && !stack2.empty()) {
+            Integer i = (stack1.peek() + stack2.peek() + mod) % 10;
+            mod = (stack1.pop() + stack2.pop() + mod) / 10;
+
+            ListNode temp = new ListNode(i);
+            temp.next = cur;
+            cur = temp;
+        }
+
+        while (!stack1.empty()) {
+            Integer i = (stack1.peek() + mod) % 10;
+            mod = (stack1.pop() + mod) / 10;
+
+            ListNode temp = new ListNode(i);
+
+            temp.next = cur;
+            cur = temp;
+        }
+
+        while (!stack2.empty()) {
+            Integer i = (stack2.peek() + mod) % 10;
+            mod = (stack2.pop() + mod) / 10;
+
+            ListNode temp = new ListNode(i);
+            temp.next = cur;
+            cur = temp;
+        }
+
+        if (mod != 0) {
+            ListNode temp = new ListNode(mod);
+            temp.next = cur;
+            cur = temp;
+        }
+
+        return cur;
+
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
@@ -1600,8 +1744,13 @@ public class MainOctober {
 
         int[][] arrays3 = new int[][]{{4, 3, 3, 1, 1}, {1, 0, 0, -1, -1}, {-2, -2, -2, -2, -3}, {-2, -2, -2, -3, -3}, {-3, -3, -3, -3, -3}};
 
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
 
-        System.out.println(mainOctober.findLength2(array, array1));
+
+        System.out.println(mainOctober.addTwoNumbers(l1, l2).val);
+
+        System.out.println(Integer.MAX_VALUE);
 
 
     }
