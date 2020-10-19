@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/SpringDemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/classes/META-INF/Spring-Demo.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/regex/JavaRegexDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/regex/JavaRegexDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +60,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -77,7 +77,12 @@
     <property name="project.structure.side.proportion" value="0.3908046" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Application.JavaRegexDemo">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\DEMO\doc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainOctober">
     <configuration name="JavaRegexDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="regex.JavaRegexDemo" />
       <module name="JavaExercise" />
@@ -104,15 +109,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.springframework.boot.SpringApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.boot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.SpringDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaRegexDemo" />
         <item itemvalue="Application.MainOctober" />
+        <item itemvalue="Spring Boot.SpringDemoApplication" />
+        <item itemvalue="Application.SpringApplication" />
+        <item itemvalue="Application.JavaRegexDemo" />
       </list>
     </recent_temporary>
   </component>
   <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_FIELDS" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_NON_PUBLIC" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -130,7 +162,17 @@
       <workItem from="1601992998188" duration="922000" />
       <workItem from="1601994250734" duration="6927000" />
       <workItem from="1602146865478" duration="217000" />
-      <workItem from="1602147111613" duration="10052000" />
+      <workItem from="1602147111613" duration="10459000" />
+      <workItem from="1602249040789" duration="3608000" />
+      <workItem from="1602415048399" duration="10733000" />
+      <workItem from="1602508709622" duration="5189000" />
+      <workItem from="1602550671285" duration="26000" />
+      <workItem from="1602591870355" duration="7057000" />
+      <workItem from="1602684660936" duration="2291000" />
+      <workItem from="1602764085364" duration="8566000" />
+      <workItem from="1602850607419" duration="14240000" />
+      <workItem from="1602986490347" duration="25254000" />
+      <workItem from="1603111908868" duration="3422000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -167,7 +209,77 @@
       <option name="project" value="LOCAL" />
       <updated>1601993881237</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="包含与未包含的匹配&#10;快慢指针法检测是否存在环&#10;数组演变为指针">
+      <created>1602169021301</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602169021301</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test">
+      <created>1602252602650</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602252602650</updated>
+    </task>
+    <task id="LOCAL-00008" summary="环形链表的判断方式">
+      <created>1602424265856</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602424265856</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1351. 统计有序矩阵中的负数">
+      <created>1602597249856</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602597249856</updated>
+    </task>
+    <task id="LOCAL-00010" summary="739. 每日温度">
+      <created>1602686669785</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602686669785</updated>
+    </task>
+    <task id="LOCAL-00011" summary="面试题 10.05. 稀疏数组搜索&#10;771. 宝石与石头&#10;x 的平方根">
+      <created>1602767244929</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602767244929</updated>
+    </task>
+    <task id="LOCAL-00012" summary="718. 最长重复子数组">
+      <created>1602947461994</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602947461994</updated>
+    </task>
+    <task id="LOCAL-00013" summary="BeanPostProcessor，BeanFactoryPostProcessor学习">
+      <created>1603007825519</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1603007825519</updated>
+    </task>
+    <task id="LOCAL-00014" summary="BeanPostProcessor，BeanFactoryPostProcessor学习">
+      <created>1603007943593</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603007943593</updated>
+    </task>
+    <task id="LOCAL-00015" summary="445. 两数相加 II&#10;454. 四数相加 II">
+      <created>1603028384252</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1603028384252</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,90 +301,155 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="结构调整" />
     <MESSAGE value="代码结构调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码结构调整" />
+    <MESSAGE value="包含与未包含的匹配&#10;快慢指针法检测是否存在环&#10;数组演变为指针" />
+    <MESSAGE value="test" />
+    <MESSAGE value="环形链表的判断方式" />
+    <MESSAGE value="1351. 统计有序矩阵中的负数" />
+    <MESSAGE value="739. 每日温度" />
+    <MESSAGE value="面试题 10.05. 稀疏数组搜索&#10;771. 宝石与石头&#10;x 的平方根" />
+    <MESSAGE value="718. 最长重复子数组" />
+    <MESSAGE value="BeanPostProcessor，BeanFactoryPostProcessor学习" />
+    <MESSAGE value="445. 两数相加 II&#10;454. 四数相加 II" />
+    <option name="LAST_COMMIT_MESSAGE" value="445. 两数相加 II&#10;454. 四数相加 II" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="318" y="0" width="658" height="680" key="#SpringApplication" timestamp="1602773663939">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="318" y="0" width="658" height="680" key="#SpringApplication/0.0.1280.680@0.0.1280.680" timestamp="1602773663939" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602037589943">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602037589943" />
-    <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser" timestamp="1601967998023">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1602989667954">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601967998023" />
+    <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602987515081" />
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602989667954" />
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1602861111811" />
     <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1601993101669">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993101669" />
-    <state width="436" height="438" key="DebuggerActiveHint" timestamp="1602163604713">
+    <state width="562" height="438" key="DebuggerActiveHint" timestamp="1603026116254">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="436" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1602163604713" />
+    <state width="860" height="670" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602998441245" />
+    <state width="573" height="438" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602993073180" />
+    <state width="562" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1603026116254" />
     <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1598785761766">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598785761766" />
-    <state width="1237" height="118" key="GridCell.Tab.0.bottom" timestamp="1602168631711">
+    <state width="1237" height="84" key="GridCell.Tab.0.bottom" timestamp="1603113645014">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
-    <state width="1237" height="118" key="GridCell.Tab.0.center" timestamp="1602168631711">
+    <state width="1237" height="130" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288373" />
+    <state width="1237" height="150" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641189" />
+    <state width="1237" height="84" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603113645014" />
+    <state width="1237" height="84" key="GridCell.Tab.0.center" timestamp="1603113645013">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
-    <state width="1237" height="118" key="GridCell.Tab.0.left" timestamp="1602168631711">
+    <state width="1237" height="130" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288373" />
+    <state width="1237" height="150" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641189" />
+    <state width="1237" height="84" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603113645013" />
+    <state width="1237" height="84" key="GridCell.Tab.0.left" timestamp="1603113645012">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
-    <state width="1237" height="118" key="GridCell.Tab.0.right" timestamp="1602168631711">
+    <state width="1237" height="130" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288372" />
+    <state width="1237" height="150" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641189" />
+    <state width="1237" height="84" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603113645012" />
+    <state width="1237" height="84" key="GridCell.Tab.0.right" timestamp="1603113645014">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="118" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602168631711" />
-    <state width="1237" height="14" key="GridCell.Tab.1.bottom" timestamp="1602166064417">
+    <state width="1237" height="130" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288373" />
+    <state width="1237" height="150" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641189" />
+    <state width="1237" height="84" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603113645014" />
+    <state width="1237" height="84" key="GridCell.Tab.1.bottom" timestamp="1603113645794">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="14" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
-    <state width="1237" height="14" key="GridCell.Tab.1.center" timestamp="1602166064417">
+    <state width="1237" height="180" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288371" />
+    <state width="1237" height="150" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
+    <state width="1237" height="84" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603113645794" />
+    <state width="1237" height="84" key="GridCell.Tab.1.center" timestamp="1603113645794">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="14" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
-    <state width="1237" height="14" key="GridCell.Tab.1.left" timestamp="1602166064417">
+    <state width="1237" height="180" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288370" />
+    <state width="1237" height="150" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
+    <state width="1237" height="84" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603113645794" />
+    <state width="1237" height="84" key="GridCell.Tab.1.left" timestamp="1603113645793">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="14" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
-    <state width="1237" height="14" key="GridCell.Tab.1.right" timestamp="1602166064417">
+    <state width="1237" height="180" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288370" />
+    <state width="1237" height="150" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
+    <state width="1237" height="84" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603113645793" />
+    <state width="1237" height="84" key="GridCell.Tab.1.right" timestamp="1603113645794">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="14" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1602166064417" />
+    <state width="1237" height="180" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288371" />
+    <state width="1237" height="150" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
+    <state width="1237" height="84" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603113645794" />
+    <state width="1237" height="104" key="GridCell.Tab.2.bottom" timestamp="1603070288367">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="104" key="GridCell.Tab.2.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288367" />
+    <state width="1237" height="150" key="GridCell.Tab.2.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641089" />
+    <state width="1237" height="104" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603025505923" />
+    <state width="1237" height="104" key="GridCell.Tab.2.center" timestamp="1603070288367">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="104" key="GridCell.Tab.2.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288367" />
+    <state width="1237" height="150" key="GridCell.Tab.2.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641089" />
+    <state width="1237" height="104" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1603025505923" />
+    <state width="1237" height="104" key="GridCell.Tab.2.left" timestamp="1603070288367">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="104" key="GridCell.Tab.2.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288367" />
+    <state width="1237" height="150" key="GridCell.Tab.2.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641089" />
+    <state width="1237" height="104" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1603025505922" />
+    <state width="1237" height="104" key="GridCell.Tab.2.right" timestamp="1603070288367">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="104" key="GridCell.Tab.2.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603070288367" />
+    <state width="1237" height="150" key="GridCell.Tab.2.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992641089" />
+    <state width="1237" height="104" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1603025505923" />
     <state x="221" y="84" key="IDE.errors.dialog" timestamp="1601993903121">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="84" key="IDE.errors.dialog/0.0.1280.680@0.0.1280.680" timestamp="1601993903121" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1602147082249">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1602860695273">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602147082249" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602860695273" />
     <state x="471" y="210" key="VCS.EditChangelistDialog" timestamp="1601993816859">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601993888472">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1603028464550">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601993888472" />
-    <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1601953509363">
+    <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603028464550" />
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602990987211">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1601953509363" />
-    <state x="35" y="0" key="new project wizard" timestamp="1602146989210">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1602146989210" />
-    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup" timestamp="1601969721576">
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602990987211" />
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1602860715367" />
+    <state x="509" y="-970" width="905" height="820" key="find.popup" timestamp="1602999752951">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601969721576" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601909532780" />
+    <state x="509" y="-970" width="905" height="820" key="find.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602999752951" />
+    <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1602856597705" />
+    <state x="53" y="-1080" key="new project wizard" timestamp="1603007702694">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="53" y="-1080" key="new project wizard/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007702694" />
+    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1602146989210" />
+    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup" timestamp="1602999757616">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602999757616" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602859318982" />
     <state x="363" y="252" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602080060180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -283,43 +460,123 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>513</line>
-          <option name="timeStamp" value="4" />
+          <line>517</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>527</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>530</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>533</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>536</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.java</url>
+          <line>190</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.java</url>
+          <line>221</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.java</url>
+          <line>238</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>523</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>482</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>492</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>486</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>488</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>479</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>520</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>635</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>636</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/GenericApplicationContext.java</url>
+          <line>264</line>
+          <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>631</line>
-          <option name="timeStamp" value="5" />
+          <line>1793</line>
+          <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>649</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>674</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>692</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>732</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>723</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>727</line>
-          <option name="timeStamp" value="21" />
+          <line>1807</line>
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

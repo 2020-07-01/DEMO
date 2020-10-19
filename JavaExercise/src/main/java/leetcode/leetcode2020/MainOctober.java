@@ -1729,15 +1729,129 @@ public class MainOctober {
             temp.next = cur;
             cur = temp;
         }
-
         return cur;
+    }
+
+    /**
+     * 228. 汇总区间
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param nums
+     * @return
+     */
+    public List<String> summaryRanges(int[] nums) {
+
+        List<String> list = new ArrayList<>();
+
+        if (nums == null || nums.length == 0) {
+            return list;
+        }
+
+        int left = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+
+            if (nums[i] != (nums[i - 1] + 1)) {
+                if (left != nums[i - 1]) {
+                    String string = left + "->" + nums[i - 1];
+                    list.add(string);
+                    left = nums[i];
+                } else {
+                    list.add(String.valueOf(left));
+                    left = nums[i];
+                }
+            }
+        }
+        int n = nums.length - 1;
+        if (left != nums[n]) {
+            String string = left + "->" + nums[n];
+            list.add(string);
+        } else {
+            list.add(String.valueOf(left));
+        }
+
+        return list;
+    }
+
+    /**
+     * 228. 汇总区间
+     * 双指针法
+     *
+     * @param nums
+     * @return
+     */
+    public List<String> summaryRanges1(int[] nums) {
+
+        List<String> list = new ArrayList<>();
+        if (nums == null || nums.length == 0) {
+            return list;
+        }
+
+        int left = 0;
+        int right = 1;
+        int pre = left;
+        while (right < nums.length) {
+            if (nums[right] != (nums[pre] + 1)) {
+                if (nums[left] != nums[pre]) {
+                    String string = nums[left] + "->" + nums[pre];
+                    list.add(string);
+                    left = right;
+                    pre = right;
+                } else {
+                    list.add(String.valueOf(nums[left]));
+                    left = right;
+                    pre = right;
+                }
+            } else {
+                pre = right;
+            }
+            right++;
+        }
+
+        if (nums[left] != nums[right]) {
+            String string = nums[left] + "->" + nums[pre];
+            list.add(string);
+        } else {
+            list.add(String.valueOf(nums[left]));
+        }
+        return list;
+    }
+
+
+    /**
+     * 849. 到最近的人的最大距离
+     * 数0的个数
+     * @param seats
+     * @return
+     */
+    public int maxDistToClosest(int[] seats) {
+
+        int pre = -1;
+        int max = 1;
+
+        for (int i = 0; i < seats.length; i++) {
+
+            if (seats[i] == 1) {
+                if (pre >= 0) {
+                    max = Math.max(max, (i - pre) / 2);
+                } else {
+                    max = i;
+                }
+
+                pre = i;
+            }
+        }
+
+        max = Math.max(max, (seats.length - 1 - pre));
+
+        return max;
 
     }
 
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
-        int[] array = new int[]{1, 2, 3, 2, 1};
+        int[] array = new int[]{0, 1, 2, 4, 5, 7, 8, 9, 10};
         int[] array1 = new int[]{3, 2, 1, 4, 7};
 
         String[] strings = new String[]{"looked", "just", "like", "her", "brother"};
@@ -1747,11 +1861,6 @@ public class MainOctober {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
 
-
-        System.out.println(mainOctober.addTwoNumbers(l1, l2).val);
-
-        System.out.println(Integer.MAX_VALUE);
-
-
+        System.out.println(mainOctober.summaryRanges1(array));
     }
 }
