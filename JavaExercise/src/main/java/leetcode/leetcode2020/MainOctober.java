@@ -1821,6 +1821,7 @@ public class MainOctober {
     /**
      * 849. 到最近的人的最大距离
      * 数0的个数
+     *
      * @param seats
      * @return
      */
@@ -1845,7 +1846,44 @@ public class MainOctober {
         max = Math.max(max, (seats.length - 1 - pre));
 
         return max;
+    }
 
+
+    /**
+     * 面试题 10.02. 变位词组
+     * 排序方式结局唯一key问题
+     *
+     * @param strs
+     * @return
+     */
+    public List<List<String>> groupAnagrams(String[] strs) {
+
+        Map<String, List<String>> map = new HashMap<>();
+        for (String string : strs) {
+
+            char[] bin = string.toCharArray();
+            Arrays.sort(bin);
+            map.computeIfAbsent(String.valueOf(bin), unused -> new ArrayList<>()).add(string);
+
+        }
+        return new ArrayList<>(map.values());
+    }
+
+
+    /**
+     * 面试题 16.02. 单词频率
+     */
+    class WordsFrequency {
+        HashMap<String, Integer> dictionary = new HashMap();
+        public WordsFrequency(String[] book) {
+            for (String string : book) {
+                dictionary.put(string, dictionary.getOrDefault(string, 0));
+            }
+        }
+
+        public int get(String word) {
+            return dictionary.getOrDefault(word,0);
+        }
     }
 
     public static void main(String[] args) {
