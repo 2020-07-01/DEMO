@@ -1886,6 +1886,164 @@ public class MainOctober {
         }
     }
 
+
+    /**
+     * 238. 除自身以外数组的乘积
+     * 时间复杂度O(n2)
+     * 暴力解法
+     * @param nums
+     * @return
+     */
+    public int[] productExceptSelf(int[] nums) {
+
+        if(nums == null || nums.length == 0){
+            return new int[0];
+        }
+
+
+        int[] result = new int[nums.length];
+
+        for(int i = 0;i<nums.length;i++){
+            int temp = 1;
+            for(int j = 0;j<nums.length;j++){
+                if(i != j){
+                    if(nums[j] == 0){
+                        temp = 0;
+                        break;
+                    }else {
+                        temp = temp * nums[j];
+                    }
+                }
+            }
+            result[i] = temp;
+        }
+        return result;
+    }
+
+    /**
+     * 238. 除自身以外数组的乘积
+     * 时间复杂度O(n)
+     *
+     * @param nums
+     * @return
+     */
+    public int[] productExceptSelf1(int[] nums) {
+
+
+        if(nums == null || nums.length == 0){
+            return new int[0];
+        }
+
+
+        int[] result = new int[nums.length];
+
+        //遍历一遍，有多于两个0的全部为0
+        int p = 0;
+        int sum = 1;
+        for(int i = 0;i<nums.length;i++){
+            if(nums[i] == 0){
+                p++;
+            }else {
+                sum = sum * nums[i];
+            }
+        }
+
+        if(p == 2){
+            return new int[nums.length];
+        }
+
+        for(int i = 0;i<nums.length;i++){
+
+            if(p == 0){
+                result[i] = sum / nums[i];
+            }else if(p == 1) {
+                if(nums[i] == 0){
+                    result[i] = sum;
+                }else {
+                    result[i] = 0;
+                }
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 238. 除自身以外数组的乘积
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     * @param nums
+     * @return
+     */
+    public int[] productExceptSelf2(int[] nums) {
+
+
+        if(nums == null || nums.length == 0){
+            return new int[0];
+        }
+
+        int[] result = new int[nums.length];
+
+        int[] L = new int[nums.length];
+        int[] R = new int[nums.length];
+
+        L[0] = 1;
+        for(int i = 1;i<nums.length;i++){
+            L[i] = L[i-1] * nums[i-1];
+        }
+
+        R[nums.length-1] = 1;
+
+        for(int i = nums.length-2;i>=0;i--){
+            R[i] = R[i+1] * nums[i+1];
+        }
+
+        for(int i = 0;i<nums.length;i++){
+            result[i] = L[i] * R[i];
+        }
+
+        return result;
+
+    }
+
+
+    /**
+     * 238. 除自身以外数组的乘积
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * 输出数组不算在空间复杂度中，只需要1个空间复杂度
+     * @param nums
+     * @return
+     */
+    public int[] productExceptSelf3(int[] nums) {
+
+
+        if(nums == null || nums.length == 0){
+            return new int[0];
+        }
+
+        int[] L = new int[nums.length];
+
+
+        L[0] = 1;
+        for(int i = 1;i<nums.length;i++){
+            L[i] = L[i-1] * nums[i-1];
+        }
+
+        //右侧所有元素的乘积
+        int R = 1;
+
+        for(int i = nums.length-1;i>=0;i--){
+            L[i] = R * L[i];
+
+            R = R * nums[i];
+        }
+
+
+        return L;
+
+    }
+
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();

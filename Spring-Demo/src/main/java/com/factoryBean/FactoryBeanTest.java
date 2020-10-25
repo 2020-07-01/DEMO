@@ -29,6 +29,8 @@ public class FactoryBeanTest {
          * & 在容器中获取工厂bean的对象
          * 在容器中获取实例对象
          */
+
+        //此处在获取factoryService时获取的是FactoryBean 对象的getObject()方法返回的对象
         Object factoryBeanService = beanFactory.getBean("factoryService");
         System.out.println("factoryBean测试");
         System.out.println(factoryBeanService.getClass().getName());

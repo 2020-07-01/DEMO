@@ -11,9 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 /**
- * 此处BeanName为factoryBeanServiceImpl，表示factoryBeanServiceImpl 通过扩展FactoryBean接口来自定义实例化
- * 假设此Bean的实例化过程非常复杂
- * 在此处进行实例化
+ *  此处默认的Bean name 是factoryService
  */
 @Component
 public class FactoryService implements FactoryBean {
