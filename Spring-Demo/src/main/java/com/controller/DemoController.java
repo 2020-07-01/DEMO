@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.factoryBean.BeanService;
 import com.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,10 @@ public class DemoController {
     @Autowired
     UserServiceImpl userService;
 
+    @Autowired(required = false)
+    BeanService beanService;
+
+
     @GetMapping("userName")
     public String getUserName() {
 
@@ -27,5 +32,19 @@ public class DemoController {
 
         return userName;
     }
+
+
+    @GetMapping("factoryBeanService")
+    public String testFactoryBeanService() {
+        try {
+            /* FactoryBeanServiceImpl o = (FactoryBeanServiceImpl)factoryBeanService.getObject();*/
+            beanService.testFactoryBean();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "";
+    }
+
 
 }
