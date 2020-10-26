@@ -2,6 +2,7 @@ package leetcode.leetcode2020;
 
 import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.NumberFormat;
@@ -1875,6 +1876,7 @@ public class MainOctober {
      */
     class WordsFrequency {
         HashMap<String, Integer> dictionary = new HashMap();
+
         public WordsFrequency(String[] book) {
             for (String string : book) {
                 dictionary.put(string, dictionary.getOrDefault(string, 0));
@@ -1882,7 +1884,7 @@ public class MainOctober {
         }
 
         public int get(String word) {
-            return dictionary.getOrDefault(word,0);
+            return dictionary.getOrDefault(word, 0);
         }
     }
 
@@ -1891,26 +1893,27 @@ public class MainOctober {
      * 238. 除自身以外数组的乘积
      * 时间复杂度O(n2)
      * 暴力解法
+     *
      * @param nums
      * @return
      */
     public int[] productExceptSelf(int[] nums) {
 
-        if(nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return new int[0];
         }
 
 
         int[] result = new int[nums.length];
 
-        for(int i = 0;i<nums.length;i++){
+        for (int i = 0; i < nums.length; i++) {
             int temp = 1;
-            for(int j = 0;j<nums.length;j++){
-                if(i != j){
-                    if(nums[j] == 0){
+            for (int j = 0; j < nums.length; j++) {
+                if (i != j) {
+                    if (nums[j] == 0) {
                         temp = 0;
                         break;
-                    }else {
+                    } else {
                         temp = temp * nums[j];
                     }
                 }
@@ -1930,7 +1933,7 @@ public class MainOctober {
     public int[] productExceptSelf1(int[] nums) {
 
 
-        if(nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return new int[0];
         }
 
@@ -1940,26 +1943,26 @@ public class MainOctober {
         //遍历一遍，有多于两个0的全部为0
         int p = 0;
         int sum = 1;
-        for(int i = 0;i<nums.length;i++){
-            if(nums[i] == 0){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
                 p++;
-            }else {
+            } else {
                 sum = sum * nums[i];
             }
         }
 
-        if(p == 2){
+        if (p == 2) {
             return new int[nums.length];
         }
 
-        for(int i = 0;i<nums.length;i++){
+        for (int i = 0; i < nums.length; i++) {
 
-            if(p == 0){
+            if (p == 0) {
                 result[i] = sum / nums[i];
-            }else if(p == 1) {
-                if(nums[i] == 0){
+            } else if (p == 1) {
+                if (nums[i] == 0) {
                     result[i] = sum;
-                }else {
+                } else {
                     result[i] = 0;
                 }
             }
@@ -1971,13 +1974,14 @@ public class MainOctober {
      * 238. 除自身以外数组的乘积
      * 时间复杂度O(n)
      * 空间复杂度O(n)
+     *
      * @param nums
      * @return
      */
     public int[] productExceptSelf2(int[] nums) {
 
 
-        if(nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return new int[0];
         }
 
@@ -1987,17 +1991,17 @@ public class MainOctober {
         int[] R = new int[nums.length];
 
         L[0] = 1;
-        for(int i = 1;i<nums.length;i++){
-            L[i] = L[i-1] * nums[i-1];
+        for (int i = 1; i < nums.length; i++) {
+            L[i] = L[i - 1] * nums[i - 1];
         }
 
-        R[nums.length-1] = 1;
+        R[nums.length - 1] = 1;
 
-        for(int i = nums.length-2;i>=0;i--){
-            R[i] = R[i+1] * nums[i+1];
+        for (int i = nums.length - 2; i >= 0; i--) {
+            R[i] = R[i + 1] * nums[i + 1];
         }
 
-        for(int i = 0;i<nums.length;i++){
+        for (int i = 0; i < nums.length; i++) {
             result[i] = L[i] * R[i];
         }
 
@@ -2011,13 +2015,14 @@ public class MainOctober {
      * 时间复杂度O(n)
      * 空间复杂度O(1)
      * 输出数组不算在空间复杂度中，只需要1个空间复杂度
+     *
      * @param nums
      * @return
      */
     public int[] productExceptSelf3(int[] nums) {
 
 
-        if(nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return new int[0];
         }
 
@@ -2025,30 +2030,161 @@ public class MainOctober {
 
 
         L[0] = 1;
-        for(int i = 1;i<nums.length;i++){
-            L[i] = L[i-1] * nums[i-1];
+        for (int i = 1; i < nums.length; i++) {
+            L[i] = L[i - 1] * nums[i - 1];
         }
 
         //右侧所有元素的乘积
         int R = 1;
 
-        for(int i = nums.length-1;i>=0;i--){
+        for (int i = nums.length - 1; i >= 0; i--) {
             L[i] = R * L[i];
 
             R = R * nums[i];
         }
-
-
         return L;
-
     }
 
+
+    /**
+     * 1518. 换酒问题
+     *
+     * @param numBottles
+     * @param numExchange
+     * @return
+     */
+    public int numWaterBottles(int numBottles, int numExchange) {
+
+        /**
+         * 计算当前能喝到的最多的酒
+         * 先喝酒再换酒
+         */
+        int sum = 0;
+        //空瓶子的数量
+        int number = 0;
+        //当前酒的数量
+        int cur = numBottles;
+
+        do {
+            //喝酒
+            sum = sum + cur;
+            //空瓶子的数据量
+            number = number + cur;
+            //换酒
+            cur = number / numExchange;
+            number = number % numExchange;
+        } while ((number + cur) >= numExchange);
+
+        return sum + cur;
+    }
+
+
+    /**
+     * 455. 分发饼干
+     * 时间复杂度O(n)
+     *
+     * @param g
+     * @param s
+     * @return
+     */
+    public int findContentChildren(int[] g, int[] s) {
+
+        Arrays.sort(g);
+        Arrays.sort(s);
+
+        /**
+         * 双指针从大到小
+         * 直到饼干分完或者小孩满足
+         */
+        int indexG = g.length - 1;
+        int indexS = s.length - 1;
+        int sum = 0;
+        while (indexG >= 0 && indexS >= 0) {
+            if (g[indexG] <= s[indexS]) {
+                sum++;
+                indexG--;
+                indexS--;
+            } else if (g[indexG] > s[indexS]) {
+                indexG--;
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * 860. 柠檬水找零
+     * 时间复杂度O(n)
+     *
+     * @param bills
+     * @return
+     */
+    public boolean lemonadeChange(int[] bills) {
+
+        /**
+         * 存储5 10的数量
+         * 先找10 再找5
+         */
+        if (bills == null || bills.length == 0) {
+            return true;
+        }
+        if (bills[0] != 5) {
+            return false;
+        }
+        int p5 = 0;
+        int p10 = 0;
+
+        for (int i = 0; i < bills.length; i++) {
+            if (bills[i] == 5) {
+                p5++;
+            } else if (bills[i] == 10) {
+                if (p5 == 0) {
+                    return false;
+                } else {
+                    p10++;
+                    p5--;
+                }
+            } else {
+                if ((p5 * 5 + p10 * 10 < 15) || p5 == 0) {
+                    return false;
+                } else if (p10 > 0) {
+                    p10--;
+                    p5--;
+                } else {
+                    p5 -= 3;
+                }
+            }
+        }
+
+        return true;
+    }
+
+
+    /**
+     * 暴力解法
+     *
+     * @param A
+     * @return
+     */
+    public int minDeletionSize(String[] A) {
+
+        int ans = 0;
+        for (int c = 0; c < A[0].length(); ++c) {
+            for (int r = 0; r < A.length - 1; ++r) {
+                if (A[r].charAt(c) > A[r + 1].charAt(c)) {
+                    ans++;
+                    break;
+                }
+            }
+        }
+
+        return ans;
+    }
 
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
-        int[] array = new int[]{0, 1, 2, 4, 5, 7, 8, 9, 10};
-        int[] array1 = new int[]{3, 2, 1, 4, 7};
+        int[] array = new int[]{5, 5, 5, 10, 20};
+        int[] array1 = new int[]{1, 2, 3};
 
         String[] strings = new String[]{"looked", "just", "like", "her", "brother"};
 
@@ -2057,6 +2193,6 @@ public class MainOctober {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
 
-        System.out.println(mainOctober.summaryRanges1(array));
+        System.out.println(mainOctober.lemonadeChange(array));
     }
 }
