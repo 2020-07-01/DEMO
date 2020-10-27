@@ -2180,10 +2180,82 @@ public class MainOctober {
         return ans;
     }
 
+
+    /**
+     * 1046. 最后一块石头的重量
+     * 贪心算法
+     * 每次遍历都进行排序
+     * 时间复杂度O(n)
+     * 也可以用堆完成
+     *
+     * @param stones
+     * @return
+     */
+    public int lastStoneWeight(int[] stones) {
+
+        if (stones == null || stones.length == 0) {
+            return 0;
+        }
+        if (stones.length < 2) {
+            return stones[0];
+        }
+        int length = stones.length;
+        int index = 0;
+        while (index < stones.length) {
+            Arrays.sort(stones);
+            int a = stones[length - 1];
+            int b = stones[length - 2];
+
+            if (a == b) {
+                stones[length - 1] = 0;
+                stones[length - 2] = 0;
+                index += 2;
+            } else {
+                stones[length - 2] = 0;
+                stones[length - 1] = a - b;
+                index += 1;
+            }
+        }
+        return stones[length - 1];
+    }
+
+
+    /**
+     * 1403. 非递增顺序的最小子序列
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * 结果集不算在空间复杂度中
+     * @param nums
+     * @return
+     */
+    public List<Integer> minSubsequence(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> result = new ArrayList<>();
+        Arrays.sort(nums);
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum = sum + nums[i];
+        }
+        int cur = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            sum = sum - nums[i];
+            cur = cur + nums[i];
+            result.add(nums[i]);
+            if(sum < cur){
+                return result;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
-        int[] array = new int[]{5, 5, 5, 10, 20};
+        int[] array = new int[]{4, 3, 10, 9, 8};
         int[] array1 = new int[]{1, 2, 3};
 
         String[] strings = new String[]{"looked", "just", "like", "her", "brother"};
@@ -2193,6 +2265,6 @@ public class MainOctober {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
 
-        System.out.println(mainOctober.lemonadeChange(array));
+        System.out.println(mainOctober.minSubsequence(array));
     }
 }
