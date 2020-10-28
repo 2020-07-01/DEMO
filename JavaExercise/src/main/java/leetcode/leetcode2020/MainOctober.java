@@ -2252,6 +2252,23 @@ public class MainOctober {
         return result;
     }
 
+    /**
+     * 1295. 统计位数为偶数的数字
+     * @param nums
+     * @return
+     */
+    public int findNumbers(int[] nums) {
+
+
+        int sum = 0;
+        for(int i = 0;i<nums.length;i++){
+            sum = sum + (String.valueOf(nums[i]).length()%2 == 0 ? 1 : 0);
+        }
+
+        return sum;
+
+    }
+
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
