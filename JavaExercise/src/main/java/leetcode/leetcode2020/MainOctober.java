@@ -2225,6 +2225,7 @@ public class MainOctober {
      * 时间复杂度O(n)
      * 空间复杂度O(1)
      * 结果集不算在空间复杂度中
+     *
      * @param nums
      * @return
      */
@@ -2245,7 +2246,7 @@ public class MainOctober {
             sum = sum - nums[i];
             cur = cur + nums[i];
             result.add(nums[i]);
-            if(sum < cur){
+            if (sum < cur) {
                 return result;
             }
         }
@@ -2254,6 +2255,7 @@ public class MainOctober {
 
     /**
      * 1295. 统计位数为偶数的数字
+     *
      * @param nums
      * @return
      */
@@ -2261,13 +2263,163 @@ public class MainOctober {
 
 
         int sum = 0;
-        for(int i = 0;i<nums.length;i++){
-            sum = sum + (String.valueOf(nums[i]).length()%2 == 0 ? 1 : 0);
+        for (int i = 0; i < nums.length; i++) {
+            sum = sum + (String.valueOf(nums[i]).length() % 2 == 0 ? 1 : 0);
         }
 
         return sum;
 
     }
+
+
+    /**
+     * 1002. 查找常用字符
+     * 暴力解法
+     * 时间复杂度O(n*m)
+     *
+     * @param A
+     * @return
+     */
+    public List<String> commonChars(String[] A) {
+
+        Arrays.sort(A, Comparator.comparingInt(String::length));
+
+        if (A.length == 0 || A == null) {
+            return new ArrayList<>();
+        }
+
+        ArrayList<String> list = new ArrayList<>();
+
+        char cur;
+        while (A[0].length() > 0) {
+            cur = A[0].charAt(0);
+            list.add(String.valueOf(cur));
+            for (int j = 0; j < A.length; j++) {
+                if (!A[j].contains(String.valueOf(cur))) {
+                    list.remove(list.size() - 1);
+                    break;
+                } else {
+                    A[j] = A[j].replaceFirst(String.valueOf(cur), "");
+                }
+            }
+        }
+        return list;
+    }
+
+
+    /**
+     * 1002. 查找常用字符
+     * 时间复杂度O(n*m)
+     * 二维数组解法
+     *
+     * @param A
+     * @return
+     */
+    public List<String> commonChars1(String[] A) {
+
+        if (A == null || A.length == 0) {
+            return new ArrayList<>();
+        }
+
+        int[][] map = new int[A.length][26];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length(); j++) {
+                map[i][A[i].charAt(j) - 'a']++;
+            }
+        }
+
+
+        List<String> list = new ArrayList<>();
+
+        for (int i = 0; i < 26; i++) {
+            int temp = map[0][i];
+            for (int j = 0; j < map.length; j++) {
+                temp = Math.min(temp, map[j][i]);
+            }
+            while (temp > 0) {
+                list.add(String.valueOf((char) (i + 97)));
+                temp--;
+            }
+        }
+        return list;
+    }
+
+
+    /**
+     * 1221. 分割平衡字符串
+     *
+     * @param s
+     * @return
+     */
+    public int balancedStringSplit(String s) {
+
+        HashMap<Character, Integer> map = new HashMap<>();
+        int sum = 0;
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+
+            if (map.getOrDefault('L', 0).intValue() == map.getOrDefault('R', 0).intValue()) {
+                sum++;
+
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * 1221. 分割平衡字符串
+     *
+     * @param s
+     * @return
+     */
+    public int balancedStringSplit1(String s) {
+
+        int sum = 0;
+        int l = 0;
+        int r = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (s.charAt(i) == 'L') {
+                l++;
+            } else {
+                r++;
+            }
+
+            if (l == r) {
+                sum++;
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * 1221. 分割平衡字符串
+     * 栈方法
+     * @param s
+     * @return
+     */
+    public int balancedStringSplit2(String s) {
+
+        int sum = 0;
+        Stack<Character> stack = new Stack<>();
+        stack.push(s.charAt(0));
+        for(int i = 1;i<s.length();i++){
+            if(stack.empty() || stack.peek() == (s.charAt(i))){
+                stack.push(s.charAt(i));
+            }else {
+                 stack.pop();
+            }
+
+            if(stack.empty()){
+                sum++;
+            }
+        }
+        return sum;
+    }
+
+
+
 
     public static void main(String[] args) {
 
@@ -2275,13 +2427,14 @@ public class MainOctober {
         int[] array = new int[]{4, 3, 10, 9, 8};
         int[] array1 = new int[]{1, 2, 3};
 
-        String[] strings = new String[]{"looked", "just", "like", "her", "brother"};
+        String[] strings = new String[]{"bella"};
 
         int[][] arrays3 = new int[][]{{4, 3, 3, 1, 1}, {1, 0, 0, -1, -1}, {-2, -2, -2, -2, -3}, {-2, -2, -2, -3, -3}, {-3, -3, -3, -3, -3}};
 
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
 
-        System.out.println(mainOctober.minSubsequence(array));
+        System.out.println(mainOctober.balancedStringSplit2("RLRRLLRLRL"));
+
     }
 }
