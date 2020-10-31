@@ -2396,6 +2396,7 @@ public class MainOctober {
     /**
      * 1221. 分割平衡字符串
      * 栈方法
+     *
      * @param s
      * @return
      */
@@ -2404,27 +2405,86 @@ public class MainOctober {
         int sum = 0;
         Stack<Character> stack = new Stack<>();
         stack.push(s.charAt(0));
-        for(int i = 1;i<s.length();i++){
-            if(stack.empty() || stack.peek() == (s.charAt(i))){
+        for (int i = 1; i < s.length(); i++) {
+            if (stack.empty() || stack.peek() == (s.charAt(i))) {
                 stack.push(s.charAt(i));
-            }else {
-                 stack.pop();
+            } else {
+                stack.pop();
             }
 
-            if(stack.empty()){
+            if (stack.empty()) {
                 sum++;
             }
         }
         return sum;
     }
 
+    /**
+     * 747. 至少是其他数字两倍的最大数
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * @param nums
+     * @return
+     */
+    public int dominantIndex(int[] nums) {
 
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        int max = nums[0];
+        int index = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (max < nums[i]) {
+                max = nums[i];
+                index = i;
+            }
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (i == index) {
+                continue;
+            }
+            if (nums[i] * 2 > max) {
+                return -1;
+            }
+        }
+        return index;
+    }
+
+
+    /**
+     * 83. 删除排序链表中的重复元素
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * @param head
+     * @return
+     */
+    public ListNode deleteDuplicates(ListNode head) {
+
+        /**
+         * 创建新的节点并进行赋值
+         * 然后进行操作
+         * 返回头节点
+         */
+        ListNode node = head;
+
+        while (node != null && node.next != null){
+            if(node.val != node.next.val){
+                node = node.next;
+            }else {
+                node = node.next.next;
+            }
+        }
+
+        return head;
+
+    }
 
 
     public static void main(String[] args) {
 
         MainOctober mainOctober = new MainOctober();
-        int[] array = new int[]{4, 3, 10, 9, 8};
+        int[] array = new int[]{3, 6, 1, 0};
         int[] array1 = new int[]{1, 2, 3};
 
         String[] strings = new String[]{"bella"};
@@ -2434,7 +2494,7 @@ public class MainOctober {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
 
-        System.out.println(mainOctober.balancedStringSplit2("RLRRLLRLRL"));
+        System.out.println(mainOctober.dominantIndex(array));
 
     }
 }
