@@ -184,6 +184,7 @@ public class MainNovember {
      * 884. 两句话中的不常见单词
      * 时间复杂度O(n)
      * 空间复杂度O(n)
+     *
      * @param A
      * @param B
      * @return
@@ -210,10 +211,10 @@ public class MainNovember {
         for (int i = 0; i < stringB.length; i++) {
             if (!hashMap.containsKey(stringB[i])) {
 
-                if(!hashMapB.containsKey(stringB[i])){
+                if (!hashMapB.containsKey(stringB[i])) {
                     result.add(stringB[i]);
                     hashMapB.put(stringB[i], 1);
-                }else {
+                } else {
                     result.remove(stringB[i]);
                 }
 
@@ -237,6 +238,7 @@ public class MainNovember {
      * 884. 两句话中的不常见单词
      * 时间复杂度O(n)
      * 空间复杂度O(n)
+     *
      * @param A
      * @param B
      * @return
@@ -249,23 +251,23 @@ public class MainNovember {
             return A.split(" ");
         }
 
-        HashMap<String,Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
 
         String[] stringA = A.split(" ");
         String[] stringB = B.split(" ");
 
-        for(int i = 0;i<stringA.length;i++){
-            map.put(stringA[i],map.getOrDefault(stringA[i],0) + 1);
+        for (int i = 0; i < stringA.length; i++) {
+            map.put(stringA[i], map.getOrDefault(stringA[i], 0) + 1);
         }
 
-        for(int i = 0;i<stringB.length;i++){
-            map.put(stringB[i],map.getOrDefault(stringB[i],0) + 1);
+        for (int i = 0; i < stringB.length; i++) {
+            map.put(stringB[i], map.getOrDefault(stringB[i], 0) + 1);
         }
 
         ArrayList<String> list = new ArrayList<>();
 
-        for (Map.Entry<String,Integer> entry : map.entrySet()) {
-            if(entry.getValue() == 1){
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1) {
                 list.add(entry.getKey());
             }
         }
@@ -275,57 +277,121 @@ public class MainNovember {
     /**
      * 1189. “气球” 的最大数量
      * if比较与switch哪个性能高
+     *
      * @param text
      * @return
      */
     public int maxNumberOfBalloons(String text) {
 
-        if(text == null || text.length() == 0){
+        if (text == null || text.length() == 0) {
             return 0;
         }
-        HashMap<Character,Integer> hashMap = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> hashMap = new HashMap<Character, Integer>();
         int index = 0;
-        while (index < text.length()){
+        while (index < text.length()) {
             char c = text.charAt(index);
-            switch (c){
-                case 'b' : hashMap.put(Character.valueOf(c),hashMap.getOrDefault(Character.valueOf(c),0) + 1);break;
-                case 'a' : hashMap.put(Character.valueOf(c),hashMap.getOrDefault(Character.valueOf(c),0) + 1);break;
-                case 'l' : hashMap.put(Character.valueOf(c),hashMap.getOrDefault(Character.valueOf(c),0) + 1);break;
-                case 'o' : hashMap.put(Character.valueOf(c),hashMap.getOrDefault(Character.valueOf(c),0) + 1);break;
-                case 'n' : hashMap.put(Character.valueOf(c),hashMap.getOrDefault(Character.valueOf(c),0) + 1);break;
-                default:index++;continue;
+            switch (c) {
+                case 'b':
+                    hashMap.put(Character.valueOf(c), hashMap.getOrDefault(Character.valueOf(c), 0) + 1);
+                    break;
+                case 'a':
+                    hashMap.put(Character.valueOf(c), hashMap.getOrDefault(Character.valueOf(c), 0) + 1);
+                    break;
+                case 'l':
+                    hashMap.put(Character.valueOf(c), hashMap.getOrDefault(Character.valueOf(c), 0) + 1);
+                    break;
+                case 'o':
+                    hashMap.put(Character.valueOf(c), hashMap.getOrDefault(Character.valueOf(c), 0) + 1);
+                    break;
+                case 'n':
+                    hashMap.put(Character.valueOf(c), hashMap.getOrDefault(Character.valueOf(c), 0) + 1);
+                    break;
+                default:
+                    index++;
+                    continue;
             }
             index++;
         }
 
-        if(hashMap.size() < 5){
+        if (hashMap.size() < 5) {
             return 0;
         }
         int l = Integer.MAX_VALUE;
         int a = Integer.MAX_VALUE;
-       //balloon
-        for (Map.Entry<Character,Integer> entry : hashMap.entrySet()) {
-            if(entry.getKey().charValue() == 'o' || entry.getKey().charValue() == 'l'){
-                l = Math.min(l,entry.getValue());
-            }else {
-                a = Math.min(a,entry.getValue());
+        //balloon
+        for (Map.Entry<Character, Integer> entry : hashMap.entrySet()) {
+            if (entry.getKey().charValue() == 'o' || entry.getKey().charValue() == 'l') {
+                l = Math.min(l, entry.getValue());
+            } else {
+                a = Math.min(a, entry.getValue());
             }
         }
 
-        return Math.min(a,(l/2));
+        return Math.min(a, (l / 2));
+    }
+
+    /**
+     * 1207. 独一无二的出现次数
+     * 两次哈希表
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param arr
+     * @return
+     */
+    public boolean uniqueOccurrences(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return false;
+        }
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+        }
+        Set<Integer> set = new HashSet<>();
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (set.contains(entry.getValue())) {
+                return false;
+            } else {
+                set.add(entry.getValue());
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * 1207. 独一无二的出现次数
+     * 两次哈希表
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param arr
+     * @return
+     */
+    public boolean uniqueOccurrences1(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return false;
+        }
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+        }
+        Set<Integer> set = new HashSet<>(map.values());
+        return set.size() == map.size();
     }
 
 
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
         int[][] array1 = new int[][]{{0, 1}, {1, 0}};
-        int[] array = new int[]{1, 0, 2, 3, 0, 4, 5, 0};
+        int[] array = new int[]{1, 2, 2, 1, 1, 3};
 
         //mainNovember.duplicateZeros(array);
         String[] strings = new String[]{"abdfs", "cccd", "a", "qwwewm"};
         //System.out.println(Arrays.toString(mainNovember.uncommonFromSentences("this apple is sweet", "this apple is sour")));
 
-        System.out.println(mainNovember.maxNumberOfBalloons("nlaebolko"));
+        System.out.println(mainNovember.uniqueOccurrences(array));
     }
 
 }
