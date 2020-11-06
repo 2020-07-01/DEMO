@@ -382,6 +382,94 @@ public class MainNovember {
     }
 
 
+    /**
+     * 575. 分糖果
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     * @param candies
+     * @return
+     */
+    public int distributeCandies(int[] candies) {
+
+        if(candies == null || candies.length == 0){
+            return 0;
+        }
+
+        HashMap<Integer,Integer> hashMap = new HashMap();
+        int result = 0;
+        for (int i : candies) {
+            if(hashMap.containsKey(i)){
+                continue;
+            }else {
+                result++;
+                //加完这行代码，性能提升一倍
+                if(result == candies.length/2){
+                    return result;
+                }
+                hashMap.put(i,i);
+            }
+        }
+        return result;
+
+    }
+
+    /**
+     * 回文排列
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     * 某个字段串是否为某个回文串得排列之一
+     * @param s
+     * @return
+     */
+    public boolean canPermutePalindrome(String s) {
+
+        if(s == null || s.length() == 0){
+            return true;
+        }
+        char[] chars = s.toCharArray();
+
+        Set<Character> set = new HashSet<>();
+        for (int i = 0;i<chars.length;i++){
+            if(set.contains(chars[i])){
+                set.remove(chars[i]);
+            }else {
+                set.add(chars[i]);
+            }
+        }
+
+        return set.size() <= 1 ? true : false;
+    }
+
+
+    /**
+     *
+     * @param s
+     * @return
+     */
+    public boolean canPermutePalindrome1(String s) {
+
+        if(s == null || s.length() < 3){
+            return true;
+        }
+        char[] chars = s.toCharArray();
+
+        HashMap<Character,Integer> hashMap = new HashMap<>();
+        for (int i = 0;i<chars.length;i++){
+             hashMap.put(chars[i],hashMap.getOrDefault(chars[i],0)+1);
+        }
+        int i = 0;
+        for(Map.Entry<Character,Integer> entry : hashMap.entrySet()){
+            if(entry.getValue()%2 != 0){
+                i++;
+            }
+            if(i == 2){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
         int[][] array1 = new int[][]{{0, 1}, {1, 0}};
