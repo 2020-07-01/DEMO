@@ -1,7 +1,5 @@
 package net.url_uri;
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;

@@ -5,6 +5,8 @@ package proxy.staticProxy;
  * @Author : yq
  * @Date: 2020-10-29
  * @Description : 代理类(增强类)
+ *
+ * 在动态代理中不需要再创建此代理类  jdk通过反射动态生成代理对象
  */
 public class ProxyMovie implements Movie {
     /**
@@ -18,6 +20,7 @@ public class ProxyMovie implements Movie {
      * 反射生成被代理类及其被代理类的方法
      * 代理类中通过Method的invoke方法执行被代理类的方法
      *
+     *
      * Aop就是代理模式 在方法执行前后进行加强
      * BeanPostProcessor也是
      */
@@ -27,7 +30,12 @@ public class ProxyMovie implements Movie {
         this.movie = movie;
     }
 
-
+    /**
+     * 目标类和代理类都实现了相同的接口的相同方法
+     * 当接口方法变化时，代理类和目标类的都要重写代码
+     * 每个目标类都要有自己的代理类
+     * 而动态代理就是程序在运行过程中动态的生成代理类，并执行其中的方法
+     */
     @Override
     public void play() {
         guangGao(true);

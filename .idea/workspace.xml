@@ -20,10 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/JdkProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/staticProxy/ProxyMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/staticProxy/ProxyMovie.java" afterDir="false" />
     </list>
-    <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
+    <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/HelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/Interceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/Invocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/MyInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/ProxyBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/TestProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/method/MethodDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/method/MobileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/reflect/method/MobileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/aop/AOPDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/aop/AopConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/aop/NotVeryUsefulAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/aop/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/GenericsAndCovariance.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/generics/wildcardCharacter/GenericsAndCovariance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/net/url_uri/StudyURLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/url_uri/StudyURLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/SpringDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/SpringDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +72,15 @@
         <option name="userSettingsFile" value="D:\application\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="1goUzSLmphCqwkK4Yp16KquBCa6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -69,27 +102,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ocean" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3908046" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainOctober">
-    <configuration name="DemoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="proxy.staticProxy.DemoMain" />
-      <module name="JavaExercise" />
+  <component name="RunManager" selected="Application.MainNovember">
+    <configuration name="AOPDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aop.AOPDemo" />
+      <module name="Spring-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="proxy.staticProxy.*" />
+          <option name="PATTERN" value="com.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,8 +130,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainOctober" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainOctober" />
+    <configuration name="JdkProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="proxy.jdkProxy.JdkProxy" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proxy.jdkProxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainNovember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainNovember" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
@@ -110,33 +156,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryBeanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spring-Demo" />
+    <configuration name="TestProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="proxy.springBootDemo.TestProxy" />
+      <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.factoryBean.*" />
+          <option name="PATTERN" value="proxy.springBootDemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.factoryBean" />
-      <option name="MAIN_CLASS_NAME" value="com.factoryBean.FactoryBeanTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FactoryBeanTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spring-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.factoryBean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.factoryBean" />
-      <option name="MAIN_CLASS_NAME" value="com.factoryBean.FactoryBeanTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainOctober" />
-        <item itemvalue="Application.DemoMain" />
+        <item itemvalue="Application.MainNovember" />
+        <item itemvalue="Application.JdkProxy" />
+        <item itemvalue="Application.AOPDemo" />
         <item itemvalue="Spring Boot.SpringDemoApplication" />
-        <item itemvalue="JUnit.FactoryBeanTest.test" />
-        <item itemvalue="JUnit.FactoryBeanTest" />
+        <item itemvalue="Application.TestProxy" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +229,12 @@
       <workItem from="1603893083630" duration="1932000" />
       <workItem from="1603974407559" duration="4560000" />
       <workItem from="1603980480345" duration="2805000" />
-      <workItem from="1604115383070" duration="1709000" />
+      <workItem from="1604115383070" duration="1805000" />
+      <workItem from="1604216441046" duration="18718000" />
+      <workItem from="1604325049066" duration="3346000" />
+      <workItem from="1604407241556" duration="7622000" />
+      <workItem from="1604498800379" duration="1278000" />
+      <workItem from="1604670387667" duration="14197000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -364,7 +397,49 @@
       <option name="project" value="LOCAL" />
       <updated>1603983658223</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="83. 删除排序链表中的重复元素&#10;747. 至少是其他数字两倍的最大数">
+      <created>1604120174651</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1604120174652</updated>
+    </task>
+    <task id="LOCAL-00025" summary="500. 键盘行&#10;219. 存在重复元素 II">
+      <created>1604243117433</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1604243117434</updated>
+    </task>
+    <task id="LOCAL-00026" summary="键盘行&#10;884. 两句话中的不常见单词&#10;复写0&#10;1189. “气球” 的最大数量">
+      <created>1604411121493</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1604411121493</updated>
+    </task>
+    <task id="LOCAL-00027" summary="1207. 独一无二的出现次数">
+      <created>1604500019759</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1604500019760</updated>
+    </task>
+    <task id="LOCAL-00028" summary="回文排列&#10;分糖果">
+      <created>1604676412267</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1604676412267</updated>
+    </task>
+    <task id="LOCAL-00029" summary="最长回文串&#10;词典中最长的单词">
+      <created>1604754057541</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1604754057541</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,8 +453,8 @@
             <State>
               <option name="COLUMN_WIDTH">
                 <map>
-                  <entry key="2" value="74" />
-                  <entry key="3" value="74" />
+                  <entry key="2" value="15" />
+                  <entry key="3" value="15" />
                 </map>
               </option>
             </State>
@@ -410,7 +485,13 @@
     <MESSAGE value="1295. 统计位数为偶数的数字&#10;41,655" />
     <MESSAGE value="1221. 分割平衡字符串&#10;1002. 查找常用字符&#10;41,395" />
     <MESSAGE value="静态代理" />
-    <option name="LAST_COMMIT_MESSAGE" value="静态代理" />
+    <MESSAGE value="83. 删除排序链表中的重复元素&#10;747. 至少是其他数字两倍的最大数" />
+    <MESSAGE value="500. 键盘行&#10;219. 存在重复元素 II" />
+    <MESSAGE value="键盘行&#10;884. 两句话中的不常见单词&#10;复写0&#10;1189. “气球” 的最大数量" />
+    <MESSAGE value="1207. 独一无二的出现次数" />
+    <MESSAGE value="回文排列&#10;分糖果" />
+    <MESSAGE value="最长回文串&#10;词典中最长的单词" />
+    <option name="LAST_COMMIT_MESSAGE" value="最长回文串&#10;词典中最长的单词" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="0" width="658" height="680" key="#SpringApplication" timestamp="1602773663939">
@@ -421,12 +502,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602037589943" />
-    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1603982909749">
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1604412021867">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602987515081" />
     <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602989667954" />
-    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1603982909749" />
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1604412021867" />
     <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1601993101669">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -435,68 +516,72 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="690" y="-814" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603603481395" />
+    <state x="396" y="43" key="#xdebugger.evaluate" timestamp="1604235263145">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="396" y="43" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1604235263145" />
     <state x="657" y="-729" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603603473969">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="657" y="-729" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603603473969" />
-    <state width="562" height="438" key="DebuggerActiveHint" timestamp="1603978537082">
+    <state width="562" height="438" key="DebuggerActiveHint" timestamp="1604751140085">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1151" height="670" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603622194270" />
     <state width="573" height="438" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602993073180" />
-    <state width="562" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1603978537082" />
-    <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1598785761766">
+    <state width="562" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1604751140085" />
+    <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1604231874338">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598785761766" />
-    <state width="1237" height="241" key="GridCell.Tab.0.bottom" timestamp="1604116494161">
+    <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604231874338" />
+    <state width="1237" height="217" key="GridCell.Tab.0.bottom" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654141" />
-    <state width="1237" height="167" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604019663907" />
-    <state width="1237" height="241" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604116494161" />
-    <state width="1237" height="241" key="GridCell.Tab.0.center" timestamp="1604116494161">
+    <state width="1237" height="188" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080763" />
+    <state width="1237" height="217" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.0.center" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654140" />
-    <state width="1237" height="167" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604019663907" />
-    <state width="1237" height="241" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604116494161" />
-    <state width="1237" height="241" key="GridCell.Tab.0.left" timestamp="1604116494160">
+    <state width="1237" height="188" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
+    <state width="1237" height="217" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.0.left" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654140" />
-    <state width="1237" height="167" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604019663906" />
-    <state width="1237" height="241" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604116494160" />
-    <state width="1237" height="241" key="GridCell.Tab.0.right" timestamp="1604116494161">
+    <state width="1237" height="188" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
+    <state width="1237" height="217" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.0.right" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654141" />
-    <state width="1237" height="167" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604019663907" />
-    <state width="1237" height="241" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604116494161" />
-    <state width="1237" height="194" key="GridCell.Tab.1.bottom" timestamp="1604115971573">
+    <state width="1237" height="188" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
+    <state width="1237" height="217" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.1.bottom" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654141" />
-    <state width="1237" height="150" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
-    <state width="1237" height="194" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604115971573" />
-    <state width="1237" height="194" key="GridCell.Tab.1.center" timestamp="1604115971573">
+    <state width="1237" height="188" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
+    <state width="1237" height="217" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.1.center" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654141" />
-    <state width="1237" height="150" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
-    <state width="1237" height="194" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604115971573" />
-    <state width="1237" height="194" key="GridCell.Tab.1.left" timestamp="1604115971573">
+    <state width="1237" height="188" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
+    <state width="1237" height="217" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.1.left" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654141" />
-    <state width="1237" height="150" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
-    <state width="1237" height="194" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604115971573" />
-    <state width="1237" height="194" key="GridCell.Tab.1.right" timestamp="1604115971573">
+    <state width="1237" height="188" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080763" />
+    <state width="1237" height="217" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
+    <state width="1237" height="217" key="GridCell.Tab.1.right" timestamp="1604753812965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="232" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603846654141" />
-    <state width="1237" height="150" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602992642375" />
-    <state width="1237" height="194" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604115971573" />
+    <state width="1237" height="188" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
+    <state width="1237" height="217" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604753812965" />
     <state width="1237" height="255" key="GridCell.Tab.2.bottom" timestamp="1603639777315">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -525,31 +610,35 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="84" key="IDE.errors.dialog/0.0.1280.680@0.0.1280.680" timestamp="1601993903121" />
-    <state x="213" y="-1080" key="SettingsEditor" timestamp="1603601309598">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="35" y="0" key="SettingsEditor" timestamp="1604411937792">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="213" y="-1080" key="SettingsEditor/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603601309598" />
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602860695273" />
+    <state x="35" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604411937792" />
     <state x="471" y="210" key="VCS.EditChangelistDialog" timestamp="1601993816859">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1603983660922">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604754061198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603983660922" />
-    <state x="221" y="-973" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603619982522">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604754061198" />
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604233171795">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1604233171795" />
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604236880715">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="-973" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603619982522" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602990987211" />
-    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1603551675046" />
-    <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1603723956240">
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1604236880715" />
+    <state x="339" y="72" width="603" height="536" key="find.popup" timestamp="1604326009148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="509" y="-970" width="905" height="820" key="find.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602999752951" />
-    <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603723956240" />
+    <state x="339" y="72" width="603" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1604326009148" />
     <state x="53" y="-1080" key="new project wizard" timestamp="1603007702694">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -559,11 +648,11 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603601154921" />
-    <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup" timestamp="1603606300647">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604675665254">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603606300647" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603549409401" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604675665254" />
     <state x="363" y="252" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602080060180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -573,181 +662,109 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>548</line>
-          <option name="timeStamp" value="283" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>533</line>
-          <option name="timeStamp" value="285" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>876</line>
-          <option name="timeStamp" value="290" />
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>344</line>
+          <option name="timeStamp" value="374" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
-          <line>821</line>
-          <option name="timeStamp" value="291" />
+          <line>410</line>
+          <option name="timeStamp" value="375" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java</url>
-          <line>245</line>
-          <option name="timeStamp" value="294" />
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>1101</line>
+          <option name="timeStamp" value="376" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>514</line>
-          <option name="timeStamp" value="297" />
+          <url>file://$PROJECT_DIR$/Spring-Demo/src/main/java/com/aop/AOPDemo.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="379" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>549</line>
-          <option name="timeStamp" value="298" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="382" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>556</line>
-          <option name="timeStamp" value="299" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="391" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>554</line>
-          <option name="timeStamp" value="300" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="400" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>566</line>
-          <option name="timeStamp" value="311" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="401" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>591</line>
-          <option name="timeStamp" value="312" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="402" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>572</line>
-          <option name="timeStamp" value="315" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="403" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>578</line>
-          <option name="timeStamp" value="316" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="406" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>592</line>
-          <option name="timeStamp" value="331" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>329</line>
+          <option name="timeStamp" value="410" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1353</line>
-          <option name="timeStamp" value="332" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/JdkProxy.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="414" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1390</line>
-          <option name="timeStamp" value="333" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/JdkProxy.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="415" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1368</line>
-          <option name="timeStamp" value="334" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/JdkProxy.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="416" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1352</line>
-          <option name="timeStamp" value="335" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>531</line>
+          <option name="timeStamp" value="418" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1386</line>
-          <option name="timeStamp" value="336" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>526</line>
+          <option name="timeStamp" value="421" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1403</line>
-          <option name="timeStamp" value="337" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>515</line>
+          <option name="timeStamp" value="430" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>1394</line>
-          <option name="timeStamp" value="338" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>625</line>
+          <option name="timeStamp" value="431" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2126</line>
-          <option name="timeStamp" value="342" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2135</line>
-          <option name="timeStamp" value="343" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2140</line>
-          <option name="timeStamp" value="344" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2146</line>
-          <option name="timeStamp" value="345" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2157</line>
-          <option name="timeStamp" value="346" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2233</line>
-          <option name="timeStamp" value="348" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2243</line>
-          <option name="timeStamp" value="349" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2294</line>
-          <option name="timeStamp" value="352" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2305</line>
-          <option name="timeStamp" value="353" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2331</line>
-          <option name="timeStamp" value="354" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2408</line>
-          <option name="timeStamp" value="358" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2442</line>
-          <option name="timeStamp" value="359" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2450</line>
-          <option name="timeStamp" value="360" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainOctober.java</url>
-          <line>2447</line>
-          <option name="timeStamp" value="361" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>616</line>
+          <option name="timeStamp" value="433" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

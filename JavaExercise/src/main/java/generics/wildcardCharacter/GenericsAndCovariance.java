@@ -1,7 +1,5 @@
 package generics.wildcardCharacter;
 
-import jdk.nashorn.internal.ir.LiteralNode;
-import sun.swing.text.html.FrameEditorPaneTag;
 
 import java.util.ArrayList;
 import java.util.List;
