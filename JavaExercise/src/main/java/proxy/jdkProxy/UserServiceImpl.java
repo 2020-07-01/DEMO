@@ -17,6 +17,11 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void selectUser() {
+        System.out.println("检索用户......");
+    }
+
+    @Override
+    public void deleteUser() {
         System.out.println("删除用户......");
     }
 }

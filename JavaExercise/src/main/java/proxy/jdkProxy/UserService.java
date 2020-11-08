@@ -12,4 +12,6 @@ public interface UserService {
 
     void selectUser();
 
+    void deleteUser();
+
 }

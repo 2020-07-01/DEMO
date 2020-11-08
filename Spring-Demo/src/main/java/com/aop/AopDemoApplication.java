@@ -1,6 +1,7 @@
 package com.aop;
 
 
+import com.aop.service.ConsumerService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -10,12 +11,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @Description :
  */
 
-public class AOPDemo {
+public class AopDemoApplication {
 
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(AopConfiguration.class);
-        UserDao userDao = annotationConfigApplicationContext.getBean(UserDao.class);
-        userDao.query();
+        ConsumerService userDao = annotationConfigApplicationContext.getBean(ConsumerService.class);
+        userDao.login("联想", "123");
     }
 }

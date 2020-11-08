@@ -8,11 +8,13 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @ClassName : Config
  * @Author : yq
  * @Date: 2020-11-01
- * @Description : aop配置类
+ * @Description : aop配置类 启用aop
  */
 @Configuration
 @ComponentScan(basePackages = "com.aop")
 @EnableAspectJAutoProxy
 public class AopConfiguration {
+
+
 
 }
