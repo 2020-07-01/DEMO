@@ -530,6 +530,7 @@ public class MainNovember {
     /**
      * 409. 最长回文串
      * 哈希法
+     *
      * @param s
      * @return
      */
@@ -547,7 +548,7 @@ public class MainNovember {
         while (index < s.length()) {
             if (hashMap.containsKey(s.charAt(index))) {
                 hashMap.remove(s.charAt(index));
-                sum+=2;
+                sum += 2;
             } else {
                 hashMap.put(s.charAt(index), true);
             }
@@ -564,6 +565,7 @@ public class MainNovember {
     /**
      * 最长回文串
      * set法
+     *
      * @param s
      * @return
      */
@@ -581,7 +583,7 @@ public class MainNovember {
         while (index < s.length()) {
             if (set.contains(s.charAt(index))) {
                 set.remove(s.charAt(index));
-                sum+=2;
+                sum += 2;
             } else {
                 set.add(s.charAt(index));
             }
@@ -598,6 +600,7 @@ public class MainNovember {
     /**
      * 最长回文串
      * set法
+     *
      * @param s
      * @return
      */
@@ -605,36 +608,79 @@ public class MainNovember {
 
         int sum = 0;
         int index = 0;
-        while (index < s.length() && s.length() >= 1){
+        while (index < s.length() && s.length() >= 1) {
             char c = s.charAt(index);
-            String temp = s.substring(index+1);
-            if(temp.contains(Character.toString(c))){
-                temp = temp.replaceFirst(String.valueOf(c),"");
+            String temp = s.substring(index + 1);
+            if (temp.contains(Character.toString(c))) {
+                temp = temp.replaceFirst(String.valueOf(c), "");
                 sum = sum + 2;
                 index = 0;
                 s = temp;
-            }else {
+            } else {
                 index++;
             }
         }
 
-        if(s.length() > 0){
-            return sum+1;
-        }else {
+        if (s.length() > 0) {
+            return sum + 1;
+        } else {
             return sum;
         }
+    }
+
+    /**
+     * 704. 二分查找
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int search(int[] nums, int target) {
+
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 魔法索引
+     * @param nums
+     * @return
+     */
+    public int findMagicIndex(int[] nums) {
+
+        if(nums == null || nums.length == 0){
+            return -1;
+        }
+
+        for(int i = 0;i<nums.length;i++){
+            if(i == nums[i]){
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
         int[][] array1 = new int[][]{{0, 1}, {1, 0}};
-        int[] array = new int[]{1, 2, 2, 1, 1, 3};
+        int[] array = new int[]{0, 2, 3, 4, 5};
 
         //mainNovember.duplicateZeros(array);
         String[] strings = new String[]{"m", "mo", "moc", "moch", "mocha", "l", "la", "lat", "latt", "latte", "c", "ca", "cat"};
         //System.out.println(Arrays.toString(mainNovember.uncommonFromSentences("this apple is sweet", "this apple is sour")));
 
-        System.out.println(mainNovember.longestPalindrome2("abccccdd"));
+        System.out.println(mainNovember.findMagicIndex(array));
     }
 
 }
