@@ -1,10 +1,7 @@
 package com.aop;
 
 import org.apache.tomcat.util.net.jsse.JSSEUtil;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 
 import org.springframework.stereotype.Component;
 
@@ -20,7 +17,7 @@ public class LoginAspect {
 
 
     /**
-     * 声明切点1
+     * 声明切点
      */
     @Pointcut("execution(public * *(..))")
     public void pointCut() {
@@ -43,4 +40,12 @@ public class LoginAspect {
     public void executeAfter() {
         System.out.println("用户登陆后打印日志......");
     }
+
+
+    @AfterReturning("pointCut()")
+    public void executeAfterReturnning() {
+        System.out.println("aftreReturnning......");
+    }
+
+
 }

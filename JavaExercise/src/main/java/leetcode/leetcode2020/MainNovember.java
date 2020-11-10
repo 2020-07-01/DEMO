@@ -1,6 +1,9 @@
 package leetcode.leetcode2020;
 
 
+import com.sun.org.apache.xpath.internal.objects.XNodeSet;
+
+import javax.swing.plaf.nimbus.State;
 import java.util.*;
 
 /**
@@ -630,6 +633,7 @@ public class MainNovember {
 
     /**
      * 704. 二分查找
+     *
      * @param nums
      * @param target
      * @return
@@ -653,17 +657,18 @@ public class MainNovember {
 
     /**
      * 魔法索引
+     *
      * @param nums
      * @return
      */
     public int findMagicIndex(int[] nums) {
 
-        if(nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return -1;
         }
 
-        for(int i = 0;i<nums.length;i++){
-            if(i == nums[i]){
+        for (int i = 0; i < nums.length; i++) {
+            if (i == nums[i]) {
                 return i;
             }
         }
@@ -671,16 +676,195 @@ public class MainNovember {
         return -1;
     }
 
+    /**
+     * @param root
+     * @param low
+     * @param high
+     * @return
+     */
+    public int rangeSumBST(TreeNode root, int low, int high) {
+
+        List<Integer> list = new ArrayList<>();
+
+        sumLeft(root, list, low, high);
+        int sum = 0;
+        for (Integer integer : list) {
+            sum = sum + integer;
+        }
+        return sum;
+    }
+
+    private void sumLeft(TreeNode node, List<Integer> list, int low, int hiht) {
+        if (node != null) {
+            if (low <= node.val && node.val <= hiht) {
+                list.add(node.val);
+            }
+            if (low < node.val) {
+                sumLeft(node.left, list, low, hiht);
+            }
+            if (node.val < hiht) {
+                sumLeft(node.right, list, low, hiht);
+            }
+        }
+
+    }
+
+    private void sumRight(TreeNode node, List<Integer> list, int high) {
+        if (node.val < high) {
+            list.add(node.val);
+            if (node.left != null) {
+                sumRight(node.left, list, high);
+            }
+        }
+    }
+
+    /**
+     * 1160. 拼写单词
+     * 时间复杂度O(n*m)
+     *
+     * @param words
+     * @param chars
+     * @return
+     */
+    public int countCharacters(String[] words, String chars) {
+
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+
+        for (int i = 0; i < chars.length(); i++) {
+            hashMap.put(chars.charAt(i), hashMap.getOrDefault(chars.charAt(i), 0) + 1);
+        }
+        int sum = 0;
+        for (int i = 0; i < words.length; i++) {
+            String temp = words[i];
+            int index = 0;
+            HashMap<Character, Integer> map = new HashMap<>();
+            while (index < temp.length()) {
+                if (hashMap.containsKey(temp.charAt(index))) {
+                    map.put(temp.charAt(index), map.getOrDefault(temp.charAt(index), 0) + 1);
+                    if (map.get(temp.charAt(index)) > hashMap.get(temp.charAt(index))) {
+                        break;
+                    } else {
+                        index++;
+                    }
+                } else {
+                    break;
+                }
+            }
+            if (index == temp.length()) {
+                sum = sum + temp.length();
+            }
+        }
+        return sum;
+    }
+
+
+    List<Integer> result = new ArrayList<>();
+
+    /**
+     * N茶树的前序遍历 递归法
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> preorder(Node root) {
+
+        if (root == null) {
+            return result;
+        }
+        result.add(root.val);
+        for (Node n : root.children) {
+            preorder(n);
+        }
+        return result;
+    }
+
+    /**
+     * N叉树的前序遍历
+     * 迭代法
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> preorder1(Node root) {
+
+        Stack<Node> stack = new Stack<>();
+        List<Integer> list = new LinkedList<>();
+        if(root == null){
+            return list;
+        }
+        stack.add(root);
+        while (!stack.empty()){
+            Node node = stack.pop();
+            list.add(node.val);
+            //反转
+            //123
+            //321
+            Collections.reverse(node.children);
+            for (Node n : node.children) {
+                //栈的底部添加
+                //3 2 1
+                stack.add(n);
+            }
+        }
+        return list;
+    }
+
+
+    /**
+     * N叉树的中序遍历
+     * 递归法
+     *
+     * @param node
+     * @return
+     */
+    public List<Integer> postOrder(Node node) {
+
+        if (node == null) {
+            return result;
+        }
+
+        for (Node n : node.children) {
+            postOrder(n);
+        }
+        result.add(node.val);
+        return result;
+    }
+
+    /**
+     * N叉树的中序遍历 递归法
+     *
+     * @param node
+     * @return
+     */
+    public List<Integer> order(Node node) {
+
+        if (node == null) {
+            return result;
+        }
+
+        for (Node n : node.children) {
+            if (n.val < node.val) {
+                order(n);
+            } else if (n.val > node.val) {
+                order(n);
+            } else {
+                result.add(node.val);
+            }
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
         int[][] array1 = new int[][]{{0, 1}, {1, 0}};
         int[] array = new int[]{0, 2, 3, 4, 5};
 
         //mainNovember.duplicateZeros(array);
-        String[] strings = new String[]{"m", "mo", "moc", "moch", "mocha", "l", "la", "lat", "latt", "latte", "c", "ca", "cat"};
+        String[] strings = new String[]{"cat", "bt", "hat", "tree"};
         //System.out.println(Arrays.toString(mainNovember.uncommonFromSentences("this apple is sweet", "this apple is sour")));
 
-        System.out.println(mainNovember.findMagicIndex(array));
+        System.out.println(mainNovember.countCharacters(strings, "atach"));
     }
 
 }
