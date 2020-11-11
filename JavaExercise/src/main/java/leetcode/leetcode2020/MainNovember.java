@@ -2,6 +2,7 @@ package leetcode.leetcode2020;
 
 
 import com.sun.org.apache.xpath.internal.objects.XNodeSet;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import javax.swing.plaf.nimbus.State;
 import java.util.*;
@@ -789,11 +790,11 @@ public class MainNovember {
 
         Stack<Node> stack = new Stack<>();
         List<Integer> list = new LinkedList<>();
-        if(root == null){
+        if (root == null) {
             return list;
         }
         stack.add(root);
-        while (!stack.empty()){
+        while (!stack.empty()) {
             Node node = stack.pop();
             list.add(node.val);
             //反转
@@ -855,16 +856,83 @@ public class MainNovember {
     }
 
 
+    /**
+     * 599. 两个列表的最小索引总和
+     * 两次Hash
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param list1
+     * @param list2
+     * @return
+     */
+    public String[] findRestaurant(String[] list1, String[] list2) {
+
+        HashMap<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < list1.length; i++) {
+            map.put(list1[i], i);
+        }
+
+        int min = Integer.MAX_VALUE;
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < list2.length; i++) {
+            Integer l1 = map.get(list2[i]);
+            if (l1 != null) {
+                if (l1 + i < min) {
+                    list = new ArrayList<>();
+                    list.add(list2[i]);
+                    min = l1 + i;
+                }
+
+                if (l1 + i == min) {
+                    list.add(list2[i]);
+                }
+            }
+        }
+        return list.toArray(new String[list.size()]);
+    }
+
+
+    /**
+     * 961. 重复 N 次的元素
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     * @param A
+     * @return
+     */
+    public int repeatedNTimes(int[] A) {
+
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        for (int i = 0; i < A.length; i++) {
+            hashMap.put(A[i], hashMap.getOrDefault(A[i], 0) + 1);
+        }
+
+        int n = hashMap.size() - 1;
+
+        for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
+            if (n == entry.getValue()) {
+                return entry.getKey();
+            }
+
+        }
+        return -1;
+    }
+
+
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
         int[][] array1 = new int[][]{{0, 1}, {1, 0}};
         int[] array = new int[]{0, 2, 3, 4, 5};
 
         //mainNovember.duplicateZeros(array);
-        String[] strings = new String[]{"cat", "bt", "hat", "tree"};
+        String[] strings = new String[]{"Shogun", "Tapioca Express", "Burger King", "KFC"};
+
+        String[] strings1 = new String[]{"KFC", "Shogun", "Burger King"};
+
         //System.out.println(Arrays.toString(mainNovember.uncommonFromSentences("this apple is sweet", "this apple is sour")));
 
-        System.out.println(mainNovember.countCharacters(strings, "atach"));
+        System.out.println(mainNovember.findRestaurant(strings, strings1));
     }
 
 }
