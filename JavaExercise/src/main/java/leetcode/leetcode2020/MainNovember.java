@@ -2,6 +2,7 @@ package leetcode.leetcode2020;
 
 
 import com.sun.org.apache.xpath.internal.objects.XNodeSet;
+import org.omg.CORBA.INTERNAL;
 import org.omg.PortableInterceptor.INACTIVE;
 
 import javax.swing.plaf.nimbus.State;
@@ -639,7 +640,7 @@ public class MainNovember {
      * @param target
      * @return
      */
-    public int search(int[] nums, int target) {
+    public int search1(int[] nums, int target) {
 
         int left = 0;
         int right = nums.length - 1;
@@ -897,6 +898,7 @@ public class MainNovember {
      * 961. 重复 N 次的元素
      * 时间复杂度O(n)
      * 空间复杂度O(n)
+     *
      * @param A
      * @return
      */
@@ -914,9 +916,158 @@ public class MainNovember {
             if (n == entry.getValue()) {
                 return entry.getKey();
             }
-
         }
         return -1;
+    }
+
+
+    /**
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> threeSum(int[] nums) {
+
+        List<List<Integer>> lists = new ArrayList<>();
+
+        for (int i = 2; i < nums.length; i++) {
+            for (int j = 1; j < i; j++) {
+                for (int k = 0; k < j; k++) {
+                    if (nums[i] + nums[j] + nums[k] == 0) {
+
+                        List<Integer> list = new ArrayList<>();
+                        list.add(nums[i]);
+                        list.add(nums[j]);
+                        list.add(nums[k]);
+                        lists.add(list);
+                    }
+                }
+            }
+        }
+
+        return lists;
+    }
+
+
+    /**
+     * @param s
+     * @return
+     */
+    public boolean repeatedSubstringPattern(String s) {
+
+        String string = s + s;
+
+        return string.substring(1, string.length() - 1).contains(s);
+    }
+
+    /**
+     * 441. 排列硬币
+     *
+     * @param n
+     * @return
+     */
+    public int arrangeCoins(int n) {
+
+        long sum = 0;
+        int index = 0;
+        while (sum < n) {
+            index++;
+            sum = sum + index;
+        }
+        if (sum == n) {
+            return index;
+        } else {
+            return index - 1;
+        }
+    }
+
+
+    /**
+     * 441. 排列硬币
+     * 等差数列求和公式
+     * 和 = (首项 + 末项) * 项数 / 2
+     *
+     * @param n
+     * @return
+     */
+    public int arrangeCoins1(int n) {
+
+        int left = 1;
+        int right = n;
+        long sum;
+        while (left <= right) {
+            long mid = left * (right - left) / 2;
+            sum = (1 + mid) * mid / 2;
+            if (sum == n) {
+                return (int) mid;
+            } else if (sum > n) {
+                right = (int) mid - 1;
+            } else {
+                left = (int) mid + 1;
+            }
+        }
+
+        return right;
+    }
+
+    /**
+     * 二分查找数字出现的次数
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int search(int[] nums, int target) {
+
+        //如果能找到，左右两边遍历
+        int left = 0;
+        int right = nums.length - 1;
+        int count = 0;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                //往左
+                for (int i = mid; i >= left; i--) {
+                    if (nums[i] == target) {
+                        count++;
+                    } else {
+                        break;
+                    }
+                }
+                //往右
+                for (int i = mid; i <= right; i++) {
+                    if (nums[i] == target) {
+                        count++;
+                    } else {
+                        break;
+                    }
+                }
+
+                return count - 1;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return 0;
+    }
+
+
+    /**
+     * 852. 山脉数组的峰顶索引
+     * 遍历/二分法
+     *
+     * @param arr
+     * @return
+     */
+    public int peakIndexInMountainArray(int[] arr) {
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return i;
+            }
+        }
+        return 0;
     }
 
 
@@ -932,7 +1083,8 @@ public class MainNovember {
 
         //System.out.println(Arrays.toString(mainNovember.uncommonFromSentences("this apple is sweet", "this apple is sour")));
 
-        System.out.println(mainNovember.findRestaurant(strings, strings1));
+        System.out.println(mainNovember.arrangeCoins1(5));
+
     }
 
 }
