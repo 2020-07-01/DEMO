@@ -31,9 +31,7 @@
         <version>2.1.6.RELEASE</version>
     </parent>
 
-
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
         <dependency>
             <groupId>cglib</groupId>

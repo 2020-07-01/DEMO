@@ -1,7 +1,10 @@
-package com.service.impl;
+package com.demo.service.impl;
 
-import com.service.UserService;
+import com.demo.service.UserService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Priority;
 
 /**
  * @ClassName : UserServiceImpl
@@ -9,6 +12,8 @@ import org.springframework.stereotype.Service;
  * @Date: 2020-10-16
  * @Description :
  */
+@Priority(value = 1)
+@Primary
 @Service("userServiceImpl")
 public class UserServiceImpl implements UserService {
 

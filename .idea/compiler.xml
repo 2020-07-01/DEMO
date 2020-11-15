@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaExercise" />
         <module name="Spring-Demo" />
+        <module name="JavaExercise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

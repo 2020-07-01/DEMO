@@ -1,4 +1,4 @@
-package com.service;
+package com.demo.service;
 
 /**
  * @ClassName : UserService

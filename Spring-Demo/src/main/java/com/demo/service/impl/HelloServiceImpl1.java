@@ -1,6 +1,6 @@
-package com.service.impl;
+package com.demo.service.impl;
 
-import com.service.HelloService;
+import com.demo.service.HelloService;
 
 /**
  * @ClassName : HelloServiceImpl1
