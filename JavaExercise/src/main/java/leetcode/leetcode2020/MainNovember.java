@@ -1070,6 +1070,78 @@ public class MainNovember {
         return 0;
     }
 
+    /**
+     * 744. 寻找比目标字母大的最小字母
+     * 时间复杂度O(n)
+     *
+     * @param letters
+     * @param target
+     * @return
+     */
+    public char nextGreatestLetter(char[] letters, char target) {
+
+        if (letters == null || letters.length == 0) {
+            return target;
+        }
+        for (int i = 0; i < letters.length; i++) {
+            if (letters[i] > target) {
+                return letters[i];
+            }
+        }
+        return letters[0];
+    }
+
+
+    /**
+     * 744. 寻找比目标字母大的最小字母
+     * 二分法查找
+     * @param letters
+     * @param target
+     * @return
+     */
+    public char nextGreatestLetter1(char[] letters, char target) {
+
+        if (letters == null || letters.length == 0) {
+            return target;
+        }
+
+        int left = 0;
+        int right = letters.length;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (letters[mid] <= target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return letters[left % letters.length];
+    }
+
+
+    public static char nextGreatestLetter2(char[] letters, char target) {
+        int left=0;
+        int right=letters.length;
+
+        if(target>=letters[letters.length-1]){//循环比较的处理
+            return letters[0];
+        }else{
+            while (left<right){//二分搜索的应用
+                int mid=(left+right)/2;
+                if(letters[mid]<=target) {
+                    left=mid+1;
+                }
+                if(letters[mid]>target) {
+                    right=mid;
+                }
+            }
+            return letters[left];
+        }
+    }
+
+
+
 
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
