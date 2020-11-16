@@ -1095,6 +1095,7 @@ public class MainNovember {
     /**
      * 744. 寻找比目标字母大的最小字母
      * 二分法查找
+     *
      * @param letters
      * @param target
      * @return
@@ -1121,19 +1122,19 @@ public class MainNovember {
 
 
     public static char nextGreatestLetter2(char[] letters, char target) {
-        int left=0;
-        int right=letters.length;
+        int left = 0;
+        int right = letters.length;
 
-        if(target>=letters[letters.length-1]){//循环比较的处理
+        if (target >= letters[letters.length - 1]) {//循环比较的处理
             return letters[0];
-        }else{
-            while (left<right){//二分搜索的应用
-                int mid=(left+right)/2;
-                if(letters[mid]<=target) {
-                    left=mid+1;
+        } else {
+            while (left < right) {//二分搜索的应用
+                int mid = (left + right) / 2;
+                if (letters[mid] <= target) {
+                    left = mid + 1;
                 }
-                if(letters[mid]>target) {
-                    right=mid;
+                if (letters[mid] > target) {
+                    right = mid;
                 }
             }
             return letters[left];
@@ -1141,6 +1142,128 @@ public class MainNovember {
     }
 
 
+    /**
+     * 876. 链表的中间结点
+     * 快慢指针法：
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param head
+     * @return
+     */
+    public ListNode middleNode(ListNode head) {
+
+        ListNode fast = head;
+
+        ListNode slow = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    /**
+     * 24. 两两交换链表中的节点
+     * 迭代法
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param head
+     * @return
+     */
+    public ListNode swapPairs(ListNode head) {
+
+        ListNode root = new ListNode(0);
+
+        ListNode curNode = root;
+        ListNode next = null;
+        ListNode cur = null;
+        while (head != null && head.next != null) {
+            next = new ListNode(head.next.val);
+            curNode.next = next;
+            cur = new ListNode(head.val);
+            curNode.next.next = cur;
+            curNode = curNode.next.next;
+
+            head = head.next.next;
+        }
+
+        if (head == null) {
+            return root.next;
+        } else {
+            ListNode node = new ListNode(head.val);
+            curNode.next = node;
+        }
+        return root.next;
+    }
+
+    /**
+     * 203. 移除链表元素
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     *
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements(ListNode head, int val) {
+        if (head == null) {
+            return head;
+        }
+
+        ListNode node = head.next;
+        ListNode pre = head;
+        while (node != null) {
+            if (node.val == val) {
+                node = node.next;
+            } else {
+                pre.next = node;
+                pre = pre.next;
+                node = node.next;
+            }
+        }
+        pre.next = node;
+        if (head.val == val) {
+            return head.next;
+        } else {
+            return head;
+        }
+    }
+
+    /**
+     * 203. 移除链表元素
+     * 双指针法
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements1(ListNode head, int val) {
+
+        if (head == null) {
+            return head;
+        }
+
+        ListNode node = new ListNode(0);
+        ListNode slow = node;
+
+        while (head != null) {
+            if (head.val == val) {
+                head = head.next;
+            } else {
+                ListNode temp = new ListNode(head.val);
+                slow.next = temp;
+                slow = slow.next;
+                head = head.next;
+            }
+        }
+
+        return node.next;
+    }
 
 
     public static void main(String[] args) {
