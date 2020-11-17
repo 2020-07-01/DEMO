@@ -4,6 +4,7 @@ package leetcode.leetcode2020;
 import com.sun.org.apache.xpath.internal.objects.XNodeSet;
 import org.omg.CORBA.INTERNAL;
 import org.omg.PortableInterceptor.INACTIVE;
+import sun.text.normalizer.CharacterIteratorWrapper;
 
 import javax.swing.plaf.nimbus.State;
 import java.util.*;
@@ -1263,6 +1264,133 @@ public class MainNovember {
         }
 
         return node.next;
+    }
+
+
+    /**
+     * 面试题 02.01. 移除重复节点
+     * set辅助
+     *
+     * @param head
+     * @return
+     */
+    public ListNode removeDuplicateNodes(ListNode head) {
+
+
+        if (head == null) {
+            return null;
+        }
+
+        ListNode left = new ListNode(head.val);
+        ListNode node = left;
+
+        Set<Integer> set = new TreeSet<>();
+
+        head = head.next;
+        while (head != null) {
+
+            if (!set.contains(head.val)) {
+                ListNode temp = new ListNode(head.val);
+                node.next = temp;
+                node = node.next;
+                set.add(head.val);
+            }
+
+            head = head.next;
+        }
+
+        return left;
+    }
+
+    /**
+     * 面试题 02.01. 移除重复节点
+     *
+     * @param head
+     * @return
+     */
+    public ListNode removeDuplicateNodes1(ListNode head) {
+
+        if (head == null) {
+            return null;
+        }
+
+        ListNode node = new ListNode(head.val);
+        node = head;
+
+        Set<Integer> set = new TreeSet<>();
+
+        set.add(head.val);
+
+        while (head.next != null) {
+
+            if (!set.contains(head.next.val)) {
+                set.add(head.next.val);
+                head = head.next;
+            } else {
+
+                head.next = head.next.next;
+            }
+        }
+        return node;
+    }
+
+    /**
+     * 面试题 02.07. 链表相交
+     * <p>
+     * 链表相交指的是两个链表中存在相同节点
+     * set方法
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+
+
+        Set<ListNode> set = new HashSet<>();
+
+        while (headA != null) {
+            set.add(headA);
+            headA = headA.next;
+        }
+        while (headB != null) {
+            if (set.contains(headB)) {
+                return headB;
+            } else {
+                headB = headB.next;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 面试题 02.07. 链表相交
+     * 双指针法
+     * 当链表一样长时
+     * A 走完了从B开始
+     * B 走完了从A开始
+     * 进行判断
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
+        //tempA和tempB我们可以认为是A,B两个指针
+        ListNode tempA = headA;
+        ListNode tempB = headB;
+        while (tempA != tempB) {
+            //如果指针tempA不为空，tempA就往后移一步。
+            //如果指针tempA为空，就让指针tempA指向headB（注意这里是headB不是tempB）
+            tempA = tempA == null ? headB : tempA.next;
+            //指针tempB同上
+            tempB = tempB == null ? headA : tempB.next;
+        }
+        //tempA要么是空，要么是两链表的交点
+        return tempA;
+
     }
 
 
