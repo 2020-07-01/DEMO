@@ -1,12 +1,5 @@
 package leetcode.leetcode2020;
 
-
-import com.sun.org.apache.xpath.internal.objects.XNodeSet;
-import org.omg.CORBA.INTERNAL;
-import org.omg.PortableInterceptor.INACTIVE;
-import sun.text.normalizer.CharacterIteratorWrapper;
-
-import javax.swing.plaf.nimbus.State;
 import java.util.*;
 
 /**
@@ -1390,7 +1383,76 @@ public class MainNovember {
         }
         //tempA要么是空，要么是两链表的交点
         return tempA;
+    }
 
+    /**
+     * 1290. 二进制链表转整数
+     *
+     * @param head
+     * @return
+     */
+    public int getDecimalValue(ListNode head) {
+
+        Stack<Integer> stack = new Stack<>();
+
+        while (head != null) {
+            stack.push(head.val);
+            head = head.next;
+        }
+        int sum = 0;
+        int i = 0;
+        while (!stack.empty()) {
+            sum = sum + stack.pop() * (int) Math.pow(2, i);
+        }
+        return sum;
+    }
+
+    /**
+     * 1290. 二进制链表转整数
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * @param head
+     * @return
+     */
+    public int getDecimalValue1(ListNode head) {
+
+        ListNode node = head;
+        int count = 0;
+        while (node != null){
+            count++;
+            node = node.next;
+        }
+        count = count - 1;
+        int sum = 0;
+        while (count >= 0){
+            sum = sum + head.val * (int)Math.pow(2,count);
+            head = head.next;
+            count--;
+        }
+        return sum;
+    }
+
+    /**
+     * 合并二叉树
+     * @param t1
+     * @param t2
+     * @return
+     */
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+
+        if(t1 == null && t2 == null){
+            return null;
+        }
+
+        //合并根节点
+        TreeNode root = new TreeNode((t1 == null ? 0 : t1.val) + (t2 == null ? 0 : t2.val));
+
+        //合并左节点
+        root.left = mergeTrees(t1 == null ? null : t1.left,t2 == null ? null : t2.left);
+        //合并右节点
+        root.right = mergeTrees(t1 == null ? null : t1.right,t2 == null ? null : t2.right);
+
+        return root;
     }
 
 
