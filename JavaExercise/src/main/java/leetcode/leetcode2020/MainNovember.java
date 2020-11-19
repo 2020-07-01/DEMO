@@ -1411,6 +1411,7 @@ public class MainNovember {
      * 1290. 二进制链表转整数
      * 时间复杂度O(n)
      * 空间复杂度O(1)
+     *
      * @param head
      * @return
      */
@@ -1418,14 +1419,14 @@ public class MainNovember {
 
         ListNode node = head;
         int count = 0;
-        while (node != null){
+        while (node != null) {
             count++;
             node = node.next;
         }
         count = count - 1;
         int sum = 0;
-        while (count >= 0){
-            sum = sum + head.val * (int)Math.pow(2,count);
+        while (count >= 0) {
+            sum = sum + head.val * (int) Math.pow(2, count);
             head = head.next;
             count--;
         }
@@ -1434,13 +1435,14 @@ public class MainNovember {
 
     /**
      * 合并二叉树
+     *
      * @param t1
      * @param t2
      * @return
      */
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
 
-        if(t1 == null && t2 == null){
+        if (t1 == null && t2 == null) {
             return null;
         }
 
@@ -1448,12 +1450,134 @@ public class MainNovember {
         TreeNode root = new TreeNode((t1 == null ? 0 : t1.val) + (t2 == null ? 0 : t2.val));
 
         //合并左节点
-        root.left = mergeTrees(t1 == null ? null : t1.left,t2 == null ? null : t2.left);
+        root.left = mergeTrees(t1 == null ? null : t1.left, t2 == null ? null : t2.left);
         //合并右节点
-        root.right = mergeTrees(t1 == null ? null : t1.right,t2 == null ? null : t2.right);
+        root.right = mergeTrees(t1 == null ? null : t1.right, t2 == null ? null : t2.right);
 
         return root;
     }
+
+
+    /**
+     * @param root
+     * @return
+     */
+    public int getMinimumDifference(TreeNode root) {
+
+        List<Integer> list = new LinkedList<>();
+
+
+        set(list, root);
+
+        Collections.sort(list);
+
+        if (list.size() == 1) {
+
+            return list.get(0);
+        } else {
+            return list.get(0) - list.get(list.size() - 1);
+        }
+
+    }
+
+
+    private void set(List<Integer> list, TreeNode root) {
+        if (root != null) {
+            list.add(root.val);
+            set(list, root.left);
+            set(list, root.right);
+        } else {
+            return;
+        }
+    }
+
+
+    int maxCount = 0;
+    List<Integer> list = new LinkedList<>();
+
+    /**
+     * 501. 二叉搜索树中的众数
+     *
+     * @param root
+     * @return
+     */
+    public int[] findMode1(TreeNode root) {
+
+        /**
+         * 遍历二叉树
+         * 记录次数
+         * 获取次数最高的元素
+         */
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        iterator(map, root);
+
+        int[] result = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            result[i] = list.get(i);
+        }
+        return result;
+    }
+
+    private void iterator(HashMap<Integer, Integer> map, TreeNode node) {
+        if (node == null) {
+            return;
+        } else {
+            map.put(node.val, map.getOrDefault(node.val, 0) + 1);
+
+            int count = map.get(node.val);
+            if (count > maxCount) {
+                list = new ArrayList<>();
+                list.add(node.val);
+                maxCount = count;
+            } else if (count == maxCount) {
+                list.add(node.val);
+            }
+            iterator(map, node.left);
+            iterator(map, node.right);
+        }
+    }
+
+
+    List<Integer> answer = new ArrayList<Integer>();
+    int base, count;
+
+    public int[] findMode(TreeNode root) {
+        dfs(root);
+        int[] mode = new int[answer.size()];
+        for (int i = 0; i < answer.size(); ++i) {
+            mode[i] = answer.get(i);
+        }
+        return mode;
+    }
+
+    public void dfs(TreeNode o) {
+        if (o == null) {
+            return;
+        }
+        dfs(o.left);
+        update(o.val);
+        dfs(o.right);
+    }
+
+    public void update(int x) {
+        if (x == base) {
+            ++count;
+        } else {
+            count = 1;
+            base = x;
+        }
+        if (count == maxCount) {
+            answer.add(base);
+        }
+        if (count > maxCount) {
+            maxCount = count;
+            answer.clear();
+            answer.add(base);
+        }
+    }
+
+
 
 
     public static void main(String[] args) {
