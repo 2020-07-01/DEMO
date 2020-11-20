@@ -1577,8 +1577,103 @@ public class MainNovember {
         }
     }
 
+    /**
+     * 872. 叶子相似的树
+     *
+     * @param root1
+     * @param root2
+     * @return
+     */
+    public boolean leafSimilar(TreeNode root1, TreeNode root2) {
+
+        List<Integer> valList1 = new ArrayList<>();
+        List<Integer> valList2 = new ArrayList<>();
+
+        orderTraversal(root1, valList1);
+
+        orderTraversal(root2, valList2);
+
+        if (valList1.size() != valList2.size()) {
+            return false;
+        } else {
+            int index = 0;
+            while (index < valList1.size()) {
+                if (!valList1.get(index).equals(valList2.get(index))) {
+                    return false;
+                }
+                index++;
+            }
+            return true;
+        }
+    }
 
 
+    /**
+     * 前序遍历
+     */
+    public void orderTraversal(TreeNode node, List<Integer> list) {
+
+        if (node == null) {
+            return;
+        }
+        if (node.left == null && node.right == null) {
+            list.add(node.val);
+        }
+
+        orderTraversal(node.left, list);
+        orderTraversal(node.right, list);
+    }
+
+
+    /**
+     * @param root1
+     * @param root2
+     * @return
+     */
+    public boolean leafSimilar1(TreeNode root1, TreeNode root2) {
+
+        List<Integer> valList1 = new ArrayList<>();
+        List<Integer> valList2 = new ArrayList<>();
+
+
+        preorderTravesal(valList1,root1);
+        preorderTravesal(valList2,root2);
+
+        if (valList1.size() != valList2.size()) {
+            return false;
+        } else {
+            int index = 0;
+            while (index < valList1.size()) {
+                if (!valList1.get(index).equals(valList2.get(index))) {
+                    return false;
+                }
+                index++;
+            }
+            return true;
+        }
+    }
+
+    public void preorderTravesal(List<Integer> list, TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node.left == null && node.right == null) {
+                list.add(node.val);
+            }
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+
+    }
 
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
