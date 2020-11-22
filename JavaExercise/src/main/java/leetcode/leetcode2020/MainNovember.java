@@ -1636,8 +1636,8 @@ public class MainNovember {
         List<Integer> valList2 = new ArrayList<>();
 
 
-        preorderTravesal(valList1,root1);
-        preorderTravesal(valList2,root2);
+        preorderTravesal(valList1, root1);
+        preorderTravesal(valList2, root2);
 
         if (valList1.size() != valList2.size()) {
             return false;
@@ -1674,6 +1674,44 @@ public class MainNovember {
         }
 
     }
+
+
+    /**
+     * 897. 递增顺序查找树
+     * @param root
+     * @return
+     */
+    public TreeNode increasingBST(TreeNode root) {
+
+        List<Integer> list = new LinkedList<>();
+        orderTraversal(list, root);
+
+        TreeNode right = new TreeNode(list.get(0).intValue(), null, null);
+        TreeNode node = new TreeNode(0, null, right);
+
+
+        for (int i = 1; i < list.size(); i++) {
+            TreeNode temp = new TreeNode(list.get(i).intValue(), null, null);
+            right.right = temp;
+            right = right.right;
+        }
+
+        return node.right;
+
+    }
+
+    private static void orderTraversal(List<Integer> list, TreeNode node) {
+
+        if (node == null) {
+            return;
+        } else {
+            orderTraversal(list, node.left);
+            list.add(node.val);
+            orderTraversal(list, node.right);
+        }
+
+    }
+
 
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
