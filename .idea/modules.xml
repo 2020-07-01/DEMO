@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DEMO.iml" filepath="$PROJECT_DIR$/.idea/DEMO.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaExercise/JavaExercise.iml" filepath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mybatis-Demo/Mybatis-Demo.iml" filepath="$PROJECT_DIR$/Mybatis-Demo/Mybatis-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-Demo/Spring-Demo.iml" filepath="$PROJECT_DIR$/Spring-Demo/Spring-Demo.iml" />
     </modules>
   </component>
