@@ -13,7 +13,6 @@
     <modules>
         <module>JavaExercise</module>
         <module>Spring-Demo</module>
-        <module>Mybatis-Demo</module>
     </modules>
 
     <properties>

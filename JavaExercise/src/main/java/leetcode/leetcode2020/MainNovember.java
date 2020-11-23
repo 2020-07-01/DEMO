@@ -1681,7 +1681,7 @@ public class MainNovember {
      * @param root
      * @return
      */
-    public TreeNode increasingBST(TreeNode root) {
+    /*public TreeNode increasingBST(TreeNode root) {
 
         List<Integer> list = new LinkedList<>();
         orderTraversal(list, root);
@@ -1699,6 +1699,34 @@ public class MainNovember {
         return node.right;
 
     }
+*/
+
+
+    /**
+     *
+     * @param word1
+     * @param word2
+     * @return
+     */
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+
+
+        String string1 = "";
+
+        for (int i = 0; i < word1.length ; i++) {
+            string1 = string1 + word1[i];
+        }
+
+        String string2 = "";
+        for (int i = 0; i < word2.length ; i++) {
+            string2 = string2 + word2[i];
+        }
+
+        return string1.equals(string2);
+
+
+    }
+
 
     private static void orderTraversal(List<Integer> list, TreeNode node) {
 
