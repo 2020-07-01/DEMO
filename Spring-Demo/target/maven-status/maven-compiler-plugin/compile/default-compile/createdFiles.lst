@@ -1,0 +1,17 @@
+com\factoryBean\FactoryBeanTest.class
+com\aop\LoginAspect.class
+com\aop\service\ConsumerService.class
+com\controller\DemoController.class
+com\service\impl\HelloServiceImpl2.class
+com\factoryBean\FactoryService.class
+com\service\impl\HelloServiceImpl1.class
+com\factoryBean\BeanService.class
+com\config\MyBeanFactoryPosterProcessor.class
+com\SpringDemoApplication.class
+com\service\impl\UserServiceImpl.class
+com\aop\AopConfiguration.class
+com\service\HelloService.class
+com\aop\AopDemoApplication.class
+com\aop\service\ConsumerServiceImpl.class
+com\config\MyBeanPostProcessor.class
+com\service\UserService.class
