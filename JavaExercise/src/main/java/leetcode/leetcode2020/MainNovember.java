@@ -1,5 +1,6 @@
 package leetcode.leetcode2020;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 /**
@@ -1724,6 +1725,54 @@ public class MainNovember {
 
         return string1.equals(string2);
 
+
+    }
+
+
+    /**
+     * 637. 二叉树的层平均值
+     * @param root
+     * @return
+     */
+    public List<Double> averageOfLevels(TreeNode root) {
+
+        /**
+         *
+         * 广度优先遍历
+         */
+        if(root == null){
+            return new LinkedList<>();
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+
+        List<Double> list = new ArrayList<>();
+        stack.push(root);
+
+        Stack<TreeNode> tempStack;
+
+        while (!stack.empty()){
+            double sum = 0.1;
+            int count = stack.size();
+            tempStack = new Stack<>();
+            while (!stack.empty()){
+                TreeNode node = stack.pop();
+                sum = sum + node.val;
+                if(node.right != null){
+                    tempStack.push(node.right);
+                }
+                if(node.left != null){
+                    tempStack.push(node.left);
+                }
+            }
+
+            double d = sum / count;
+            list.add(d);
+            stack = tempStack;
+        }
+
+
+        return list;
 
     }
 
