@@ -1704,7 +1704,6 @@ public class MainNovember {
 
 
     /**
-     *
      * @param word1
      * @param word2
      * @return
@@ -1714,12 +1713,12 @@ public class MainNovember {
 
         String string1 = "";
 
-        for (int i = 0; i < word1.length ; i++) {
+        for (int i = 0; i < word1.length; i++) {
             string1 = string1 + word1[i];
         }
 
         String string2 = "";
-        for (int i = 0; i < word2.length ; i++) {
+        for (int i = 0; i < word2.length; i++) {
             string2 = string2 + word2[i];
         }
 
@@ -1731,6 +1730,7 @@ public class MainNovember {
 
     /**
      * 637. 二叉树的层平均值
+     *
      * @param root
      * @return
      */
@@ -1740,7 +1740,7 @@ public class MainNovember {
          *
          * 广度优先遍历
          */
-        if(root == null){
+        if (root == null) {
             return new LinkedList<>();
         }
 
@@ -1751,17 +1751,17 @@ public class MainNovember {
 
         Stack<TreeNode> tempStack;
 
-        while (!stack.empty()){
+        while (!stack.empty()) {
             double sum = 0.1;
             int count = stack.size();
             tempStack = new Stack<>();
-            while (!stack.empty()){
+            while (!stack.empty()) {
                 TreeNode node = stack.pop();
                 sum = sum + node.val;
-                if(node.right != null){
+                if (node.right != null) {
                     tempStack.push(node.right);
                 }
-                if(node.left != null){
+                if (node.left != null) {
                     tempStack.push(node.left);
                 }
             }
@@ -1776,17 +1776,98 @@ public class MainNovember {
 
     }
 
+    /**
+     * 110. 平衡二叉树
+     * 自底向上进行判断
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param root
+     * @return
+     */
+    public boolean isBalanced(TreeNode root) {
 
-    private static void orderTraversal(List<Integer> list, TreeNode node) {
+        return height(root) == -1 ? false : true;
+    }
 
+
+    /**
+     * 自底向上进行判断
+     *
+     * @param node
+     * @return
+     */
+    private int height(TreeNode node) {
         if (node == null) {
-            return;
+            return 0;
         } else {
-            orderTraversal(list, node.left);
-            list.add(node.val);
-            orderTraversal(list, node.right);
+            int left = height(node.left);
+            int right = height(node.right);
+            //如果有一个子树不平衡则停止判断 向上传递
+            if (left == -1 || right == -1 || Math.abs(right - left) > 1) {
+                //此处理解剪枝思想
+                return -1;
+            } else {
+                return Math.max(left, right) + 1;
+            }
+
+        }
+    }
+
+    public boolean isBalanced1(TreeNode root) {
+
+        if(root == null){
+            return false;
+        }else {
+            return Math.abs(h(root.left) - h(root.right)) <=1 && isBalanced1(root.left) && isBalanced1(root.right);
         }
 
+    }
+
+    private int h(TreeNode node){
+
+        if(node == null){
+            return 0;
+        }else {
+            return Math.max(h(node.left),h(node.right)) + 1;
+        }
+
+    }
+
+
+    /**
+     * 剑指 Offer 32 - II. 从上到下打印二叉树 II
+     * 时间复杂度O(n)
+     * 空间复杂度(n)
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrder(TreeNode root) {
+
+        List<List<Integer>> list = new LinkedList<>();
+        if(root == null){
+            return list;
+        }
+        int count;
+        LinkedList<TreeNode> linkedList = new LinkedList<>();
+        linkedList.add(root);
+        while (!linkedList.isEmpty()){
+            List<Integer> tempList = new LinkedList<>();
+             count = linkedList.size();
+            while (count > 0){
+                TreeNode temp = linkedList.remove();
+                tempList.add(temp.val);
+                if(temp.left != null){
+                    linkedList.add(temp.left);
+                }
+                if(temp.right != null){
+                    linkedList.add(temp.right);
+                }
+                count--;
+            }
+            list.add(tempList);
+        }
+        return list;
     }
 
 

@@ -224,7 +224,9 @@
       <workItem from="1605270289127" duration="23586000" />
       <workItem from="1606056258087" duration="93000" />
       <workItem from="1606141906356" duration="1690000" />
-      <workItem from="1606227888347" duration="2316000" />
+      <workItem from="1606227888347" duration="2332000" />
+      <workItem from="1606396859906" duration="1443000" />
+      <workItem from="1606479606607" duration="3661000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -485,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606143502705</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="637. 二叉树的层平均值">
+      <created>1606266235103</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1606266235103</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +521,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="BeanPostProcessor，BeanFactoryPostProcessor学习" />
     <MESSAGE value="445. 两数相加 II&#10;454. 四数相加 II" />
     <MESSAGE value="算法" />
     <MESSAGE value="面试题 16.02. 单词频率" />
@@ -537,7 +545,8 @@
     <MESSAGE value="mybatis学习" />
     <MESSAGE value="代码规范&#10;算法练习" />
     <MESSAGE value="代码规范" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
+    <MESSAGE value="637. 二叉树的层平均值" />
+    <option name="LAST_COMMIT_MESSAGE" value="637. 二叉树的层平均值" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="0" width="658" height="680" key="#SpringApplication" timestamp="1602773663939">
@@ -670,6 +679,10 @@
     </state>
     <state x="213" y="-1080" key="SettingsEditor/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603601309598" />
     <state x="35" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604411937792" />
+    <state x="362" y="82" width="540" height="524" key="StructurePopup" timestamp="1606486113781">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="362" y="82" width="540" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1606486113781" />
     <state x="471" y="210" key="VCS.EditChangelistDialog" timestamp="1601993816859">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
