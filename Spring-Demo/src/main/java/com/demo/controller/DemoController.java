@@ -1,8 +1,10 @@
 package com.demo.controller;
 
-import com.factoryBean.BeanService;
-import com.demo.service.impl.UserServiceImpl;
+
+import com.demo.service.UserServiceImpl;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,17 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("demo")
-public class DemoController {
+public class DemoController implements InitializingBean {
 
+    private String name;
+
+    @Bean
+    public void setName() {
+        this.name = "name";
+        System.out.println("初始化name.....");
+    }
 
     @Autowired
     UserServiceImpl userService;
-
-    @Autowired(required = false)
-    BeanService beanService;
-
-
-
 
     @GetMapping("userName")
     public String getUserName() {
@@ -36,17 +39,8 @@ public class DemoController {
     }
 
 
-    @GetMapping("factoryBeanService")
-    public String testFactoryBeanService() {
-        try {
-            /* FactoryBeanServiceImpl o = (FactoryBeanServiceImpl)factoryBeanService.getObject();*/
-            beanService.testFactoryBean();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return "";
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("初始化controller.....");
     }
-
-
 }

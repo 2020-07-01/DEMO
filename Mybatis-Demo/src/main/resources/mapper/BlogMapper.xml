@@ -12,4 +12,15 @@
     <select id="selectAll" resultMap="base">
         select * from blog
   </select>
+
+
+    <insert id="insert" parameterType="com.mybatis.bean.Blog" useGeneratedKeys="true" keyColumn="id" keyProperty="id" >
+        insert into blog(name)
+        value(#{blog.name,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="selectBlog" resultMap="base" parameterType="java.lang.Integer">
+        select * from blog
+        where id = ${id,jdbcType=INTEGER}
+    </select>
 </mapper>

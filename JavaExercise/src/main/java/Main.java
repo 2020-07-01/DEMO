@@ -34,5 +34,6 @@ public class Main {
 
         Class clazz = super.getClass();
         System.out.println(clazz.getName());
+
     }
 }
