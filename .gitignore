@@ -6,6 +6,5 @@
 *log.*
 *.pyc
 *.class
-*.xml
 /target/
 
