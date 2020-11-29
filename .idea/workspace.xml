@@ -23,8 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
+      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/MybatisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/MybatisDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/mapper/BlogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -68,7 +75,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -97,7 +103,7 @@
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringDemoApplication">
+  <component name="RunManager" selected="Application.MybatisApplication">
     <configuration name="AopDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aop.AopDemoApplication" />
       <module name="Spring-Demo" />
@@ -124,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdkProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="proxy.jdkProxy.JdkProxy" />
+    <configuration name="MainNovember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainNovember" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="proxy.jdkProxy.*" />
+          <option name="PATTERN" value="leetcode.leetcode2020.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainNovember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainNovember" />
-      <module name="JavaExercise" />
+    <configuration name="MybatisApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mybatis.MybatisApplication" />
+      <module name="Mybatis-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leetcode.leetcode2020.*" />
+          <option name="PATTERN" value="com.mybatis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MybatisApplication" />
         <item itemvalue="Spring Boot.SpringDemoApplication" />
         <item itemvalue="Application.MainNovember" />
         <item itemvalue="Application.AopDemoApplication" />
         <item itemvalue="Application.CglibProxy" />
-        <item itemvalue="Application.JdkProxy" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +232,7 @@
       <workItem from="1606141906356" duration="1690000" />
       <workItem from="1606227888347" duration="2332000" />
       <workItem from="1606396859906" duration="1443000" />
-      <workItem from="1606479606607" duration="3661000" />
+      <workItem from="1606479606607" duration="5948000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -494,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606266235103</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="剑指 Offer 32 - II. 从上到下打印二叉树 II">
+      <created>1606490428835</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1606490428835</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +522,7 @@
               <option name="COLUMN_WIDTH">
                 <map>
                   <entry key="2" value="15" />
-                  <entry key="3" value="15" />
+                  <entry key="3" value="137" />
                 </map>
               </option>
             </State>
@@ -521,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="445. 两数相加 II&#10;454. 四数相加 II" />
     <MESSAGE value="算法" />
     <MESSAGE value="面试题 16.02. 单词频率" />
     <MESSAGE value="238. 除自身以外数组的乘积" />
@@ -546,7 +558,8 @@
     <MESSAGE value="代码规范&#10;算法练习" />
     <MESSAGE value="代码规范" />
     <MESSAGE value="637. 二叉树的层平均值" />
-    <option name="LAST_COMMIT_MESSAGE" value="637. 二叉树的层平均值" />
+    <MESSAGE value="剑指 Offer 32 - II. 从上到下打印二叉树 II" />
+    <option name="LAST_COMMIT_MESSAGE" value="剑指 Offer 32 - II. 从上到下打印二叉树 II" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="0" width="658" height="680" key="#SpringApplication" timestamp="1602773663939">
@@ -557,12 +570,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602037589943" />
-    <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser" timestamp="1605419815679">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1606630766264">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605419815679" />
     <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602989667954" />
-    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1604824183235" />
+    <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1606630766264" />
     <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1601993101669">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -590,62 +603,62 @@
     <state width="1151" height="670" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605420977263" />
     <state width="573" height="438" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602993073180" />
     <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1605271598006" />
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1606143597239">
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1606630835224">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1606143597239" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1606630835224" />
     <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1604231874338">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604231874338" />
-    <state width="1877" height="229" key="GridCell.Tab.0.bottom" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.0.bottom" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080763" />
-    <state width="1237" height="170" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605358001282" />
-    <state width="1877" height="229" key="GridCell.Tab.0.center" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.0.center" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
-    <state width="1237" height="170" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605358001282" />
-    <state width="1877" height="229" key="GridCell.Tab.0.left" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.0.left" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
-    <state width="1237" height="170" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605358001282" />
-    <state width="1877" height="229" key="GridCell.Tab.0.right" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.0.right" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
-    <state width="1237" height="170" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605358001282" />
-    <state width="1877" height="229" key="GridCell.Tab.1.bottom" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.1.bottom" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
-    <state width="1237" height="193" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605357520614" />
-    <state width="1877" height="229" key="GridCell.Tab.1.center" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.1.center" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
-    <state width="1237" height="193" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1605357520614" />
-    <state width="1877" height="229" key="GridCell.Tab.1.left" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.1.left" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080763" />
-    <state width="1237" height="193" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1605357520614" />
-    <state width="1877" height="229" key="GridCell.Tab.1.right" timestamp="1605421487134">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="294" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
+    <state width="1237" height="294" key="GridCell.Tab.1.right" timestamp="1606631357754">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
-    <state width="1237" height="193" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1605357520614" />
+    <state width="1237" height="294" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1606631357754" />
     <state width="1877" height="229" key="GridCell.Tab.2.bottom" timestamp="1605421487134">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -687,11 +700,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1606143509554">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1606490438995">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606143509554" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606490438995" />
     <state x="104" y="32" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1606056338154">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -706,20 +719,20 @@
     <state x="221" y="-973" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605420593205" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602990987211" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1605270312367" />
-    <state x="339" y="72" width="603" height="560" key="find.popup" timestamp="1606228462635">
+    <state x="339" y="72" width="603" height="560" key="find.popup" timestamp="1606631299389">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="509" y="-970" width="905" height="820" key="find.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602999752951" />
-    <state x="339" y="72" width="603" height="560" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1606228462635" />
+    <state x="339" y="72" width="603" height="560" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1606631299389" />
     <state x="349" y="128" key="git4idea.merge.GitPullDialog" timestamp="1606143579995">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="349" y="128" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1606143579995" />
-    <state x="503" y="-807" key="new project wizard" timestamp="1605422790093">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="56" y="2" key="new project wizard" timestamp="1606630076283">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="503" y="-807" key="new project wizard/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605422790093" />
-    <state x="35" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1602146989210" />
+    <state x="56" y="2" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1606630076283" />
     <state x="616" y="-299" key="run.anything.popup" timestamp="1603601154921">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -761,6 +774,11 @@
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
           <line>1757</line>
           <option name="timeStamp" value="599" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/MybatisApplication.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="600" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
