@@ -1,5 +1,6 @@
 package leetcode.leetcode2020;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -1816,20 +1817,20 @@ public class MainNovember {
 
     public boolean isBalanced1(TreeNode root) {
 
-        if(root == null){
+        if (root == null) {
             return false;
-        }else {
-            return Math.abs(h(root.left) - h(root.right)) <=1 && isBalanced1(root.left) && isBalanced1(root.right);
+        } else {
+            return Math.abs(h(root.left) - h(root.right)) <= 1 && isBalanced1(root.left) && isBalanced1(root.right);
         }
 
     }
 
-    private int h(TreeNode node){
+    private int h(TreeNode node) {
 
-        if(node == null){
+        if (node == null) {
             return 0;
-        }else {
-            return Math.max(h(node.left),h(node.right)) + 1;
+        } else {
+            return Math.max(h(node.left), h(node.right)) + 1;
         }
 
     }
@@ -1839,28 +1840,29 @@ public class MainNovember {
      * 剑指 Offer 32 - II. 从上到下打印二叉树 II
      * 时间复杂度O(n)
      * 空间复杂度(n)
+     *
      * @param root
      * @return
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
 
         List<List<Integer>> list = new LinkedList<>();
-        if(root == null){
+        if (root == null) {
             return list;
         }
         int count;
         LinkedList<TreeNode> linkedList = new LinkedList<>();
         linkedList.add(root);
-        while (!linkedList.isEmpty()){
+        while (!linkedList.isEmpty()) {
             List<Integer> tempList = new LinkedList<>();
-             count = linkedList.size();
-            while (count > 0){
+            count = linkedList.size();
+            while (count > 0) {
                 TreeNode temp = linkedList.remove();
                 tempList.add(temp.val);
-                if(temp.left != null){
+                if (temp.left != null) {
                     linkedList.add(temp.left);
                 }
-                if(temp.right != null){
+                if (temp.right != null) {
                     linkedList.add(temp.right);
                 }
                 count--;
@@ -1870,20 +1872,84 @@ public class MainNovember {
         return list;
     }
 
+    /**
+     * 108. 将有序数组转换为二叉搜索树
+     *
+     * @param nums
+     * @return
+     */
+    public TreeNode sortedArrayToBST(int[] nums) {
+
+        if (nums.length == 0) {
+            return new TreeNode(0);
+        }
+
+        if (nums.length == 1) {
+
+            return new TreeNode(nums[0]);
+        }
+
+        int mid = nums.length / 2;
+        int midValue = nums[mid];
+        TreeNode root = new TreeNode(midValue);
+        temp(nums, root);
+        return root;
+    }
+
+
+    private void temp(int[] nums, TreeNode root) {
+
+        if (nums.length > 1) {
+            int mid = nums.length / 2;
+            //左部分
+            int[] left = new int[mid];
+            System.arraycopy(nums, 0, left, 0, mid - 1);
+            TreeNode leftNode = new TreeNode(left[left.length / 2]);
+            root.left = leftNode;
+            //右部分
+            int[] right = new int[nums.length - mid - 1];
+            System.arraycopy(nums, mid + 1, right, 0, nums.length - mid - 1);
+            TreeNode rightNode = new TreeNode(right[right.length / 2]);
+            root.right = rightNode;
+
+            temp(left, leftNode);
+            temp(right, rightNode);
+        } else if (nums.length == 1) {
+            TreeNode node = new TreeNode(nums[0]);
+            root.left = node;
+        } else if (nums.length == 1) {
+            TreeNode left = new TreeNode(nums[0]);
+            TreeNode right = new TreeNode(nums[1]);
+            root.left = left;
+            root.right = right;
+        } else {
+            return;
+        }
+    }
+
 
     public static void main(String[] args) {
         MainNovember mainNovember = new MainNovember();
         int[][] array1 = new int[][]{{0, 1}, {1, 0}};
-        int[] array = new int[]{0, 2, 3, 4, 5};
+        int[] array = new int[]{-10, -3, 0, 5, 9};
+        int mid = array.length / 2;
+        int[] left = new int[mid];
+        System.arraycopy(array, 0, left, 0, mid);
+        int[] right = new int[array.length - mid - 1];
+        System.arraycopy(array, mid + 1, right, 0, array.length - mid - 1);
 
-        //mainNovember.duplicateZeros(array);
+        System.out.println(Arrays.toString(left));
+        System.out.println(Arrays.toString(right));
+
+        /*//mainNovember.duplicateZeros(array);
         String[] strings = new String[]{"Shogun", "Tapioca Express", "Burger King", "KFC"};
 
         String[] strings1 = new String[]{"KFC", "Shogun", "Burger King"};
 
         //System.out.println(Arrays.toString(mainNovember.uncommonFromSentences("this apple is sweet", "this apple is sour")));
 
-        System.out.println(mainNovember.arrangeCoins1(5));
+        System.out.println(mainNovember.arrangeCoins1(5));*/
+
 
     }
 

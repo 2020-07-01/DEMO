@@ -23,25 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mspring/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mspring/MyBatisSpringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mspring/MybatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/classes/META-INF/Spring-Demo.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/MybatisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/MybatisApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/mapper/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/mapper/BlogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/target/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/target/classes/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/SpringDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/SpringDemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/controller/DemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/service/ApplicationContextAwareDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/service/HelloService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/service/impl/HelloServiceImpl1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/service/impl/HelloServiceImpl2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/demo/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/TreeNode.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +100,7 @@
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MybatisApplication">
+  <component name="RunManager" selected="Application.MainNovember">
     <configuration name="AopDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aop.AopDemoApplication" />
       <module name="Spring-Demo" />
@@ -183,10 +168,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainNovember" />
         <item itemvalue="Application.MybatisApplication" />
         <item itemvalue="Spring Boot.MyBatisSpringApplication" />
         <item itemvalue="Spring Boot.SpringDemoApplication" />
-        <item itemvalue="Application.MainNovember" />
         <item itemvalue="Application.AopDemoApplication" />
       </list>
     </recent_temporary>
@@ -245,7 +230,8 @@
       <workItem from="1606227888347" duration="2332000" />
       <workItem from="1606396859906" duration="1443000" />
       <workItem from="1606479606607" duration="16167000" />
-      <workItem from="1606651122282" duration="7377000" />
+      <workItem from="1606651122282" duration="8671000" />
+      <workItem from="1606740718697" duration="6146000" />
     </task>
     <task id="LOCAL-00001" summary="结构调整">
       <created>1598780931753</created>
@@ -541,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606632488928</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="mybatis学习">
+      <created>1606659375483</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1606659375483</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +578,6 @@
     <MESSAGE value="N叉树前序遍历" />
     <MESSAGE value="961. 重复 N 次的元素&#10;599. 两个列表的最小索引总和" />
     <MESSAGE value="852. 山脉数组的峰顶索引&#10;二分查找数字出现的次数&#10;441. 排列硬币" />
-    <MESSAGE value="mybatis学习" />
     <MESSAGE value="代码规范&#10;算法练习" />
     <MESSAGE value="代码规范" />
     <MESSAGE value="637. 二叉树的层平均值" />
@@ -593,7 +585,8 @@
     <MESSAGE value="mybatis" />
     <MESSAGE value="ignore" />
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="mybatis学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis学习" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="0" width="658" height="680" key="#SpringApplication" timestamp="1602773663939">
@@ -649,54 +642,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604231874338" />
-    <state width="1237" height="222" key="GridCell.Tab.0.bottom" timestamp="1606658392338">
+    <state width="1237" height="170" key="GridCell.Tab.0.bottom" timestamp="1606749373565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080763" />
-    <state width="1237" height="222" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606658392338" />
-    <state width="1237" height="222" key="GridCell.Tab.0.center" timestamp="1606658392338">
+    <state width="1237" height="170" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606749373565" />
+    <state width="1237" height="170" key="GridCell.Tab.0.center" timestamp="1606749373565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
-    <state width="1237" height="222" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606658392338" />
-    <state width="1237" height="222" key="GridCell.Tab.0.left" timestamp="1606658392338">
+    <state width="1237" height="170" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606749373565" />
+    <state width="1237" height="170" key="GridCell.Tab.0.left" timestamp="1606749373565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
-    <state width="1237" height="222" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606658392338" />
-    <state width="1237" height="222" key="GridCell.Tab.0.right" timestamp="1606658392338">
+    <state width="1237" height="170" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606749373565" />
+    <state width="1237" height="170" key="GridCell.Tab.0.right" timestamp="1606749373565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080762" />
-    <state width="1237" height="222" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606658392338" />
-    <state width="1237" height="222" key="GridCell.Tab.1.bottom" timestamp="1606658391640">
+    <state width="1237" height="170" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606749373565" />
+    <state width="1237" height="170" key="GridCell.Tab.1.bottom" timestamp="1606749373565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
-    <state width="1237" height="222" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606658391640" />
-    <state width="1237" height="222" key="GridCell.Tab.1.center" timestamp="1606658391640">
+    <state width="1237" height="170" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606749373565" />
+    <state width="1237" height="170" key="GridCell.Tab.1.center" timestamp="1606749373564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
-    <state width="1237" height="222" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1606658391640" />
-    <state width="1237" height="222" key="GridCell.Tab.1.left" timestamp="1606658391640">
+    <state width="1237" height="170" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1606749373564" />
+    <state width="1237" height="170" key="GridCell.Tab.1.left" timestamp="1606749373564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080763" />
-    <state width="1237" height="222" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1606658391640" />
-    <state width="1237" height="222" key="GridCell.Tab.1.right" timestamp="1606658391640">
+    <state width="1237" height="170" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1606749373564" />
+    <state width="1237" height="170" key="GridCell.Tab.1.right" timestamp="1606749373565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605421487134" />
     <state width="1237" height="188" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1604379080764" />
-    <state width="1237" height="222" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1606658391640" />
+    <state width="1237" height="170" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1606749373565" />
     <state width="1237" height="2" key="GridCell.Tab.2.bottom" timestamp="1606651118186">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -738,11 +731,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1606632493008">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1606659389385">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606632493008" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606659389385" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -755,12 +748,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1604233171795" />
-    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606647895764">
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606659381517">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="-973" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605420593205" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602990987211" />
-    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1606647895764" />
+    <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1606659381517" />
     <state x="339" y="72" width="603" height="560" key="find.popup" timestamp="1606657635547">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -792,40 +785,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mspring/MybatisConfig.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="608" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mspring/MybatisConfig.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="610" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mspring/MybatisConfig.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="611" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/Mybatis-Demo/src/main/java/com/mybatis/MybatisApplication.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="613" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.5/mybatis-3.5.5-sources.jar!/org/apache/ibatis/mapping/MappedStatement.java</url>
-          <line>304</line>
-          <option name="timeStamp" value="614" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.5/mybatis-3.5.5-sources.jar!/org/apache/ibatis/scripting/xmltags/DynamicSqlSource.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="615" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.5/mybatis-3.5.5-sources.jar!/org/apache/ibatis/scripting/xmltags/DynamicSqlSource.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="616" />
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainNovember.java</url>
+          <line>1936</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
