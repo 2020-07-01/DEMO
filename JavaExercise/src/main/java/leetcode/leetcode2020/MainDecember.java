@@ -1,6 +1,7 @@
 package leetcode.leetcode2020;
 
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -132,6 +133,103 @@ public class MainDecember {
         }
         return result;
     }
+
+
+    /**
+     * 111. 二叉树的最小深度
+     * 广度优先遍历
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param root
+     * @return
+     */
+    public int minDepth(TreeNode root) {
+
+        if (root == null) {
+            return 0;
+        }
+        int nodeCount = 1;
+        LinkedList<TreeNode> queue = new LinkedList();
+        queue.addFirst(root);
+        while (!queue.isEmpty()) {
+            LinkedList<TreeNode> list = new LinkedList<>();
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.remove();
+                if (node.left == null && node.right == null) {
+                    return nodeCount;
+                }
+                if (node.left != null) {
+                    list.addFirst(node.left);
+                }
+                if (node.right != null) {
+                    list.addFirst(node.right);
+                }
+            }
+            nodeCount++;
+            queue = list;
+        }
+        return nodeCount;
+    }
+
+    /**
+     * 111. 二叉树的最小深度
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     * 深度优先遍历
+     *
+     * @param root
+     * @return
+     */
+    public int minDepth1(TreeNode root) {
+
+        if (root == null) {
+            return 0;
+        }
+        if (root.left == null && root.right == null) {
+            return 1;
+        }
+        int min_deep = Integer.MAX_VALUE;
+        if (root.left != null) {
+            min_deep = Math.min(minDepth1(root.left), min_deep);
+        }
+        if (root.right != null) {
+            min_deep = Math.min(minDepth1(root.right), min_deep);
+        }
+        return min_deep + 1;
+    }
+
+    LinkedList<Integer> linkedList = new LinkedList<>();
+
+    /**
+     * 671. 二叉树中第二小的节点
+     * 暴力解法
+     *
+     * @param root
+     * @return
+     */
+    public int findSecondMinimumValue(TreeNode root) {
+        order(root);
+        Collections.sort(linkedList);
+        if (linkedList.size() >= 2) {
+            return linkedList.get(linkedList.size() - 2);
+        }
+
+        return -1;
+    }
+
+    private void order(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        order(node.left);
+        if (!linkedList.contains(node.val)) {
+            linkedList.add(node.val);
+        }
+        order(node.right);
+    }
+
 
     public static void main(String[] args) {
 
