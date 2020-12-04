@@ -1,10 +1,7 @@
 package leetcode.leetcode2020;
 
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @ClassName : MainDecember
@@ -329,6 +326,67 @@ public class MainDecember {
 
         list1.next = temp;
         return node;
+    }
+
+
+    /**
+     * 26. 删除排序数组中的重复项
+     * @param nums
+     * @return
+     */
+    public int removeDuplicates(int[] nums) {
+
+        if(nums == null || nums.length == 0){
+            return 0;
+        }
+        int cur = nums[0];
+        int index = 1;
+        for(int i = 1;i<nums.length;i++){
+            if(nums[i] != cur){
+                cur = nums[i];
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+        return index;
+    }
+
+
+    /**
+     * 143. 重排链表
+     * @param head
+     */
+    public void reorderList(ListNode head) {
+
+        if(head == null){
+            return;
+        }
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int n = 0;
+        ListNode next = head;
+        while (next != null){
+            map.put(n,next.val);
+            next = next.next;
+            n++;
+        }
+        n = n-1;
+        int i = 1;
+        boolean p = false;
+        while (i <= n){
+            if(p){
+                ListNode temp = new ListNode(map.get(i));
+                head.next = temp;
+                head = head.next;
+                p = false;
+                i++;
+            }else {
+                ListNode temp = new ListNode(map.get(n));
+                head.next = temp;
+                head = head.next;
+                p = true;
+                n--;
+            }
+        }
     }
 
 
