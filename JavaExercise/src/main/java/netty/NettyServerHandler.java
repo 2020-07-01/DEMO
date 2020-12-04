@@ -28,17 +28,26 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        System.out.println("服务器读取线程：" + Thread.currentThread().getName());
+
+        ctx.channel().eventLoop().execute(() -> {
+            try {
+                Thread.sleep(10 * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+        /*System.out.println("服务器读取线程：" + Thread.currentThread().getName());
         System.out.println("看看channel和pipeline的关系");
-        /**
+        *//**
          * pipeline和channel是相互对应的关系
-         */
+         *//*
         Channel channel = ctx.channel();
         ChannelPipeline pipeline = ctx.pipeline();//底层是双向链表
 
         ByteBuf byteBuf = (ByteBuf) msg;
         System.out.println("客户端发送的消息是：" + byteBuf.toString(CharsetUtil.UTF_8));
-        System.out.println("客户端发送的地址是：" + ctx.channel().remoteAddress());
+        System.out.println("客户端发送的地址是：" + ctx.channel().remoteAddress());*/
     }
 
     /**

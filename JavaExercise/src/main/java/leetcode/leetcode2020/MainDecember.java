@@ -231,6 +231,107 @@ public class MainDecember {
     }
 
 
+    /**
+     * 204. 计数质数
+     * 暴力解法会超时
+     *
+     * @param n
+     * @return
+     */
+    public int countPrimes(int n) {
+
+        if (n <= 2) {
+            return 0;
+        }
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            int j = 2;
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    break;
+                }
+            }
+            if (j == i) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
+    /**
+     * 700. 二叉搜索树中的搜索
+     * 地规法
+     *
+     * @param root
+     * @param val
+     * @return
+     */
+    public TreeNode searchBST(TreeNode root, int val) {
+
+        if (root == null) {
+            return null;
+        } else if (root != null && root.val == val) {
+            return root;
+        } else {
+            TreeNode left = searchBST(root.left, val);
+            TreeNode right = searchBST(root.right, val);
+            return left == null ? right : left;
+        }
+    }
+
+
+    /**
+     * 700. 二叉搜索树中的搜索
+     * 迭代法 比 递归法快
+     * 时间复杂度O(n)
+     *
+     * @param root
+     * @param val
+     * @return
+     */
+    public TreeNode searchBST1(TreeNode root, int val) {
+
+        while (root != null) {
+            if (root.val == val) {
+                return root;
+            } else {
+                root = root.val > val ? root.left : root.right;
+            }
+        }
+        return null;
+    }
+
+
+    public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
+
+        ListNode node = list1;
+
+        int a1 = a;
+        while (a > 0){
+            list1 = list1.next;
+            a--;
+        }
+        int c = b-a1;
+        while (c > 0){
+            list1.next = list1.next.next;
+            c--;
+        }
+        ListNode temp = list1.next;
+
+        while (list2.next != null){
+            ListNode listNode = new ListNode(list2.val);
+            list1.next = listNode;
+            list1 = list1.next;
+            list2 = list2.next;
+        }
+
+        list1.next = temp;
+        return node;
+    }
+
+
     public static void main(String[] args) {
 
 
