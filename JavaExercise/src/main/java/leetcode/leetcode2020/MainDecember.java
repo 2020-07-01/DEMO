@@ -306,18 +306,18 @@ public class MainDecember {
         ListNode node = list1;
 
         int a1 = a;
-        while (a > 0){
+        while (a > 0) {
             list1 = list1.next;
             a--;
         }
-        int c = b-a1;
-        while (c > 0){
+        int c = b - a1;
+        while (c > 0) {
             list1.next = list1.next.next;
             c--;
         }
         ListNode temp = list1.next;
 
-        while (list2.next != null){
+        while (list2.next != null) {
             ListNode listNode = new ListNode(list2.val);
             list1.next = listNode;
             list1 = list1.next;
@@ -331,18 +331,19 @@ public class MainDecember {
 
     /**
      * 26. 删除排序数组中的重复项
+     *
      * @param nums
      * @return
      */
     public int removeDuplicates(int[] nums) {
 
-        if(nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return 0;
         }
         int cur = nums[0];
         int index = 1;
-        for(int i = 1;i<nums.length;i++){
-            if(nums[i] != cur){
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != cur) {
                 cur = nums[i];
                 nums[index] = nums[i];
                 index++;
@@ -354,32 +355,33 @@ public class MainDecember {
 
     /**
      * 143. 重排链表
+     *
      * @param head
      */
     public void reorderList(ListNode head) {
 
-        if(head == null){
+        if (head == null) {
             return;
         }
-        HashMap<Integer,Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         int n = 0;
         ListNode next = head;
-        while (next != null){
-            map.put(n,next.val);
+        while (next != null) {
+            map.put(n, next.val);
             next = next.next;
             n++;
         }
-        n = n-1;
+        n = n - 1;
         int i = 1;
         boolean p = false;
-        while (i <= n){
-            if(p){
+        while (i <= n) {
+            if (p) {
                 ListNode temp = new ListNode(map.get(i));
                 head.next = temp;
                 head = head.next;
                 p = false;
                 i++;
-            }else {
+            } else {
                 ListNode temp = new ListNode(map.get(n));
                 head.next = temp;
                 head = head.next;
@@ -389,10 +391,121 @@ public class MainDecember {
         }
     }
 
+    /**
+     * 559. N叉树的最大深度
+     * 迭代法
+     *
+     * @param root
+     * @return
+     */
+    public int maxDepth(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int deep = 1;
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
 
-    public static void main(String[] args) {
+        while (!stack.isEmpty()) {
+            Node node;
+            Stack<Node> nodes = new Stack<>();
+            while (!stack.isEmpty()) {
+                node = stack.pop();
+                List<Node> children = node.children;
+                for (Node childrenNode : children) {
+                    nodes.push(childrenNode);
+                }
+            }
+            if (nodes.isEmpty()) {
+                return deep;
+            } else {
+                stack = nodes;
+                deep++;
+            }
+        }
+        return deep;
+    }
 
+    /**
+     * 783. 二叉搜索树节点最小距离
+     * 空间复杂度O(n)
+     * 时间复杂度O(nlogn)
+     *
+     * @param root
+     * @return
+     */
+    public int minDiffInBST(TreeNode root) {
+
+        if (root == null) {
+            return 0;
+        }
+        List<Integer> list = new LinkedList<>();
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        TreeNode node;
+        Stack<TreeNode> temp;
+        while (!stack.isEmpty()) {
+            temp = new Stack<>();
+            while (!stack.isEmpty()) {
+                node = stack.pop();
+                list.add(node.val);
+                if (node.left != null) {
+                    temp.push(node.left);
+                }
+                if (node.right != null) {
+                    temp.push(node.right);
+                }
+            }
+            stack = temp;
+        }
+        Collections.sort(list);
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+        int result = Integer.MAX_VALUE;
+        for (int i = 0; i < list.size() - 1; i++) {
+            if (list.get(i + 1) - list.get(i) < result) {
+                result = list.get(i + 1) - list.get(i);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 783. 二叉搜索树节点最小距离
+     *
+     * @param root
+     * @return
+     */
+    public int minDiffInBST1(TreeNode root) {
+
+        /**
+         * 中序遍历
+         * 再遍历比较差值大小
+         */
+        return 0;
 
     }
 
+    /**
+     * 1346. 检查整数及其两倍数是否存在
+     * 时间复杂度O(n2)
+     * 空间复杂度O(1)
+     *
+     * @param arr
+     * @return
+     */
+    public boolean checkIfExist(int[] arr) {
+
+        for (int i = 0; i < arr.length - 1; i++) {
+
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] * 2 == arr[j] || arr[j] * 2 == arr[i]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
