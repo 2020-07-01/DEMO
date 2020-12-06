@@ -508,4 +508,41 @@ public class MainDecember {
         }
         return false;
     }
+
+    /**
+     * 1200. 最小绝对差
+     * 时间复杂度O(n)
+     *
+     * @param arr
+     * @return
+     */
+    public List<List<Integer>> minimumAbsDifference(int[] arr) {
+
+        List<List<Integer>> lists = new LinkedList<>();
+        if (arr == null || arr.length < 0) {
+            return lists;
+        }
+
+        int minValue = Integer.MAX_VALUE;
+
+        Arrays.sort(arr);
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] < minValue) {
+                List<Integer> list = new ArrayList<>();
+                lists.clear();
+                list.add(arr[i - 1]);
+                list.add(arr[i]);
+                lists.add(list);
+                minValue = arr[i] - arr[i - 1];
+            } else if (arr[i] - arr[i - 1] == minValue) {
+                List<Integer> list = new ArrayList<>();
+                list.add(arr[i - 1]);
+                list.add(arr[i]);
+                lists.add(list);
+            }
+        }
+
+        return lists;
+
+    }
 }
