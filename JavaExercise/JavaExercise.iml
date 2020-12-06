@@ -11,8 +11,8 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="Maven: cglib:cglib:3.3.0" level="project" />
-    <orderEntry type="library" exported="" name="Maven: org.ow2.asm:asm:7.1" level="project" />
-    <orderEntry type="library" exported="" name="Maven: io.netty:netty-all:4.1.20.Final" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:7.1" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.20.Final" level="project" />
   </component>
 </module>

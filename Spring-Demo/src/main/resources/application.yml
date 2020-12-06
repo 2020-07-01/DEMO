@@ -1,2 +1,13 @@
 server:
-  port: 8090
+  port: 8091
+
+spring:
+  application:
+    name: DEMO
+
+  rabbitmq:
+    username: user
+    password: password
+    host: 139.196.186.217
+    port: 5672
+    virtual-host: /
