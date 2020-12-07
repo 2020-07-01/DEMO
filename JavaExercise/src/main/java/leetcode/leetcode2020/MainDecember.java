@@ -300,30 +300,37 @@ public class MainDecember {
         return null;
     }
 
-
+    /**
+     *  1669. 合并两个链表
+     * @param list1
+     * @param a
+     * @param b
+     * @param list2
+     * @return
+     */
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
 
         ListNode node = list1;
 
         int a1 = a;
-        while (a > 0) {
+        while (a > 1) {
             list1 = list1.next;
             a--;
         }
         int c = b - a1;
-        while (c > 0) {
+        while (c >= 0) {
             list1.next = list1.next.next;
             c--;
         }
+
         ListNode temp = list1.next;
 
-        while (list2.next != null) {
+        while (list2 != null) {
             ListNode listNode = new ListNode(list2.val);
             list1.next = listNode;
             list1 = list1.next;
             list2 = list2.next;
         }
-
         list1.next = temp;
         return node;
     }
@@ -541,8 +548,48 @@ public class MainDecember {
                 lists.add(list);
             }
         }
-
         return lists;
-
     }
+
+    /**
+     * 面试题 16.01. 交换数字
+     *
+     * @param numbers
+     * @return
+     */
+    public int[] swapNumbers(int[] numbers) {
+        /**
+         * a + b
+         * ab - b
+         */
+        numbers[0] = numbers[0] + numbers[1];
+        numbers[1] = numbers[0] - numbers[1];
+        numbers[0] = numbers[0] - numbers[1];
+        return numbers;
+    }
+
+    /**
+     * 1281. 整数的各位积和之差
+     *
+     * @param n
+     * @return
+     */
+    public int subtractProductAndSum(int n) {
+
+        if (n == 0) {
+            return 1;
+        }
+        int count = 0;
+        int product = 1;
+        while (n >= 10) {
+            int temp = n % 10;
+            n = n / 10;
+            count = count + temp;
+            product = product * temp;
+        }
+        count = count + n;
+        product = product * n;
+        return product - count;
+    }
+
 }
