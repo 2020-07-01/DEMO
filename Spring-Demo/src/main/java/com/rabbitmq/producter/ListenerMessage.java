@@ -1,4 +1,4 @@
-package com.rabbitmq;
+package com.rabbitmq.producter;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;

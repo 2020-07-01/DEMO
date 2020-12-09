@@ -1,4 +1,4 @@
-package com.rabbitmq;
+package com.rabbitmq.consumer;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class PublisherMessage {
      * 发送消息
      */
     public void sendMessage() {
-        rabbitTemplate.convertAndSend("queue-demo","queue-demo","hello world");
+        rabbitTemplate.convertAndSend("exchange-direct","123","hello world");
     }
 
 
