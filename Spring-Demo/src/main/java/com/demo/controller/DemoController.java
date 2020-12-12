@@ -30,7 +30,7 @@ public class DemoController implements InitializingBean {
     @Autowired
     UserServiceImpl userService;
 
-    @GetMapping("userName")
+    @GetMapping("/userName")
     public String getUserName() {
 
         String userName = userService.getUserServiceDesc();
@@ -43,4 +43,6 @@ public class DemoController implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("初始化controller.....");
     }
+
+
 }

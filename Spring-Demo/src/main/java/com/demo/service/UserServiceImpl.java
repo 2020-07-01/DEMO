@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService, InitializingBean {
 
     @Override
     public String getUserServiceDesc() {
-        return null;
+        return "hello world";
     }
 
 

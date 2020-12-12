@@ -1,6 +1,10 @@
 package leetcode.leetcode2020;
 
 
+import dataStructure.list.Link;
+import javafx.scene.chart.StackedAreaChart;
+import sun.reflect.generics.tree.Tree;
+
 import java.util.*;
 
 /**
@@ -301,7 +305,8 @@ public class MainDecember {
     }
 
     /**
-     *  1669. 合并两个链表
+     * 1669. 合并两个链表
+     *
      * @param list1
      * @param a
      * @param b
@@ -590,6 +595,284 @@ public class MainDecember {
         count = count + n;
         product = product * n;
         return product - count;
+    }
+
+    /**
+     * 1379. 找出克隆二叉树中的相同节点
+     *
+     * @param original
+     * @param cloned
+     * @param target
+     * @return
+     */
+    public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
+        if (cloned == null || target == null) {
+            return null;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(cloned);
+
+        while (!stack.empty()) {
+            Stack<TreeNode> tempStack = new Stack<>();
+            while (!stack.empty()) {
+                TreeNode node = stack.pop();
+                if (node.val == target.val) {
+                    return node;
+                } else {
+                    if (node.left != null) {
+                        tempStack.push(node.left);
+                    }
+                    if (node.right != null) {
+                        tempStack.push(node.right);
+                    }
+                }
+            }
+            stack = tempStack;
+        }
+        return target;
+    }
+
+
+    /**
+     * 广度优先遍历，应该使用队列，避免切换
+     */
+
+    /**
+     * 1302. 层数最深叶子节点的和
+     * 空间复杂度O(n)
+     * 时间复杂度O(n)
+     * 获取最后一层的所有叶子节点
+     * 遍历求和
+     *
+     * @param root
+     * @return
+     */
+    public int deepestLeavesSum(TreeNode root) {
+        int sum = 0;
+        if (root == null) {
+            return sum;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        List<Integer> list = new LinkedList<>();
+        while (!stack.empty()) {
+            list = new LinkedList<>();
+            Stack<TreeNode> tempStack = new Stack<>();
+            while (!stack.empty()) {
+                TreeNode node = stack.pop();
+                list.add(node.val);
+                if (node.left != null) {
+                    tempStack.push(node.left);
+                }
+                if (node.right != null) {
+                    tempStack.push(node.right);
+                }
+            }
+            stack = tempStack;
+        }
+        for (Integer integer : list) {
+            sum = sum + integer;
+        }
+        return sum;
+    }
+
+
+    /**
+     * 深度优先遍历使用栈
+     *
+     * @param root
+     * @return
+     */
+    public int deepestLeavesSum1(TreeNode root) {
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        int maxDeep = 0;
+        int sum = 0;
+
+        int deep = 0;
+        while (!stack.empty()) {
+            deep = stack.size();
+            TreeNode node = stack.pop();
+            if (node.left == null && node.right == null) {
+                if (maxDeep == deep) {
+                    sum = sum + maxDeep;
+                } else if (maxDeep < deep) {
+                    sum = 0;
+                    maxDeep = deep;
+                } else {
+                    continue;
+                }
+            } else if (node.right != null) {
+                stack.push(node.right);
+            } else if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+        return sum;
+
+    }
+
+
+    /**
+     * @param root
+     * @return
+     */
+    public int sumEvenGrandparent(TreeNode root) {
+        int sum = 0;
+        Deque<TreeNode> linkedList = new LinkedList();
+        linkedList.add(root);
+        while (!linkedList.isEmpty()) {
+            int size = linkedList.size();
+            while (size > 0) {
+                TreeNode node = linkedList.removeLast();
+                if (node.val % 2 == 0) {
+                    if (node.left != null) {
+                        sum = sum + (node.left.left == null ? 0 : node.left.left.val);
+                        sum = sum + (node.left.right == null ? 0 : node.left.right.val);
+                        linkedList.addFirst(node.left);
+                    }
+                    if (node.right != null) {
+                        sum = sum + (node.right.left == null ? 0 : node.right.left.val);
+                        sum = sum + (node.right.right == null ? 0 : node.right.right.val);
+                        linkedList.addFirst(node.right);
+                    }
+                }
+            }
+        }
+        return sum;
+    }
+
+
+    /**
+     * 1672. 最富有客户的资产总量
+     * 时间复杂度O(n * m)
+     * 空间复杂度O(1)
+     *
+     * @param accounts
+     * @return
+     */
+    public int maximumWealth(int[][] accounts) {
+
+        int max = 0;
+
+        int temp;
+        for (int i = 0; i < accounts.length; i++) {
+            temp = 0;
+            for (int j = 0; j < accounts[i].length; j++) {
+                temp = temp + accounts[i][j];
+            }
+            max = max > temp ? max : temp;
+        }
+
+        return max;
+    }
+
+
+    /**
+     * 145. 二叉树的后序遍历
+     * 迭代法
+     * 与前序遍历类似
+     * 每次迭代进行"根右左"操作最后反转list
+     * @param nums
+     * @param index
+     * @return
+     */
+    public int[] createTargetArray(int[] nums, int[] index) {
+
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            linkedList.add(index[i], nums[i]);
+        }
+
+        for (int i = 0; i < linkedList.size(); i++) {
+            nums[i] = linkedList.get(i);
+        }
+        return nums;
+    }
+
+    /**
+     * @param root
+     * @return
+     */
+    public List<Integer> postorderTraversal(TreeNode root) {
+
+        Stack<TreeNode> stack = new Stack<>();
+
+        List<Integer> list = new LinkedList<>();
+        TreeNode cur = root;
+        while (!stack.empty() || cur != null){
+            //如果当前节点为不为null，则下一个节点为当前节点的左节点
+            if(cur != null){
+                list.add(cur.val);
+                stack.push(cur);
+                cur = cur.right;
+            }else {
+                //如果当前节点为空，获取父节点，进而访问父节点的右子节点
+                TreeNode rightNode = stack.pop();
+                cur = rightNode.left;
+            }
+        }
+
+        Collections.reverse(list);
+        return list;
+    }
+
+    /**
+     * 144. 二叉树的前序遍历
+     * 递归法
+     * @param root
+     * @return
+     */
+    public List<Integer> preorderTraversal(TreeNode root) {
+
+        List<Integer> list = new LinkedList<>();
+
+        pre(root,list);
+        return list;
+    }
+
+    private void pre(TreeNode root,List<Integer> list){
+        if(root == null){
+            return;
+        }else {
+            list.add(root.val);
+            pre(root.left,list);
+            pre(root.right,list);
+        }
+
+    }
+
+    /**
+     * 144. 二叉树的前序遍历
+     * 迭代法
+     * 迭代法时间比递归法慢
+     * 每次迭代进行"根左右"操作
+     * @param root
+     * @return
+     */
+    public List<Integer> preorderTraversal1(TreeNode root) {
+
+        Stack<TreeNode> stack = new Stack<>();
+
+        List<Integer> list = new LinkedList<>();
+        TreeNode cur = root;
+        while (!stack.empty() || cur != null){
+            //如果当前节点为不为null，则下一个节点为当前节点的左节点
+            if(cur != null){
+                list.add(cur.val);
+                stack.push(cur);
+                cur = cur.left;
+            }else {
+                //如果当前节点为空，获取父节点，进而访问父节点的右子节点
+                TreeNode rightNode = stack.pop();
+                cur = rightNode.right;
+            }
+        }
+
+        return list;
     }
 
 }
