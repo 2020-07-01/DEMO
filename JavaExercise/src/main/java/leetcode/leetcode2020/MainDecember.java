@@ -5,6 +5,7 @@ import dataStructure.list.Link;
 import javafx.scene.chart.StackedAreaChart;
 import sun.reflect.generics.tree.Tree;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -775,6 +776,7 @@ public class MainDecember {
      * 迭代法
      * 与前序遍历类似
      * 每次迭代进行"根右左"操作最后反转list
+     *
      * @param nums
      * @param index
      * @return
@@ -803,13 +805,13 @@ public class MainDecember {
 
         List<Integer> list = new LinkedList<>();
         TreeNode cur = root;
-        while (!stack.empty() || cur != null){
+        while (!stack.empty() || cur != null) {
             //如果当前节点为不为null，则下一个节点为当前节点的左节点
-            if(cur != null){
+            if (cur != null) {
                 list.add(cur.val);
                 stack.push(cur);
                 cur = cur.right;
-            }else {
+            } else {
                 //如果当前节点为空，获取父节点，进而访问父节点的右子节点
                 TreeNode rightNode = stack.pop();
                 cur = rightNode.left;
@@ -823,6 +825,7 @@ public class MainDecember {
     /**
      * 144. 二叉树的前序遍历
      * 递归法
+     *
      * @param root
      * @return
      */
@@ -830,17 +833,17 @@ public class MainDecember {
 
         List<Integer> list = new LinkedList<>();
 
-        pre(root,list);
+        pre(root, list);
         return list;
     }
 
-    private void pre(TreeNode root,List<Integer> list){
-        if(root == null){
+    private void pre(TreeNode root, List<Integer> list) {
+        if (root == null) {
             return;
-        }else {
+        } else {
             list.add(root.val);
-            pre(root.left,list);
-            pre(root.right,list);
+            pre(root.left, list);
+            pre(root.right, list);
         }
 
     }
@@ -850,6 +853,7 @@ public class MainDecember {
      * 迭代法
      * 迭代法时间比递归法慢
      * 每次迭代进行"根左右"操作
+     *
      * @param root
      * @return
      */
@@ -859,13 +863,13 @@ public class MainDecember {
 
         List<Integer> list = new LinkedList<>();
         TreeNode cur = root;
-        while (!stack.empty() || cur != null){
+        while (!stack.empty() || cur != null) {
             //如果当前节点为不为null，则下一个节点为当前节点的左节点
-            if(cur != null){
+            if (cur != null) {
                 list.add(cur.val);
                 stack.push(cur);
                 cur = cur.left;
-            }else {
+            } else {
                 //如果当前节点为空，获取父节点，进而访问父节点的右子节点
                 TreeNode rightNode = stack.pop();
                 cur = rightNode.right;
@@ -874,5 +878,207 @@ public class MainDecember {
 
         return list;
     }
+
+    /**
+     * 剑指 Offer 37. 序列化二叉树
+     *
+     * @param root
+     * @return
+     */
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+
+        Deque<TreeNode> deque = new LinkedList();
+        deque.offerFirst(root);
+        String string = "";
+        while (!deque.isEmpty()) {
+            TreeNode node = deque.pollLast();
+            string = string + node.val + ",";
+            if (node.left != null) {
+                deque.offerFirst(node.left);
+            }
+            if (node.right != null) {
+                deque.offerFirst(node.right);
+            }
+        }
+        if (string.length() > 0) {
+            return string.substring(0, string.length() - 1);
+        }
+        return "";
+    }
+
+    // Decodes your encoded data to tree.
+  /*  public TreeNode deserialize(String data) {
+
+
+    }*/
+
+    /**
+     * 1122. 数组的相对排序
+     * 技术排序思想
+     *
+     * @param arr1
+     * @param arr2
+     * @return
+     */
+    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+
+        List<Integer> list2 = new LinkedList<>();
+        for (int i = 0; i < arr2.length; i++) {
+            list2.add(arr2[i]);
+        }
+
+        int[] result = new int[arr1.length];
+        List<Integer> noList = new LinkedList<>();
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < arr1.length; i++) {
+            if (list2.contains(arr1[i])) {
+                hashMap.put(arr1[i], hashMap.getOrDefault(arr1[i], 0) + 1);
+            } else {
+                noList.add(arr1[i]);
+            }
+        }
+
+        int index = 0;
+
+        for (int i = 0; i < arr2.length; i++) {
+            if (hashMap.containsKey(arr2[i])) {
+                int count = hashMap.get(arr2[i]);
+                while (count > 0) {
+                    result[index] = arr2[i];
+                    index++;
+                    count--;
+                }
+            }
+        }
+
+        Collections.sort(noList);
+        for (Integer item : noList) {
+            result[index] = item;
+            index++;
+        }
+
+        return result;
+    }
+
+
+    /**
+     * 404. 左叶子之和
+     * 广度优先遍历
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param root
+     * @return
+     */
+    public int sumOfLeftLeaves(TreeNode root) {
+        int sum = 0;
+        if (root == null) {
+            return sum;
+        }
+        Deque<TreeNode> deque = new LinkedList();
+        deque.offerFirst(root);
+        while (!deque.isEmpty()) {
+            TreeNode node = deque.pollLast();
+            if (node.left != null) {
+                deque.offerFirst(node.left);
+                if (node.left.left == null && node.left.right == null) {
+                    sum = sum + node.left.val;
+                }
+            }
+            if (node.right != null) {
+                deque.offerFirst(node.right);
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * 面试题 01.02. 判定是否互为字符重排
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public boolean CheckPermutation(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        char[] chars1 = s1.toCharArray();
+        char[] chars2 = s2.toCharArray();
+
+        Arrays.sort(chars1);
+        Arrays.sort(chars2);
+        int index = 0;
+        while (index < chars1.length) {
+            if (chars1[index] != chars2[index]) {
+                return false;
+            }
+            index++;
+        }
+        return true;
+    }
+
+
+    /**
+     * @param nums
+     * @return
+     */
+    public boolean containsDuplicate(int[] nums) {
+
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        for (Integer item : nums) {
+            if (treeSet.contains(item)) {
+                return false;
+            } else {
+                treeSet.add(item);
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 628. 三个数的最大乘积
+     * 分情况题目
+     * 贪心算法最合适
+     *
+     * @param nums
+     * @return
+     */
+    public int maximumProduct(int[] nums) {
+
+        Arrays.sort(nums);
+
+        //如果全为负数 或者全为正数  1，2，3，4，5，6     -10，-9，-8，-7
+        if (nums[nums.length - 1] < 0 || nums[0] > 0) {
+            return nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3];
+        }
+
+        //有整数也有负数 -10，-9，1，2，3
+        if (nums[0] < 0 && nums[1] < 0) {
+            int length = nums.length - 1;
+            return Math.max(nums[0] * nums[1] * nums[length], nums[length] * nums[length - 1] * nums[length - 2]);
+        }
+
+        return 0;
+
+    }
+
+
+    public static void main(String[] args) {
+
+        MainDecember mainDecember = new MainDecember();
+        int[] arr2 = {2, 1, 4, 3, 9, 6};
+        int[] arr1 = {2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19};
+        List list2 = Arrays.asList(arr2);
+        System.out.println(list2.toString());
+
+
+        mainDecember.relativeSortArray(arr1, arr2);
+    }
+
 
 }
