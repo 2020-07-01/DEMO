@@ -5,6 +5,8 @@ server:
     max-threads: 200
     min-spare-threads: 10
     max-connections: 10000
+    max-swallow-size: 10MB
+
 spring:
   application:
     name: DEMO

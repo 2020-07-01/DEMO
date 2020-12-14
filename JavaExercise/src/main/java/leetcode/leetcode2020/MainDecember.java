@@ -5,8 +5,10 @@ import dataStructure.list.Link;
 import javafx.scene.chart.StackedAreaChart;
 import sun.reflect.generics.tree.Tree;
 
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.List;
 
 /**
  * @ClassName : MainDecember
@@ -1067,6 +1069,46 @@ public class MainDecember {
 
     }
 
+    /**
+     * 268. 丢失的数字
+     *
+     * @param nums
+     * @return
+     */
+    public int missingNumber(int[] nums) {
+
+        Arrays.sort(nums);
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (nums[i] != i + 1) {
+                return i + 1;
+            }
+        }
+        return 0;
+    }
+
+
+    /**
+     * 148. 排序链表
+     * @param head
+     * @return
+     */
+    public ListNode sortList(ListNode head) {
+        List<Integer> list = new LinkedList<>();
+        while (head != null){
+            list.add(head.val);
+            head = head.next;
+        }
+        Collections.sort(list);
+        head = new ListNode(0);
+        ListNode cur = head;
+        for (Integer integer : list) {
+
+            ListNode node = new ListNode(integer);
+            cur.next = node;
+            cur = cur.next;
+        }
+        return head.next;
+    }
 
     public static void main(String[] args) {
 
