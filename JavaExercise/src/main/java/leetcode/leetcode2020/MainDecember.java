@@ -1089,12 +1089,13 @@ public class MainDecember {
 
     /**
      * 148. 排序链表
+     *
      * @param head
      * @return
      */
     public ListNode sortList(ListNode head) {
         List<Integer> list = new LinkedList<>();
-        while (head != null){
+        while (head != null) {
             list.add(head.val);
             head = head.next;
         }
@@ -1108,6 +1109,103 @@ public class MainDecember {
             cur = cur.next;
         }
         return head.next;
+    }
+
+    /**
+     * 153. 寻找旋转排序数组中的最小值
+     *
+     * @param nums
+     * @return
+     */
+    public int findMin(int[] nums) {
+
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            min = Math.min(min, nums[i]);
+        }
+        return min;
+    }
+
+
+    /**
+     * 面试题 04.03. 特定深度节点链表
+     *
+     * @param tree
+     * @return
+     */
+    public ListNode[] listOfDepth(TreeNode tree) {
+
+        if (tree == null) {
+            return new ListNode[0];
+        }
+        //存储头节点
+        List<ListNode> listNodes = new LinkedList<>();
+        Deque<TreeNode> deque = new LinkedList();
+        deque.offerFirst(tree);
+        while (!deque.isEmpty()) {
+            int i = deque.size();
+            ListNode head = new ListNode(0);
+            ListNode cur = head;
+            while (i > 0) {
+                TreeNode treeNode = deque.pollLast();
+                ListNode temp = new ListNode(treeNode.val);
+                //注意此处
+                cur.next = temp;
+                cur = cur.next;
+                if (treeNode.left != null) {
+                    deque.addFirst(treeNode.left);
+                }
+
+                if (treeNode.right != null) {
+                    deque.addFirst(treeNode.right);
+                }
+                i--;
+            }
+            listNodes.add(head.next);
+        }
+        return listNodes.toArray(new ListNode[listNodes.size()]);
+    }
+
+    /**
+     * 25. K 个一组翻转链表
+     * 时间复杂度太高
+     *
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode reverseKGroup(ListNode head, int k) {
+
+        if (head == null) {
+            return null;
+        }
+
+        Deque<Integer> stack = new LinkedList<>();
+        ListNode root = new ListNode(0);
+        ListNode cur = root;
+        while (head != null) {
+            int i = 0;
+            while (i < k && head != null) {
+                stack.addFirst(head.val);
+                head = head.next;
+                i++;
+            }
+            if (i == k) {
+                while (!stack.isEmpty()) {
+                    ListNode temp = new ListNode(stack.pop().intValue());
+                    cur.next = temp;
+                    cur = cur.next;
+                }
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            ListNode temp = new ListNode(stack.pollLast().intValue());
+            cur.next = temp;
+            cur = cur.next;
+        }
+
+        return root.next;
     }
 
     public static void main(String[] args) {
