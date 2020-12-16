@@ -1208,6 +1208,90 @@ public class MainDecember {
         return root.next;
     }
 
+    /**
+     * 待研究
+     *
+     * @param head
+     * @param m
+     * @param n
+     * @return
+     */
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+
+        if (head == null) {
+            return null;
+        }
+        ListNode node = new ListNode(head.val);
+        ListNode cur = node;
+        head = head.next;
+        int i = 1;
+        while (i < m) {
+            ListNode temp = new ListNode(head.val);
+            cur.next = temp;
+            cur = cur.next;
+            head = head.next;
+            i++;
+        }
+
+        ListNode listNode = new ListNode(head.val);
+        head = head.next;
+        m = m + 1;
+        while (m < n) {
+
+            ListNode temp = new ListNode(head.val);
+            temp.next = head;
+            listNode = temp;
+            head = head.next;
+            m++;
+        }
+        cur = listNode;
+        cur.next = head;
+
+        return node;
+    }
+
+    /**
+     * 82. 删除排序链表中的重复元素 II
+     *
+     * @param head
+     * @return
+     */
+    public ListNode deleteDuplicates(ListNode head) {
+
+        if (head == null) {
+            return null;
+        }
+
+        ListNode node = new ListNode(0);
+        int pre = head.val;
+        boolean p = true;
+        head = head.next;
+        ListNode cur = node;
+
+        while (head != null) {
+            if (head.val == pre) {
+                p = false;
+            } else if (!p) {
+                pre = head.val;
+                p = true;
+            } else {
+                ListNode temp = new ListNode(pre);
+                cur.next = temp;
+                cur = cur.next;
+                pre = head.val;
+            }
+            head = head.next;
+        }
+
+        if (p) {
+            ListNode temp = new ListNode(pre);
+            cur.next = temp;
+            cur = cur.next;
+        }
+
+        return node.next;
+    }
+
     public static void main(String[] args) {
 
         MainDecember mainDecember = new MainDecember();
