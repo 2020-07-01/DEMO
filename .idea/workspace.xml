@@ -102,25 +102,13 @@
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Tomcat">
+  <component name="RunManager" selected="Application.MainDecember">
     <configuration name="MainDecember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainDecember" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="leetcode.leetcode2020.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.apache.catalina.startup.Tomcat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.apache.catalina.startup.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,16 +157,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainDecember" />
-      <item itemvalue="Application.Tomcat" />
       <item itemvalue="Spring Boot.SpringBootRabbitMqApplication" />
       <item itemvalue="Spring Boot.PublishEventApplication" />
       <item itemvalue="Spring Boot.SpringDemoApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Tomcat" />
-        <item itemvalue="Spring Boot.SpringDemoApplication" />
         <item itemvalue="Application.MainDecember" />
+        <item itemvalue="Spring Boot.SpringDemoApplication" />
         <item itemvalue="Spring Boot.SpringBootRabbitMqApplication" />
         <item itemvalue="Spring Boot.PublishEventApplication" />
       </list>
@@ -252,14 +238,8 @@
       <workItem from="1607688789835" duration="36226000" />
       <workItem from="1607948624807" duration="8353000" />
       <workItem from="1608034531478" duration="9686000" />
-      <workItem from="1608118232729" duration="6362000" />
-    </task>
-    <task id="LOCAL-00012" summary="718. 最长重复子数组">
-      <created>1602947461994</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1602947461994</updated>
+      <workItem from="1608118232729" duration="6511000" />
+      <workItem from="1608214188807" duration="2571000" />
     </task>
     <task id="LOCAL-00013" summary="BeanPostProcessor，BeanFactoryPostProcessor学习">
       <created>1603007825519</created>
@@ -597,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608042323173</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="82. 删除排序链表中的重复元素 II">
+      <created>1608132768163</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1608132768163</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="961. 重复 N 次的元素&#10;599. 两个列表的最小索引总和" />
     <MESSAGE value="852. 山脉数组的峰顶索引&#10;二分查找数字出现的次数&#10;441. 排列硬币" />
     <MESSAGE value="代码规范&#10;算法练习" />
     <MESSAGE value="代码规范" />
@@ -649,7 +635,8 @@
     <MESSAGE value="628. 三个数的最大乘积&#10;面试题 01.02. 判定是否互为字符重排&#10;404. 左叶子之和&#10;1122. 数组的相对排序&#10;剑指 Offer 37. 序列化二叉树" />
     <MESSAGE value="148. 排序链表&#10;268. 丢失的数字" />
     <MESSAGE value="25. K 个一组翻转链表&#10;面试题 04.03. 特定深度节点链表&#10;153. 寻找旋转排序数组中的最小值" />
-    <option name="LAST_COMMIT_MESSAGE" value="25. K 个一组翻转链表&#10;面试题 04.03. 特定深度节点链表&#10;153. 寻找旋转排序数组中的最小值" />
+    <MESSAGE value="82. 删除排序链表中的重复元素 II" />
+    <option name="LAST_COMMIT_MESSAGE" value="82. 删除排序链表中的重复元素 II" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
@@ -664,11 +651,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="318" y="0" width="658" height="680" key="#Tomcat/0.0.1280.680@0.0.1280.680" timestamp="1608037192198" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608122185268">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608217122019">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="-1080" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607231094487" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608122185268" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608217122019" />
     <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1607775067111">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -809,11 +796,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608042326860">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608132775494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608042326860" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608132775494" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

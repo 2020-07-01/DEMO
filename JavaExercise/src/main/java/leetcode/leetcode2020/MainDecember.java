@@ -1292,6 +1292,67 @@ public class MainDecember {
         return node.next;
     }
 
+    /**
+     * 剑指 Offer 32 - I. 从上到下打印二叉树
+     *
+     * @param root
+     * @return
+     */
+    public int[] levelOrder(TreeNode root) {
+        if (root == null) {
+            return new int[0];
+        }
+        List<Integer> list = new LinkedList<>();
+        Deque<TreeNode> deque = new LinkedList();
+        deque.addFirst(root);
+
+        while (!deque.isEmpty()) {
+            TreeNode node = deque.pollLast();
+            if (node.left != null) {
+                deque.addFirst(node.left);
+            }
+            if (node.right != null) {
+                deque.addFirst(node.right);
+            }
+            list.add(node.val);
+        }
+        int index = 0;
+        int[] result = new int[list.size()];
+        for (Integer item : list) {
+            result[index++] = item;
+        }
+        return result;
+    }
+
+    /**
+     * 面试题 01.01. 判定字符是否唯一
+     *
+     * @param astr
+     * @return
+     */
+    public boolean isUnique(String astr) {
+
+        int index = 0;
+        while (index < astr.length() - 1) {
+            if (-1 != astr.indexOf(astr.charAt(index), index + 1)) {
+                return false;
+            }
+            index++;
+        }
+        return true;
+    }
+
+    /**
+     * 1323. 6 和 9 组成的最大数字
+     * @param num
+     * @return
+     */
+    public int maximum69Number (int num) {
+        String  s = String.valueOf(num);
+        s = s.replaceFirst("6","9");
+        return Integer.valueOf(s);
+    }
+
     public static void main(String[] args) {
 
         MainDecember mainDecember = new MainDecember();
