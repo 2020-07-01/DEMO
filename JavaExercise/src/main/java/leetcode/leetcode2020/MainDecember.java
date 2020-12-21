@@ -9,6 +9,7 @@ import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * @ClassName : MainDecember
@@ -1344,14 +1345,87 @@ public class MainDecember {
 
     /**
      * 1323. 6 和 9 组成的最大数字
+     *
      * @param num
      * @return
      */
-    public int maximum69Number (int num) {
-        String  s = String.valueOf(num);
-        s = s.replaceFirst("6","9");
+    public int maximum69Number(int num) {
+        String s = String.valueOf(num);
+        s = s.replaceFirst("6", "9");
         return Integer.valueOf(s);
     }
+
+    /**
+     * 58. 最后一个单词的长度
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLastWord(String s) {
+        if (s.trim() == null || s.trim().length() == 0) {
+            return 0;
+        }
+        String[] strings = s.trim().split(" ");
+        return strings[strings.length - 1].length();
+    }
+
+
+    /**
+     * 520. 检测大写字母
+     *
+     * @param word
+     * @return
+     */
+    public boolean detectCapitalUse(String word) {
+
+
+        if (word == null || word.equals("")) {
+            return true;
+        }
+        if (word.trim().equals("")) {
+            return false;
+        }
+        if (word.length() > 1) {
+            //如果第一个个字母大写，则其他全部要为小写 或者全部为大写
+            if (word.charAt(0) > 'A' && word.charAt(0) < 'Z') {
+                boolean p1 = false;//小写
+                boolean p2 = false;//大写
+                for (int i = 1; i < word.length(); i++) {
+                    //存在大写
+                    if (word.charAt(i) < 'a' || word.charAt(i) > 'z') {
+                        if (p1) {
+                            return false;
+                        } else {
+                            p2 = true;
+                        }
+                    }
+                    //存在小写
+                    if (word.charAt(i) < 'A' || word.charAt(i) > 'Z') {
+                        if (p2) {
+                            return false;
+                        } else {
+                            p1 = true;
+                        }
+                    }
+                }
+                return true;
+            }
+            //第一个字母小写,其他全部为小写
+            else {
+                for (int i = 1; i < word.length(); i++) {
+                    //存在大写
+                    if (word.charAt(i) < 'a' || word.charAt(i) > 'z') {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        } else {
+            //小写
+            return true;
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -1364,6 +1438,5 @@ public class MainDecember {
 
         mainDecember.relativeSortArray(arr1, arr2);
     }
-
 
 }

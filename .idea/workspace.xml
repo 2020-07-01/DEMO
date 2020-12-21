@@ -25,6 +25,7 @@
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainDecember.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainDecember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
@@ -48,6 +49,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="0fa598b9-851d-45a9-96f6-5d6c602669de" />
+        <range start1="8" end1="8" start2="9" end2="11" changelist="0fa598b9-851d-45a9-96f6-5d6c602669de" />
+        <range start1="14" end1="16" start2="17" end2="19" changelist="64d7e400-f4d2-45da-8ba9-c82082d33a0f" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -239,14 +249,10 @@
       <workItem from="1607948624807" duration="8353000" />
       <workItem from="1608034531478" duration="9686000" />
       <workItem from="1608118232729" duration="6511000" />
-      <workItem from="1608214188807" duration="2571000" />
-    </task>
-    <task id="LOCAL-00013" summary="BeanPostProcessor，BeanFactoryPostProcessor学习">
-      <created>1603007825519</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1603007825519</updated>
+      <workItem from="1608214188807" duration="2805000" />
+      <workItem from="1608304493887" duration="2359000" />
+      <workItem from="1608455519325" duration="1773000" />
+      <workItem from="1608556519701" duration="1957000" />
     </task>
     <task id="LOCAL-00014" summary="BeanPostProcessor，BeanFactoryPostProcessor学习">
       <created>1603007943593</created>
@@ -584,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608132768163</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树">
+      <created>1608217329148</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1608217329149</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="852. 山脉数组的峰顶索引&#10;二分查找数字出现的次数&#10;441. 排列硬币" />
     <MESSAGE value="代码规范&#10;算法练习" />
     <MESSAGE value="代码规范" />
     <MESSAGE value="637. 二叉树的层平均值" />
@@ -636,7 +648,8 @@
     <MESSAGE value="148. 排序链表&#10;268. 丢失的数字" />
     <MESSAGE value="25. K 个一组翻转链表&#10;面试题 04.03. 特定深度节点链表&#10;153. 寻找旋转排序数组中的最小值" />
     <MESSAGE value="82. 删除排序链表中的重复元素 II" />
-    <option name="LAST_COMMIT_MESSAGE" value="82. 删除排序链表中的重复元素 II" />
+    <MESSAGE value="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树" />
+    <option name="LAST_COMMIT_MESSAGE" value="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
@@ -796,11 +809,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608132775494">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608217343832">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608132775494" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608217343832" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -867,7 +880,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainDecember.java</url>
-          <line>963</line>
+          <line>964</line>
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
