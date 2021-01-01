@@ -3,6 +3,7 @@ package leetcode.leetcode2020;
 
 import dataStructure.list.Link;
 import javafx.scene.chart.StackedAreaChart;
+import org.omg.CORBA.INTERNAL;
 import sun.reflect.generics.tree.Tree;
 
 import java.awt.*;
@@ -1426,17 +1427,207 @@ public class MainDecember {
         }
     }
 
+    /**
+     * 796. 旋转字符串
+     * @param A
+     * @param B
+     * @return
+     */
+    public boolean rotateString(String A, String B) {
+
+         return (A.length() == B.length()) ? (A+A).contains(B) : false;
+    }
+
+
+    /**
+     *
+     * @param S
+     * @param C
+     * @return
+     */
+    public int[] shortestToChar(String S, char C) {
+
+        int[] result = new int[S.length()];
+
+        List<Integer> list = new LinkedList<>();
+
+        int index = 0;
+        while (index < S.length()){
+            if(S.charAt(index) == C){
+                list.add(index);
+            }
+            index++;
+        }
+
+        index = 0;
+
+        while (index < result.length){
+            int min = Integer.MAX_VALUE;
+            for(int i = 0;i<list.size();i++){
+                min = Math.min(min,Math.abs((list.get(i) - index)));
+            }
+            result[index] = min;
+        }
+        return result;
+    }
+
+    /**
+     *
+     * @param nums1
+     * @param nums2
+     * @return
+     */
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+
+        HashMap<Integer,Integer> hashMap = new HashMap<>();
+        List<Integer> list = new ArrayList<>();
+        for(int i = nums2.length-1;i>=0;i--){
+            list.add(nums2[i]);
+        }
+
+        Collections.sort(list);
+
+        for(int i = 0;i<list.size()-1;i++){
+            hashMap.put(list.get(i),list.get(i+1));
+        }
+        hashMap.put(list.get(list.size()-1),-1);
+
+        for(int i = 0;i<nums1.length;i++){
+            nums1[i] = hashMap.get(nums1[i]);
+        }
+        return nums1;
+
+    }
+
+    /**
+     *
+     * @param root
+     * @return
+     */
+    public int countNodes(TreeNode root) {
+
+        int count = 0;
+        if(root == null){
+            return count;
+        }
+        Deque<TreeNode> deque = new LinkedList();
+
+        deque.addFirst(root);
+        while (!deque.isEmpty()){
+            TreeNode node = deque.pollLast();
+            count++;
+            if(node.left != null){
+                deque.addFirst(node.left);
+            }
+
+            if(node.right != null){
+                deque.addFirst(node.right);
+            }
+        }
+        return count;
+    }
+
+    int count = 0;
+    public int countNodes1(TreeNode root) {
+        t(root);
+        return count;
+    }
+
+
+    private void t(TreeNode node){
+        if(node != null){
+            count ++;
+            t(node.left);
+            t(node.right);
+        }
+    }
+
+    /**
+     * 724. 寻找数组的中心索引
+     * @param nums
+     * @return
+     */
+    public int pivotIndex(int[] nums) {
+
+        if(nums.length == 1){
+            return 0;
+        }
+        if(nums.length == 0){
+            return -1;
+        }
+        int sum = 0;
+        for(int i = 0;i<nums.length;i++){
+            sum = sum + nums[i];
+        }
+        int sumLeft = 0;
+        for(int i = 0;i<nums.length;i++){
+            sum = sum - nums[i];
+            if(sumLeft == sum){
+                return i;
+            }else {
+                sumLeft = sumLeft + nums[i];
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 434. 字符串中的单词数
+     * 正则表达式
+     * @param s
+     * @return
+     */
+    public int countSegments(String s) {
+        String trimmed = s.trim();
+        if (trimmed.equals("")) {
+            return 0;
+        }
+        return trimmed.split("\\s+").length;
+    }
+
+    /**
+     * 709. 转换成小写字母
+     * @param str
+     * @return
+     */
+    public String toLowerCase(String str) {
+
+        int index = 0;
+        String s = "";
+        while (index < str.length()) {
+            if (str.charAt(index) >= 'a' && str.charAt(index) <= 'z') {
+                s = s + str.charAt(index);
+            } else {
+                s = s + Character.toLowerCase(str.charAt(index));
+            }
+            index++;
+        }
+        return s;
+    }
+
+    /**
+     * 1464. 数组中两元素的最大乘积
+     * @param nums
+     * @return
+     */
+    public int maxProduct(int[] nums) {
+        if(nums == null || nums.length < 2){
+            return 0;
+        }
+        Arrays.sort(nums);
+        return (nums[nums.length-1]-1) * (nums[nums.length-2]-1);
+    }
+
+
 
     public static void main(String[] args) {
 
-        MainDecember mainDecember = new MainDecember();
-        int[] arr2 = {2, 1, 4, 3, 9, 6};
-        int[] arr1 = {2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19};
-        List list2 = Arrays.asList(arr2);
-        System.out.println(list2.toString());
+        String s = "Hell";
+
+        System.out.println(s.charAt(0));
 
 
-        mainDecember.relativeSortArray(arr1, arr2);
+        System.out.println( );
     }
 
 }

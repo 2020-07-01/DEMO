@@ -1,15 +1,8 @@
-package nio;
-
-import com.sun.javafx.image.ByteToBytePixelConverter;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
-import sun.nio.ch.FileChannelImpl;
+package net.nio;
 
 import java.io.*;
 import java.nio.ByteBuffer;
-import java.nio.channels.Channel;
 import java.nio.channels.FileChannel;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
 import java.nio.charset.Charset;
 
 /**
@@ -30,7 +23,7 @@ public class JavaNioDemo {
     public static void testFileChannel() {
         try {
             String string = "hello world!";
-            FileOutputStream fileOutputStream = new FileOutputStream("D:\\workspace\\DEMO\\JavaExercise\\src\\main\\java\\nio\\file\\helloWorld.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream("D:\\workspace\\DEMO\\JavaExercise\\src\\main\\java\\net.nio\\file\\helloWorld.txt");
             FileChannel fileChannel = fileOutputStream.getChannel();
 
             //创建缓冲区
@@ -52,7 +45,7 @@ public class JavaNioDemo {
     public static void testChannel() {
 
         try {
-            FileInputStream fileInputStream = new FileInputStream("D:\\workspace\\DEMO\\JavaExercise\\src\\main\\java\\nio\\file\\helloWorld.txt");
+            FileInputStream fileInputStream = new FileInputStream("D:\\workspace\\DEMO\\JavaExercise\\src\\main\\java\\net.nio\\file\\helloWorld.txt");
 
             FileChannel channel = fileInputStream.getChannel();
 

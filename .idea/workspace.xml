@@ -23,9 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/SocketDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/bio/SocketServerBioDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/nio/NioServerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/io/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/io/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainDecember.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainDecember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/net/StudyInetAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/SocketNioDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/UDPClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/net/client_server/UDPServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/nio/JavaNioDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/net/nio/JavaNioDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/nio/file/helloWorld.txt" beforeDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
@@ -49,15 +61,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="SOFT" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="0fa598b9-851d-45a9-96f6-5d6c602669de" />
-        <range start1="8" end1="8" start2="9" end2="11" changelist="0fa598b9-851d-45a9-96f6-5d6c602669de" />
-        <range start1="14" end1="16" start2="17" end2="19" changelist="64d7e400-f4d2-45da-8ba9-c82082d33a0f" />
-      </ranges>
-    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -108,11 +111,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\DEMO\JavaExercise\src\main\java\net\nio" />
       <recent name="D:\workspace\DEMO\JavaExercise\src\main\java\netty\source" />
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainDecember">
+  <component name="RunManager" selected="Application.SocketServerBioDemo">
     <configuration name="MainDecember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainDecember" />
       <module name="JavaExercise" />
@@ -126,28 +130,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PublishEventApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Spring-Demo" />
+    <configuration name="SocketDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.SocketDemo" />
+      <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.publishEvent.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.publishEvent.PublishEventApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootRabbitMqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Spring-Demo" />
+    <configuration name="SocketNioDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.SocketNioDemo" />
+      <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rabbitmq.consumer.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rabbitmq.consumer.SpringBootRabbitMqApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketServerBioDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.bio.SocketServerBioDemo" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.bio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,16 +184,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainDecember" />
-      <item itemvalue="Spring Boot.SpringBootRabbitMqApplication" />
-      <item itemvalue="Spring Boot.PublishEventApplication" />
+      <item itemvalue="Application.SocketDemo" />
       <item itemvalue="Spring Boot.SpringDemoApplication" />
+      <item itemvalue="Application.SocketNioDemo" />
+      <item itemvalue="Application.SocketServerBioDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SocketServerBioDemo" />
+        <item itemvalue="Application.SocketNioDemo" />
         <item itemvalue="Application.MainDecember" />
+        <item itemvalue="Application.SocketDemo" />
         <item itemvalue="Spring Boot.SpringDemoApplication" />
-        <item itemvalue="Spring Boot.SpringBootRabbitMqApplication" />
-        <item itemvalue="Spring Boot.PublishEventApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -252,14 +271,13 @@
       <workItem from="1608214188807" duration="2805000" />
       <workItem from="1608304493887" duration="2359000" />
       <workItem from="1608455519325" duration="1773000" />
-      <workItem from="1608556519701" duration="1957000" />
-    </task>
-    <task id="LOCAL-00014" summary="BeanPostProcessor，BeanFactoryPostProcessor学习">
-      <created>1603007943593</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1603007943593</updated>
+      <workItem from="1608556519701" duration="2076000" />
+      <workItem from="1608639351060" duration="1803000" />
+      <workItem from="1608726726019" duration="6168000" />
+      <workItem from="1608809326055" duration="4689000" />
+      <workItem from="1609155641446" duration="4662000" />
+      <workItem from="1609246189349" duration="1958000" />
+      <workItem from="1609332629322" duration="16016000" />
     </task>
     <task id="LOCAL-00015" summary="445. 两数相加 II&#10;454. 四数相加 II">
       <created>1603028384252</created>
@@ -597,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608217329149</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="520. 检测大写字母">
+      <created>1608561662390</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1608561662391</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +649,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="代码规范&#10;算法练习" />
     <MESSAGE value="代码规范" />
     <MESSAGE value="637. 二叉树的层平均值" />
     <MESSAGE value="剑指 Offer 32 - II. 从上到下打印二叉树 II" />
@@ -649,7 +673,8 @@
     <MESSAGE value="25. K 个一组翻转链表&#10;面试题 04.03. 特定深度节点链表&#10;153. 寻找旋转排序数组中的最小值" />
     <MESSAGE value="82. 删除排序链表中的重复元素 II" />
     <MESSAGE value="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树" />
-    <option name="LAST_COMMIT_MESSAGE" value="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树" />
+    <MESSAGE value="520. 检测大写字母" />
+    <option name="LAST_COMMIT_MESSAGE" value="520. 检测大写字母" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
@@ -669,12 +694,12 @@
     </state>
     <state x="144" y="-1080" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607231094487" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608217122019" />
-    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1607775067111">
+    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1608810075682">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607241491133" />
     <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602989667954" />
-    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1607775067111" />
+    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608810075682" />
     <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1608122183152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -683,10 +708,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="262" y="19" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993101669" />
-    <state x="298" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605189935055">
+    <state x="298" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1608809955377">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="298" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1605189935055" />
+    <state x="298" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1608809955377" />
     <state x="419" y="208" width="443" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606643079689">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -719,54 +744,54 @@
     </state>
     <state x="632" y="-1033" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607232373829" />
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607747363148" />
-    <state width="1237" height="267" key="GridCell.Tab.0.bottom" timestamp="1608044607603">
+    <state width="1237" height="154" key="GridCell.Tab.0.bottom" timestamp="1609407210180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940878" />
-    <state width="1237" height="93" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982120" />
-    <state width="1237" height="267" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608044607603" />
-    <state width="1237" height="267" key="GridCell.Tab.0.center" timestamp="1608044607603">
+    <state width="1237" height="31" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1609407210180" />
+    <state width="1237" height="154" key="GridCell.Tab.0.center" timestamp="1609407210180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940877" />
-    <state width="1237" height="93" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982119" />
-    <state width="1237" height="267" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608044607603" />
-    <state width="1237" height="267" key="GridCell.Tab.0.left" timestamp="1608044607603">
+    <state width="1237" height="31" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1609407210180" />
+    <state width="1237" height="154" key="GridCell.Tab.0.left" timestamp="1609407210180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940877" />
-    <state width="1237" height="93" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982119" />
-    <state width="1237" height="267" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608044607603" />
-    <state width="1237" height="267" key="GridCell.Tab.0.right" timestamp="1608044607603">
+    <state width="1237" height="31" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1609407210180" />
+    <state width="1237" height="154" key="GridCell.Tab.0.right" timestamp="1609407210180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940877" />
-    <state width="1237" height="93" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982119" />
-    <state width="1237" height="267" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608044607603" />
-    <state width="1237" height="19" key="GridCell.Tab.1.bottom" timestamp="1607958142924">
+    <state width="1237" height="31" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1609407210180" />
+    <state width="1237" height="31" key="GridCell.Tab.1.bottom" timestamp="1608858129048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242941072" />
-    <state width="1237" height="195" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982112" />
-    <state width="1237" height="19" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607958142924" />
-    <state width="1237" height="19" key="GridCell.Tab.1.center" timestamp="1607958142923">
+    <state width="1237" height="31" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="31" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608821445339" />
+    <state width="1237" height="31" key="GridCell.Tab.1.center" timestamp="1608858129048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242941072" />
-    <state width="1237" height="195" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982112" />
-    <state width="1237" height="19" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1607958142923" />
-    <state width="1237" height="19" key="GridCell.Tab.1.left" timestamp="1607958142923">
+    <state width="1237" height="31" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="31" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1608821445339" />
+    <state width="1237" height="31" key="GridCell.Tab.1.left" timestamp="1608858129048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242941072" />
-    <state width="1237" height="195" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982111" />
-    <state width="1237" height="19" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1607958142923" />
-    <state width="1237" height="19" key="GridCell.Tab.1.right" timestamp="1607958142924">
+    <state width="1237" height="31" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="31" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1608821445338" />
+    <state width="1237" height="31" key="GridCell.Tab.1.right" timestamp="1608858129048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242941072" />
-    <state width="1237" height="195" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1607907982112" />
-    <state width="1237" height="19" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1607958142924" />
+    <state width="1237" height="31" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
+    <state width="1237" height="31" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1608821445339" />
     <state width="1237" height="19" key="GridCell.Tab.2.bottom" timestamp="1607958142922">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -800,20 +825,20 @@
     </state>
     <state x="213" y="-1080" key="SettingsEditor/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603601309598" />
     <state x="35" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607002412255" />
-    <state x="362" y="82" width="576" height="524" key="StructurePopup" timestamp="1608129689027">
+    <state x="362" y="82" width="576" height="524" key="StructurePopup" timestamp="1608727124446">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="543" y="-955" width="864" height="802" key="StructurePopup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607240431565" />
-    <state x="362" y="82" width="576" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1608129689027" />
+    <state x="362" y="82" width="576" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1608727124446" />
     <state x="471" y="210" key="VCS.EditChangelistDialog" timestamp="1601993816859">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608217343832">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608561666202">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608217343832" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608561666202" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -822,21 +847,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="104" y="32" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1606056338154" />
-    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604233171795">
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608822023527">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1604233171795" />
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1608822023527" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607754611905">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="-973" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607238339131" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602990987211" />
     <state x="147" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1607754611905" />
-    <state x="339" y="72" width="603" height="560" key="find.popup" timestamp="1608131649333">
+    <state x="339" y="72" width="603" height="560" key="find.popup" timestamp="1609406567319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="509" y="-970" width="905" height="820" key="find.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242004095" />
-    <state x="339" y="72" width="603" height="560" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1608131649333" />
+    <state x="339" y="72" width="603" height="560" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1609406567319" />
     <state x="349" y="128" key="git4idea.merge.GitPullDialog" timestamp="1606143579995">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -850,11 +875,11 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603601154921" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1608037423022">
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1609165743196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607240337428" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608037423022" />
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609165743196" />
     <state x="363" y="252" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602080060180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -864,23 +889,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/tomcat/util/net/AbstractEndpoint.java</url>
-          <line>1275</line>
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/tomcat/util/net/AbstractEndpoint.java</url>
-          <line>441</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/tomcat/util/net/NioEndpoint.java</url>
           <line>250</line>
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2020/MainDecember.java</url>
-          <line>964</line>
+          <line>965</line>
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
@@ -889,14 +904,14 @@
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/catalina/connector/Connector.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="177" />
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/tomcat/util/net/NioEndpoint.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/catalina/connector/Connector.java</url>
-          <line>940</line>
-          <option name="timeStamp" value="178" />
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/tomcat/util/net/NioEndpoint.java</url>
+          <line>214</line>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
