@@ -1,4 +1,4 @@
-package proxy.cglib;
+package designMode.proxy.cglib;
 
 /**
  * @ClassName : Dog

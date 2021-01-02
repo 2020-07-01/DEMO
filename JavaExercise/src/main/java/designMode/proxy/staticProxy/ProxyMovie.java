@@ -1,4 +1,4 @@
-package proxy.staticProxy;
+package designMode.proxy.staticProxy;
 
 /**
  * @ClassName : ProxyMovie

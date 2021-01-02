@@ -8,7 +8,7 @@ package designMode.singlePattern;
  */
 public class Singleton3 {
 
-    /**
+    /**Observer
      * 1、反射可破坏
      */
     private Singleton3() {

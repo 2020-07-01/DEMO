@@ -21,11 +21,11 @@ public class PublishEventApplication {
         SpringApplication.run(PublishEventApplication.class, args);
     }
 
-    /**
+   /* *//**
      * 定义线程池
      *
      * @return
-     */
+     *//*
     @Bean
     public SimpleApplicationEventMulticaster simpleApplicationEventMulticaster() {
         BlockingQueue queue = new DelayQueue();
@@ -35,6 +35,6 @@ public class PublishEventApplication {
         SimpleApplicationEventMulticaster simpleApplicationEventMulticaster = new SimpleApplicationEventMulticaster();
         simpleApplicationEventMulticaster.setTaskExecutor(executor);
         return simpleApplicationEventMulticaster;
-    }
+    }*/
 }
 

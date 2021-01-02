@@ -1,6 +1,4 @@
-package proxy.springBootDemo;
-
-import rmi.Hello;
+package designMode.proxy.springBootDemo;
 
 /**
  * @ClassName : TestProxy
