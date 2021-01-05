@@ -1,11 +1,9 @@
 package dataStructure;
 
-import java.util.ArrayList;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.Vector;
-import java.util.WeakHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * @ClassName : JavaDemo
@@ -17,17 +15,22 @@ public class JavaDemo {
 
     public static void main(String[] args) {
 
-        WeakHashMap weakHashMap = new WeakHashMap();
-        weakHashMap.put("A","A");
+        PriorityQueue priorityQueue = new PriorityQueue();
 
-        weakHashMap.get("A");
+        priorityQueue.add(100);
+        priorityQueue.add(32);
+        priorityQueue.add(43);
+        priorityQueue.add(2);
+        priorityQueue.add(324);
+        priorityQueue.add(6);
+        priorityQueue.remove(5);
+
+        System.out.println(priorityQueue.peek());
+        System.out.println(priorityQueue.peek());
 
 
-        HashMap hashMap = new HashMap();
-        hashMap.put("","");
-
-        System.gc();
-
+        PriorityBlockingQueue priorityBlockingQueue = new PriorityBlockingQueue();
+        priorityBlockingQueue.add(4);
 
     }
 }

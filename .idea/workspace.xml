@@ -23,41 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/JavaDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/JavaDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/ListenerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/PublisherDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/SendMessageEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/common/AbstractPublish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/common/ApplicationListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/common/ApplicationPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/monitor/common/EventSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/observer/demo1/DemoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/observer/demo1/WatchEd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/observer/demo1/Watcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/Bits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton3.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/cglib/CglibProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/cglib/CglibProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/cglib/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/cglib/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/cglib/MyMethodInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/cglib/MyMethodInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/JdkProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/jdkProxy/JdkProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/jdkProxy/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/jdkProxy/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/jdkProxy/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/HelloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/Interceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/Interceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/MyInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/MyInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/ProxyBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/ProxyBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/springBootDemo/TestProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/springBootDemo/TestProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/staticProxy/DemoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/staticProxy/DemoMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/staticProxy/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/staticProxy/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/staticProxy/ProxyMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/staticProxy/ProxyMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/proxy/staticProxy/RealMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/proxy/staticProxy/RealMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/publishEvent/PublishEventApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/publishEvent/PublishEventApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/JavaDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/JavaDemo.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
@@ -139,13 +107,26 @@
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JavaDemo">
+  <component name="RunManager" selected="Application.MainJanuary">
     <configuration name="DemoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="designMode.observer.demo1.DemoMain" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="designMode.observer.demo1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaDemo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataStructure.JavaDemo" />
+      <module name="JavaExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dataStructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,25 +147,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainDecember" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2020.MainDecember" />
+    <configuration name="MainJanuary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.leetcode2021.MainJanuary" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leetcode.leetcode2020.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SocketNioDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.SocketNioDemo" />
-      <module name="JavaExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.*" />
+          <option name="PATTERN" value="leetcode.leetcode2021.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -206,19 +174,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MainDecember" />
-      <item itemvalue="Application.SocketNioDemo" />
       <item itemvalue="Application.SocketServerBioDemo" />
       <item itemvalue="Application.DemoMain" />
       <item itemvalue="Application.JavaDemo" />
+      <item itemvalue="Application.JavaDemo (1)" />
+      <item itemvalue="Application.MainJanuary" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainJanuary" />
+        <item itemvalue="Application.JavaDemo (1)" />
         <item itemvalue="Application.JavaDemo" />
         <item itemvalue="Application.DemoMain" />
         <item itemvalue="Application.SocketServerBioDemo" />
-        <item itemvalue="Application.SocketNioDemo" />
-        <item itemvalue="Application.MainDecember" />
       </list>
     </recent_temporary>
   </component>
@@ -301,14 +269,9 @@
       <workItem from="1609155641446" duration="4662000" />
       <workItem from="1609246189349" duration="1958000" />
       <workItem from="1609332629322" duration="30889000" />
-      <workItem from="1609559231670" duration="13257000" />
-    </task>
-    <task id="LOCAL-00016" summary="算法">
-      <created>1603115582077</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1603115582077</updated>
+      <workItem from="1609559231670" duration="21439000" />
+      <workItem from="1609673602816" duration="10275000" />
+      <workItem from="1609849535774" duration="3989000" />
     </task>
     <task id="LOCAL-00017" summary="面试题 16.02. 单词频率">
       <created>1603377724822</created>
@@ -646,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609491775066</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="观察者模式和监听者模式">
+      <created>1609589793110</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1609589793111</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +643,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="637. 二叉树的层平均值" />
     <MESSAGE value="剑指 Offer 32 - II. 从上到下打印二叉树 II" />
     <MESSAGE value="mybatis" />
     <MESSAGE value="ignore" />
@@ -698,7 +667,8 @@
     <MESSAGE value="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树" />
     <MESSAGE value="520. 检测大写字母" />
     <MESSAGE value="编码练习" />
-    <option name="LAST_COMMIT_MESSAGE" value="编码练习" />
+    <MESSAGE value="观察者模式和监听者模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="观察者模式和监听者模式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
@@ -718,12 +688,12 @@
     </state>
     <state x="144" y="-1080" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607231094487" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608217122019" />
-    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1609589505923">
+    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1609852526330">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="765" y="-844" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607241491133" />
     <state x="510" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602989667954" />
-    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609589505923" />
+    <state x="510" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609852526330" />
     <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1608122183152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -748,50 +718,50 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="396" y="43" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1604235263145" />
-    <state x="657" y="-729" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605419582800">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="438" y="230" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609676883040">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="657" y="-729" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605419582800" />
-    <state x="438" y="230" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604816167881" />
+    <state x="438" y="230" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1609676883040" />
     <state width="713" height="438" key="DebuggerActiveHint" timestamp="1607950643986">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1151" height="670" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607238707735" />
     <state width="573" height="438" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602993073180" />
     <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1607950643986" />
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1606635684355">
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1609677079037">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1606635684355" />
-    <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1609493600122">
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1609677079037" />
+    <state x="421" y="31" key="FileChooserDialogImpl" timestamp="1609676800127">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="632" y="-1033" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607232373829" />
-    <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609493600122" />
-    <state width="1237" height="104" key="GridCell.Tab.0.bottom" timestamp="1609589043204">
+    <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609676800127" />
+    <state width="1237" height="116" key="GridCell.Tab.0.bottom" timestamp="1609852751279">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940878" />
     <state width="1237" height="31" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
-    <state width="1237" height="104" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1609589043204" />
-    <state width="1237" height="104" key="GridCell.Tab.0.center" timestamp="1609589043204">
+    <state width="1237" height="116" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1609852751279" />
+    <state width="1237" height="116" key="GridCell.Tab.0.center" timestamp="1609852751278">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940877" />
     <state width="1237" height="31" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
-    <state width="1237" height="104" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1609589043204" />
-    <state width="1237" height="104" key="GridCell.Tab.0.left" timestamp="1609589043204">
+    <state width="1237" height="116" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1609852751278" />
+    <state width="1237" height="116" key="GridCell.Tab.0.left" timestamp="1609852751278">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940877" />
     <state width="1237" height="31" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
-    <state width="1237" height="104" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1609589043204" />
-    <state width="1237" height="104" key="GridCell.Tab.0.right" timestamp="1609589043204">
+    <state width="1237" height="116" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1609852751278" />
+    <state width="1237" height="116" key="GridCell.Tab.0.right" timestamp="1609852751279">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607242940877" />
     <state width="1237" height="31" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1608858129048" />
-    <state width="1237" height="104" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1609589043204" />
+    <state width="1237" height="116" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1609852751279" />
     <state width="1237" height="31" key="GridCell.Tab.1.bottom" timestamp="1608858129048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -858,11 +828,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="210" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1601993816859" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1609491784767">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1609589797706">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609491784767" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609589797706" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -903,11 +873,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="433" y="199" key="scopes/0.0.1280.680@0.0.1280.680" timestamp="1609512915321" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1609574341089">
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1609676910943">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607240337428" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609574341089" />
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609676910943" />
     <state x="363" y="252" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602080060180">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
