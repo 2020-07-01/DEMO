@@ -282,9 +282,90 @@ public class MainJanuary {
                 list.get(list.size() - 1)[1] = Math.max(right, list.get(list.size() - 1)[1]);
             }
         }
-
         return list.toArray(new int[list.size()][2]);
+    }
 
+    /**
+     * 79. 单词搜索
+     * 回溯法
+     *
+     * @param board
+     * @param word
+     * @return
+     */
+    public boolean exist(char[][] board, String word) {
+
+        /**
+         * 思路:
+         * 枚举法：从一个点触发
+         * 向四个方向进行
+         * 外层两个for循环遍历节点
+         * 内部深度优先遍历
+         */
+
+        char[] words = word.toCharArray();
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (check(board, words, i, j, 0)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean check(char[][] board, char[] words, int i, int j, int index) {
+        //边界值判断
+        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || board[i][j] != words[index]) {
+            return false;
+        }
+        //
+        if (index == words.length - 1) {
+            return true;
+        }
+
+        char temp = board[i][j];
+        board[i][j] = '.';
+
+        /**
+         * 从上下左右四个方向找
+         *  boolean res = check(board, words, i + 1, j, index + 1) || check(board, words, i - 1, j, index + 1) ||
+         *             check(board, words, i, j + 1, index + 1) || check(board, words, i, j - 1, index + 1);
+         */
+
+        boolean res;
+        //往右
+        res = check(board, words, i, j + 1, index + 1);
+        //往左
+        res = res | check(board, words, i, j - 1, index + 1);
+        //往下
+        res = res | check(board, words, i + 1, j, index + 1);
+        //往上
+        res = res | check(board, words, i - 1, j + 1, index + 1);
+        board[i][j] = temp;
+        return res;
+    }
+
+    /**
+     * 55. 跳跃游戏
+     *
+     * @param nums
+     * 时间复杂度O(n)
+     * @return
+     */
+    public boolean canJump(int[] nums) {
+        int max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i <= max) {
+                max = Math.max(max, nums[i] + i);
+                if (max >= nums.length - 1) {
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 
     public static void main(String[] args) {

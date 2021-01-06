@@ -9,7 +9,15 @@ import java.util.concurrent.*;
 public class Main {
 
     public static void main(String[] args) {
+        LinkedBlockingDeque linkedBlockingDeque = new LinkedBlockingDeque();
+        linkedBlockingDeque.add(1);
 
+    }
+
+
+
+
+    public void test() {
         BlockingQueue queue = new DelayQueue();
         /**
          * 默认工厂
@@ -22,18 +30,6 @@ public class Main {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10,20,5000, TimeUnit.SECONDS,queue,threadFactory);
 
 
-        Main main = new Main();
-        main.test();
-    }
-
-
-    public void test() {
-
-        Class c = this.getClass();
-        System.out.println(c.getName());
-
-        Class clazz = super.getClass();
-        System.out.println(clazz.getName());
 
     }
 }
