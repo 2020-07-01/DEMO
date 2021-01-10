@@ -1,6 +1,7 @@
 package leetcode.leetcode2021;
 
-import javax.swing.tree.TreeNode;
+import callback_function.example2.Main;
+
 import java.util.*;
 
 /**
@@ -261,12 +262,7 @@ public class MainJanuary {
         }
 
         //先进行排序
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                return o1[0] - o2[0];
-            }
-        });
+        Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
 
         /**
          * [[1,3],[2,6],[8,10],[15,18]]
@@ -351,8 +347,7 @@ public class MainJanuary {
     /**
      * 55. 跳跃游戏
      *
-     * @param nums
-     * 时间复杂度O(n)
+     * @param nums 时间复杂度O(n)
      * @return
      */
     public boolean canJump(int[] nums) {
@@ -369,6 +364,159 @@ public class MainJanuary {
         return false;
     }
 
+    //选择当前节点的情况下，左右子树最大权值和
+    HashMap<TreeNode, Integer> f = new HashMap<>();
+    //不选择当前节点的情况下，左右子树最大权值和
+    HashMap<TreeNode, Integer> g = new HashMap<>();
+
+    /**
+     * @param root
+     * @return
+     */
+    public int rob(TreeNode root) {
+
+        /**
+         * 广度优先遍历
+         * 取最大值
+         */
+        dfs(root);
+        return Math.max(f.getOrDefault(root, 0), g.getOrDefault(root, 0));
+    }
+
+    /**
+     * 深度优先遍历
+     *
+     * @param treeNode
+     */
+    private void dfs(TreeNode treeNode) {
+        if (treeNode == null) {
+            return;
+        }
+        dfs(treeNode.left);
+        dfs(treeNode.right);
+
+        f.put(treeNode, treeNode.val + g.getOrDefault(treeNode.left, 0) + g.getOrDefault(treeNode.right, 0));
+        g.put(treeNode, Math.max(g.getOrDefault(treeNode.left, 0), f.getOrDefault(treeNode.left, 0)) + Math.max(g.getOrDefault(treeNode.right, 0), f.getOrDefault(treeNode.right, 0)));
+    }
+
+    /**
+     * 322. 零钱兑换
+     * 字节跳动原题
+     * 待实现
+     *
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public int coinChange(int[] coins, int amount) {
+
+        if (coins == null || coins.length == 0) {
+            return -1;
+        }
+        int count = 0;
+        Arrays.sort(coins);
+        int coninsIndex = coins.length - 1;
+
+        while (coninsIndex >= 0) {
+            int temp = amount / coins[coninsIndex];
+            if (temp > 0) {
+                count = count + temp;
+                amount = amount - temp * coins[coninsIndex];
+            }
+            coninsIndex--;
+        }
+
+        return count;
+    }
+
+    /**
+     * 121. 买卖股票的最佳时机
+     * 只允许进行一笔交易
+     *
+     * @param prices
+     * @return
+     */
+    public int maxProfit(int[] prices) {
+        if(prices == null || prices.length == 0){
+            return -1;
+        }
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < prices.length; i++) {
+            //记录最低点
+            min = Math.min(min, prices[i]);
+            //最大收益时卖出
+            max = Math.max(max, prices[i] - min);
+        }
+        return max;
+    }
+
+
+    /**
+     * 122. 买卖股票的最佳时机 II
+     * 可以进行多次交易
+     * 交易天数 >= 2
+     * @param prices
+     * @return
+     */
+    public int maxProfit1(int[] prices) {
+
+        /**
+         * 第i天交易股票与不交易股票的最大利润
+         * dp[i][0]:表示交易股票
+         * dp[i][1]:表示不交易股票
+         */
+
+        int[][] dp = new int[prices.length][2];
+        //第一天无法卖出，只能买入，
+        //交易
+        //不买入 收益为-prices[0];
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for (int i = 1;i<prices.length;i++){
+
+            //i天交易 = i-1交易 ： i-1天不交易 + i天交易
+            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1] + prices[i]);
+
+            //i天不交易 = i-1天不交易 ：i-1天交易 - i天买入
+            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0] - prices[i]);
+        }
+        //最后一天不持有股票
+        return dp[prices.length-1][0];
+    }
+
+    /**
+     * 714. 买卖股票的最佳时机含手续费
+     * @param prices
+     * @param fee
+     * @return
+     */
+    public int maxProfit1(int[] prices, int fee) {
+
+        /**
+         * 第i天持有和不持有股票时最大利润
+         * dp[i][0]:表示不持有股票
+         * dp[i][1]:表示持有股票
+         */
+
+        int[][] dp = new int[prices.length][2];
+        //第一天无法卖出，只能买入，
+        //交易
+        //不买入 收益为-prices[0] ;
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for (int i = 1;i<prices.length;i++){
+
+            // 不持有 i天交易 = i-1交易 ： i-1天不交易 + i天交易 交易付手续费
+            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1] + prices[i] - fee);
+
+            //持有 i天不交易 = i-1天不交易 ：i-1天交易 - i天买入
+            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0] - prices[i] );
+        }
+        //最后一天不持有股票
+        return dp[prices.length-1][0];
+    }
 
 
     public static void main(String[] args) {
