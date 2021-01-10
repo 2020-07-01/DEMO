@@ -2,6 +2,8 @@ package dataStructure;
 
 import java.util.*;
 
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.PriorityBlockingQueue;
 
@@ -15,22 +17,17 @@ public class JavaDemo {
 
     public static void main(String[] args) {
 
-        PriorityQueue priorityQueue = new PriorityQueue();
-
-        priorityQueue.add(100);
-        priorityQueue.add(32);
-        priorityQueue.add(43);
-        priorityQueue.add(2);
-        priorityQueue.add(324);
-        priorityQueue.add(6);
-        priorityQueue.remove(5);
-
-        System.out.println(priorityQueue.peek());
-        System.out.println(priorityQueue.peek());
+        ArrayDeque arrayDeque = new ArrayDeque();
 
 
-        PriorityBlockingQueue priorityBlockingQueue = new PriorityBlockingQueue();
-        priorityBlockingQueue.add(4);
+        ConcurrentLinkedQueue concurrentLinkedQueue = new ConcurrentLinkedQueue();
+        concurrentLinkedQueue.add(1);
+        concurrentLinkedQueue.remove();
+
+
+        ConcurrentLinkedDeque concurrentLinkedDeque = new ConcurrentLinkedDeque();
+        concurrentLinkedDeque.add(1);
 
     }
+
 }

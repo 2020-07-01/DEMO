@@ -2155,7 +2155,7 @@ public class MainSeptember {
 
 
 
-    class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
 
@@ -2164,15 +2164,6 @@ public class MainSeptember {
         }
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public static void main(String[] args) {
 

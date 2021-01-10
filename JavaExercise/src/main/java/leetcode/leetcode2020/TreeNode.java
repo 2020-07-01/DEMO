@@ -6,7 +6,7 @@ package leetcode.leetcode2020;
  * @Date: 2020-10-07
  * @Description :
  */
-public class TreeNode {
+class TreeNode {
 
     int val;
     TreeNode left;

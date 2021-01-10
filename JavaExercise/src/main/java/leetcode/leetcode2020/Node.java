@@ -8,7 +8,7 @@ import java.util.List;
  * @Date: 2020-11-10
  * @Description :
  */
-public class Node {
+class Node {
     public int val;
     public List<Node> children;
 

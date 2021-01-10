@@ -20,8 +20,14 @@ public class BLockMain {
 
         try {
             while (delayQueue.size() > 0) {
+                System.out.println("等待获取数据......");
+                /**
+                 * take()方法为阻塞的
+                 */
                 System.out.println(delayQueue.take().getName());
+                delayQueue.take();
             }
+            System.out.println("结束......");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
