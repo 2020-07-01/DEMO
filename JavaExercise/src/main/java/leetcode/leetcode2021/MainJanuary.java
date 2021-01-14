@@ -1,6 +1,6 @@
 package leetcode.leetcode2021;
 
-import callback_function.example2.Main;
+import dataStructure.list.Link;
 
 import java.util.*;
 
@@ -11,7 +11,6 @@ import java.util.*;
  * @Description :
  */
 public class MainJanuary {
-
 
     int count = 0;
 
@@ -437,7 +436,7 @@ public class MainJanuary {
      * @return
      */
     public int maxProfit(int[] prices) {
-        if(prices == null || prices.length == 0){
+        if (prices == null || prices.length == 0) {
             return -1;
         }
         int min = Integer.MAX_VALUE;
@@ -457,6 +456,7 @@ public class MainJanuary {
      * 122. 买卖股票的最佳时机 II
      * 可以进行多次交易
      * 交易天数 >= 2
+     *
      * @param prices
      * @return
      */
@@ -474,20 +474,21 @@ public class MainJanuary {
         //不买入 收益为-prices[0];
         dp[0][0] = 0;
         dp[0][1] = -prices[0];
-        for (int i = 1;i<prices.length;i++){
+        for (int i = 1; i < prices.length; i++) {
 
             //i天交易 = i-1交易 ： i-1天不交易 + i天交易
-            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1] + prices[i]);
+            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
 
             //i天不交易 = i-1天不交易 ：i-1天交易 - i天买入
-            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0] - prices[i]);
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
         }
         //最后一天不持有股票
-        return dp[prices.length-1][0];
+        return dp[prices.length - 1][0];
     }
 
     /**
      * 714. 买卖股票的最佳时机含手续费
+     *
      * @param prices
      * @param fee
      * @return
@@ -506,30 +507,220 @@ public class MainJanuary {
         //不买入 收益为-prices[0] ;
         dp[0][0] = 0;
         dp[0][1] = -prices[0];
-        for (int i = 1;i<prices.length;i++){
+        for (int i = 1; i < prices.length; i++) {
 
             // 不持有 i天交易 = i-1交易 ： i-1天不交易 + i天交易 交易付手续费
-            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1] + prices[i] - fee);
+            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee);
 
             //持有 i天不交易 = i-1天不交易 ：i-1天交易 - i天买入
-            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0] - prices[i] );
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
         }
         //最后一天不持有股票
-        return dp[prices.length-1][0];
+        return dp[prices.length - 1][0];
+    }
+
+    /**
+     * 除法运算
+     *
+     * @param dividend
+     * @param divisor
+     * @return
+     */
+    public int divide(int dividend, int divisor) {
+
+        boolean p = true;
+
+        if (dividend < 0) {
+            p = !p;
+            dividend = Math.abs(dividend);
+        }
+
+        if (divisor < 0) {
+            p = !p;
+            divisor = Math.abs(divisor);
+        }
+        int result = 0;
+        while (divisor < dividend) {
+            result++;
+            divisor = divisor + divisor;
+        }
+
+        return p ? result : -result;
+    }
+
+
+    /**
+     * 29. 两数相除
+     *
+     * @param dividend
+     * @param divisor
+     * @return
+     */
+    public int divide1(int dividend, int divisor) {
+
+        if (dividend == Integer.MIN_VALUE && divisor == -1) {
+            return Integer.MAX_VALUE;
+        }
+
+        boolean k = (dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0);
+        int result = 0;
+        /**
+         * 全部转换为负数，避免边界值问题
+         * -1000
+         * -10
+         */
+        dividend = -Math.abs(dividend);
+        divisor = -Math.abs(divisor);
+        while (dividend <= divisor) {
+            int temp = divisor; // -10
+            int c = 1;
+            while (dividend - temp <= temp) {//二分法思想
+                temp = temp << 1;
+                c = c << 1;
+            }
+            dividend = dividend - temp;
+            result = result + c;
+        }
+        return k ? result : -result;
+    }
+
+    List<Integer> temp = new ArrayList<>();
+    List<List<Integer>> ans = new ArrayList<>();
+
+    public List<List<Integer>> combine(int n, int k) {
+        dfs(1, n, k);
+        return ans;
+    }
+
+    private void dfs(int cur, int n, int k) {
+        //
+        if (temp.size() + (n - cur + 1) < k) {
+            return;
+        }
+
+        //正确答案
+        if (temp.size() == k) {
+            ans.add(new ArrayList<>(temp));
+            return;
+        }
+
+        //
+
+        temp.add(cur);
+        dfs(cur + 1, n, k);
+        temp.remove(temp.size() - 1);
+        //考虑不选择当前位置
+        dfs(cur + 1, n, k);
+    }
+
+
+    /**
+     * 46. 全排列
+     * 回溯法
+     * 深度优先遍历是先填充，再交换
+     *
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> permute(int[] nums) {
+
+        List<List<Integer>> res = new ArrayList<>();
+
+        List<Integer> output = new ArrayList<>();
+        for (int num : nums) {
+            output.add(num);
+        }
+
+        int n = nums.length;
+        backtrack(n, output, 0);
+        return res;
+    }
+
+    public void backtrack(int n, List<Integer> output, int first) {
+        //System.out.println("开始：" + "first:" + first + "output:" + Arrays.toString(output.toArray()));
+        //所有数都填完了
+        if (first == n) {
+
+        }
+
+        for (int i = first; i < n; i++) {
+            //动态维护数组 交换
+            Collections.swap(output, first, i);
+            //递归 下一个数
+            backtrack(n, output, first + 1);
+            //撤销操作 回溯
+            Collections.swap(output, first, i);
+        }
+    }
+
+
+    /**
+     * 78. 子集
+     * 无重复子集
+     *
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+
+        List<List<Integer>> result = new LinkedList<>();
+        List<Integer> innerList = new LinkedList<>();
+        innerList.add(nums[0]);
+        result.add(innerList);
+
+        for (int i = 1; i < nums.length; i++) {
+
+            List<List<Integer>> resultTemp = new LinkedList<>();
+            //遍历已有结果集
+            //将每个结果集添加元素后组成新的结果集
+            for (int j = 0; j < result.size(); j++) {
+                innerList = new LinkedList<>(result.get(j));
+                innerList.add(nums[i]);
+                resultTemp.add(innerList);
+            }
+            innerList = new LinkedList<>();
+            innerList.add(nums[i]);
+            resultTemp.add(innerList);
+            result.addAll(resultTemp);
+        }
+
+        result.add(new ArrayList<>());
+        return result;
+    }
+
+
+    /**
+     * 全排列
+     * 广度优先遍历
+     * 填充得过程中交换数字
+     * 待思考
+     *
+     * @param nums
+     */
+    public void test1(int[] nums) {
+
+        List<Integer> output = new ArrayList<>();
+        bfs(nums, 0, output);
+    }
+
+    private void bfs(int[] nums, int index, List<Integer> output) {
+        System.out.println(output.toString() + index);
+        if (index == nums.length) {
+
+        }
+
+        
+            output.add(nums[index]);
+        for (int i = index + 1; i < nums.length; i++) {
+            bfs(nums, i, output);
+        }
     }
 
 
     public static void main(String[] args) {
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.addFirst(1);
-        linkedList.addFirst(100);
-        linkedList.addFirst(10);
-        Collections.sort(linkedList, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1 - o2;
-            }
-        });
-        System.out.println(linkedList);
+
+        MainJanuary mainJanuary = new MainJanuary();
+        int[] nums = new int[]{1, 2, 3};
+        mainJanuary.test1(nums);
     }
 }
