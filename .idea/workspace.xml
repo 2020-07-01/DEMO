@@ -271,14 +271,8 @@
       <workItem from="1610370549200" duration="3652000" />
       <workItem from="1610462603960" duration="1439000" />
       <workItem from="1610547434026" duration="4233000" />
-      <workItem from="1610628341819" duration="407000" />
-    </task>
-    <task id="LOCAL-00021" summary="1295. 统计位数为偶数的数字&#10;41,655">
-      <created>1603895346446</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1603895346446</updated>
+      <workItem from="1610628341819" duration="477000" />
+      <workItem from="1610629952243" duration="783000" />
     </task>
     <task id="LOCAL-00022" summary="1221. 分割平衡字符串&#10;1002. 查找常用字符&#10;41,395">
       <created>1603978929246</created>
@@ -616,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610272512667</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="编码练习">
+      <created>1610628790941</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1610628790941</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,9 +667,9 @@
     <MESSAGE value="观察者模式和监听者模式" />
     <MESSAGE value="56. 合并区间&#10;33. 搜索旋转排序数组" />
     <MESSAGE value="55. 跳跃游戏&#10;79. 单词搜索" />
-    <MESSAGE value="编码练习" />
     <MESSAGE value="股票买卖时机" />
-    <option name="LAST_COMMIT_MESSAGE" value="股票买卖时机" />
+    <MESSAGE value="编码练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="编码练习" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">

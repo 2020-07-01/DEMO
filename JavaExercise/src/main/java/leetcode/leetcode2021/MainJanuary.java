@@ -709,12 +709,46 @@ public class MainJanuary {
 
         }
 
-        
-            output.add(nums[index]);
+
+        output.add(nums[index]);
         for (int i = index + 1; i < nums.length; i++) {
             bfs(nums, i, output);
         }
     }
+
+    /**
+     * 557. 反转字符串中的单词 III
+     *
+     * @param s
+     * @return
+     */
+    public String reverseWords(String s) {
+
+        if (s == null || s.trim().length() == 0) {
+            return "";
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        String[] strings = s.trim().split(" ");
+        int index = 0;
+        while (index < strings.length) {
+            String string = strings[index];
+            if (string.equals("")) {
+                index++;
+                continue;
+            }
+            int i = string.length() - 1;
+            while (i >= 0) {
+                stringBuilder = stringBuilder.append(string.charAt(i));
+                i--;
+            }
+            stringBuilder = stringBuilder.append(" ");
+            index++;
+        }
+
+        return stringBuilder.substring(0, stringBuilder.length() - 1);
+    }
+
+
 
 
     public static void main(String[] args) {
