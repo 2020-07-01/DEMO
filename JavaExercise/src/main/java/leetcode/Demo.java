@@ -1,5 +1,12 @@
 package leetcode;
 
+import com.sun.java.swing.plaf.windows.WindowsDesktopIconUI;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @ClassName : Demo
  * @Author : yq
@@ -61,11 +68,6 @@ public class Demo {
      * 二分左边界搜索法 ： 744. 寻找比目标字母大的最小字母
      */
 
-    /**
-     * 回溯法：总体思想为试探法
-     * 挨个遍历不断试探，如果失败从上一步往其他方向再试探
-     */
-
 
     /**
      * 摩尔投票法：
@@ -119,5 +121,132 @@ public class Demo {
     /**
      * 单调栈
      */
+
+    /**
+     * 回溯法：总体思想为试探法
+     * 通过枚举的方式不断尝试，当满足条件时继续向下执行，当不满足条件时，进行回溯
+     * 深度优先遍历
+     * 广度优先遍历
+     */
+
+    /**
+     * 无重复数字全排列
+     *
+     * @param nums
+     */
+    public void backtrack1(int[] nums) {
+        ArrayList<Integer> integerArrayList = new ArrayList<>();
+        dfs1(integerArrayList, nums);
+    }
+
+    private void dfs1(ArrayList<Integer> innerList, int[] nums) {
+
+        //终止条件
+        if (nums.length == innerList.size()) {
+            System.out.println(innerList);
+        } else {
+            //从头开始遍历元素，此处待优化
+            for (int i = 0; i < nums.length; i++) {
+                //如果包含，则已经添加
+                if (innerList.contains(nums[i])) {
+                    continue;
+                }
+                //如果不包含，添加元素
+                innerList.add(nums[i]);
+                //继续向下遍历
+                dfs1(innerList, nums);
+                //删除此元素，回溯到上个状态，继续对下个元素进行判断
+                innerList.remove(innerList.size() - 1);
+            }
+        }
+    }
+
+    //先填充好元素，动态维护，根据下标判断是否输出s
+    public void backtrack2(int[] nums) {
+        dfs2(nums, 0);
+    }
+
+    private void dfs2(int[] nums, int index) {
+        //System.out.println("index:" + index + "[List]:" + Arrays.toString(nums));
+        //终止条件，如果当前下标为数组长度
+        if (index == nums.length) {
+            System.out.println("index:" + index + "[List]:" + Arrays.toString(nums));
+        } else {
+            for (int i = index; i < nums.length; i++) {
+
+                /**
+                 * 1,2,3 index = 0
+                 * 1,2,3 index = 1 交换 2,1,3 下一个  。。。 回溯 1，2，3
+                 * 1,2,3 index = 3 交换 3,2,1
+                 */
+                //交换元素
+                int temp = nums[i];
+                nums[i] = nums[index];
+                nums[index] = temp;
+
+                //判断下一个元素
+                dfs2(nums, index + 1);
+
+                temp = nums[i];
+                nums[i] = nums[index];
+                nums[index] = temp;
+            }
+        }
+    }
+
+    /**
+     * 无重复元素全排列
+     * 广度优先遍历
+     *
+     * @param nums
+     */
+    public void backtrack3(int[] nums) {
+
+        LinkedList<List<Integer>> lists = new LinkedList<>();
+
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            List<Integer> innerList = new ArrayList<>();
+            innerList.add(nums[i]);
+            lists.add(innerList);
+        }
+
+        bfs(nums, lists, 1);
+    }
+
+    //广度优先遍历
+    private void bfs(int[] nums, LinkedList<List<Integer>> lists, int curCount) {
+        System.out.println(lists);
+        if (curCount == nums.length) {
+            return;
+        } else {
+            int index = 0;
+            int n = lists.size();
+            while (index < n) {
+                List<Integer> innerList = lists.removeFirst();
+                for (int i = 0; i < nums.length; i++) {
+                    if (!innerList.contains(nums[i])) {
+                        List<Integer> temp = new LinkedList<>();
+                        temp.addAll(innerList);
+                        temp.add(nums[i]);
+                        lists.addLast(temp);
+                    }
+                }
+                index++;
+            }
+
+            bfs(nums, lists, curCount + 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        Demo demo = new Demo();
+        int[] nums = new int[]{1, 2, 3, 4};
+        demo.backtrack3(nums);
+
+    }
+
 
 }

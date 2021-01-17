@@ -1,5 +1,6 @@
 package leetcode.leetcode2021;
 
+import com.sun.org.apache.xerces.internal.xs.LSInputList;
 import dataStructure.list.Link;
 
 import java.util.*;
@@ -749,12 +750,180 @@ public class MainJanuary {
     }
 
 
+    /**
+     * 216. 组合总和 III
+     * 找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。
+     * 思路：1-9排列
+     * 终止条件 个数为k和为n
+     * <p>
+     * 深度优先算法
+     *
+     * @param k
+     * @param n
+     * @return
+     */
+    public List<List<Integer>> combinationSum3(int k, int n) {
 
+        List<List<Integer>> lists = new LinkedList<>();
+        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        List<Integer> innerList = new LinkedList<>();
+        dfs(nums, innerList, lists, k, n, 0);
+
+
+        return lists;
+    }
+
+    private void dfs(int[] nums, List<Integer> innerList, List<List<Integer>> lists, int k, int n, int sum) {
+
+        if (innerList.size() == k && sum == n) {
+            //去重
+            if (lists.size() == 0) {
+                List<Integer> temp = new LinkedList<>(innerList);
+                Collections.sort(temp);
+                lists.add(temp);
+            } else {
+                Collections.sort(innerList);
+                List<List<Integer>> listTemp = new LinkedList<>();
+                boolean p = true;
+                for (int i = 0; i < lists.size(); i++) {
+                    List<Integer> list = lists.get(i);
+                    if (list.equals(innerList)) {
+                        p = false;
+                    }
+                }
+                if (p) {
+                    List<Integer> temp = new LinkedList<>(innerList);
+                    listTemp.add(temp);
+                }
+                lists.addAll(listTemp);
+            }
+        } else if (sum > n || innerList.size() > k) {
+            return;
+        } else {
+            for (int i = 0; i < nums.length; i++) {
+                if (innerList.contains(nums[i])) {
+                    continue;
+                }
+                //不包含则添加
+                innerList.add(nums[i]);
+                sum = sum + nums[i];
+
+                dfs(nums, innerList, lists, k, n, sum);
+                //回溯
+                innerList.remove(Integer.valueOf(nums[i]));
+                sum = sum - nums[i];
+            }
+        }
+    }
+
+
+    /**
+     * 39. 组合总和
+     * 回溯思想
+     *
+     * @param candidates
+     * @param target
+     * @return
+     */
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+
+        List<List<Integer>> lists = new LinkedList<>();
+
+        List<Integer> innerList = new LinkedList<>();
+
+        dfs(lists, innerList, candidates, target, 0);
+
+        return lists;
+    }
+
+
+    private void dfs(List<List<Integer>> lists, List<Integer> innerList, int[] candidates, int target, int sum) {
+        if (sum == target) {
+            List<Integer> temp = new LinkedList<>(innerList);
+            Collections.sort(temp);
+
+            if (lists.size() == 0) {
+                lists.add(temp);
+            } else {
+                boolean p = true;
+                for (int i = 0; i < lists.size(); i++) {
+                    List<Integer> list = lists.get(i);
+                    //如果有相同
+                    if (temp.equals(list)) {
+                        p = false;
+                        break;
+                    }
+                }
+                if (p) {
+                    lists.add(temp);
+                }
+            }
+        } else if (sum > target) {
+            return;
+        } else {
+            for (int i = 0; i < candidates.length; i++) {
+                //添加
+                innerList.add(candidates[i]);
+                sum = sum + candidates[i];
+                //迭代
+                dfs(lists, innerList, candidates, target, sum);
+                //回溯
+                innerList.remove(Integer.valueOf(candidates[i]));
+                sum = sum - candidates[i];
+            }
+        }
+    }
+
+    /**
+     * 面试题 08.07. 无重复字符串的排列组合
+     * 深度优先遍历
+     *
+     * @param S
+     * @return
+     */
+    public String[] permutation(String S) {
+
+        char[] chars = S.toCharArray();
+
+        List<String> lists = new LinkedList<>();
+
+        List<Character> innerList = new LinkedList<>();
+
+        dfs(lists, innerList, chars);
+
+        return lists.toArray(new String[lists.size()]);
+    }
+
+    private void dfs(List<String> lists, List<Character> innerList, char[] chars) {
+
+        if (innerList.size() == chars.length) {
+            StringBuilder stringBuilder = new StringBuilder();
+            List<Character> temp = new LinkedList<>(innerList);
+            for (int i = 0; i < temp.size(); i++) {
+                stringBuilder = stringBuilder.append(temp.get(i));
+            }
+            lists.add(stringBuilder.toString());
+        } else {
+            for (int i = 0; i < chars.length; i++) {
+
+                //不存在则添加
+                if (innerList.contains(chars[i])) {
+                    continue;
+                }
+                //添加
+                innerList.add(chars[i]);
+                //迭代
+                dfs(lists, innerList, chars);
+                //回溯
+                innerList.remove(Character.valueOf(chars[i]));
+            }
+        }
+    }
 
     public static void main(String[] args) {
 
         MainJanuary mainJanuary = new MainJanuary();
-        int[] nums = new int[]{1, 2, 3};
-        mainJanuary.test1(nums);
+        int[] nums = new int[]{2, 3, 6, 7};
+        mainJanuary.permutation("qwe");
     }
 }
