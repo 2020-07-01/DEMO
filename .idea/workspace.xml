@@ -24,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
@@ -274,14 +274,10 @@
       <workItem from="1610547434026" duration="4233000" />
       <workItem from="1610628341819" duration="477000" />
       <workItem from="1610629952243" duration="783000" />
-      <workItem from="1610803785663" duration="19363000" />
-    </task>
-    <task id="LOCAL-00023" summary="静态代理">
-      <created>1603983658223</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1603983658223</updated>
+      <workItem from="1610803785663" duration="22260000" />
+      <workItem from="1610977806572" duration="3158000" />
+      <workItem from="1611067196342" duration="1053000" />
+      <workItem from="1611239657317" duration="694000" />
     </task>
     <task id="LOCAL-00024" summary="83. 删除排序链表中的重复元素&#10;747. 至少是其他数字两倍的最大数">
       <created>1604120174651</created>
@@ -619,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610803845942</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="回溯法">
+      <created>1610889157504</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1610889157504</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +649,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="mybatis学习" />
     <MESSAGE value="108. 将有序数组转换为二叉搜索树" />
     <MESSAGE value="34. 在排序数组中查找元素的第一个和最后一个位置&#10;107. 二叉树的层次遍历 II&#10;100. 相同的树" />
     <MESSAGE value="111. 二叉树的最小深度&#10;671. 二叉树中第二小的节点" />
@@ -671,7 +673,8 @@
     <MESSAGE value="股票买卖时机" />
     <MESSAGE value="编码练习" />
     <MESSAGE value="557. 反转字符串中的单词 III" />
-    <option name="LAST_COMMIT_MESSAGE" value="557. 反转字符串中的单词 III" />
+    <MESSAGE value="回溯法" />
+    <option name="LAST_COMMIT_MESSAGE" value="回溯法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
@@ -722,12 +725,12 @@
     </state>
     <state x="657" y="-729" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605419582800" />
     <state x="438" y="230" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1609676883040" />
-    <state width="713" height="438" key="DebuggerActiveHint" timestamp="1610873072740">
+    <state width="713" height="438" key="DebuggerActiveHint" timestamp="1610979888850">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1151" height="670" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607238707735" />
     <state width="573" height="438" key="DebuggerActiveHint/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1602993073180" />
-    <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1610873072740" />
+    <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1610979888850" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1609677079037">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -737,54 +740,54 @@
     </state>
     <state x="632" y="-1033" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607232373829" />
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609676800127" />
-    <state width="1237" height="123" key="GridCell.Tab.0.bottom" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.0.bottom" timestamp="1610981546045">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610265284447" />
     <state width="1237" height="211" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1610499817352" />
-    <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
-    <state width="1237" height="123" key="GridCell.Tab.0.center" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1610981546045" />
+    <state width="618" height="153" key="GridCell.Tab.0.center" timestamp="1610981546044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610265284447" />
     <state width="1237" height="211" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1610499817352" />
-    <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
-    <state width="1237" height="123" key="GridCell.Tab.0.left" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1610981546044" />
+    <state width="618" height="153" key="GridCell.Tab.0.left" timestamp="1610981546044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610265284446" />
     <state width="1237" height="211" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1610499817352" />
-    <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
-    <state width="1237" height="123" key="GridCell.Tab.0.right" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1610981546044" />
+    <state width="618" height="153" key="GridCell.Tab.0.right" timestamp="1610981546045">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610265284447" />
     <state width="1237" height="211" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1610499817352" />
-    <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
-    <state width="1237" height="123" key="GridCell.Tab.1.bottom" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1610981546045" />
+    <state width="618" height="153" key="GridCell.Tab.1.bottom" timestamp="1610981546044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="130" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610260128246" />
     <state width="1237" height="222" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1609895245934" />
-    <state width="1237" height="123" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
-    <state width="1237" height="123" key="GridCell.Tab.1.center" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1610981546044" />
+    <state width="618" height="153" key="GridCell.Tab.1.center" timestamp="1610981546044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="130" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610260128246" />
     <state width="1237" height="222" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1609895245934" />
-    <state width="1237" height="123" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
-    <state width="1237" height="123" key="GridCell.Tab.1.left" timestamp="1610888044284">
+    <state width="618" height="153" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1610981546044" />
+    <state width="618" height="153" key="GridCell.Tab.1.left" timestamp="1610981546044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="130" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610260128246" />
     <state width="1237" height="222" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1609895245934" />
-    <state width="1237" height="123" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1610888044284" />
-    <state width="1237" height="123" key="GridCell.Tab.1.right" timestamp="1610888044285">
+    <state width="618" height="153" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1610981546044" />
+    <state width="618" height="153" key="GridCell.Tab.1.right" timestamp="1610981546044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="130" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1610260128246" />
     <state width="1237" height="222" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1609895245934" />
-    <state width="1237" height="123" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1610888044285" />
+    <state width="618" height="153" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1610981546044" />
     <state width="1237" height="19" key="GridCell.Tab.2.bottom" timestamp="1607958142922">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -823,11 +826,11 @@
     </state>
     <state x="543" y="-955" width="864" height="802" key="StructurePopup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607240431565" />
     <state x="362" y="82" width="576" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1609565382377" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1609942959623">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1610889164298">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="-967" key="Vcs.Push.Dialog.v2/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603007948531" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609942959623" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1610889164298" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -869,11 +872,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="433" y="199" key="scopes/0.0.1280.680@0.0.1280.680" timestamp="1609512915321" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1609943050445">
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1610891497017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="455" y="-1078" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607240337428" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609943050445" />
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1610891497017" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,8 +933,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java</url>
-          <line>890</line>
+          <line>893</line>
           <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java</url>
+          <line>909</line>
+          <option name="timeStamp" value="247" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java</url>
+          <line>917</line>
+          <option name="timeStamp" value="248" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java</url>
+          <line>931</line>
+          <option name="timeStamp" value="253" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>

@@ -1,3 +1,4 @@
+import java.util.*;
 import java.util.concurrent.*;
 
 /**
@@ -9,11 +10,11 @@ import java.util.concurrent.*;
 public class Main {
 
     public static void main(String[] args) {
-        LinkedBlockingDeque linkedBlockingDeque = new LinkedBlockingDeque();
-        linkedBlockingDeque.add(1);
+         
+
+
 
     }
-
 
 
 

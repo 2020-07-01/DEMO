@@ -920,10 +920,78 @@ public class MainJanuary {
         }
     }
 
+    /**
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> subsets1(int[] nums) {
+
+        List<List<Integer>> lists = new ArrayList<>();
+
+        dfs(lists, new LinkedList<>(), nums, 0);
+        return lists;
+    }
+
+    /**
+     * 此处i来控制递归终止条件
+     *
+     * @param lists
+     * @param innerList
+     * @param nums
+     * @param index
+     */
+    private void dfs(List<List<Integer>> lists, List<Integer> innerList, int[] nums, int index) {
+
+        List<Integer> temp = new LinkedList<>(innerList);
+
+        lists.add(temp);
+
+        for (int i = index; i < nums.length; i++) {
+
+            //添加
+            innerList.add(nums[i]);
+            //迭代
+            dfs(lists, innerList, nums, i + 1);
+            //回溯
+            innerList.remove(innerList.size() - 1);
+        }
+
+    }
+
+
+    public int[] smallestK(int[] arr, int k) {
+
+        Arrays.sort(arr);
+        int[] result = new int[k];
+        for (int i = 0; i < k; i++) {
+            result[i] = arr[i];
+        }
+        return result;
+    }
+
+    /**
+     * 1550. 存在连续三个奇数的数组
+     *
+     * @param arr
+     * @return
+     */
+    public boolean threeConsecutiveOdds(int[] arr) {
+        if (arr == null || arr.length < 3) {
+            return false;
+        }
+        for (int i = 2; i < arr.length; i++) {
+            if (arr[i - 1] % 2 == 0 && arr[i - 2] % 2 == 0 && arr[i] % 2 == 0) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
     public static void main(String[] args) {
 
         MainJanuary mainJanuary = new MainJanuary();
-        int[] nums = new int[]{2, 3, 6, 7};
-        mainJanuary.permutation("qwe");
+        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        mainJanuary.subsets1(nums);
     }
 }
