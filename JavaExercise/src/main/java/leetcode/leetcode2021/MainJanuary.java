@@ -1,5 +1,6 @@
 package leetcode.leetcode2021;
 
+import basicDataType.Main;
 import com.sun.org.apache.xerces.internal.xs.LSInputList;
 import dataStructure.list.Link;
 
@@ -988,10 +989,74 @@ public class MainJanuary {
 
     }
 
+    public void nextPermutation(int[] nums) {
+
+        int number = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            number = number + (int) Math.pow(10, nums.length - i - 1) * nums[i];
+        }
+
+        dfs(new LinkedList<>(), nums, number, 0);
+
+        Arrays.sort(nums);
+    }
+
+    private void dfs(List<Integer> list, int[] nums, int number, int index) {
+        if (list.size() == nums.length) {
+            int curNumber = 0;
+            for (int i = list.size() - 1; i >= 0; i--) {
+                curNumber = curNumber + (int) Math.pow(10, list.size() - i - 1) * list.get(i);
+            }
+
+            if (curNumber > number) {
+                for (int i = 0; i < list.size(); i++) {
+                    nums[i] = list.get(i);
+                }
+                System.out.println(curNumber);
+                return;
+            }
+        } else {
+            for (int i = 0; i < nums.length; i++) {
+                if (i == index) {
+                    continue;
+                }
+                list.add(nums[i]);
+                dfs(list, nums, number, 0);
+                list.remove(Integer.valueOf(nums[i]));
+            }
+        }
+    }
+
+    /**
+     * 989. 数组形式的整数加法
+     * 按部计算
+     *
+     * @param A
+     * @param K
+     * @return
+     */
+    public List<Integer> addToArrayForm(int[] A, int K) {
+
+        LinkedList<Integer> list = new LinkedList<>();
+        int number = 0;
+
+        for (int i = A.length - 1; i >= 0; i--) {
+            number = number + (int) Math.pow(10, A.length - i - 1) * A[i];
+        }
+        //超过最大范围
+        number = number + K;
+
+        while (number != 0) {
+            list.addFirst(number % 10);
+            number = number / 10;
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
 
         MainJanuary mainJanuary = new MainJanuary();
-        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-        mainJanuary.subsets1(nums);
+        int[] nums = new int[]{9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
+        mainJanuary.addToArrayForm(nums, 1);
     }
 }
