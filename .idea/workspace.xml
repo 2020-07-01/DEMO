@@ -23,8 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/redisDemo/RedisDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/redisDemo/RedisLockController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-Demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/pom.xml" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
@@ -277,14 +279,8 @@
       <workItem from="1610977806572" duration="3158000" />
       <workItem from="1611067196342" duration="1053000" />
       <workItem from="1611239657317" duration="1020000" />
-      <workItem from="1611321686978" duration="4504000" />
-    </task>
-    <task id="LOCAL-00025" summary="500. 键盘行&#10;219. 存在重复元素 II">
-      <created>1604243117433</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1604243117434</updated>
+      <workItem from="1611321686978" duration="5113000" />
+      <workItem from="1611466005013" duration="5276000" />
     </task>
     <task id="LOCAL-00026" summary="键盘行&#10;884. 两句话中的不常见单词&#10;复写0&#10;1189. “气球” 的最大数量">
       <created>1604411121493</created>
@@ -622,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611240666199</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="算法">
+      <created>1611326403091</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1611326403091</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +652,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="108. 将有序数组转换为二叉搜索树" />
     <MESSAGE value="34. 在排序数组中查找元素的第一个和最后一个位置&#10;107. 二叉树的层次遍历 II&#10;100. 相同的树" />
     <MESSAGE value="111. 二叉树的最小深度&#10;671. 二叉树中第二小的节点" />
     <MESSAGE value="netty学习" />
@@ -674,17 +676,14 @@
     <MESSAGE value="编码练习" />
     <MESSAGE value="557. 反转字符串中的单词 III" />
     <MESSAGE value="回溯法" />
-    <option name="LAST_COMMIT_MESSAGE" value="回溯法" />
+    <MESSAGE value="算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="算法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1607747373639" />
-    <state x="318" y="0" width="658" height="680" key="#SpringApplication" timestamp="1602773663939">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="318" y="0" width="658" height="680" key="#SpringApplication/0.0.1280.680@0.0.1280.680" timestamp="1602773663939" />
     <state x="318" y="0" width="658" height="680" key="#Tomcat" timestamp="1608037192198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -859,10 +858,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="349" y="128" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1606143579995" />
-    <state x="56" y="2" key="new project wizard" timestamp="1607519096417">
+    <state x="56" y="2" key="new project wizard" timestamp="1611467573770">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="503" y="-807" key="new project wizard/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605422790093" />
+    <state x="56" y="2" key="new project wizard/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1611467573770" />
     <state x="56" y="2" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1607519096417" />
     <state x="616" y="-299" key="run.anything.popup" timestamp="1603601154921">
       <screen x="0" y="-1080" width="1920" height="1040" />
