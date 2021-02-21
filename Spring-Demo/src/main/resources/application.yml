@@ -7,13 +7,15 @@ server:
     max-connections: 10000
     max-swallow-size: 10MB
 
+
+
 spring:
   application:
     name: DEMO
 
   rabbitmq:
-    username:
-    password:
+    username: user
+    password: password
     host: 139.196.186.217
     port: 5672
     virtual-host: /

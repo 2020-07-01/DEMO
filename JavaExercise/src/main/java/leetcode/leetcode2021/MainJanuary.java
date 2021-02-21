@@ -1053,10 +1053,94 @@ public class MainJanuary {
         return list;
     }
 
+
+    /**
+     * @param nums
+     * @return
+     */
+    public int thirdMax(int[] nums) {
+
+        List<Integer> list = new LinkedList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (!list.contains(nums[i])) {
+                list.add(nums[i]);
+            }
+        }
+
+        Collections.sort(list);
+
+        if (list.size() > 2) {
+            return list.get(list.size() - 3);
+        } else {
+            return list.get(list.size() - 1);
+        }
+    }
+
+
+    int sum = 0;
+
+    /**
+     * @param arr
+     * @return
+     */
+    public int sumOddLengthSubarrays(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int temp = 0;
+            int count = 0;
+            for (int j = i; j < arr.length; j++) {
+                temp = temp + arr[j];
+                count++;
+                if (count % 2 == 1) {
+                    sum = sum + temp;
+                    temp = 0;
+                }
+            }
+        }
+        return sum;
+    }
+
+
+    /**
+     * @param guess
+     * @param answer
+     * @return
+     */
+    public int game(int[] guess, int[] answer) {
+        int count = 0;
+        for (int i = 0; i < guess.length; i++) {
+            if (guess[i] == answer[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * 442. 数组中重复的数据
+     *
+     * @param nums
+     * @return
+     */
+    public List<Integer> findDuplicates(int[] nums) {
+
+        Arrays.sort(nums);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                list.add(nums[i]);
+                i++;
+            }
+        }
+
+        return list;
+    }
+
     public static void main(String[] args) {
 
         MainJanuary mainJanuary = new MainJanuary();
-        int[] nums = new int[]{9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
-        mainJanuary.addToArrayForm(nums, 1);
+        int[] nums = new int[]{1, 4, 2, 5, 3};
+        mainJanuary.sumOddLengthSubarrays(nums);
     }
 }

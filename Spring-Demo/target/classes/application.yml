@@ -1,13 +1,22 @@
 server:
   port: 8091
+  tomcat:
+    accept-count: 100
+    max-threads: 200
+    min-spare-threads: 10
+    max-connections: 10000
+    max-swallow-size: 10MB
+
+
 
 spring:
   application:
     name: DEMO
 
   rabbitmq:
-    username:
-    password:
+    username: user
+    password: password
     host: 139.196.186.217
     port: 5672
     virtual-host: /
+
