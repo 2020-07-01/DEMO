@@ -4,7 +4,9 @@ import basicDataType.Main;
 import org.omg.PortableInterceptor.INACTIVE;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 /**
  * @ClassName : MainFebruary
@@ -142,13 +144,87 @@ public class MainFebruary {
         return nums;
     }
 
+    /**
+     * 暴力解法
+     * 超出时间限制
+     *
+     * @param nums
+     * @param limit
+     * @return
+     */
+    public int longestSubarray1(int[] nums, int limit) {
+
+        int left = 0;
+        int right = 1;
+        int maxLength = 1;
+        while (left < right && right < nums.length) {
+
+            //获取子数组
+            int[] numsTemp = new int[right - left + 1];
+            System.arraycopy(nums, left, numsTemp, 0, right - left + 1);
+            Arrays.sort(numsTemp);
+
+            if (numsTemp[numsTemp.length - 1] - numsTemp[0] > limit) {
+                left++;
+                right++;
+            } else {
+                right++;
+                maxLength = Math.max(maxLength, numsTemp.length);
+            }
+
+        }
+        return maxLength;
+    }
+
+
+    /**
+     * @param nums
+     * @param limit
+     * @return
+     */
+    public int longestSubarray(int[] nums, int limit) {
+
+        int left = 0;
+        int right = 0;
+        int maxLength = 0;
+
+        //维护当前元素为止，左侧元素中的最大值与最小值
+        PriorityQueue<Integer> minQueue = new PriorityQueue<>(Comparator.naturalOrder());
+        PriorityQueue<Integer> maxQueue = new PriorityQueue<>(Comparator.reverseOrder());
+
+        while (right < nums.length && left < nums.length) {
+
+            minQueue.add(nums[right]);
+            maxQueue.add(nums[right]);
+
+            if (maxQueue.peek() - minQueue.peek() <= limit) {
+                maxLength = Math.max(maxLength, right - left + 1);
+                right++;
+                continue;
+            }
+            maxQueue.remove(nums[left]);
+            minQueue.remove(nums[left]);
+            left++;
+            right++;
+        }
+        return maxLength;
+    }
+
+
     public static void main(String[] args) {
 
 
         MainFebruary main = new MainFebruary();
 
-        int[] nums = new int[]{3, 2, 10, 4};
-        main.stoneGame(nums);
+        int[] nums = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+        int[] nums1 = new int[3];
+
+        System.arraycopy(nums, 1, nums1, 0, 1);
+        System.out.println(Arrays.toString(nums1));
+
+
+        System.out.println(main.longestSubarray(nums, 10));
 
     }
 
