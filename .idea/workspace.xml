@@ -23,31 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainFebruary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/target/JavaExercise-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/Mybatis-Demo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/classes/mapper/BlogMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/classes/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mybatis-Demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/zookeeperDemo/ZookeeperDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/src/main/java/com/zookeeperDemo/ZookeeperLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/Spring-Demo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/classes/META-INF/Spring-Demo.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-Demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainJanuary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring-Demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/pom.xml" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring-Demo/src/main/resources/application.yml" afterDir="false" />
@@ -313,6 +289,7 @@
       <workItem from="1613124636847" duration="273000" />
       <workItem from="1613739657628" duration="1198000" />
       <workItem from="1613823194854" duration="4060000" />
+      <workItem from="1613910636409" duration="538000" />
     </task>
     <task id="LOCAL-00027" summary="1207. 独一无二的出现次数">
       <created>1604500019759</created>
@@ -704,12 +681,12 @@
     <MESSAGE value="56. 合并区间&#10;33. 搜索旋转排序数组" />
     <MESSAGE value="55. 跳跃游戏&#10;79. 单词搜索" />
     <MESSAGE value="股票买卖时机" />
-    <MESSAGE value="编码练习" />
     <MESSAGE value="557. 反转字符串中的单词 III" />
     <MESSAGE value="回溯法" />
     <MESSAGE value="算法" />
     <MESSAGE value="分布式锁" />
-    <option name="LAST_COMMIT_MESSAGE" value="分布式锁" />
+    <MESSAGE value="编码练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="编码练习" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1607747373639">
@@ -847,10 +824,10 @@
     </state>
     <state x="543" y="-955" width="864" height="802" key="StructurePopup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607240431565" />
     <state x="362" y="82" width="576" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1609565382377" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1610889164298">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1613911156830">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1610889164298" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613911156830" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1606658420196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
