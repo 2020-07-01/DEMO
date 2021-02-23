@@ -23,7 +23,7 @@ spring:
       names: db0
       db0:
         url: jdbc:mysql://139.196.186.217:3306/db0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2b8
-        username:  
+        username:
         password:
     rules:
       sharding:
