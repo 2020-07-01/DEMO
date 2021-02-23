@@ -210,6 +210,46 @@ public class MainFebruary {
         return maxLength;
     }
 
+    /**
+     * 766. 托普利茨矩阵
+     * 时间复杂度O(M*N)
+     *
+     * @param matrix
+     * @return
+     */
+    public boolean isToeplitzMatrix(int[][] matrix) {
+
+        //判断最上边
+        for (int i = 0; i < matrix[0].length; i++) {
+
+            int index1 = 0;
+            int index2 = i;
+
+            while (index1 < matrix.length && index2 < matrix[0].length) {
+                if (matrix[0][i] != matrix[index1][index2]) {
+                    return false;
+                }
+                index1++;
+                index2++;
+            }
+        }
+
+        //判断最左边
+        for (int i = 0; i < matrix.length; i++) {
+
+            int index1 = i;
+            int index2 = 0;
+
+            while (index1 < matrix.length && index2 < matrix[0].length) {
+                if (matrix[i][0] != matrix[index1][index2]) {
+                    return false;
+                }
+                index1++;
+                index2++;
+            }
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
 

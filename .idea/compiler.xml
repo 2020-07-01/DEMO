@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaExercise" />
+        <module name="Sharding-Sphere-Demo" />
         <module name="Spring-Demo" />
         <module name="Mybatis-Demo" />
       </profile>
@@ -16,6 +17,7 @@
       <module name="DEMO" target="1.8" />
       <module name="JavaExercise" target="1.8" />
       <module name="Mybatis-Demo" target="1.8" />
+      <module name="Sharding-Sphere-Demo" target="1.8" />
       <module name="Spring-Demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>

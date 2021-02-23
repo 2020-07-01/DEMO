@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharding.demo.mapper.OrderMapper">
+
+    <resultMap id="base" type="com.sharding.demo.entity.Order">
+        <id property="orderId" jdbcType="BIGINT" column="order_id"/>
+        <result property="userId" jdbcType="BIGINT" column="user_id"/>
+        <result property="orderNo" jdbcType="VARCHAR" column="order_no"/>
+        <result property="createTime" jdbcType="TIMESTAMP" column="create_time"/>
+    </resultMap>
+
+    <insert id="insert">
+        insert into t_order (order_id,user_id,order_no,create_time)
+        value(
+        #{orderId,jdbcType=BIGINT},
+        #{userId,jdbcType=BIGINT},
+        #{orderNo,jdbcType=VARCHAR},
+        now())
+    </insert>
+
+</mapper>

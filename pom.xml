@@ -14,6 +14,7 @@
         <module>JavaExercise</module>
         <module>Spring-Demo</module>
         <module>Mybatis-Demo</module>
+        <module>Sharding-Sphere-Demo</module>
     </modules>
 
     <properties>
@@ -29,7 +30,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.3.1.RELEASE</version>
     </parent>
 
     <dependencies>
