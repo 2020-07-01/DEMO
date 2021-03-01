@@ -3,10 +3,8 @@ package leetcode.leetcode2021;
 import basicDataType.Main;
 import org.omg.PortableInterceptor.INACTIVE;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName : MainFebruary
@@ -251,20 +249,340 @@ public class MainFebruary {
         return true;
     }
 
+    /**
+     * 1052. 爱生气的书店老板
+     * 滑动窗口
+     * 问题转换
+     * 21489
+     *
+     * @param customers
+     * @param grumpy
+     * @param X
+     * @return
+     */
+    public int maxSatisfied(int[] customers, int[] grumpy, int X) {
+
+        int n = customers.length;
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            if (grumpy[i] == 0) {
+                ans += customers[i];
+                customers[i] = 0;
+            }
+        }
+        int max = 0, cur = 0;
+        for (int i = 0, j = 0; i < n; i++) {
+            cur += customers[i];
+            if (i - j + 1 > X) cur -= customers[j++];
+            max = Math.max(max, cur);
+        }
+        return ans + max;
+    }
+
+    /**
+     * 832. 翻转图像
+     *
+     * @param A
+     * @return
+     */
+    public int[][] flipAndInvertImage(int[][] A) {
+
+        int length = A[0].length;
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length / 2; j++) {
+                int temp = A[i][j];
+                A[i][j] = A[i][length - j - 1];
+                A[i][length - j - 1] = temp;
+            }
+        }
+
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length; j++) {
+                A[i][j] = A[i][j] == 0 ? 1 : 0;
+            }
+        }
+
+        return A;
+    }
+
+    /**
+     * 832. 翻转图像
+     *
+     * @param A
+     * @return
+     */
+    public int[][] flipAndInvertImage1(int[][] A) {
+
+        int length = A[0].length;
+        if (A[0].length % 2 == 0) {
+            for (int i = 0; i < A.length; i++) {
+                for (int j = 0; j < A[i].length / 2; j++) {
+                    int temp = A[i][j] == 0 ? 1 : 0;
+                    A[i][j] = A[i][length - j - 1] == 0 ? 1 : 0;
+                    A[i][length - j - 1] = temp;
+                }
+            }
+        } else {
+            for (int i = 0; i < A.length; i++) {
+                for (int j = 0; j <= A[i].length / 2; j++) {
+                    int temp = A[i][j] == 0 ? 1 : 0;
+                    A[i][j] = A[i][length - j - 1] == 0 ? 1 : 0;
+                    A[i][length - j - 1] = temp;
+                }
+            }
+        }
+        return A;
+    }
+
+
+    /**
+     * @param s
+     * @return
+     */
+    public String makeGood(String s) {
+        StringBuffer ret = new StringBuffer();
+        int retIndex = -1;
+        int length = s.length();
+        for (int i = 0; i < length; i++) {
+            char ch = s.charAt(i);
+            if (ret.length() > 0 && Character.toLowerCase(ret.charAt(retIndex)) == Character.toLowerCase(ch) && ret.charAt(retIndex) != ch) {
+                ret.deleteCharAt(retIndex);
+                retIndex--;
+            } else {
+                ret.append(ch);
+                retIndex++;
+            }
+        }
+        return ret.toString();
+
+    }
+
+
+    /**
+     * 395. 至少有 K 个重复字符的最长子串
+     * 滑动窗口
+     * 错误解法
+     *
+     * @param s
+     * @param k
+     * @return
+     */
+    public int longestSubstring(String s, int k) {
+
+        int maxCount = 0;
+        int left = 0;
+        int right = 0;
+        HashMap<Character, Integer> hashMap = new HashMap<>(k);
+        String string;
+        int index;
+        while (right < s.length()) {
+            string = s.substring(left, right);
+            index = 0;
+            hashMap.clear();
+            while (index < string.length()) {
+                hashMap.put(string.charAt(index), hashMap.getOrDefault(string.charAt(index), 0) + 1);
+                index++;
+            }
+            boolean p = true;
+            for (Integer integer : hashMap.values()) {
+                if (integer < k) {
+                    p = false;
+                }
+            }
+            if (p) {
+                maxCount = Math.max(maxCount, string.length());
+            } else {
+                if (string.length() >= k) {
+                    left++;
+                }
+            }
+            right++;
+        }
+        return maxCount;
+    }
+
+    /**
+     * 395. 至少有 K 个重复字符的最长子串
+     * 暴力解法
+     * 时间复杂度超时
+     *
+     * @param s
+     * @param k
+     * @return
+     */
+    public int longestSubstring1(String s, int k) {
+        int maxCount = 0;
+        HashMap<Character, Integer> hashMap = new HashMap<>(k);
+        String string;
+        int index;
+
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                string = s.substring(j, i);
+                index = 0;
+                hashMap.clear();
+                while (index < string.length()) {
+                    hashMap.put(string.charAt(index), hashMap.getOrDefault(string.charAt(index), 0) + 1);
+                    index++;
+                }
+                boolean p = true;
+                for (Integer integer : hashMap.values()) {
+                    if (integer < k) {
+                        p = false;
+                    }
+                }
+                if (p) {
+                    maxCount = Math.max(maxCount, string.length());
+                }
+            }
+        }
+        return maxCount;
+    }
+
+    /**
+     * 594. 最长和谐子序列
+     * 滑动窗口
+     *
+     * @param nums
+     * @return
+     */
+    public int findLHS(int[] nums) {
+
+        Arrays.sort(nums);
+        int maxCount = 0;
+        int left = 0;
+        int right = 1;
+        while (right < nums.length && left <= right) {
+            if (nums[right] - nums[left] > 1) {
+                left++;
+            }
+            if (nums[right] - nums[left] == 1) {
+                maxCount = Math.max(maxCount, right - left + 1);
+            }
+            right++;
+
+        }
+        return maxCount;
+    }
+
+    /**
+     * HashMap法解法
+     *
+     * @param nums
+     * @return
+     */
+    public int findLHS1(int[] nums) {
+
+        int maxCount = 0;
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            hashMap.put(nums[i], hashMap.getOrDefault(nums[i], 0) + 1);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.getOrDefault(nums[i] + 1, 0) == 0) {
+                continue;
+            }
+            maxCount = Math.max(maxCount, hashMap.getOrDefault(nums[i], 0) + hashMap.getOrDefault(nums[i] + 1, 0));
+        }
+
+        return maxCount;
+    }
+
+    /**
+     * 896. 单调数列
+     * 一次遍历
+     *
+     * @param A
+     * @return
+     */
+    public boolean isMonotonic(int[] A) {
+
+        boolean p1 = false;
+        boolean p2 = false;
+        for (int i = 1; i < A.length; i++) {
+            if (A[i] > A[i - 1]) {
+                p1 = true;
+            }
+            if (A[i] < A[i - 1]) {
+                p2 = true;
+            }
+        }
+
+        return p1 && p2 == true ? false : true;
+    }
+
+    /**
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+
+        List<List<Integer>> lists = new LinkedList<>();
+        List<Integer> integerList = new LinkedList<>();
+
+        dfs(lists, integerList, nums, target);
+
+        return lists;
+    }
+
+    private void dfs(List<List<Integer>> lists, List<Integer> integerList, int[] nums, int targets) {
+
+        if (integerList.size() == 4) {
+            //判断值
+            int sum = 0;
+            for (int i = 0; i < integerList.size(); i++) {
+                sum = sum + integerList.get(i);
+            }
+            if (sum != targets) {
+                return;
+            }
+
+            //判断重复
+            List<Integer> list = new LinkedList<>();
+            list.addAll(integerList);
+            Collections.sort(list);
+            int index = 1;
+            for (int i = 0; i < lists.size(); i++) {
+                List<Integer> tempInteger = lists.get(i);
+                Collections.sort(tempInteger);
+                for (int j = 0; j < 4; j++) {
+                    if (!tempInteger.get(j).equals(list.get(j))) {
+                        index++;
+                        break;
+                    }
+                }
+            }
+
+            if(index == lists.size()){
+                lists.add(list);
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            //不存在则添加
+            if (integerList.contains(nums[i])) {
+                continue;
+            }
+            integerList.add(nums[i]);
+            dfs(lists, integerList, nums, targets);
+            integerList.remove(integerList.size()-1);
+        }
+
+    }
+
+
     public static void main(String[] args) {
 
 
         MainFebruary main = new MainFebruary();
 
-        int[] nums = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        int[] nums = {1,0,-1,0,-2,2};
+        main.fourSum(nums,0);
 
-        int[] nums1 = new int[3];
-
-        System.arraycopy(nums, 1, nums1, 0, 1);
-        System.out.println(Arrays.toString(nums1));
-
-
-        System.out.println(main.longestSubarray(nums, 10));
 
     }
 

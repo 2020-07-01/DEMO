@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shardingSphere.mapper.UserMapper">
+<mapper namespace="com.UserMapper">
 
-    <resultMap id="base" type="com.shardingSphere.entity.User">
+    <resultMap id="base" type="com.User">
         <id property="id" jdbcType="BIGINT" column="id"/>
         <result property="city" jdbcType="VARCHAR" column="city"/>
         <result property="name" jdbcType="VARCHAR" column="name"/>
