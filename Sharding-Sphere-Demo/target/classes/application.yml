@@ -24,13 +24,13 @@ spring:
       #配置数据源，有多少个数据库，就配置多少个数据源
       names: db0,db1
       db0:
-        url: jdbc:mysql://139.196.186.217:3306/db0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2b8
-        username: root
-        password: 111111
+        url: jdbc:mysql:// /db0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2b8
+        username:  
+        password:  
       db1:
-        url: jdbc:mysql://139.196.186.217:3306/db1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2b8
-        username: root
-        password: 111111
+        url: jdbc:mysql:// /db1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2b8
+        username:    
+        password:  
     # 配置分片策略（分片键+分片算法）
     rules:
       sharding:
