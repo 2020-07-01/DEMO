@@ -1,5 +1,9 @@
 package leetcode.leetcode2021;
 
+import dataStructure.list.Link;
+import javafx.beans.binding.StringBinding;
+import netscape.security.UserTarget;
+
 import javax.swing.text.SimpleAttributeSet;
 import java.util.*;
 import java.util.function.IntUnaryOperator;
@@ -588,12 +592,190 @@ public class MainMarch {
     }
 
 
+    /**
+     * 394. 字符串解码
+     * 栈
+     *
+     * @param s
+     * @return
+     */
+    public String decodeString(String s) {
+
+
+        Deque<String> stack = new ArrayDeque<>();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ']') {
+                boolean p = true;
+                String temp = new String();
+                while (p) {
+                    if (!stack.peek().equals("[")) {
+                        temp = stack.pop() + temp;
+                    } else {
+                        p = false;
+                        stack.pop();
+                    }
+                }
+                //获取数字
+                String stringI = new String();
+                while (Character.isDigit(stack.peek().charAt(0))) {
+                    stringI = stack.pop() + stringI;
+                }
+                Integer integer = Integer.valueOf(stringI);
+                while (integer > 0) {
+                    stack.push(temp);
+                    integer--;
+                }
+            } else {
+                stack.push(Character.toString(s.charAt(i)));
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            stringBuilder.append(stack.removeLast());
+        }
+
+        return stringBuilder.toString();
+    }
+
+    /**
+     * 1047. 删除字符串中的所有相邻重复项
+     *
+     * @param S
+     * @return
+     */
+    public String removeDuplicates(String S) {
+
+        if (S == null || S.length() < 2) {
+            return S;
+        }
+        Deque<String> stack = new ArrayDeque<>();
+        stack.push(Character.toString(S.charAt(0)));
+        int index = 1;
+
+        while (index < S.length()) {
+            if (!stack.isEmpty() && stack.peek().equals(String.valueOf(S.charAt(index)))) {
+                stack.pop();
+            } else {
+                index++;
+            }
+        }
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        while (!stack.isEmpty()) {
+            stringBuilder.append(stack.removeLast());
+        }
+        return stringBuilder.toString();
+    }
+
+
+    /**
+     * 1047. 删除字符串中的所有相邻重复项
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param S
+     * @return
+     */
+    public String removeDuplicates1(String S) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        int top = -1;
+        for (int i = 0; i < S.length(); i++) {
+            char ch = S.charAt(i);
+            if (top >= 0 && ch == stringBuilder.charAt(top)) {
+                stringBuilder.deleteCharAt(top);
+                top--;
+            } else {
+                stringBuilder.append(ch);
+                top++;
+            }
+        }
+        return stringBuilder.toString();
+    }
+
+    /**
+     * 剑指 Offer 48. 最长不含重复字符的子字符串
+     * 滑动窗口
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring(String s) {
+
+        if (s == null) {
+            return 0;
+        }
+        if (s.length() <= 1) {
+            return s.length();
+        }
+
+        int max = 0;
+        int left = 0;
+        int right = 1;
+        int length = s.length();
+
+        String string = new String();
+        string = string + s.charAt(0);
+        while (left < right && right < length) {
+            int index = string.indexOf(s.charAt(right));
+            //如果包含
+            if (index != -1) {
+                max = Math.max(max, string.length());
+                string = string.substring(index + 1);
+                string = string + s.charAt(right);
+                left = right;
+            } else {
+                string = string + s.charAt(right);
+            }
+            right++;
+        }
+
+        return max;
+    }
+
+    /**
+     * 剑指 Offer 48. 最长不含重复字符的子字符串
+     * 哈希优化
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring1(String s) {
+
+        if (s == null) {
+            return 0;
+        }
+        if (s.length() <= 1) {
+            return s.length();
+        }
+
+        int left = 0;
+        int right = 0;
+        int length = s.length();
+
+        int max = 0;
+        //标识从字符key开始，后一个下标位置处不重复
+        HashMap<String, Integer> map = new HashMap<>();
+
+        while (right < length) {
+
+            char c = s.charAt(right);
+            if (map.get(String.valueOf(c)) != null) {
+                left = Math.max(map.get(c), left);
+            }
+            max = Math.max(max, right - left + 1);
+            map.put(String.valueOf(c), right + 1);
+            right++;
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
 
-        for (int i = 0; i < 10; ++i) {
-            System.out.println(i);
-            return;
-        }
+        MainMarch main = new MainMarch();
+        System.out.println(main.lengthOfLongestSubstring("abcabcbb"));
     }
 
 }
