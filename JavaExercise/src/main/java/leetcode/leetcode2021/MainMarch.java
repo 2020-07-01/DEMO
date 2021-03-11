@@ -772,10 +772,232 @@ public class MainMarch {
         return max;
     }
 
+
+    /**
+     * 227. 基本计算器 II
+     * 思路正确
+     * 超出时间限制
+     *
+     * @param s
+     * @return
+     */
+    public int calculate(String s) {
+        //+', '-', '*', '/
+
+        //再算 + -
+
+        List<String> queue = new LinkedList();
+        s = s.replaceAll(" ", "");
+        int index = 0;
+        String string = "";
+        while (index < s.length()) {
+
+            if (Character.isDigit(s.charAt(index))) {
+                string = string + s.charAt(index);
+            } else {
+                queue.add(string);
+                queue.add(String.valueOf(s.charAt(index)));
+                string = "";
+            }
+            index++;
+        }
+        queue.add(string);
+
+        index = 1;
+        while (index < queue.size()) {
+            if (queue.get(index).equals("*")) {
+
+                Integer result = Integer.valueOf(queue.get(index - 1)) * Integer.valueOf(queue.get(index + 1));
+                queue.remove(index);
+                queue.remove(index);
+                queue.set(index - 1, String.valueOf(result));
+            } else if (queue.get(index).equals("/")) {
+                Integer result = Integer.valueOf(queue.get(index - 1)) / Integer.valueOf(queue.get(index + 1));
+                queue.remove(index);
+                queue.remove(index);
+                queue.set(index - 1, String.valueOf(result));
+            } else {
+                index += 2;
+            }
+        }
+
+        index = 1;
+        while (index < queue.size()) {
+            if (queue.get(index).equals("+")) {
+
+                Integer result = Integer.valueOf(queue.get(index - 1)) + Integer.valueOf(queue.get(index + 1));
+                queue.remove(index);
+                queue.remove(index);
+                queue.set(index - 1, String.valueOf(result));
+            } else if (queue.get(index).equals("-")) {
+                Integer result = Integer.valueOf(queue.get(index - 1)) - Integer.valueOf(queue.get(index + 1));
+                queue.remove(index);
+                queue.remove(index);
+                queue.set(index - 1, String.valueOf(result));
+            } else {
+                index += 2;
+            }
+        }
+        return Integer.valueOf(queue.get(0));
+    }
+
+    /**
+     * 思路正确
+     * int 大小溢出
+     *
+     * @param s
+     * @return
+     */
+    public int calculate1(String s) {
+        //+', '-', '*', '/
+
+        //再算 + -
+
+        List<String> queue = new LinkedList();
+        s = s.replaceAll(" ", "");
+        int index = 0;
+        String string = "";
+        while (index < s.length()) {
+
+            if (Character.isDigit(s.charAt(index))) {
+                string = string + s.charAt(index);
+            } else {
+                queue.add(string);
+                queue.add(String.valueOf(s.charAt(index)));
+                string = "";
+            }
+            index++;
+        }
+        queue.add(string);
+
+        Stack<Integer> stack = new Stack<>();
+        int length = queue.size();
+        index = 0;
+        while (index < length) {
+            string = queue.get(index);
+            if (string.equals("*")) {
+                index++;
+                stack.push(stack.pop() * Integer.valueOf(queue.get(index)));
+            } else if (string.equals("/")) {
+                index++;
+                stack.push(stack.pop() / Integer.valueOf(queue.get(index)));
+            } else if (string.equals("-")) {
+                index++;
+                stack.push(Math.abs(Integer.valueOf(queue.get(index))));
+            } else if (string.equals("+")) {
+                index++;
+                stack.push(Integer.valueOf(queue.get(index)));
+            } else {
+                stack.push(Integer.valueOf(queue.get(index)));
+            }
+            index++;
+        }
+
+        long result = 0L;
+        while (!stack.empty()) {
+            result = result + stack.pop();
+        }
+        return (int) result;
+    }
+
+
+    /**
+     * 官方答案
+     *
+     * @param s
+     * @return
+     */
+    public int calculate3(String s) {
+        Deque<Integer> stack = new LinkedList<Integer>();
+        char preSign = '+';
+        int num = 0;
+        int n = s.length();
+        for (int i = 0; i < n; ++i) {
+            if (Character.isDigit(s.charAt(i))) {
+                num = num * 10 + s.charAt(i) - '0';
+            }
+            if (!Character.isDigit(s.charAt(i)) && s.charAt(i) != ' ' || i == n - 1) {
+                switch (preSign) {
+                    case '+':
+                        stack.push(num);
+                        break;
+                    case '-':
+                        stack.push(-num);
+                        break;
+                    case '*':
+                        stack.push(stack.pop() * num);
+                        break;
+                    default:
+                        stack.push(stack.pop() / num);
+                }
+                preSign = s.charAt(i);
+                num = 0;
+            }
+        }
+        int ans = 0;
+        while (!stack.isEmpty()) {
+            ans += stack.pop();
+        }
+        return ans;
+    }
+
+    /**
+     * 加减法 + 括号
+     *
+     * @param s
+     * @return
+     */
+    public int calculate4(String s) {
+
+        /**
+         * 思路一:先计算括号里面的，再计算剩余的
+         * 思路二:官方解法，双栈
+         */
+
+        Stack<Integer> ops = new Stack<>();
+        //第一位为加号
+        ops.push(1);
+        int sign = 1; //加减法标志
+        int res = 0;
+        int length = s.length();
+        int i = 0;
+        while (i < length) {
+            char ch = s.charAt(i);
+            if (ch == ' ') {
+                i++;
+            } else if (ch == '+') {
+                sign = ops.peek();
+                i++;
+            } else if (ch == '-') {
+                sign = -ops.peek();
+                i++;
+            } else if (ch == '(') {
+                //记录上一个值
+                //以括号前的符号为准
+                ops.push(sign);
+                i++;
+            } else if (ch == ')') {
+                //删除括号前符号
+                ops.pop();
+                i++;
+            } else {
+                long num = 0;
+                while (i < length && Character.isDigit(s.charAt(i))) {
+                    //增长10倍
+                    num = num * 10 + s.charAt(i) - '0';
+                    i++;
+                }
+                //加上当前数
+                res = res + (int) (sign * num);
+            }
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
-        System.out.println(main.lengthOfLongestSubstring("abcabcbb"));
+
     }
 
 }
