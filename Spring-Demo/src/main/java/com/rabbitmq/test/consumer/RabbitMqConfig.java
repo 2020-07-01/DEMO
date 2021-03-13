@@ -1,6 +1,6 @@
-package com.rabbitmq.consumer;
+package com.rabbitmq.test.consumer;
 
-import com.rabbitmq.producter.ListenerMessage;
+import com.rabbitmq.test.producter.ListenerMessage;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;

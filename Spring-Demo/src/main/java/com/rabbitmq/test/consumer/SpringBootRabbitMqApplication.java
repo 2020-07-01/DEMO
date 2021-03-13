@@ -1,4 +1,4 @@
-package com.rabbitmq.consumer;
+package com.rabbitmq.test.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
