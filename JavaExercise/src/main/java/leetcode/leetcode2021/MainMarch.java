@@ -3,6 +3,7 @@ package leetcode.leetcode2021;
 import dataStructure.list.Link;
 import javafx.beans.binding.StringBinding;
 import netscape.security.UserTarget;
+import org.checkerframework.framework.qual.LiteralKind;
 
 import javax.swing.text.SimpleAttributeSet;
 import java.util.*;
@@ -995,11 +996,187 @@ public class MainMarch {
     }
 
 
+    /**
+     * 理解错题意
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int[] maxSlidingWindow(int[] nums, int k) {
+
+        int index = 0;
+        int sum = 0;
+
+        LinkedList<Integer> queue = new LinkedList<>();
+        while (index < k) {
+            sum = sum + nums[index];
+            queue.addLast(nums[index]);
+            index++;
+        }
+        LinkedList<Integer> result = new LinkedList<>();
+        result.addAll(queue);
+        while (index < nums.length) {
+
+            if (nums[index] < queue.peek()) {
+                queue.removeFirst();
+                queue.addLast(nums[index]);
+            } else {
+                sum = sum - queue.removeFirst();
+                queue.addLast(nums[index]);
+                result.clear();
+                result.addAll(queue);
+            }
+            index++;
+        }
+
+        int[] arrays = new int[k];
+        index = 0;
+        while (!queue.isEmpty()) {
+            arrays[index++] = queue.removeFirst();
+        }
+        return arrays;
+    }
+
+    /**
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int[] maxSlidingWindow1(int[] nums, int k) {
+
+        if (nums == null || nums.length == 0) {
+            int[] arrays = new int[0];
+            return arrays;
+        }
+        int[] result = new int[nums.length - k + 1];
+
+        //堆
+        PriorityQueue<Integer> queue = new PriorityQueue(new Comparator<Integer>() {
+
+
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1 - o2;
+            }
+        });
+        int index = 0;
+        while (index < k) {
+            queue.add(nums[index]);
+            index++;
+        }
+        int i = 0;
+        while (index < k) {
+            //计算上个队列的最大值
+            result[i] = queue.peek();
+            queue.remove(nums[i]);
+            queue.add(nums[index]);
+            i++;
+        }
+        result[i] = queue.poll();
+
+        return result;
+    }
+
+    /**
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int[] maxSlidingWindow2(int[] nums, int k) {
+
+        //队首元素为当前的最大值
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        int index = 0;
+        while (index < k) {
+            //不为空并且当前元素大于队尾元素，则出队
+            while (!queue.isEmpty() && nums[index] >= nums[queue.peekLast()]) {
+                queue.removeLast();
+            }
+            queue.addLast(index++);
+        }
+
+        int[] result = new int[nums.length - k + 1];
+        index = k;
+        int i = 0;
+        while (index < nums.length) {
+
+            //不为空并且当前元素大于队尾元素，则出队
+            while (!queue.isEmpty() && nums[index] >= nums[queue.peekLast()]) {
+                queue.removeLast();
+            }
+
+            queue.addLast(index);
+            //判断队首元素是否在窗中
+
+            while (queue.peekFirst() < (index - k)) {
+                queue.pollFirst();
+            }
+            index++;
+
+            result[i++] = nums[queue.peekFirst()];
+        }
+        return result;
+    }
+
+    /**
+     * 螺旋矩阵2
+     *
+     * @param n
+     * @return
+     */
+    public int[][] generateMatrix(int n) {
+
+        int p = 1;
+        int[][] nums = new int[n][n];
+
+        int i = 0;
+        int j = 0;
+
+        while (p <= n * n) {
+            //右
+            while (j < n && nums[i][j] == 0) {
+                nums[i][j] = p++;
+                j++;
+            }
+            i++;
+            j--;
+            //下
+            while (i < n && nums[i][j] == 0) {
+                //下
+                nums[i][j] = p++;
+                i++;
+            }
+
+            i--;
+            j--;
+            //左
+            while (j >= 0 && nums[i][j] == 0) {
+
+                nums[i][j] = p++;
+                j--;
+
+            }
+            i--;
+            j++;
+            //上
+            while (i >= 0 && nums[i][j] == 0) {
+                nums[i][j] = p++;
+                i--;
+            }
+            j++;
+            i++;
+        }
+        return nums;
+    }
+
+
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
-
-        System.out.println(1 << 20);
+        int[] arrays = new int[]{1, 25, 3, 12, 3121, 3, 231, 2};
+        System.out.println(main.generateMatrix(3));
 
     }
 

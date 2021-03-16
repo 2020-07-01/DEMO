@@ -1,9 +1,5 @@
 package leetcode.leetcode2021;
 
-import basicDataType.Main;
-import com.sun.org.apache.xerces.internal.xs.LSInputList;
-import dataStructure.list.Link;
-
 import java.util.*;
 
 /**
