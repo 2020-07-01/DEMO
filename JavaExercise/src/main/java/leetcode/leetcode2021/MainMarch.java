@@ -1172,15 +1172,158 @@ public class MainMarch {
     }
 
 
+    /**
+     * 反转链表
+     *
+     * @param head
+     * @param left
+     * @param right
+     * @return
+     */
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+
+        ListNode res = new ListNode(0);
+        ListNode node = res.next;
+
+        int num = 1;
+        while (num < left) {
+            ListNode temp = new ListNode(head.val);
+            node.next = temp;
+            node = node.next;
+            num++;
+            head = head.next;
+        }
+
+        LinkedList<Integer> list = new LinkedList<>();
+        while (left < right) {
+            list.add(head.val);
+            left++;
+            head = head.next;
+        }
+
+        while (!list.isEmpty()) {
+            ListNode temp = new ListNode(list.removeLast());
+            node.next = temp;
+            node = temp;
+        }
+
+        while (head != null) {
+            ListNode temp = new ListNode(head.val);
+            node.next = temp;
+            node = temp;
+        }
+
+        node.next = null;
+
+        return head.next;
+    }
+
+
+    /**
+     * 面试题 17.09. 第 k 个数
+     * 如果有素因子，则素因子为3，5，7
+     *
+     * @param k
+     * @return
+     */
+    public int getKthMagicNumber(int k) {
+
+        int p3 = 0, p5 = 0, p7 = 0;
+        int[] dp = new int[k];
+        dp[0] = 1;
+        for (int i = 1; i < k; i++) {
+            dp[i] = Math.min(dp[p3] * 3, Math.min(dp[p5] * 5, dp[p7] * 7));
+            if (dp[i] == dp[p3] * 3) {
+                p3++;
+            }
+            if (dp[i] == dp[p5] * 5) {
+                p5++;
+            }
+            if (dp[i] == dp[p7] * 7) {
+                p7++;
+            }
+        }
+        return dp[k - 1];
+    }
+
+
+    /**
+     * 150. 逆波兰表达式求值
+     *
+     * @param tokens
+     * @return
+     */
+    public int evalRPN(String[] tokens) {
+
+        Set<String> set = new HashSet<>();
+        set.add("+");
+        set.add("-");
+        set.add("*");
+        set.add("/");
+        Stack<String> stack = new Stack<>();
+        Integer integer1;
+        Integer integer2;
+        for (String string : tokens) {
+
+            if (string.equals("+")) {
+                integer1 = Integer.valueOf(stack.pop());
+                integer2 = Integer.valueOf(stack.pop());
+                stack.push(String.valueOf(integer1 + integer2));
+            } else if (string.equals("-")) {
+                integer1 = Integer.valueOf(stack.pop());
+                integer2 = Integer.valueOf(stack.pop());
+                stack.push(String.valueOf(integer2 - integer1));
+            } else if (string.equals("*")) {
+                integer1 = Integer.valueOf(stack.pop());
+                integer2 = Integer.valueOf(stack.pop());
+                stack.push(String.valueOf(integer1 * integer2));
+            } else if (string.equals("/")) {
+                integer1 = Integer.valueOf(stack.pop());
+                integer2 = Integer.valueOf(stack.pop());
+                stack.push(String.valueOf(integer2 / integer1));
+            } else {
+                stack.push(string);
+            }
+        }
+        return Integer.valueOf(stack.pop());
+    }
+
+
+
+
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
         int[] arrays = new int[]{1, 25, 3, 12, 3121, 3, 231, 2};
-        System.out.println(main.generateMatrix(3));
+        String[] strings = new String[]{"4", "13", "5", "/", "+"};
+        System.out.println(main.evalRPN(strings));
 
     }
 
 }
+
+
+/**
+ * 最近的请求次数
+ */
+class RecentCounter {
+
+    Deque<Integer> queue;
+
+    public RecentCounter() {
+        queue = new LinkedList<>();
+    }
+
+    public int ping(int t) {
+
+        queue.addLast(t);
+        while (queue.peek() < t - 3000) {
+            queue.poll();
+        }
+        return queue.size();
+    }
+}
+
 
 /**
  * 232. 用栈实现队列

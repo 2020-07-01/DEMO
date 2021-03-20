@@ -10,12 +10,11 @@ import java.util.concurrent.*;
 public class Main {
 
     public static void main(String[] args) {
-         
 
 
+        List list = Collections.synchronizedList(new LinkedList<>());
 
     }
-
 
 
     public void test() {

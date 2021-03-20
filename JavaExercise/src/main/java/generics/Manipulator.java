@@ -1,6 +1,6 @@
 package generics;
 
-import basicDataType.Main;
+
 
 /**
  * @author :qiang

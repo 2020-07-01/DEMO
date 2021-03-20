@@ -1,4 +1,4 @@
-package b_plus_tree;
+package dataStructure.b_plus_tree;
 
 /**
  * @program: KeyAndValue
