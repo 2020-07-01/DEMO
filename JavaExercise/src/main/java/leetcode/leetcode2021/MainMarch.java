@@ -1289,17 +1289,247 @@ public class MainMarch {
     }
 
 
+    /**
+     * 73. 矩阵置零
+     * 标记数组法
+     *
+     * @param matrix
+     */
+    public void setZeroes(int[][] matrix) {
 
+        /**
+         * 方式1：暴力解法空间复杂度O(m*n)
+         * 方式2：标记数组法 时间复杂度O(m*n) 空间复杂度O(m+n)
+         */
+
+        boolean[] cols = new boolean[matrix[0].length];
+        boolean[] rows = new boolean[matrix.length];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 0) {
+                    cols[j] = rows[i] = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (rows[i] || cols[j]) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+
+
+    /**
+     * 73. 矩阵置零
+     * 两个标记变量
+     *
+     * @param matrix
+     */
+    public void setZeroes1(int[][] matrix) {
+
+        boolean col0 = false;
+        boolean row0 = false;
+
+        for (int i = 0; i < matrix[0].length; i++) {
+            if (matrix[0][i] == 0) {
+                row0 = true;
+            }
+        }
+
+        for (int i = 0; i < matrix.length; i++) {
+            if (matrix[i][0] == 0) {
+                col0 = true;
+            }
+        }
+
+        for (int i = 1; i < matrix.length; i++) {
+            for (int j = 1; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0;
+                }
+            }
+        }
+
+        for (int j = 1; j < matrix[0].length; j++) {
+            if (matrix[0][j] == 0) {
+                for (int i = 1; i < matrix.length; i++) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+
+        for (int i = 1; i < matrix.length; i++) {
+            if (matrix[i][0] == 0) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+
+        if (col0) {
+            for (int i = 0; i < matrix.length; i++) {
+                matrix[i][0] = 0;
+            }
+        }
+
+        if (row0) {
+            for (int i = 0; i < matrix[0].length; i++) {
+                matrix[0][i] = 0;
+            }
+        }
+    }
+
+    /**
+     * 191. 位1的个数
+     *
+     * @param n n
+     * @return int
+     */
+    public int hammingWeight(int n) {
+
+        String string = Integer.toBinaryString(n);
+        int count = 0;
+        int index = 0;
+        while (index < string.length()) {
+            if (string.charAt(index) == '1') {
+                count++;
+            }
+            index++;
+        }
+        return count;
+    }
+
+
+    /**
+     * 1673. 找出最具竞争力的子序列
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int[] mostCompetitive(int[] nums, int k) {
+
+        Stack<Integer> stack = new Stack<>();
+        int n = nums.length;
+        if (n == k) return nums;
+        stack.push(nums[0]);
+        for (int i = 1; i < n; i++) {
+            if (n - i > k - stack.size()) {//还有选择的余地
+                if (stack.peek() > nums[i]) {
+                    while (!stack.isEmpty() && stack.peek() > nums[i] && n - i > k - stack.size()) {
+                        stack.pop();
+                    }
+                    stack.push(nums[i]);
+                } else {
+                    if (k != stack.size()) stack.push(nums[i]);
+                }
+            } else {//没有选择的余地了，必须把剩下所有元素都加上
+                while (i < n) {
+                    stack.push(nums[i]);
+                    i++;
+                }
+                break;
+            }
+        }
+        int[] res = new int[k];
+        for (int i = k - 1; i >= 0; i--) {
+            res[i] = stack.pop();
+        }
+        return res;
+    }
+
+    /**
+     * 42. 接雨水
+     * <p>
+     * 晚上脑子转不动
+     *
+     * @param height
+     * @return
+     */
+    public int trap(int[] height) {
+
+        int res = 0;
+        for (int i = 1; i < height.length - 1; i++) {
+            int left = height[i];
+            int right = height[i];
+            for (int j = i - 1; j >= 0; j--) {
+                if (height[j] > left) {
+                    left = height[j];
+                }
+            }
+            for (int k = i + 1; k < height.length; k++) {
+                if (height[k] > right) {
+                    right = height[k];
+                }
+            }
+            res = res + (Math.min(left, right) - height[i]);
+        }
+        return res;
+    }
 
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
-        int[] arrays = new int[]{1, 25, 3, 12, 3121, 3, 231, 2};
+        int[][] arrays = new int[][]{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
         String[] strings = new String[]{"4", "13", "5", "/", "+"};
-        System.out.println(main.evalRPN(strings));
+        int[] nums = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(main.trap(nums));
+    }
+}
 
+/**
+ * 341. 扁平化嵌套列表迭代器
+ * 先解析 再处理
+ * 1.队列实现
+ * 2.数组实现
+ */
+class NestedIterator implements Iterator<Integer> {
+
+    List<Integer> list = new LinkedList<>();
+    int index = 0;
+
+    public NestedIterator(List<NestedInteger> nestedList) {
+        add(nestedList);
     }
 
+    private void add(List<NestedInteger> nestedList) {
+        for (NestedInteger nestedInteger : nestedList) {
+            if (nestedInteger.isInteger()) {
+                list.add(nestedInteger.getInteger());
+            } else {
+                add(nestedInteger.getList());
+            }
+        }
+    }
+
+    @Override
+    public Integer next() {
+        return list.get(index++);
+    }
+
+    @Override
+    public boolean hasNext() {
+        return !list.isEmpty();
+    }
+}
+
+interface NestedInteger {
+
+    // @return true if this NestedInteger holds a single integer, rather than a nested list.
+    public boolean isInteger();
+
+    // @return the single integer that this NestedInteger holds, if it holds a single integer
+    // Return null if this NestedInteger holds a nested list
+    public Integer getInteger();
+
+    // @return the nested list that this NestedInteger holds, if it holds a nested list
+    // Return null if this NestedInteger holds a single integer
+    public List<NestedInteger> getList();
 }
 
 

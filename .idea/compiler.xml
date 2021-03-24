@@ -7,24 +7,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaExercise" />
         <module name="Spring-Demo" />
-        <module name="Mybatis-Demo" />
+        <module name="JavaExercise" />
         <module name="Message-Queue-Demo" />
         <module name="Sharding-Sphere-Demo" />
+        <module name="Mybatis-Demo" />
+        <module name="Zuul-Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="DEMO" target="1.8" />
+      <module name="Hystrix-Demo" target="1.8" />
       <module name="JavaExercise" target="1.8" />
       <module name="Message-Queue-Demo" target="1.8" />
       <module name="Mybatis-Demo" target="1.8" />
       <module name="Sharding-Sphere-Demo" target="1.8" />
       <module name="Spring-Demo" target="1.8" />
+      <module name="Zuul-Demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Hystrix-Demo" options="-parameters" />
       <module name="Message-Queue-Demo" options="-parameters" />
     </option>
   </component>
