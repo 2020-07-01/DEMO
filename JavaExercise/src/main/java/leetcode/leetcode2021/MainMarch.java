@@ -1503,10 +1503,21 @@ public class MainMarch {
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
-        int[][] arrays = new int[][]{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
-        String[] strings = new String[]{"4", "13", "5", "/", "+"};
-        int[] nums = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        System.out.println(main.countAndSay(4));
+
+        MyCircularDeque circularDeque = new MyCircularDeque(77);
+
+        circularDeque.insertFront(89);
+        circularDeque.deleteLast();
+        circularDeque.insertFront(19);
+        circularDeque.insertFront(23);
+        circularDeque.insertFront(23);
+        circularDeque.insertFront(82);
+        circularDeque.insertFront(45);
+        circularDeque.deleteLast();
+        circularDeque.insertFront(74);
+        circularDeque.deleteFront();
+        System.out.println(Arrays.toString(circularDeque.array));
+
     }
 }
 
@@ -1543,7 +1554,7 @@ class Solution {
     public int[] shuffle() {
         for (int i = 0; i < array.length; i++) {
             //i 到 array.length 之间的随机数
-            int index = random.nextInt(array.length-i) + i;
+            int index = random.nextInt(array.length - i) + i;
             int temp = array[i];
             array[i] = array[index];
             array[index] = temp;
@@ -1563,15 +1574,7 @@ class Solution {
         array = nums;
     }
 
-    *//**
- * Resets the array to its original configuration and return it.
- * <p>
- * Returns a random shuffling of the array.
- * <p>
- * Returns a random shuffling of the array.
- * <p>
- * Returns a random shuffling of the array.
- *//*
+    *//*
     public int[] reset() {
         array = orgin.clone();
         return orgin;
@@ -1647,6 +1650,151 @@ interface NestedInteger {
     // @return the nested list that this NestedInteger holds, if it holds a nested list
     // Return null if this NestedInteger holds a single integer
     public List<NestedInteger> getList();
+}
+
+/**
+ * 设计循环双端队列
+ * 使用循环数组
+ */
+class MyCircularDeque {
+
+    int size = 0;
+    int[] array;
+    int start = 0;
+    int end = 0;
+
+    /**
+     * Initialize your data structure here. Set the size of the deque to be k.
+     */
+    public MyCircularDeque(int k) {
+        array = new int[k];
+    }
+
+    /**
+     * Adds an item at the front of Deque. Return true if the operation is successful.
+     */
+    public boolean insertFront(int value) {
+        if (size == array.length) {
+            return false;
+        } else {
+            if (size == 0) {
+                start = 0;
+                end = 0;
+                array[start] = value;
+            } else {
+                if (start == 0) {
+                    start = array.length;
+                }
+                array[--start] = value;
+            }
+        }
+        size++;
+        return true;
+    }
+
+    /**
+     * Adds an item at the rear of Deque. Return true if the operation is successful.
+     */
+    public boolean insertLast(int value) {
+        if (array.length == size) {
+            return false;
+        } else {
+            if (end == array.length - 1) {
+                end = 0;
+                array[end] = value;
+            } else {
+                if (size == 0) {
+                    start = 0;
+                    end = 0;
+                    array[end] = value;
+                } else {
+                    array[++end] = value;
+                }
+            }
+        }
+        size++;
+        return true;
+    }
+
+    /**
+     * Deletes an item from the front of Deque. Return true if the operation is successful.
+     */
+    public boolean deleteFront() {
+        if (size == 0) {
+            return false;
+        } else {
+            array[start] = 0;
+            if (start == array.length - 1) {
+                start = 0;
+            } else {
+                start++;
+            }
+        }
+        size--;
+        if (size == 0) {
+            start = 0;
+            end = 0;
+        }
+        return true;
+    }
+
+    /**
+     * Deletes an item from the rear of Deque. Return true if the operation is successful.
+     */
+    public boolean deleteLast() {
+        if (size == 0) {
+            return false;
+        } else {
+            array[end] = 0;
+            if (end == 0) {
+                end = array.length - 1;
+            } else {
+                end--;
+            }
+        }
+        if (size == 0) {
+            start = 0;
+            end = 0;
+        }
+        size--;
+        return true;
+    }
+
+    /**
+     * Get the front item from the deque.
+     */
+    public int getFront() {
+        if (size == 0) {
+            return -1;
+        } else {
+            return array[start];
+        }
+    }
+
+    /**
+     * Get the last item from the deque.
+     */
+    public int getRear() {
+        if (size == 0) {
+            return -1;
+        } else {
+            return array[end];
+        }
+    }
+
+    /**
+     * Checks whether the circular deque is empty or not.
+     */
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    /**
+     * Checks whether the circular deque is full or not.
+     */
+    public boolean isFull() {
+        return size == array.length;
+    }
 }
 
 

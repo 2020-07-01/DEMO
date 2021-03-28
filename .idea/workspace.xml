@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/loadbalance/HashDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainMarch.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainMarch.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
@@ -114,7 +110,7 @@
       <recent name="D:\workspace\DEMO\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.MainMarch">
     <configuration name="CreateExcel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="thread.excel.CreateExcel" />
       <module name="JavaExercise" />
@@ -183,8 +179,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainMarch" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.CreateExcel" />
         <item itemvalue="Application.TimeThreadPoolExecutor" />
         <item itemvalue="Application.ThreadDemo" />
@@ -330,14 +326,7 @@
       <workItem from="1616500607931" duration="2159000" />
       <workItem from="1616593847305" duration="4756000" />
       <workItem from="1616678255419" duration="4695000" />
-      <workItem from="1616908733058" duration="6354000" />
-    </task>
-    <task id="LOCAL-00039" summary="剑指 Offer 32 - II. 从上到下打印二叉树 II">
-      <created>1606490428835</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1606490428835</updated>
+      <workItem from="1616908733058" duration="11492000" />
     </task>
     <task id="LOCAL-00040" summary="mybatis">
       <created>1606631687938</created>
@@ -675,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616597992565</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="一致性Hash算法">
+      <created>1616916212185</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1616916212186</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,7 +698,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="148. 排序链表&#10;268. 丢失的数字" />
     <MESSAGE value="25. K 个一组翻转链表&#10;面试题 04.03. 特定深度节点链表&#10;153. 寻找旋转排序数组中的最小值" />
     <MESSAGE value="82. 删除排序链表中的重复元素 II" />
     <MESSAGE value="1323. 6 和 9 组成的最大数字&#10;面试题 01.01. 判定字符是否唯一&#10;剑指 Offer 32 - I. 从上到下打印二叉树" />
@@ -727,7 +722,8 @@
     <MESSAGE value="螺旋矩阵2" />
     <MESSAGE value="DEMO" />
     <MESSAGE value="脑子转不动" />
-    <option name="LAST_COMMIT_MESSAGE" value="脑子转不动" />
+    <MESSAGE value="一致性Hash算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="一致性Hash算法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="239" key="#Custom_Plugin_Repositories" timestamp="1614499931929">
@@ -793,28 +789,28 @@
     </state>
     <state x="632" y="-1033" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1615613400851" />
     <state x="421" y="31" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1615301231583" />
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom" timestamp="1616912583521">
+    <state width="1877" height="225" key="GridCell.Tab.0.bottom" timestamp="1616921451373">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616912583521" />
+    <state width="1877" height="225" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616921451373" />
     <state width="1237" height="229" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1616634125937" />
     <state width="1237" height="126" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1616685287232" />
-    <state width="1877" height="225" key="GridCell.Tab.0.center" timestamp="1616912583521">
+    <state width="1877" height="225" key="GridCell.Tab.0.center" timestamp="1616921451373">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616912583521" />
+    <state width="1877" height="225" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616921451373" />
     <state width="1237" height="229" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1616634125937" />
     <state width="1237" height="126" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1616685287231" />
-    <state width="1877" height="225" key="GridCell.Tab.0.left" timestamp="1616912583520">
+    <state width="1877" height="225" key="GridCell.Tab.0.left" timestamp="1616921451373">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616912583520" />
+    <state width="1877" height="225" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616921451373" />
     <state width="1237" height="229" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1616634125937" />
     <state width="1237" height="126" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1616685287231" />
-    <state width="1877" height="225" key="GridCell.Tab.0.right" timestamp="1616912583521">
+    <state width="1877" height="225" key="GridCell.Tab.0.right" timestamp="1616921451373">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616912583521" />
+    <state width="1877" height="225" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1616921451373" />
     <state width="1237" height="229" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1616634125937" />
     <state width="1237" height="126" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1616685287232" />
     <state width="1237" height="155" key="GridCell.Tab.1.bottom" timestamp="1616685287229">
