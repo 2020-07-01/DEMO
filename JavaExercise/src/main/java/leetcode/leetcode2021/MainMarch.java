@@ -1472,15 +1472,132 @@ public class MainMarch {
         return res;
     }
 
+    /**
+     * @param n
+     * @return
+     */
+    public String countAndSay(int n) {
+
+        StringBuilder result = new StringBuilder();
+        result.append(1);
+        for (int i = 1; i < n; i++) {
+            // 记录当前行的字符串
+            StringBuilder s = new StringBuilder();
+            // 记录每个数字的开始索引
+            int start = 0;
+            for (int j = 1; j < result.length(); j++) {
+                // 当数字发生改变时执行
+                if (result.charAt(j) != result.charAt(start)) {
+                    s.append(j - start).append(result.charAt(start));
+                    start = j;
+                }
+            }
+            // 字符串最后一个数字
+            s.append(result.length() - start).append(result.charAt(start));
+            result = s;
+        }
+        return result.toString();
+    }
+
+
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
         int[][] arrays = new int[][]{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
         String[] strings = new String[]{"4", "13", "5", "/", "+"};
         int[] nums = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        System.out.println(main.trap(nums));
+        System.out.println(main.countAndSay(4));
     }
 }
+
+/**
+ * 洗牌算法
+ * 时间复杂度O(n)
+ */
+class Solution {
+
+    /**
+     * 洗牌算法
+     * 每次随机摸出一个元素 与当前元素进行交换
+     */
+    int[] orgin;
+    int[] array;
+    Random random = new Random();
+
+    public Solution(int[] nums) {
+        orgin = nums.clone();
+        array = nums;
+    }
+
+    /**
+     * Resets the array to its original configuration and return it.
+     */
+    public int[] reset() {
+        array = orgin.clone();
+        return orgin;
+    }
+
+    /**
+     * Returns a random shuffling of the array.
+     */
+    public int[] shuffle() {
+        for (int i = 0; i < array.length; i++) {
+            //i 到 array.length 之间的随机数
+            int index = random.nextInt(array.length-i) + i;
+            int temp = array[i];
+            array[i] = array[index];
+            array[index] = temp;
+        }
+        return array;
+    }
+}
+
+/*class Solution {
+
+    int[] orgin;
+    int[] array;
+    Random random = new Random();
+
+    public Solution(int[] nums) {
+        orgin = nums.clone();
+        array = nums;
+    }
+
+    *//**
+ * Resets the array to its original configuration and return it.
+ * <p>
+ * Returns a random shuffling of the array.
+ * <p>
+ * Returns a random shuffling of the array.
+ * <p>
+ * Returns a random shuffling of the array.
+ *//*
+    public int[] reset() {
+        array = orgin.clone();
+        return orgin;
+    }
+
+    *//**
+ * Returns a random shuffling of the array.
+ *//*
+    public int[] shuffle() {
+
+        int[] res = new int[array.length];
+
+        List<Integer> list = new LinkedList<>();
+        for (int i = 0; i < array.length; i++) {
+            list.add(array[i]);
+        }
+
+        for (int i = 0; i < res.length; i++) {
+
+            int index = random.nextInt(list.size());
+            res[i] = list.get(index);
+            list.remove(index);
+        }
+        return res;
+    }
+}*/
 
 /**
  * 341. 扁平化嵌套列表迭代器
