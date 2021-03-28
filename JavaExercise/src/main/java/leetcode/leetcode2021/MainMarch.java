@@ -1653,6 +1653,85 @@ interface NestedInteger {
 }
 
 /**
+ * 622. 设计循环队列
+ * 循环数组
+ */
+class MyCircularQueue {
+
+    int size = 0;
+    int start = 0;
+    int end = 0;
+    int[] array;
+
+    public MyCircularQueue(int k) {
+        array = new int[k];
+    }
+
+    public boolean enQueue(int value) {
+        if (size == array.length) {
+            return false;
+        } else {
+            if (size == 0) {
+                array[end] = value;
+            } else {
+                if (end == array.length - 1) {
+                    end = 0;
+                    array[end] = value;
+                } else {
+                    array[++end] = value;
+                }
+            }
+        }
+        size++;
+        return true;
+    }
+
+    public boolean deQueue() {
+        if (size == 0) {
+            return false;
+        } else {
+            if (start == array.length - 1) {
+                array[start] = 0;
+                start = 0;
+            } else {
+                array[start++] = 0;
+            }
+        }
+        size--;
+        if (size == 0) {
+            start = 0;
+            end = 0;
+        }
+        return true;
+    }
+
+    public int Front() {
+        if (size == 0) {
+            return -1;
+        } else {
+            return array[start];
+        }
+    }
+
+    public int Rear() {
+        if (size == 0) {
+            return -1;
+        } else {
+            return array[end];
+        }
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean isFull() {
+        return size == array.length;
+    }
+}
+
+
+/**
  * 设计循环双端队列
  * 使用循环数组
  */
