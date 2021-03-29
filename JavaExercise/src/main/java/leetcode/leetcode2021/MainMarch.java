@@ -1499,25 +1499,100 @@ public class MainMarch {
         return result.toString();
     }
 
+    /**
+     *
+     * @param n
+     * @return
+     */
+    public List<String> fizzBuzz(int n) {
+
+        List<String> list = new LinkedList<>();
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0) {
+                if (i % 5 == 0) {
+                    list.add("FizzBuzz");
+                } else {
+                    list.add("Fizz");
+                }
+            } else if (i % 5 == 0) {
+                if (i % 3 == 0) {
+                    list.add("FizzBuzz");
+                } else {
+                    list.add("Buzz");
+                }
+            } else {
+                list.add(i + "");
+            }
+        }
+        return list;
+    }
 
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
 
-        MyCircularDeque circularDeque = new MyCircularDeque(77);
 
-        circularDeque.insertFront(89);
-        circularDeque.deleteLast();
-        circularDeque.insertFront(19);
-        circularDeque.insertFront(23);
-        circularDeque.insertFront(23);
-        circularDeque.insertFront(82);
-        circularDeque.insertFront(45);
-        circularDeque.deleteLast();
-        circularDeque.insertFront(74);
-        circularDeque.deleteFront();
-        System.out.println(Arrays.toString(circularDeque.array));
+    }
+}
 
+/**
+ * Hash + List
+ * 380. 常数时间插入、删除和获取随机元素
+ * 时间复杂度O(n)
+ * 空间复杂度O(n)
+ */
+class RandomizedSet {
+
+    List<Integer> list;
+    HashMap<Integer, Integer> map;
+    Random random;
+
+    /**
+     * Initialize your data structure here.
+     */
+    public RandomizedSet() {
+        this.list = new ArrayList<>();
+        this.map = new HashMap<>();
+        this.random = new Random();
+    }
+
+    /**
+     * Inserts a value to the set. Returns true if the set did not already contain the specified element.
+     */
+    public boolean insert(int val) {
+        if (map.containsKey(val)) {
+            return false;
+        } else {
+            list.add(val);
+            map.put(val, list.size() - 1);
+            return true;
+        }
+    }
+
+    /**
+     * Removes a value from the set. Returns true if the set contained the specified element.
+     */
+    public boolean remove(int val) {
+        if (!map.containsKey(val)) {
+            return false;
+        } else {
+            int last = list.get(list.size() - 1);
+            list.set(map.get(val),last);
+            map.put(last, map.get(val));
+            list.remove(list.size() - 1);
+            map.remove(val);
+            return true;
+        }
+    }
+
+    /**
+     * Get a random element from the set.
+     */
+    public int getRandom() {
+        if (list.isEmpty()) {
+            return -1;
+        }
+        return list.get(random.nextInt(list.size()));
     }
 }
 
@@ -1574,15 +1649,11 @@ class Solution {
         array = nums;
     }
 
-    *//*
     public int[] reset() {
         array = orgin.clone();
         return orgin;
     }
 
-    *//**
- * Returns a random shuffling of the array.
- *//*
     public int[] shuffle() {
 
         int[] res = new int[array.length];
