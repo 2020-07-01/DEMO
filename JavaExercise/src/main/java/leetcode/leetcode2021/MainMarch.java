@@ -1500,7 +1500,6 @@ public class MainMarch {
     }
 
     /**
-     *
      * @param n
      * @return
      */
@@ -1527,11 +1526,56 @@ public class MainMarch {
         return list;
     }
 
+    /**
+     * 378. 有序矩阵中第 K 小的元素
+     *
+     * @param matrix matrix
+     * @param k
+     * @return
+     */
+    public int kthSmallest(int[][] matrix, int k) {
+        List<Integer> list = new LinkedList<>();
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                list.add(matrix[i][j]);
+            }
+        }
+        Collections.sort(list);
+        return list.get(k - 1);
+    }
+
+
+    /**
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isAnagram(String s, String t) {
+
+        int index = 0;
+        while (index < s.length()) {
+            if (s.charAt(index) != t.charAt(index + 1) || s.charAt(index + 1) != t.charAt(index)) {
+                if(s.charAt(index) != t.charAt(index) || s.charAt(index+1) != t.charAt(index+1)){
+                    return false;
+                }
+            }
+            index = index + 2;
+        }
+
+        if (index > s.length()) {
+            index--;
+            return s.charAt(index) == t.charAt(index);
+        }
+        return true;
+    }
+
+
     public static void main(String[] args) {
 
         MainMarch main = new MainMarch();
 
-
+        System.out.println(main.isAnagram("anagram","nagaram"));
     }
 }
 
@@ -1577,7 +1621,7 @@ class RandomizedSet {
             return false;
         } else {
             int last = list.get(list.size() - 1);
-            list.set(map.get(val),last);
+            list.set(map.get(val), last);
             map.put(last, map.get(val));
             list.remove(list.size() - 1);
             map.remove(val);
