@@ -70,29 +70,27 @@ public class Main {
 
     public static void main(String[] args) {
 
+/*
 
         String[] keys = {"太阳", "月亮", "星星","1312"};
 
         for (int i = 0; i < keys.length; i++) {
             System.out.println("字符串" + keys[i] + "服务器为：" + getServer(keys[i]));
         }
+*/
 
-        TreeMap treeMap = new TreeMap();
 
-    }
 
-    public void test() {
-        BlockingQueue queue = new DelayQueue();
-        /**
-         * 默认工厂
-         * 为线程池创建一组相同类型的线程
-         * 主要声名线程名，
-         * 是否为守护线程
-         *
-         */
-        ThreadFactory threadFactory = Executors.defaultThreadFactory();
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 20, 5000, TimeUnit.SECONDS, queue, threadFactory);
+        ConcurrentSkipListMap concurrentSkipListMap = new ConcurrentSkipListMap();
+        concurrentSkipListMap.put("5","5");
+        concurrentSkipListMap.put("6","6");
+        concurrentSkipListMap.put("100","100");
+        concurrentSkipListMap.put("50","50");
+
+        System.out.println(concurrentSkipListMap.get("5"));
 
 
     }
+
 }
+
