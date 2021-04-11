@@ -1,7 +1,6 @@
 package leetcode.leetcode2021;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * @ClassName : MainApril
@@ -277,7 +276,7 @@ public class MainApril {
         int right = nums.length - 1;
         while (left < right) {
             int mid = (left + right) / 2;
-            if (nums[mid] < nums[right]) {
+            if (nums[mid] <= nums[right]) {
                 right = mid;
             } else {
                 left = mid + 1;
@@ -287,10 +286,103 @@ public class MainApril {
     }
 
 
+    /**
+     * 丑数
+     *
+     * @param n
+     * @return
+     */
+    public boolean isUgly(int n) {
+
+        if (n < 1) {
+            return false;
+        }
+        //只包含质因子 2 3 5
+        while (n % 5 == 0) {
+            n = n / 5;
+        }
+        while (n % 3 == 0) {
+            n = n / 3;
+        }
+        while (n % 2 == 0) {
+            n = n >> 1;
+        }
+
+        if (n == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 剑指 Offer 49. 丑数
+     * 动态规划法
+     *
+     * @param n
+     * @return
+     */
+    public int nthUglyNumber(int n) {
+
+        int[] dp = new int[n];
+        int index2 = 0;
+        int index3 = 0;
+        int index5 = 0;
+        dp[0] = 1;
+        int i = 1;
+        while (i < n) {
+            dp[i] = Math.min(dp[index2] * 2, Math.min(dp[index3] * 3, dp[index5] * 5));
+            while (dp[index2] * 2 <= dp[i]) {
+                index2++;
+            }
+            while (dp[index3] * 3 <= dp[i]) {
+                index3++;
+            }
+            while (dp[index5] * 5 <= dp[i]) {
+                index5++;
+            }
+        }
+        return dp[n - 1];
+    }
+
+
+    /**
+     * 剑指 Offer 49. 丑数
+     * 最小堆法
+     *
+     * @param n
+     * @return
+     */
+    public int nthUglyNumber1(int n) {
+        if (n < 1) {
+            return -1;
+        }
+
+        int[] nums = new int[]{2, 3, 5};
+        //去重
+        Set<Long> set = new HashSet<>();
+        PriorityQueue<Long> queue = new PriorityQueue();
+        queue.add(1L);
+        set.add(1L);
+        int res = 1;
+        while (n > 0) {
+            long temp = queue.poll();
+            res = (int) temp;
+            for (int i = 0; i < nums.length; i++) {
+                if (set.add(temp * nums[i])) {
+                    queue.offer(temp * nums[i]);
+                }
+            }
+            n--;
+        }
+        return res;
+    }
+
 
     public static void main(String[] args) {
         MainApril main = new MainApril();
-        int[] nums = new int[]{3, 4, 5, 1, 2};
-        System.out.println(main.findMin(nums));
+        System.out.println(Integer.MAX_VALUE);
+
+
     }
 }

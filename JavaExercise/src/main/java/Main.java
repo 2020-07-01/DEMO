@@ -79,6 +79,9 @@ public class Main {
         }
 */
 
+        Random random = new Random();
+        random.nextInt(10);
+
 
 
         ConcurrentSkipListMap concurrentSkipListMap = new ConcurrentSkipListMap();
@@ -89,6 +92,9 @@ public class Main {
 
         System.out.println(concurrentSkipListMap.get("5"));
 
+
+        System.out.println("2147483649");
+        System.out.println(Integer.MAX_VALUE);
 
     }
 
