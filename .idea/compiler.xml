@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Cache-Demo" />
         <module name="Spring-Demo" />
         <module name="JavaExercise" />
         <module name="Message-Queue-Demo" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Cache-Demo" target="1.8" />
       <module name="DEMO" target="1.8" />
       <module name="Hystrix-Demo" target="1.8" />
       <module name="JavaExercise" target="1.8" />
@@ -28,6 +30,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Cache-Demo" options="-parameters" />
       <module name="Hystrix-Demo" options="-parameters" />
       <module name="Message-Queue-Demo" options="-parameters" />
     </option>

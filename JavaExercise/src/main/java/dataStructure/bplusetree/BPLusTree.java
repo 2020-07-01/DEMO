@@ -298,6 +298,9 @@ public class BPLusTree<K extends Comparable<? super K>, V> {
         bpLusTree.insert(10, 10);
         bpLusTree.insert(11, 11);
         bpLusTree.insert(12, 12);
+        bpLusTree.insert(13, 13);
+        bpLusTree.insert(14, 14);
+        bpLusTree.insert(15, 15);
 
         System.out.println(bpLusTree.root);
 

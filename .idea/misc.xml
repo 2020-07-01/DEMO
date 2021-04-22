@@ -11,6 +11,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/RabbitMq-Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Cache-Demo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
