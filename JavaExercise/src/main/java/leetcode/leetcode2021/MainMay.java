@@ -35,13 +35,17 @@ public class MainMay {
     }
 
     /**
-     * 116. 填充每个节点的下一个右侧节点指针
+     * 116. 填充每个节点的下一个右侧节点指针 完全二叉树 普通二叉树均使用
      * bfs
      *
      * @param root
      * @return
      */
     public Node connect(Node root) {
+
+        if (root == null) {
+            return root;
+        }
 
         Queue<Node> queue = new LinkedList();
         queue.add(root);
@@ -69,6 +73,7 @@ public class MainMay {
                     node.next = queue.peek();
                 }
             }
+            //待优化
             queue = new LinkedList<>(temp);
         }
         while (!queue.isEmpty()) {
@@ -101,6 +106,40 @@ public class MainMay {
                 head = head.next;
             }
             node = node.left;
+        }
+        return root;
+    }
+
+    /**
+     * 117. 填充每个节点的下一个右侧节点指针 II 普通二叉树
+     *
+     * @param root
+     * @return
+     */
+    public Node connect2(Node root) {
+        if (root == null) {
+            return root;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            Node last = null;
+            for (int i = 1; i <= size; i++) {
+                Node first = queue.poll();
+                if (first.left != null) {
+                    queue.offer(first.left);
+                }
+                if (first.right != null) {
+                    queue.offer(first.right);
+                }
+                if (i != 1) {
+                    //上个元素的next
+                    last.next = first;
+                }
+                //上个元素
+                last = first;
+            }
         }
         return root;
     }

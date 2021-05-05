@@ -23,53 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/annotation/Cache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/aop/CacheAopProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/aop/CacheAopProxyChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/aop/CacheMethodInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/autoload/AutoLoadHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/autoload/AutoLoadOldestComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/autoload/AutoLoadQueueSortType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/autoload/AutoLoadTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/autoload/AutoloadCacheController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/autoload/ProcessingTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/common/CacheUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/common/LoadDataTimeOutException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/common/MSetParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/config/AutoLoadConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/config/AutoloadCacheManagerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/config/AutoloadCacheProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/config/DistributedLockConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/controller/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheKeyTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheOpType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/dataload/DataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/lock/AbstractRedisLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/lock/ILock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/lock/RedissonLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/lock/jedis/JedisClusterLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/ICacheManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/map/CacheChangeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/map/CacheTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/map/MapCacheManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/redis/AbstractRedisCacheManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/redis/IRedis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/redis/JedisClusterCacheManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/serializer/ISerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/serializer/StringSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/refresh/RefreshHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cache-Demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainMay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Message-Queue-Demo/src/main/java/com/rabbitmq/overstock/RabbitMqConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cache-Demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/RedisClusterConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/RedisUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainApril.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainApril.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Message-Queue-Demo/src/main/java/com/rabbitmq/plan1/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Message-Queue-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainMay.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/leetcode/leetcode2021/MainMay.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -404,14 +359,7 @@
       <workItem from="1619613902326" duration="6674000" />
       <workItem from="1619703885054" duration="1678000" />
       <workItem from="1619964172039" duration="6013000" />
-      <workItem from="1620107421987" duration="37661000" />
-    </task>
-    <task id="LOCAL-00049" summary="143. 重排链表&#10;26. 删除排序数组中的重复项">
-      <created>1607097317427</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1607097317427</updated>
+      <workItem from="1620107421987" duration="39245000" />
     </task>
     <task id="LOCAL-00050" summary="1346. 检查整数及其两倍数是否存在&#10;783. 二叉搜索树节点最小距离&#10;559. N叉树的最大深度">
       <created>1607181414646</created>
@@ -749,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619100121480</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="缓存框架">
+      <created>1620226063988</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1620226063988</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,7 +731,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="回溯法" />
     <MESSAGE value="算法" />
     <MESSAGE value="分布式锁" />
     <MESSAGE value="编码练习" />
@@ -801,7 +755,8 @@
     <MESSAGE value="B+Tree" />
     <MESSAGE value="329. 矩阵中的最长递增路径" />
     <MESSAGE value="dfs" />
-    <option name="LAST_COMMIT_MESSAGE" value="dfs" />
+    <MESSAGE value="缓存框架" />
+    <option name="LAST_COMMIT_MESSAGE" value="缓存框架" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="239" key="#Custom_Plugin_Repositories" timestamp="1614499931929">
