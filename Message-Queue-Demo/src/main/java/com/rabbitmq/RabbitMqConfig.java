@@ -1,5 +1,7 @@
-package com.rabbitmq.plan1;
+package com.rabbitmq;
 
+import com.rabbitmq.plan1.ConfirmCallbackExtend;
+import com.rabbitmq.plan1.ReturnCallbackExtend;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -14,7 +16,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RabbitMqConfig {
-
 
     @Bean
     public CachingConnectionFactory connectionFactory() {

@@ -1,11 +1,14 @@
 package leetcode.leetcode2021;
 
 import callback_function.example2.Main;
+import com.sun.javafx.collections.ListListenerHelper;
+import dataStructure.list.Link;
 import org.omg.CORBA.INTERNAL;
 
 import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName : MainApril
@@ -891,6 +894,217 @@ public class MainApril {
             }
         }
         return false;
+    }
+
+    /**
+     * 105. 从前序与中序遍历序列构造二叉树
+     *
+     * @param preorder
+     * @param inorder
+     * @return
+     */
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+
+        /**
+         * 前序遍历的第一个节点为根节点
+         * 第二个节点为左右节点
+         *
+         * 中序遍历 【[],根节点,[]】
+         */
+        if (preorder.length == 0 || inorder.length == 0) {
+            return null;
+        }
+
+        TreeNode treeNode = new TreeNode(preorder[0]);
+        for (int i = 0; i < preorder.length; i++) {
+            //找到根节点
+            if (preorder[0] == inorder[i]) {
+                treeNode.left = buildTree(Arrays.copyOfRange(preorder, 1, i + 1), Arrays.copyOfRange(inorder, 0, i));
+                treeNode.right = buildTree(Arrays.copyOfRange(preorder, i + 1, preorder.length), Arrays.copyOfRange(inorder, i + 1, inorder.length));
+            }
+        }
+        return treeNode;
+    }
+
+
+    HashMap<Integer, Integer> indexMap = new HashMap<>(1 << 4);
+
+    /**
+     * 105. 从前序与中序遍历序列构造二叉树
+     * 传边界值
+     *
+     * @param preorder
+     * @param inorder
+     * @return
+     */
+    public TreeNode buildTree1(int[] preorder, int[] inorder) {
+
+        for (int i = 0; i < inorder.length; i++) {
+            indexMap.put(inorder[i], i);
+        }
+        return builder(preorder, 0, preorder.length - 1, 0);
+    }
+
+    private TreeNode builder(int[] preorder, int preorder_left, int preorder_right, int inorder_left) {
+
+        if (preorder_left > preorder_right) {
+            return null;
+        }
+        //前序遍历第一个节点
+        int root_index = preorder_left;
+        //头节点索引
+        int inorder_head = indexMap.get(preorder[root_index]);
+        //根节点
+        TreeNode treeNode = new TreeNode(preorder[root_index]);
+        // 得到左子树中的节点数目
+        int size_left_subtree = inorder_head - inorder_left;
+
+        treeNode.left = builder(preorder, preorder_left + 1, preorder_left + size_left_subtree, inorder_left);
+        treeNode.right = builder(preorder, preorder_left + size_left_subtree + 1, preorder_right, inorder_head + 1);
+        return treeNode;
+    }
+
+    /**
+     * 513. 找树左下角的值
+     * 广度优先遍历
+     *
+     * @param root
+     * @return
+     */
+    public int findBottomLeftValue(TreeNode root) {
+
+        if (root == null) {
+            return -1;
+        }
+
+        LinkedList<TreeNode> queue = new LinkedList();
+        queue.addLast(root);
+        while (!queue.isEmpty()) {
+            LinkedList<TreeNode> treeNodes = new LinkedList<>();
+            TreeNode left = queue.getFirst();
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.removeFirst();
+                if (node.left != null) {
+                    treeNodes.addLast(node.left);
+                }
+                if (node.right != null) {
+                    treeNodes.addLast(node.right);
+                }
+            }
+
+            if (treeNodes.isEmpty()) {
+                return left.val;
+            } else {
+                queue = new LinkedList<>(treeNodes);
+            }
+        }
+        return -1;
+    }
+
+    int curMaxDept = -1;
+    int res = 0;
+
+    /**
+     * 513. 找树左下角的值
+     * dfs
+     *
+     * @param root
+     * @return
+     */
+    public int findBottomLeftValue1(TreeNode root) {
+        dfs(root, 0);
+        return res;
+    }
+
+    private void dfs(TreeNode node, int deep) {
+        if (node == null) {
+            return;
+        }
+        //如果当前层第一次来
+        if (deep > curMaxDept) {
+            curMaxDept = deep;
+            res = node.val;
+        }
+        dfs(node.left, deep + 1);
+        dfs(node.right, deep + 1);
+    }
+
+
+    /**
+     * 129. 求根节点到叶节点数字之和
+     *
+     * @param root
+     * @return
+     */
+    public int sumNumbers(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return dfs(root, root.val + "");
+    }
+
+    private int dfs(TreeNode node, String string) {
+        string = string + node.val;
+        if (node.left != null && node.right != null) {
+            return dfs(node.left, string) + dfs(node.right, string);
+        } else if (node.left != null) {
+            return dfs(node.left, string);
+        } else if (node.right != null) {
+            return dfs(node.right, string);
+        } else {
+            return Integer.valueOf(string);
+        }
+    }
+
+    /**
+     * 515. 在每个树行中找最大值
+     * bfs
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> largestValues(TreeNode root) {
+
+        List<Integer> res = new LinkedList<>();
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.addLast(root);
+        while (!queue.isEmpty()) {
+            LinkedList<TreeNode> temp = new LinkedList<>();
+            int max = Integer.MIN_VALUE;
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.removeFirst();
+                if (node.left != null) {
+                    temp.addLast(node.left);
+                }
+                if (node.right != null) {
+                    temp.addLast(node.right);
+                }
+                max = Math.max(max, node.val);
+            }
+            res.add(max);
+            queue = new LinkedList<>(temp);
+        }
+        return res;
+    }
+
+    int sum = 0;
+
+    /**
+     * 538. 把二叉搜索树转换为累加树
+     * 反序中序遍历
+     *
+     * @param root
+     * @return
+     */
+    public TreeNode convertBST(TreeNode root) {
+
+        if (root != null) {
+            convertBST(root.right);
+            sum = sum + root.val;
+            root.val = sum;
+            convertBST(root.left);
+        }
+        return root;
     }
 
     public static void main(String[] args) {
