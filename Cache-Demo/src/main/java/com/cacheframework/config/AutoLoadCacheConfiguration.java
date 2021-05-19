@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Slf4j
 @Configuration
-public class AutoloadCacheManagerConfiguration {
+public class AutoLoadCacheConfiguration {
 
     @Bean
     public ICacheManager mapCacheManager(AutoloadCacheProperties cacheProperties) {

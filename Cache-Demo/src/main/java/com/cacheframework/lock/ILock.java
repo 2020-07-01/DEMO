@@ -20,9 +20,10 @@ public interface ILock {
     /**
      * 释放锁
      *
-     * @param key 锁key
+     * @param key   锁key
+     * @param value 锁value
      */
-    void unLock(String key);
+    void releaseLock(String key, String value);
 }
 
 

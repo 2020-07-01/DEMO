@@ -40,8 +40,10 @@ public class CacheWrapper<T> implements Serializable, Cloneable {
 
     /**
      * 判断缓存是否过期
+     * true : 过期
+     * false : 不过期
      *
-     * @return
+     * @return boolean
      */
     public boolean isExpired() {
         if (expire > 0) {

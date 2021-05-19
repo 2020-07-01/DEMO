@@ -43,7 +43,7 @@ public class AutoLoadConfig {
     /**
      * 是否启用DataLoader对象池
      */
-    private boolean dataLoaderPooled = true;
+    //private boolean dataLoaderPooled = true;
 
     /**
      * 单个线程中执行自动加载的时间间隔
@@ -65,5 +65,10 @@ public class AutoLoadConfig {
      * 加载数据重试次数，默认值为1：
      */
     private int loadDataTryCnt = 1;
+
+    /**
+     * 当请求耗时超过此值时，打印日志
+     */
+    private int slowLoadTime;
 
 }

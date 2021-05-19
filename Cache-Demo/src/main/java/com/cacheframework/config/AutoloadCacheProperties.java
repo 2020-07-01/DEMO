@@ -17,7 +17,10 @@ public class AutoloadCacheProperties {
 
     private AutoLoadConfig config = new AutoLoadConfig();
 
-    private boolean enable = true;
+    /**
+     * 开启缓存
+     */
+    private boolean enable = false;
 
     /**
      * 对JedisClusterCacheManager 进行配置

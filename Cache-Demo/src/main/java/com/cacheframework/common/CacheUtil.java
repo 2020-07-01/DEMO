@@ -8,9 +8,15 @@ package com.cacheframework.common;
  */
 public class CacheUtil {
 
-
     private static final String SPLIT_STR = "_";
 
+    /**
+     * 类名.方法名
+     * @param className
+     * @param method
+     * @param arguments
+     * @return
+     */
     public static String getDefaultCacheKey(String className, String method, Object[] arguments) {
         StringBuilder sb = new StringBuilder();
         sb.append(getDefaultCacheKeyPrefix(className, method));

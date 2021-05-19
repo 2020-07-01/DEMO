@@ -23,12 +23,12 @@ public class StringSerializer implements ISerializer<String> {
     }
 
     @Override
-    public byte[] serialize(String obj) throws Exception {
+    public byte[] serialize(String obj) {
         return new byte[0];
     }
 
     @Override
-    public String deserialize(byte[] bytes, Type returnType) throws Exception {
+    public String deserialize(byte[] bytes, Type returnType) {
         return (bytes == null ? null : new String(bytes, charset));
     }
 }

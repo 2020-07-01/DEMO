@@ -1,6 +1,6 @@
 package com.cacheframework.autoload;
 
-import com.cacheframework.aop.CacheAopProxyChain;
+import com.cacheframework.common.CacheAopProxyChain;
 import com.cacheframework.core.CacheHandler;
 import com.cacheframework.core.CacheKeyTO;
 import com.cacheframework.core.CacheWrapper;
@@ -118,6 +118,10 @@ public class AutoLoadHandler {
     public AutoLoadTO putIfAbsent(CacheKeyTO cacheKey, CacheAopProxyChain joinPoint, Cache cache,
                                   CacheWrapper<Object> cacheWrapper) {
         if (null == autoLoadMap) {
+            return null;
+        }
+
+        if (cacheWrapper == null) {
             return null;
         }
 

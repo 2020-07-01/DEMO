@@ -2,6 +2,9 @@ package com.cacheframework.lock.jedis;
 
 import com.cacheframework.lock.AbstractRedisLock;
 import redis.clients.jedis.JedisCluster;
+import redis.clients.jedis.params.SetParams;
+
+import java.util.Collections;
 
 /**
  * @ClassName : JedisClusterLock
@@ -18,24 +21,31 @@ public class JedisClusterLock extends AbstractRedisLock {
     }
 
     /**
-     * 获取分布式锁
+     * 获取锁
      *
-     * @param key        锁key
-     * @param lockExpire 锁的缓存时间(单位：秒)
+     * @param key    key
+     * @param value  value
+     * @param expire expire
      * @return boolean
      */
     @Override
-    public boolean tryLock(String key, int lockExpire) {
-        return false;
+    public boolean doTryLock(String key, String value, int expire) {
+        //todo redis 集群中会出问题
+        //res = "OK".equals(jedisCluster.set(key, value, SetParams.setParams().nx().ex(expire)));
+        return "OK".equals(jedisCluster.setex(key, expire, value));
     }
 
     /**
      * 释放锁
      *
-     * @param key 锁key
+     * @param key   key
+     * @param value value
+     * @return boolean
      */
     @Override
-    public void unLock(String key) {
-
+    public boolean doReleaseLock(String key, String value) {
+        String luaScript = "if redis.call('get',KEYS[1]) == ARGV[1] then " +
+                "return redis.call('del',KEYS[1]) else return 0 end";
+        return jedisCluster.eval(luaScript, Collections.singletonList(key), Collections.singletonList(value)).equals(1L);
     }
 }

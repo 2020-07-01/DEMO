@@ -1,4 +1,4 @@
-package com.cacheframework.aop;
+package com.cacheframework.common;
 
 import java.lang.reflect.Method;
 
@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
  * @ClassName : CacheAopProxyChain
  * @Author : yq
  * @Date: 2021-04-28
- * @Description :
+ * @Description : 缓存切面代理接口
  */
 public interface CacheAopProxyChain {
 

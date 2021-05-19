@@ -2,7 +2,7 @@ package com.cacheframework.autoload;
 
 import com.cacheframework.core.CacheKeyTO;
 import com.cacheframework.annotation.Cache;
-import com.cacheframework.aop.CacheAopProxyChain;
+import com.cacheframework.common.CacheAopProxyChain;
 import com.cacheframework.core.CacheWrapper;
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import lombok.Data;
  * @ClassName : AutoLoadTO
  * @Author : yq
  * @Date: 2021-05-04
- * @Description : 处理自动加载数据到缓存
+ * @Description : 处理自动加载数据类
  */
 @Data
 public class AutoLoadTO {
@@ -111,6 +111,9 @@ public class AutoLoadTO {
      * @param cacheWrapper
      */
     public void flushRequestTime(CacheWrapper<Object> cacheWrapper) {
+        if (cacheWrapper == null) {
+            return;
+        }
         //同步最后请求时间
         this.setLastRequestTime(System.currentTimeMillis())
                 //同步从DAO加载时间

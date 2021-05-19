@@ -19,19 +19,17 @@ import java.util.Set;
  */
 public interface ICacheManager {
 
-
     /**
      * 当过期时间为0，说明永不过期
      */
     int NEVER_EXPIRE = 0;
 
-
     /**
-     * 写数据
+     * 往缓存写数据
      *
-     * @param cacheKey
-     * @param result
-     * @param method
+     * @param cacheKey 缓存key
+     * @param result   缓存值
+     * @param method   method
      */
     void setCache(final CacheKeyTO cacheKey, final CacheWrapper<Object> result, final Method method);
 

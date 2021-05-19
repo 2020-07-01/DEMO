@@ -1,6 +1,5 @@
-package leetcode.leetcode2021;
 
-import lombok.NoArgsConstructor;
+package leetcode.leetcode2021;
 
 import java.util.*;
 
@@ -679,6 +678,85 @@ public class MainMay {
         return root.next;
     }
 
+    /**
+     * 面试题 02.08. 环路检测
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle(ListNode head) {
+
+        Set<ListNode> set = new HashSet<>();
+
+        while (head != null) {
+            if (set.contains(head)) {
+                return head;
+            } else {
+                set.add(head);
+            }
+            head = head.next;
+        }
+
+        return null;
+    }
+
+
+    /**
+     * 面试题 02.08. 环路检测
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle1(ListNode head) {
+        //公式推算
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                fast = head;
+                while (fast != slow) {
+                    fast = fast.next;
+                    slow = slow.next;
+                }
+                return fast;
+            }
+        }
+        return null;
+    }
+
+
+    /**
+     * 1367. 二叉树中的列表
+     * 逐层作为新的头节点开始比较
+     *
+     * @param head
+     * @param root
+     * @return
+     */
+    public boolean isSubPath(ListNode head, TreeNode root) {
+        if (root == null) {
+            return false;
+        }
+        //每次都作为新的节点
+        return dfs(head, root) || isSubPath(head, root.left) || isSubPath(head, root.right);
+    }
+
+    private boolean dfs(ListNode head, TreeNode root) {
+        if (head == null) {
+            return true;
+        }
+
+        if (root == null) {
+            return false;
+        }
+        if (head.val != root.val) {
+            return false;
+        }
+        return dfs(head.next, root.left) || dfs(head.next, root.right);
+    }
 
     public static void main(String[] args) {
 

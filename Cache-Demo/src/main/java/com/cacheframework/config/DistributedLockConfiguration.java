@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @Description : 分布式锁配置
  */
 @Configuration
-@AutoConfigureAfter({AutoloadCacheManagerConfiguration.class})
+@AutoConfigureAfter({AutoLoadCacheConfiguration.class})
 @Slf4j
 public class DistributedLockConfiguration {
 

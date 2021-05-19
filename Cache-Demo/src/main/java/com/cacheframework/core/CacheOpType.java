@@ -22,5 +22,5 @@ public enum CacheOpType {
      * 适用于登录等
      * 或者操作不频繁的场景
      */
-    LOAD;
+    LOAD
 }
