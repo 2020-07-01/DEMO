@@ -102,7 +102,7 @@ public class CacheHandler {
         CacheWrapper<Object> cacheWrapper = null;
         try {
             //从缓存中获取数据
-            cacheWrapper = this.get(cacheKey, method);
+            cacheWrapper = this.getCache(cacheKey, method);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
@@ -115,12 +115,12 @@ public class CacheHandler {
         //不为空也不过期
         if (cacheWrapper != null && !cacheWrapper.isExpired()) {
             AutoLoadTO autoLoadTO = autoLoadHandler.putIfAbsent(cacheKey, cacheAopProxyChain, cache, cacheWrapper);
-            //如果不为空
+            //需要自动加载
             if (autoLoadTO != null) {
-                //刷新请求次数
+                //刷新请求时间
                 autoLoadTO.flushRequestTime(cacheWrapper);
             } else {
-                //异步刷新
+                //不需要自动加载
                 refreshHandler.doRefresh(cacheAopProxyChain, cache, cacheKey, cacheWrapper);
             }
             return cacheWrapper.getCacheObject();
@@ -268,7 +268,7 @@ public class CacheHandler {
         }
     }
 
-    public CacheWrapper<Object> get(CacheKeyTO key, Method method) throws IOException {
+    public CacheWrapper<Object> getCache(CacheKeyTO key, Method method) throws IOException {
         return cacheManager.get(key, method);
     }
 

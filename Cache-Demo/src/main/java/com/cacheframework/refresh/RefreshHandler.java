@@ -17,6 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Author : yq
  * @Date: 2021-05-05
  * @Description : 异步刷新缓存处理器
+ * 在预警时间内即将要过期，则进行异步刷新
  */
 @Slf4j
 public class RefreshHandler {
@@ -60,6 +61,14 @@ public class RefreshHandler {
                 }, rejectedHandler);
     }
 
+    /**
+     * 刷新
+     *
+     * @param cacheAopProxyChain cacheAopProxyChain
+     * @param cache              cache
+     * @param cacheKey           cacheKey
+     * @param cacheWrapper       cacheWrapper
+     */
     public void doRefresh(CacheAopProxyChain cacheAopProxyChain, Cache cache, CacheKeyTO cacheKey, CacheWrapper<Object> cacheWrapper) {
 
         int expire = cacheWrapper.getExpire();
@@ -92,15 +101,15 @@ public class RefreshHandler {
         }
 
         tmpByte = 1;
+        //TODO 引入线程池统一管理
         if (null == refreshing.putIfAbsent(cacheKey, tmpByte)) {
-            try {
-                refreshThreadPool.execute(new RefreshTask(cacheAopProxyChain, cache, cacheKey, cacheWrapper));
-            } catch (Exception e) {
-
-            }
+            refreshThreadPool.execute(new RefreshTask(cacheAopProxyChain, cache, cacheKey, cacheWrapper));
         }
     }
 
+    /**
+     * 刷新任务
+     */
     class RefreshTask implements Runnable {
 
         private final CacheAopProxyChain cacheAopProxyChain;
@@ -113,8 +122,7 @@ public class RefreshHandler {
 
         private final Object[] arguments;
 
-        public RefreshTask(CacheAopProxyChain cacheAopProxyChain, Cache cache, CacheKeyTO cacheKey, CacheWrapper<Object> cacheWrapper)
-                throws Exception {
+        public RefreshTask(CacheAopProxyChain cacheAopProxyChain, Cache cache, CacheKeyTO cacheKey, CacheWrapper<Object> cacheWrapper) {
             this.cacheAopProxyChain = cacheAopProxyChain;
             this.cache = cache;
             this.cacheKey = cacheKey;
@@ -125,19 +133,12 @@ public class RefreshHandler {
 
         @Override
         public void run() {
-            DataLoader dataLoader;
+            DataLoader dataLoader = new DataLoader();
+            boolean isFirst;
+            CacheWrapper<Object> newCacheWrapper = dataLoader.init(cacheAopProxyChain, cache, cacheHandler).getData().getCacheWrapper();
+
             //todo
-            dataLoader = new DataLoader();
-
-            boolean isFirst = false;
-            CacheWrapper<Object> newCacheWrapper = null;
-            try {
-                newCacheWrapper = dataLoader.init(cacheAopProxyChain, cache, cacheHandler).getData().getCacheWrapper();
-            } catch (Throwable e) {
-
-            } finally {
-                isFirst = dataLoader.isFirst();
-            }
+            isFirst = dataLoader.isFirst();
 
             if (isFirst) {
                 // 如果数据加载失败，则把旧数据进行续租
@@ -146,16 +147,11 @@ public class RefreshHandler {
                     if (newExpire < 120) {
                         newExpire = 120;
                     }
-                    newCacheWrapper = new CacheWrapper<Object>(cacheWrapper.getCacheObject(), newExpire);
+                    newCacheWrapper = new CacheWrapper<>(cacheWrapper.getCacheObject(), newExpire);
                 }
-
-                try {
-                    if (null != newCacheWrapper) {
-                        //将数据写入缓存
-                        cacheHandler.writeCache(cacheAopProxyChain, arguments, cache, cacheKey, newCacheWrapper);
-                    }
-                } catch (Throwable e) {
-                    log.error(e.getMessage(), e);
+                if (null != newCacheWrapper) {
+                    //将数据写入缓存
+                    cacheHandler.writeCache(cacheAopProxyChain, arguments, cache, cacheKey, newCacheWrapper);
                 }
             }
             refreshing.remove(cacheKey);

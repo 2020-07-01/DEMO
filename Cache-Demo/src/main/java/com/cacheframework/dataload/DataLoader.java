@@ -19,7 +19,7 @@ import java.io.IOException;
  * @Author : yq
  * @Date: 2021-05-04
  * @Description : 数据加载
- * 数据加载分为：用户请求和自动加载两种
+ * 等待机制
  */
 @Slf4j
 public class DataLoader {
@@ -154,7 +154,7 @@ public class DataLoader {
                 do {
                     int tryCount = 20;
                     for (int i = 0; i < tryCount; i++) {
-                        cacheWrapper = cacheHandler.get(cacheKey, cacheAopProxyChain.getMethod());
+                        cacheWrapper = cacheHandler.getCache(cacheKey, cacheAopProxyChain.getMethod());
                         if (null != cacheWrapper) {
                             break;
                         }
@@ -206,7 +206,7 @@ public class DataLoader {
             }
         } while (System.currentTimeMillis() - startWait < cache.waitTimeOut());
         if (null == cacheWrapper) {
-            cacheWrapper = cacheHandler.get(cacheKey, cacheAopProxyChain.getMethod());
+            cacheWrapper = cacheHandler.getCache(cacheKey, cacheAopProxyChain.getMethod());
         }
         if (null == cacheWrapper) {
             AutoLoadConfig config = cacheHandler.getAutoLoadConfig();
@@ -246,7 +246,7 @@ public class DataLoader {
      *
      * @return DataLoader
      */
-    public DataLoader getData() throws Throwable {
+    public DataLoader getData()  {
         long loadDataStartTime = System.currentTimeMillis();
         //执行dao层方法加载数据
         Object result = cacheAopProxyChain.doProxyChain(arguments);

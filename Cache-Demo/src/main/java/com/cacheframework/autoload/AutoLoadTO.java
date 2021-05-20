@@ -15,6 +15,9 @@ import lombok.Data;
 @Data
 public class AutoLoadTO {
 
+    /**
+     * 请求参数
+     */
     private final Object[] args;
 
     /**
@@ -22,6 +25,9 @@ public class AutoLoadTO {
      */
     private final CacheKeyTO cacheKey;
 
+    /**
+     * 切面类
+     */
     private final CacheAopProxyChain joinPoint;
 
     /**

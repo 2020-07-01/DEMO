@@ -38,7 +38,7 @@ public interface CacheAopProxyChain {
      * @return
      * @throws Throwable
      */
-    Object doProxyChain(Object[] arguments) throws Throwable;
+    Object doProxyChain(Object[] arguments);
 
 
 }

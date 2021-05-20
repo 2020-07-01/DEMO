@@ -1,5 +1,6 @@
 package com.cacheframework.common;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.intercept.MethodInvocation;
 
 import java.lang.reflect.Method;
@@ -10,6 +11,7 @@ import java.lang.reflect.Method;
  * @Date: 2021-05-04
  * @Description : 缓存切面代理类
  */
+@Slf4j
 public class CacheAopProxy implements CacheAopProxyChain {
 
     private final MethodInvocation invocation;
@@ -56,12 +58,17 @@ public class CacheAopProxy implements CacheAopProxyChain {
     /**
      * 执行方法
      *
-     * @param arguments
-     * @return
-     * @throws Throwable
+     * @param arguments 参数
+     * @return DAO结果
      */
     @Override
-    public Object doProxyChain(Object[] arguments) throws Throwable {
-        return getMethod().invoke(invocation.getThis(), arguments);
+    public Object doProxyChain(Object[] arguments) {
+        try {
+            return getMethod().invoke(invocation.getThis(), arguments);
+        } catch (Exception e) {
+            log.error("Method invoke is error ...");
+            log.error(e.getMessage(), e);
+        }
+        return null;
     }
 }

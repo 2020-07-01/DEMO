@@ -7,10 +7,11 @@ import com.cacheframework.core.CacheWrapper;
 import com.cacheframework.annotation.Cache;
 import com.cacheframework.config.AutoLoadConfig;
 import com.cacheframework.dataload.DataLoader;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadLocalRandom;
@@ -38,7 +39,8 @@ public class AutoLoadHandler {
     private static final int ONE_THOUSAND_MS = 1000;
 
     /**
-     * 自动加载队列
+     * 自动加载Map
+     * 避免重复加载
      */
     private final ConcurrentHashMap<CacheKeyTO, AutoLoadTO> autoLoadMap;
 
@@ -91,6 +93,11 @@ public class AutoLoadHandler {
         }
     }
 
+    /**
+     * 获取自动加载数据
+     *
+     * @return autoLoad
+     */
     public AutoLoadTO[] getAutoLoadQueue() {
         if (null == autoLoadMap || autoLoadMap.isEmpty()) {
             return null;
@@ -109,11 +116,11 @@ public class AutoLoadHandler {
      * 如果存在则不替换，返回已存在的值
      * 如果autoLoadMap中的数据还未来得及消费，又进来一条数据
      *
-     * @param cacheKey
-     * @param joinPoint
-     * @param cache
-     * @param cacheWrapper
-     * @return
+     * @param cacheKey     cacheKey
+     * @param joinPoint    joinPoint
+     * @param cache        cache
+     * @param cacheWrapper cacheWrapper
+     * @return AutoLoadTO
      */
     public AutoLoadTO putIfAbsent(CacheKeyTO cacheKey, CacheAopProxyChain joinPoint, Cache cache,
                                   CacheWrapper<Object> cacheWrapper) {
@@ -130,11 +137,10 @@ public class AutoLoadHandler {
             //已经存在
             return autoLoadTO;
         }
-        //TODO 表达式解析忽略
+
         int expire = cacheWrapper.getExpire();
         if (expire >= AUTO_LOAD_MIN_EXPIRE && autoLoadMap.size() < this.config.getMaxElement()) {
             Object[] arguments;
-
             //TODO 深度复制忽略
             arguments = joinPoint.getArgs();
             autoLoadTO = new AutoLoadTO(cacheKey, joinPoint, arguments, cache, expire);
@@ -152,12 +158,12 @@ public class AutoLoadHandler {
     /**
      * 写缓存并设置上一次加载时间
      *
-     * @param cache
-     * @param cacheAopProxyChain
-     * @param cacheKey
-     * @param newCacheWrapper
-     * @param loadDataUseTime
-     * @param autoLoadTO
+     * @param cache              Cache注解
+     * @param cacheAopProxyChain 切面类
+     * @param cacheKey           缓存key
+     * @param newCacheWrapper    缓存value
+     * @param loadDataUseTime    加载耗时
+     * @param autoLoadTO         自动加载数据
      */
     private void writeCacheAndSetLoadTime(Cache cache, CacheAopProxyChain cacheAopProxyChain, CacheKeyTO cacheKey, CacheWrapper<Object> newCacheWrapper, long loadDataUseTime, AutoLoadTO autoLoadTO) {
 
@@ -168,7 +174,7 @@ public class AutoLoadHandler {
                         .setExpire(newCacheWrapper.getExpire()).addUseTotalTime(loadDataUseTime);
             }
         } catch (Exception e) {
-
+            log.error(e.getMessage(), e);
         }
     }
 
@@ -179,13 +185,15 @@ public class AutoLoadHandler {
 
         @Override
         public void run() {
+            if (autoLoadQueue == null) {
+                throw new NullPointerException("autoLoadQueue is null...");
+            }
             while (running) {
                 try {
+                    //获取头部元素
                     AutoLoadTO tmpTo = autoLoadQueue.take();
-                    if (tmpTo != null) {
-                        loadCache(tmpTo);
-                        Thread.sleep(config.getAutoLoadPeriod());
-                    }
+                    loadCache(tmpTo);
+                    Thread.sleep(config.getAutoLoadPeriod());
                 } catch (Throwable e) {
                     log.error(e.getMessage(), e);
                 }
@@ -195,6 +203,7 @@ public class AutoLoadHandler {
 
         /**
          * 自动加载数据
+         * 根据从DAO加载数据耗时 请求频率 计算是否需要自动加载
          *
          * @param autoLoadTO 自动加载数据类
          */
@@ -266,9 +275,9 @@ public class AutoLoadHandler {
                 try {
                     Method method = autoLoadTO.getJoinPoint().getMethod();
                     //从缓存中获取数据
-                    result = cacheHandler.get(autoLoadTO.getCacheKey(), method);
+                    result = cacheHandler.getCache(autoLoadTO.getCacheKey(), method);
                 } catch (Exception e) {
-
+                    log.error(e.getMessage(), e);
                 }
                 //如果已经被别的服务器更新了，则不需要再次更新
                 if (null != result) {
@@ -281,22 +290,19 @@ public class AutoLoadHandler {
                 }
             }
 
-            //TODO dataloader 池
             CacheAopProxyChain cacheAopProxyChain = autoLoadTO.getJoinPoint();
             CacheKeyTO cacheKey = autoLoadTO.getCacheKey();
             DataLoader dataLoader;
             dataLoader = new DataLoader();
             CacheWrapper<Object> newCacheWrapper = null;
-            boolean isFirst = false;
+            boolean isFirst;
             long loadDataUseTime = 0L;
             try {
                 newCacheWrapper = dataLoader.init(cacheAopProxyChain, cache, cacheHandler).getData().getCacheWrapper();
                 loadDataUseTime = dataLoader.getLoadDataUseTime();
             } catch (Exception e) {
-
+                log.error(e.getMessage(), e);
             } finally {
-
-                // dataLoader 的数据必须在放回对象池之前获取
                 isFirst = dataLoader.isFirst();
             }
 
@@ -311,38 +317,35 @@ public class AutoLoadHandler {
         }
     }
 
+    /**
+     * 排序线程
+     */
     class SortRunnable implements Runnable {
 
+        @SneakyThrows
         @Override
         public void run() {
+            if (autoLoadMap == null) {
+                throw new NullPointerException("autoLoadMap is null...");
+            }
+            if (autoLoadQueue == null) {
+                throw new NullPointerException("autoLoadQueue is null...");
+            }
             while (running) {
                 int sleep = 100;
-
-                if (autoLoadMap.isEmpty() || autoLoadQueue.size() > 0) {
-                    try {
-                        Thread.sleep(sleep);
-                    } catch (Exception e) {
-                        //TODO
-                        log.error("");
-                    }
+                if (autoLoadMap.isEmpty() || Objects.requireNonNull(autoLoadQueue).size() > 0) {
+                    Thread.sleep(sleep);
                 }
-
-                //TODO
-
+                //TODO 此处可引入线程池
                 AutoLoadTO[] tmpArr = getAutoLoadQueue();
                 if (null == tmpArr || tmpArr.length == 0) {
                     continue;
                 }
                 for (int i = 0; i < tmpArr.length; i++) {
-                    try {
-                        AutoLoadTO to = tmpArr[i];
-                        autoLoadQueue.put(to);
-                        if (i > 0 & i % 1000 == 0) {
-                            //TODO
-                            Thread.yield();
-                        }
-                    } catch (Exception e) {
-
+                    AutoLoadTO to = tmpArr[i];
+                    autoLoadQueue.put(to);
+                    if (i > 0 & i % 1000 == 0) {
+                        Thread.yield();
                     }
                 }
             }

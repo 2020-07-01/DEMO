@@ -758,6 +758,26 @@ public class MainMay {
         return dfs(head.next, root.left) || dfs(head.next, root.right);
     }
 
+
+    /**
+     * 1833. 雪糕的最大数量
+     * 刷新对贪心算法的理解
+     *
+     * @param costs
+     * @param coins
+     * @return
+     */
+    public int maxIceCream(int[] costs, int coins) {
+
+        Arrays.sort(costs);
+        int index = 0;
+        int length = costs.length;
+        while (index < length && coins >= costs[index]) {
+            coins = coins - costs[index++];
+        }
+        return index;
+    }
+
     public static void main(String[] args) {
 
         System.out.println(0 / 10);
