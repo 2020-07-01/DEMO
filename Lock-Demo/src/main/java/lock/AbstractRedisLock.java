@@ -1,4 +1,4 @@
-package com.cacheframework.lock;
+package lock;
 
 /**
  * @ClassName : AbstractRedisLock

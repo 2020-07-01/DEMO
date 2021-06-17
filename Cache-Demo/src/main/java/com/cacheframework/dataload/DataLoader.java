@@ -9,7 +9,6 @@ import com.cacheframework.config.AutoLoadConfig;
 import com.cacheframework.core.CacheHandler;
 import com.cacheframework.core.CacheKeyTO;
 import com.cacheframework.core.CacheWrapper;
-import com.cacheframework.lock.ILock;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -131,7 +130,7 @@ public class DataLoader {
      */
     private void doFirstRequest(ProcessingTO processingTO) throws Throwable {
 
-        ILock distributedLock = cacheHandler.getLock();
+        //ILock distributedLock = cacheHandler.getLock();
 
         if (null != distributedLock || cache.lockExpire() > 0) {
             String lockKey = cacheKey.getLockKey();
@@ -143,7 +142,7 @@ public class DataLoader {
                 } finally {
                     try {
                         //todo 分布式锁key 与 value
-                        distributedLock.releaseLock(lockKey, "");
+                        //distributedLock.releaseLock(lockKey, "");
                     } catch (Exception e) {
                         log.error("release lock failure!", e);
                     }

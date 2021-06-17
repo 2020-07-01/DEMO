@@ -71,14 +71,14 @@ public class JedisClusterCacheManager extends AbstractRedisCacheManager {
             RetryableJedisClusterPipeline retryAbleJedisCluster = new RetryableJedisClusterPipeline(jedisCluster) {
                 @Override
                 public void execute(JedisClusterPipeline jedisClusterPipeline) {
-                    JedisUtil.executeDelete(jedisClusterPipeline,keys);
+                    JedisUtil.executeDelete(jedisClusterPipeline, keys);
                 }
             };
 
             try {
-retryAbleJedisCluster.sync();
+                retryAbleJedisCluster.sync();
 
-            }catch (Exception e){
+            } catch (Exception e) {
 
             }
         }
@@ -105,6 +105,7 @@ retryAbleJedisCluster.sync();
 
         @Override
         public void mset(Collection<MSetParam> params) {
+
 
         }
 

@@ -1,8 +1,8 @@
-package com.cacheframework.lock.jedis;
+package lock.jedis;
 
-import com.cacheframework.lock.AbstractRedisLock;
+import lock.AbstractRedisLock;
 import redis.clients.jedis.JedisCluster;
-import redis.clients.jedis.params.SetParams;
+
 
 import java.util.Collections;
 

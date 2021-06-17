@@ -15,9 +15,7 @@ public abstract class RetryableJedisClusterPipeline {
     private final JedisClusterInfoCache clusterInfoCache;
 
     public RetryableJedisClusterPipeline(JedisCluster jedisCluster) {
-
-
-        clusterInfoCache = getValue(connectionHandler, FIELD_CACHE);
+        clusterInfoCache =  null;
     }
 
     public abstract void execute(JedisClusterPipeline jedisClusterPipeline);
@@ -27,7 +25,7 @@ public abstract class RetryableJedisClusterPipeline {
 
         JedisClusterPipeline pipeline = new JedisClusterPipeline(clusterInfoCache);
         execute(pipeline);
-        pipeline
+
     }
 
 

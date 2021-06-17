@@ -5,11 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/Cache-Demo/Cache-Demo.iml" filepath="$PROJECT_DIR$/Cache-Demo/Cache-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DEMO.iml" filepath="$PROJECT_DIR$/.idea/DEMO.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaExercise/JavaExercise.iml" filepath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lock-Demo/Lock-Demo.iml" filepath="$PROJECT_DIR$/Lock-Demo/Lock-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Message-Queue-Demo/Message-Queue-Demo.iml" filepath="$PROJECT_DIR$/Message-Queue-Demo/Message-Queue-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis-Demo/Mybatis-Demo.iml" filepath="$PROJECT_DIR$/Mybatis-Demo/Mybatis-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sharding-Sphere-Demo/Sharding-Sphere-Demo.iml" filepath="$PROJECT_DIR$/Sharding-Sphere-Demo/Sharding-Sphere-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-Demo/Spring-Demo.iml" filepath="$PROJECT_DIR$/Spring-Demo/Spring-Demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Zuul-Demo/Zuul-Demo.iml" filepath="$PROJECT_DIR$/Zuul-Demo/Zuul-Demo.iml" />
     </modules>
   </component>
 </project>

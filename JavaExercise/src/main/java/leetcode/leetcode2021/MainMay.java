@@ -1,6 +1,8 @@
 
 package leetcode.leetcode2021;
 
+import callback_function.example2.Main;
+
 import java.util.*;
 
 /**
@@ -778,9 +780,198 @@ public class MainMay {
         return index;
     }
 
+    /**
+     * 209. 长度最小的子数组
+     * 待优化
+     *
+     * @param target
+     * @param nums
+     * @return
+     */
+    public int minSubArrayLen(int target, int[] nums) {
+
+        int left = 0;
+        int right = 1;
+        int res = Integer.MAX_VALUE;
+        int currentSum = nums[left];
+        while (right <= nums.length) {
+
+            if (currentSum < target && right < nums.length) {
+                currentSum = currentSum + nums[right];
+                right++;
+            } else if (currentSum == target) {
+                int resTemp = right - left;
+                if (resTemp < res) {
+                    res = resTemp;
+                }
+                currentSum = currentSum - nums[left];
+                if (right != nums.length) {
+                    currentSum = currentSum + nums[right];
+                    right++;
+                }
+                left++;
+
+            } else {
+                currentSum = currentSum - nums[left];
+                left++;
+            }
+        }
+        if (currentSum == 0) {
+            res = 0;
+        }
+        return res;
+    }
+
+    /**
+     * 209. 长度最小的子数组
+     * 时间复杂度O(n)
+     *
+     * @param target
+     * @param nums
+     * @return
+     */
+    public int minSubArrayLen1(int target, int[] nums) {
+
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+        int ans = Integer.MAX_VALUE;
+        int left = 0;
+        int right = 0;
+
+        int sum = 0;
+        while (right < n) {
+            sum = sum + nums[right];
+            while (sum >= target) {
+                ans = Math.min(ans, right - left + 1);
+                sum = sum - nums[left];
+                left++;
+            }
+            right++;
+        }
+        return ans == Integer.MAX_VALUE ? 0 : ans;
+    }
+
+
+    /**
+     * 1748. 唯一元素的和
+     *
+     * @param nums
+     * @return
+     */
+    public int sumOfUnique(int[] nums) {
+
+        int res = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (map.get(nums[i]) == 1) {
+                res = res + nums[i];
+            }
+        }
+        return res;
+    }
+
+    /**
+     * 15. 三数之和
+     *
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> resList = new LinkedList<>();
+        if (nums == null || nums.length < 3) {
+            return resList;
+        }
+
+        Arrays.sort(nums);
+        int length = nums.length;
+        for (int i = 0; i < length; i++) {
+
+            //如果nums[i] > 0 跳过
+            if (nums[i] > 0) {
+                continue;
+            }
+
+            //如果跟上个元素相同则跳过
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+
+            int left = i + 1;
+            int right = length - 1;
+            while (left < right) {
+
+                if (nums[i] + nums[left] + nums[right] > 0) {
+                    right--;
+                } else if (nums[i] + nums[left] + nums[right] < 0) {
+                    left++;
+                } else {
+                    List<Integer> list = new LinkedList<>();
+                    list.add(nums[i]);
+                    list.add(nums[left]);
+                    list.add(nums[right]);
+                    resList.add(list);
+                    //判断下一位是否相同 去重
+                    while (left < right && nums[left] == nums[left + 1]) {
+                        left++;
+                    }
+                    while (left < right && nums[right] == nums[right - 1]) {
+                        right--;
+                    }
+                    left++;
+                    right--;
+                }
+            }
+        }
+        return resList;
+    }
+
+
+    /**
+     * 62. 不同路径
+     *
+     * @param m
+     * @param n
+     * @return
+     */
+    public int uniquePaths(int m, int n) {
+        if (m == 1 || n == 1) {
+            return 2;
+        }
+
+        int[][] right = new int[m][n];
+        int[][] down = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            right[i][0] = 1;
+        }
+
+        for (int i = 0; i < n; i++) {
+            down[0][i] = 1;
+        }
+
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                //上面的值 + 左边的值
+                right[i][j] = down[i - 1][j] + right[i][j - 1];
+                down[i][j] = down[i - 1][j] + right[i][j - 1];
+            }
+        }
+        return right[m - 1][n - 2] + down[m - 2][n - 1];
+    }
+
+
     public static void main(String[] args) {
 
-        System.out.println(0 / 10);
+        MainMay main = new MainMay();
+        int[] nums = new int[]{1, 1, 1, 1, 1, 1, 1, 1};
+
+        System.out.println(main.uniquePaths(3, 7));
 
     }
 }

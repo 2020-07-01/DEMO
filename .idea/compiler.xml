@@ -10,10 +10,10 @@
         <module name="Cache-Demo" />
         <module name="Spring-Demo" />
         <module name="JavaExercise" />
+        <module name="Lock-Demo" />
         <module name="Message-Queue-Demo" />
         <module name="Sharding-Sphere-Demo" />
         <module name="Mybatis-Demo" />
-        <module name="Zuul-Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,11 +21,11 @@
       <module name="DEMO" target="1.8" />
       <module name="Hystrix-Demo" target="1.8" />
       <module name="JavaExercise" target="1.8" />
+      <module name="Lock-Demo" target="1.8" />
       <module name="Message-Queue-Demo" target="1.8" />
       <module name="Mybatis-Demo" target="1.8" />
       <module name="Sharding-Sphere-Demo" target="1.8" />
       <module name="Spring-Demo" target="1.8" />
-      <module name="Zuul-Demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

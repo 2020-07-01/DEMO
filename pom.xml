@@ -15,7 +15,7 @@
         <module>Spring-Demo</module>
         <module>Mybatis-Demo</module>
         <module>Sharding-Sphere-Demo</module>
-        <module>Zuul-Demo</module>
+        <module>Lock-Demo</module>
     </modules>
 
     <properties>
