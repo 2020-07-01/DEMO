@@ -1,0 +1,17 @@
+server:
+  port: 8091
+  tomcat:
+    accept-count: 100
+    max-threads: 200
+    min-spare-threads: 10
+    max-connections: 10000
+    max-swallow-size: 10MB
+
+
+spring:
+  application:
+    name: DEMO
+
+  redis:
+    clusterNodes: 127.0.0.1
+    password:
