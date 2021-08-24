@@ -1,6 +1,8 @@
 package leetcode.leetcode2021;
 
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.stream.Collectors;
 
 /**
@@ -423,11 +425,195 @@ public class MainJuly {
         return dp[n] % 1000000007;
     }
 
-    public static void main(String[] args) {
-        MainJuly main = new MainJuly();
-        int[] nums = new int[]{1, 2, 3, 4, 5};
-        int[] speed = new int[]{4, 5, 3, 2, 1};
-        System.out.println(main.validateStackSequences(nums, speed));
+
+    /**
+     * 面试题 03.02. 栈的最小值
+     */
+    class MinStack {
+
+        private Deque<Integer> deque;
+        private PriorityQueue<Integer> queue;
+
+        /**
+         * initialize your data structure here.
+         */
+        public MinStack() {
+            deque = new LinkedList<>();
+            queue = new PriorityQueue<>();
+        }
+
+        public void push(int x) {
+            deque.push(x);
+            queue.add(x);
+        }
+
+        public void pop() {
+            if (!deque.isEmpty()) {
+                Integer value = deque.pop();
+                queue.remove(value);
+            }
+        }
+
+        public int top() {
+            if (!deque.isEmpty()) {
+                return deque.peek();
+            }
+            return -1;
+        }
+
+        public int getMin() {
+            if (!deque.isEmpty()) {
+                return queue.peek();
+            }
+            return -1;
+        }
     }
 
+
+    /**
+     * 剑指 Offer 59 - II. 队列的最大值
+     */
+    class MaxQueue {
+
+        private Deque<Integer> deque;
+        private PriorityQueue<Integer> queue;
+
+        public MaxQueue() {
+            deque = new LinkedList();
+            queue = new PriorityQueue<>((o1, o2) -> o2 - o1);
+        }
+
+        public int max_value() {
+            if (deque.isEmpty()) {
+                return -1;
+            }
+            return queue.peek();
+        }
+
+        public void push_back(int value) {
+            deque.addLast(value);
+            queue.add(value);
+        }
+
+        public int pop_front() {
+
+            if (deque.isEmpty()) {
+                return -1;
+            }
+            int value = deque.removeFirst();
+            queue.remove(value);
+            return value;
+        }
+    }
+
+
+    /**
+     * 面试题 16.07. 最大数值
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public int maximum(int a, int b) {
+        long c = a;
+        long d = b;
+        int res = (int) ((Math.abs(c - d) + c + d) / 2);
+        return res;
+    }
+
+    /**
+     * 两个栈实现一个队列
+     * 保证每个操作都合法
+     */
+    class MyQueue {
+        Stack<Integer> stack1;
+        Stack<Integer> stack2;
+
+        /** Initialize your data structure here. */
+        public MyQueue() {
+            stack1 = new Stack<>();
+            stack2 = new Stack<>();
+        }
+
+        /** Push element x to the back of queue. */
+        public void push(int x) {
+            stack1.push(x);
+        }
+
+        /** Removes the element from in front of queue and returns that element. */
+        public int pop() {
+            if(stack2.empty()){
+                while (!stack1.empty()){
+                    stack2.push(stack1.pop());
+                }
+            }
+            if(!stack2.empty()){
+                return stack2.pop();
+            }else {
+                return -1;
+            }
+        }
+
+        /** Get the front element. */
+        public int peek() {
+            if(stack2.empty()){
+                while (!stack1.empty()){
+                    stack2.push(stack1.pop());
+                }
+            }
+            if(!stack2.empty()){
+                return stack2.peek();
+            }else {
+                return -1;
+            }
+        }
+
+        /** Returns whether the queue is empty. */
+        public boolean empty() {
+            return stack2.empty() && stack1.empty();
+        }
+    }
+
+
+    public static void main(String[] args) {
+//        MainJuly main = new MainJuly();
+//        int[] nums = new int[]{1, 2, 3, 4, 5};
+//        int[] speed = new int[]{4, 5, 3, 2, 1};
+//        System.out.println(main.validateStackSequences(nums, speed));
+
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        treeMap.put(1, 1);
+        treeMap.put(2, 2);
+        treeMap.put(5, 5);
+        treeMap.put(10, 10);
+
+        List arrayList = new ArrayList();
+        LinkedList linkedList=  new LinkedList();
+        linkedList.add(3,"");
+
+        arrayList.add(3,"");
+        Thread threadA = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("AAA");
+            }
+        });
+        Thread threadB = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("BBB");
+            }
+        });
+        Thread threadC = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("CCC");
+            }
+        });
+        threadA.start();
+    }
 }
+
+
+
+

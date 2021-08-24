@@ -2,7 +2,6 @@ package leetcode.leetcode2021;
 
 import dataStructure.list.Link;
 import javafx.beans.binding.StringBinding;
-import netscape.security.UserTarget;
 import org.checkerframework.framework.qual.LiteralKind;
 
 import javax.swing.text.SimpleAttributeSet;

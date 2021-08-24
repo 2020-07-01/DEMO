@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cache-Demo" />
+        <module name="Lock-Demo" />
         <module name="Spring-Demo" />
         <module name="JavaExercise" />
-        <module name="Lock-Demo" />
         <module name="Message-Queue-Demo" />
         <module name="Sharding-Sphere-Demo" />
         <module name="Mybatis-Demo" />
+        <module name="Cache-Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
