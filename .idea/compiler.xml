@@ -8,9 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Lock-Demo" />
-        <module name="Spring-Demo" />
         <module name="JavaExercise" />
-        <module name="Message-Queue-Demo" />
+        <module name="Spring-Boot-demo" />
         <module name="Sharding-Sphere-Demo" />
         <module name="Mybatis-Demo" />
         <module name="Cache-Demo" />
@@ -25,7 +24,7 @@
       <module name="Message-Queue-Demo" target="1.8" />
       <module name="Mybatis-Demo" target="1.8" />
       <module name="Sharding-Sphere-Demo" target="1.8" />
-      <module name="Spring-Demo" target="1.8" />
+      <module name="Spring-Boot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

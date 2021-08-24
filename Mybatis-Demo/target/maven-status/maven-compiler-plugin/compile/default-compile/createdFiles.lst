@@ -1,8 +1,6 @@
-com\mspring\MyBatisSpringApplication.class
 com\mybatis\mapper\BlogMapper.class
 com\mybatis\mapper\UserMapper.class
 com\mybatis\bean\User.class
-com\mspring\MybatisConfig.class
 com\mybatis\bean\Blog.class
 com\mybatis\MybatisDemo.class
 com\mybatis\MybatisApplication.class
