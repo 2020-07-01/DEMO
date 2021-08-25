@@ -132,10 +132,10 @@ public class DataLoader {
 
         //ILock distributedLock = cacheHandler.getLock();
 
-        if (null != distributedLock || cache.lockExpire() > 0) {
+        if ( cache.lockExpire() > 0) {
             String lockKey = cacheKey.getLockKey();
             long startWait = processingTO.getStartTime();
-            boolean lock = tryLock(distributedLock, lockKey);
+            boolean lock = tryLock("", lockKey);
             if (lock) {
                 try {
                     getData();
@@ -144,7 +144,7 @@ public class DataLoader {
                         //todo 分布式锁key 与 value
                         //distributedLock.releaseLock(lockKey, "");
                     } catch (Exception e) {
-                        log.error("release lock failure!", e);
+                        log.error("release com.lock failure!", e);
                     }
                 }
             } else {
@@ -177,7 +177,7 @@ public class DataLoader {
      * 处理等待请求
      *
      * @param processing 请求包装类
-     * @param lock       lock
+     * @param lock       com.lock
      * @throws IOException IOException
      */
     private void doWaitRequest(ProcessingTO processing, Object lock) throws Throwable {
@@ -226,12 +226,13 @@ public class DataLoader {
      * @param lockKey         lockKey
      * @return boolean 是否获取到锁
      */
-    private boolean tryLock(ILock distributedLock, String lockKey) {
+    private boolean tryLock(Object distributedLock, String lockKey) {
         try {
-            return distributedLock.tryLock(lockKey, cache.lockExpire());
+            return false;
+            //return distributedLock.tryLock(lockKey, cache.lockExpire());
         } catch (Throwable e) {
             if (cache.openLockDown()) {
-                cacheHandler.setLock(null);
+                //cacheHandler.setLock(null);
                 log.error("分布式锁异常，强制停止使用分布式锁!", e);
             } else {
                 log.error("分布式锁异常!", e);

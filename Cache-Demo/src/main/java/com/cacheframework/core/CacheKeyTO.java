@@ -37,7 +37,7 @@ public class CacheKeyTO implements Serializable {
         if (null != hfield && hfield.length() > 0) {
             key.append(":").append(hfield);
         }
-        key.append(":lock");
+        key.append(":com.lock");
         return key.toString();
     }
 

@@ -23,9 +23,6 @@ public abstract class RetryableJedisClusterPipeline {
 
     public void sync(){
 
-        JedisClusterPipeline pipeline = new JedisClusterPipeline(clusterInfoCache);
-        execute(pipeline);
-
     }
 
 

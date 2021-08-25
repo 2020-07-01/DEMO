@@ -10,7 +10,6 @@ import com.cacheframework.common.MSetParam;
 import com.cacheframework.config.AutoLoadConfig;
 import com.cacheframework.refresh.RefreshHandler;
 import com.cacheframework.dataload.DataLoader;
-import com.cacheframework.lock.ILock;
 import com.cacheframework.manager.ICacheManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -57,11 +56,6 @@ public class CacheHandler {
      * 刷新处理
      */
     private final RefreshHandler refreshHandler;
-
-    /**
-     * 分布式锁
-     */
-    private ILock lock;
 
     public CacheHandler(ICacheManager cacheManager, AutoLoadConfig autoLoadConfig) throws IllegalArgumentException {
         if (null == cacheManager) {
@@ -325,14 +319,6 @@ public class CacheHandler {
 
     public AutoLoadConfig getAutoLoadConfig() {
         return this.autoLoadConfig;
-    }
-
-    public ILock getLock() {
-        return lock;
-    }
-
-    public void setLock(ILock lock) {
-        this.lock = lock;
     }
 
     public ConcurrentHashMap<CacheKeyTO, ProcessingTO> getProcessing() {

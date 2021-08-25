@@ -19,13 +19,6 @@ public enum Singleton4 {
 class Test{
     public static void main(String[] args) throws Exception{
 
-        Singleton4 instance1 = Singleton4.INSTANCE;
-        Constructor<Singleton4> constructor = Singleton4.class.getDeclaredConstructor(null);
-
-        constructor.setAccessible(true);
-        Singleton4 instance2 = constructor.newInstance(String.class,int.class);
-        System.out.println(instance1.hashCode());
-
 
     }
 }

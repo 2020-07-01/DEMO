@@ -12,7 +12,6 @@
 
     <modules>
         <module>JavaExercise</module>
-        <module>Spring-Boot-Demo</module>
         <module>Mybatis-Demo</module>
         <module>Sharding-Sphere-Demo</module>
         <module>Lock-Demo</module>
