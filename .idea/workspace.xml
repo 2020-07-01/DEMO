@@ -23,29 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/SpringBootDemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/BizMessageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/DeadMessageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqDeclare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqPublishController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lock-Demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheKeyTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/core/CacheKeyTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/dataload/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/dataload/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/redis/RetryableJedisClusterPipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cache-Demo/src/main/java/com/cacheframework/manager/redis/RetryableJedisClusterPipeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton4.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/designMode/singlePattern/Singleton4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock-Demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lock-Demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/lock/AbstractRedisLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/lock/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/lock/ILock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/lock/RedissonLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/lock/jedis/JedisClusterLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/target/Mybatis-Demo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/target/Mybatis-Demo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/BizMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/BizMessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqDeclare.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqDeclare.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -382,14 +364,8 @@
       <workItem from="1629809680778" duration="703000" />
       <workItem from="1629810427334" duration="2834000" />
       <workItem from="1629813350086" duration="7468000" />
-      <workItem from="1629893257481" duration="5251000" />
-    </task>
-    <task id="LOCAL-00057" summary="144. 二叉树的前序遍历&#10;145. 二叉树的后序遍历&#10;1672. 最富有客户的资产总量">
-      <created>1607782323553</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1607782323554</updated>
+      <workItem from="1629893257481" duration="8848000" />
+      <workItem from="1630066129749" duration="4598000" />
     </task>
     <task id="LOCAL-00058" summary="628. 三个数的最大乘积&#10;面试题 01.02. 判定是否互为字符重排&#10;404. 左叶子之和&#10;1122. 数组的相对排序&#10;剑指 Offer 37. 序列化二叉树">
       <created>1607868602693</created>
@@ -727,7 +703,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629812583549</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="rabbitmq死信队列学习">
+      <created>1629899647096</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1629899647097</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +737,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="分库分表配置" />
     <MESSAGE value="338. 比特位计数" />
     <MESSAGE value="395. 至少有 K 个重复字符的最长子串&#10;503. 下一个更大元素 II&#10;131. 分割回文串" />
     <MESSAGE value="计算器" />
@@ -779,7 +761,8 @@
     <MESSAGE value="缓存框架" />
     <MESSAGE value="demo" />
     <MESSAGE value="删除message-queue-demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除message-queue-demo" />
+    <MESSAGE value="rabbitmq死信队列学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabbitmq死信队列学习" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="203" key="#Notifications" timestamp="1621601764071">
@@ -810,100 +793,104 @@
     </state>
     <state x="298" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629813055549" />
     <state x="298" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1621771792992" />
+    <state x="383" y="208" width="515" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1630067511635">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="383" y="208" width="515" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630067511635" />
     <state x="438" y="230" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1621738860260">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="230" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1621738860260" />
-    <state width="713" height="438" key="DebuggerActiveHint" timestamp="1629894931479">
+    <state width="713" height="438" key="DebuggerActiveHint" timestamp="1630071329600">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629894931479" />
+    <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630071329600" />
     <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471499216" />
     <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1625497857388" />
-    <state width="1237" height="277" key="GridCell.Tab.0.bottom" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.0.bottom" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="198" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327575" />
     <state width="1237" height="189" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747339" />
     <state width="1237" height="125" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="277" key="GridCell.Tab.0.center" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.0.center" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="198" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327574" />
     <state width="1237" height="189" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747338" />
     <state width="1237" height="125" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="277" key="GridCell.Tab.0.left" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.0.left" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="198" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327574" />
     <state width="1237" height="189" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747338" />
     <state width="1237" height="125" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="277" key="GridCell.Tab.0.right" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.0.right" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="198" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327575" />
     <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747338" />
     <state width="1237" height="125" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="277" key="GridCell.Tab.1.bottom" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.1.bottom" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.1.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.1.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="192" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
     <state width="1237" height="189" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747339" />
     <state width="1237" height="60" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625533419912" />
-    <state width="1237" height="277" key="GridCell.Tab.1.center" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.1.center" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.1.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.1.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="192" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
     <state width="1237" height="189" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747339" />
     <state width="1237" height="60" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1625533419911" />
-    <state width="1237" height="277" key="GridCell.Tab.1.left" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.1.left" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.1.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.1.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="192" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
     <state width="1237" height="189" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747339" />
     <state width="1237" height="60" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1625533419911" />
-    <state width="1237" height="277" key="GridCell.Tab.1.right" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.1.right" timestamp="1630069215198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.1.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.1.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215198" />
     <state width="1237" height="192" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
     <state width="1237" height="189" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622471747339" />
     <state width="1237" height="60" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1625533419911" />
-    <state width="1237" height="277" key="GridCell.Tab.2.bottom" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.2.bottom" timestamp="1630069215199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.2.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.2.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215199" />
     <state width="1237" height="192" key="GridCell.Tab.2.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327559" />
-    <state width="1237" height="277" key="GridCell.Tab.2.center" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.2.center" timestamp="1630069215199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.2.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.2.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215199" />
     <state width="1237" height="192" key="GridCell.Tab.2.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
-    <state width="1237" height="277" key="GridCell.Tab.2.left" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.2.left" timestamp="1630069215199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.2.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.2.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215199" />
     <state width="1237" height="192" key="GridCell.Tab.2.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
-    <state width="1237" height="277" key="GridCell.Tab.2.right" timestamp="1629899252210">
+    <state width="1237" height="131" key="GridCell.Tab.2.right" timestamp="1630069215199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="277" key="GridCell.Tab.2.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629899252210" />
+    <state width="1237" height="131" key="GridCell.Tab.2.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630069215199" />
     <state width="1237" height="192" key="GridCell.Tab.2.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327558" />
     <state x="221" y="84" key="IDE.errors.dialog" timestamp="1625059756052">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="84" key="IDE.errors.dialog/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1625059756052" />
-    <state x="434" y="42" key="RollbackChangesDialog" timestamp="1624114345581">
+    <state x="434" y="42" key="RollbackChangesDialog" timestamp="1630073311504">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="434" y="42" key="RollbackChangesDialog/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1624114345581" />
+    <state x="434" y="42" key="RollbackChangesDialog/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630073311504" />
     <state x="53" y="0" key="SettingsEditor" timestamp="1625839446567">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -917,21 +904,16 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1627199056641" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1621260526259" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1623940747938" />
-    <state x="339" y="72" width="610" height="594" key="find.popup" timestamp="1629820500338">
+    <state x="339" y="72" width="610" height="594" key="find.popup" timestamp="1630072893503">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="339" y="72" width="610" height="594" key="find.popup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629820500338" />
+    <state x="339" y="72" width="610" height="594" key="find.popup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630072893503" />
     <state x="339" y="72" width="610" height="594" key="find.popup/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1622357980965" />
     <state x="28" y="1" key="new project wizard" timestamp="1629812666512">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="28" y="1" key="new project wizard/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629812666512" />
-    <state x="102" y="89" key="refactoring.ChangeSignatureDialog" timestamp="1621261039424">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="102" y="89" key="refactoring.ChangeSignatureDialog/0.0.1280.680/1920.0.1536.824@0.0.1280.680" timestamp="1621261039424" />
     <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1629809915047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -1198,18 +1180,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="370" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqDeclare.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="380" />
+          <line>56</line>
+          <option name="timeStamp" value="403" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/BizMessageListener.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="384" />
+          <line>39</line>
+          <option name="timeStamp" value="404" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="405" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqConfig.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="406" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/BizMessageListener.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="409" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Lock-Demo/src/main/java/com/rabbitmq/RabbitMqPublishController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="410" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>

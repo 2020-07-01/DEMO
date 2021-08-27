@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
@@ -49,13 +50,19 @@ public class RabbitMqConfig {
         @Bean(value = "rabbitTemplate")
         public RabbitTemplate rabbitTemplate(@Qualifier("bizConnectionFactory") ConnectionFactory connectionFactory) {
             RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-            rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> log.info("消息发送成功!"));
+            rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
+                if (ack) {
+                    log.info("消息发送成功!");
+                } else {
+                    log.info("消息发送失败!");
+                }
+            });
             //监听消息回调
             rabbitTemplate.setMandatory(true);
             rabbitTemplate.containerAckMode(AcknowledgeMode.MANUAL);
             rabbitTemplate.setReturnCallback((message, replyCode, replyText, exchange, routingKey) -> log.info("消息从Exchange路由到Queue失败: exchange: {}, route: {}, replyCode: {}, replyText: {}, message: {}",
                     exchange, routingKey, replyCode, replyText, message));
-            return new RabbitTemplate(connectionFactory);
+            return rabbitTemplate;
         }
 
         @Bean("bizRabbitAdmin")

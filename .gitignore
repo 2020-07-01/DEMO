@@ -8,3 +8,28 @@
 *.class
 /target/
 
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.idea/*.xml
+
+
+.svn/
+target/
+test-output/
+*.class
+.classpath
+.project
+.settings/
+tmp
+temp
+*.log
+antx.properties
+.idea/
+*.iml
+htdocs
+release

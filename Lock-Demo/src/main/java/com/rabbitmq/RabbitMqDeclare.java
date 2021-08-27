@@ -38,13 +38,14 @@ public class RabbitMqDeclare implements SmartLifecycle {
         args.put("x-dead-letter-exchange", deadExchange.getName());
         //声明当前队列绑定的死信路由key 死信交换机路由到指定死信队列
         args.put("x-dead-letter-routing-key", "dead-routing-key");
+        //配置队列中消息过期时间
+        //args.put("x-message-ttl",20 * 1000);
         Queue bizQueue = QueueBuilder.durable("bizQueue").withArguments(args).build();
 
         //业务交换机绑定业务队列
         rabbitAdmin.declareQueue(bizQueue);
         rabbitAdmin.declareExchange(bizExchange);
         rabbitAdmin.declareBinding(new Binding(bizQueue.getName(), Binding.DestinationType.QUEUE, bizExchange.getName(), "biz-routing-key", Collections.emptyMap()));
-
         //声明死信队列A
         Queue deadQueue = QueueBuilder.durable("deadQueue").build();
         //死信交换机绑定死信队列
