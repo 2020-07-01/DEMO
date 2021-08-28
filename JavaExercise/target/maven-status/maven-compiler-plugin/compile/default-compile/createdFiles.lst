@@ -144,6 +144,7 @@ designMode\observer\demo1\Watcher.class
 dataStructure\map\Element.class
 sort_algorithm\SortTool.class
 designMode\monitor\common\AbstractPublish.class
+gson\GsonDemo.class
 designMode\proxy\springBootDemo\ProxyBean.class
 dataStructure\set\HashType.class
 string\IsPalindrome.class
