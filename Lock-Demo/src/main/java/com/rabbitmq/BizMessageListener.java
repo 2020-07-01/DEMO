@@ -18,7 +18,7 @@ public class BizMessageListener implements ChannelAwareMessageListener {
     @Override
     public void onMessage(Message message, Channel channel) throws Exception {
         String string = new String(message.getBody());
-        log.info("biz msg:{}", string);
+        log.info("header:{},biz msg:{}", string,message.getMessageProperties().getHeaders(),string);
         if (string.endsWith("1")) {
             /**
              * 拒绝本条消息之前的所有未确认的消息，不再重新入队

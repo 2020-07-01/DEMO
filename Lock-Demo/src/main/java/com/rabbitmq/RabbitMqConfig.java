@@ -1,7 +1,11 @@
 package com.rabbitmq;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.AcknowledgeMode;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
@@ -79,11 +83,34 @@ public class RabbitMqConfig {
         public SimpleMessageListenerContainer simpleMessageListenerContainer(@Qualifier("bizConnectionFactory") ConnectionFactory connectionFactory,
                                                                              @Qualifier("bizMessageListener") BizMessageListener messageListener) {
             SimpleMessageListenerContainer simpleMessageListenerContainer = new SimpleMessageListenerContainer(connectionFactory);
+            //设置监听的队列
             simpleMessageListenerContainer.setQueueNames("bizQueue");
+            simpleMessageListenerContainer.setQueues(new Queue("bizQueue"));
+            //待研究
+            simpleMessageListenerContainer.setReceiveTimeout(1000);
+            //设置消息后置处理器
+            simpleMessageListenerContainer.setAfterReceivePostProcessors(new MessagePostProcessor() {
+                @Override
+                public Message postProcessMessage(Message message) throws AmqpException {
+                    message.getMessageProperties().getHeaders().put("queue","biz");
+                    return message;
+                }
+            });
+            //设置监听者
             simpleMessageListenerContainer.setMessageListener(messageListener);
+            //设置消息确认模式
             simpleMessageListenerContainer.setAcknowledgeMode(AcknowledgeMode.MANUAL);
-            simpleMessageListenerContainer.setExposeListenerChannel(true);
-            simpleMessageListenerContainer.start();
+            //设置自动创建
+            simpleMessageListenerContainer.setAutoDeclare(true);
+            //设置当前消费者的数量
+            simpleMessageListenerContainer.setConcurrentConsumers(5);
+            //设置最大消费者的数量
+            simpleMessageListenerContainer.setMaxConcurrentConsumers(10);
+            //设置批量处理消息数量
+            simpleMessageListenerContainer.setBatchSize(3);
+            //设置已消费但未ack的消息的数量，即Unacked
+            simpleMessageListenerContainer.setPrefetchCount(1);
+
             return simpleMessageListenerContainer;
         }
     }
@@ -142,7 +169,6 @@ public class RabbitMqConfig {
             simpleMessageListenerContainer.addQueueNames("deadQueue");
             simpleMessageListenerContainer.setMessageListener(deadMessageListener);
             simpleMessageListenerContainer.setAcknowledgeMode(AcknowledgeMode.MANUAL);
-            simpleMessageListenerContainer.start();
             return simpleMessageListenerContainer;
         }
     }
