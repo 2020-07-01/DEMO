@@ -1,4 +1,4 @@
-package enumPackage;
+package enumsustom;
 
 import java.util.Arrays;
 

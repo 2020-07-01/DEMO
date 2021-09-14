@@ -1,4 +1,4 @@
-package enumPackage.redGreenYellow;
+package enumsustom.redGreenYellow;
 
 /**
  * @author :qiang

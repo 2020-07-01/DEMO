@@ -1,4 +1,4 @@
-package enumPackage.enumInterface;
+package enumsustom.enumInterface;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package enumPackage;
+package enumsustom;
 
 /**
  * @author :qiang

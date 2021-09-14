@@ -22,6 +22,15 @@
 
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.16</version>
+        </dependency>
+
+
         <!--cglib-->
         <dependency>
             <groupId>cglib</groupId>

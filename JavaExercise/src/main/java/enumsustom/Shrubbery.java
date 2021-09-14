@@ -1,4 +1,4 @@
-package enumPackage;
+package enumsustom;
 
 /**
  * 所有的枚举类都继承Enum类，可以使用Enum类中的非私有方法

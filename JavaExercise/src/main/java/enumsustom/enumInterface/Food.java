@@ -1,4 +1,4 @@
-package enumPackage.enumInterface;
+package enumsustom.enumInterface;
 
 /**
  * @author :qiang
