@@ -29,6 +29,13 @@ public class ThreadDemo2 {
 
     private static volatile boolean notice = false;
 
+
+    public static void main(String[] args) {
+        ThreadDemo2 threadDemo = new ThreadDemo2();
+        threadDemo.test2();
+    }
+
+
     public void test1() {
         List<String> list = new LinkedList<>();
 

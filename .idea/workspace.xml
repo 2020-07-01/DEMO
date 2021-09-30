@@ -23,30 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa598b9-851d-45a9-96f6-5d6c602669de" name="Default Changelist" comment="结构调整">
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/MainInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/object/ObjectDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/object/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/CountDownLatchDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/SemaphoreDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/ThreadInterruptDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/JavaExercise.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/CartoonCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/CartoonCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/EnumClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/EnumClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/OzWitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/OzWitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/Shrubbery.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/Shrubbery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/StudyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/StudyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/enumInterface/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/Enums.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/enumInterface/Enums.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/enumInterface/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/enumInterface/TypeFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/enumInterface/TypeFood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/redGreenYellow/Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/redGreenYellow/Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/enumPackage/redGreenYellow/TrafficLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/enumsustom/redGreenYellow/TrafficLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaExercise/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mybatis-Demo/target/Mybatis-Demo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Mybatis-Demo/target/Mybatis-Demo-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/bloomFilter/MyBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/dataStructure/bloomFilter/MyBloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/ThreadDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/ThreadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/ThreadDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaExercise/src/main/java/thread/ThreadDemo2.java" afterDir="false" />
     </list>
     <list id="64d7e400-f4d2-45da-8ba9-c82082d33a0f" name="changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +115,7 @@
       <recent name="D:\workspace\DEMO\JavaExercise\src\main\java\net\nio" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.ThreadDemo">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaExercise" />
@@ -164,8 +144,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SemaphoreDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.SemaphoreDemo" />
+    <configuration name="ThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadDemo" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
@@ -177,8 +157,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadInterruptDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.ThreadInterruptDemo" />
+    <configuration name="ThreadDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadDemo2" />
       <module name="JavaExercise" />
       <extension name="coverage">
         <pattern>
@@ -194,16 +174,16 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.MainInterface" />
       <item itemvalue="Application.ObjectDemo" />
-      <item itemvalue="Application.SemaphoreDemo" />
-      <item itemvalue="Application.ThreadInterruptDemo" />
+      <item itemvalue="Application.ThreadDemo" />
+      <item itemvalue="Application.ThreadDemo2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadDemo" />
+        <item itemvalue="Application.ThreadDemo2" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainInterface" />
         <item itemvalue="Application.ObjectDemo" />
-        <item itemvalue="Application.ThreadInterruptDemo" />
-        <item itemvalue="Application.SemaphoreDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -451,14 +431,8 @@
       <workItem from="1631456384959" duration="788000" />
       <workItem from="1631457257939" duration="110000" />
       <workItem from="1631538100984" duration="3285000" />
-      <workItem from="1631626104683" duration="283000" />
-    </task>
-    <task id="LOCAL-00060" summary="25. K 个一组翻转链表&#10;面试题 04.03. 特定深度节点链表&#10;153. 寻找旋转排序数组中的最小值">
-      <created>1608042323173</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1608042323173</updated>
+      <workItem from="1631626104683" duration="3839000" />
+      <workItem from="1631796446487" duration="4592000" />
     </task>
     <task id="LOCAL-00061" summary="82. 删除排序链表中的重复元素 II">
       <created>1608132768163</created>
@@ -796,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630245822461</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="DEMO">
+      <created>1631627072309</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1631627072310</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -827,7 +808,6 @@
     <MESSAGE value="rabbitmq 可靠性方案" />
     <MESSAGE value="哈希设计" />
     <MESSAGE value="螺旋矩阵2" />
-    <MESSAGE value="DEMO" />
     <MESSAGE value="脑子转不动" />
     <MESSAGE value="一致性Hash算法" />
     <MESSAGE value="设计一个双端队列" />
@@ -848,7 +828,8 @@
     <MESSAGE value="rabbitmq死信队列学习" />
     <MESSAGE value="mq 消息拒绝" />
     <MESSAGE value="rabbitmq 学习" />
-    <option name="LAST_COMMIT_MESSAGE" value="rabbitmq 学习" />
+    <MESSAGE value="DEMO" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEMO" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1629818224786">
@@ -889,32 +870,36 @@
     </state>
     <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630156848977" />
     <state width="713" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1625497857388" />
-    <state width="1237" height="334" key="GridCell.Tab.0.bottom" timestamp="1631544158530">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1631626339380">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631626339380" />
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom" timestamp="1631804710930">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1493" height="290" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631343517777" />
-    <state width="1237" height="334" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631544158530" />
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631804710930" />
     <state width="1237" height="198" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327575" />
     <state width="1237" height="125" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="334" key="GridCell.Tab.0.center" timestamp="1631544158529">
+    <state width="1237" height="139" key="GridCell.Tab.0.center" timestamp="1631804710930">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1493" height="290" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631343517777" />
-    <state width="1237" height="334" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631544158529" />
+    <state width="1237" height="139" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631804710930" />
     <state width="1237" height="198" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327574" />
     <state width="1237" height="125" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="334" key="GridCell.Tab.0.left" timestamp="1631544158529">
+    <state width="1237" height="139" key="GridCell.Tab.0.left" timestamp="1631804710930">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1493" height="290" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631343517777" />
-    <state width="1237" height="334" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631544158529" />
+    <state width="1237" height="139" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631804710930" />
     <state width="1237" height="198" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327574" />
     <state width="1237" height="125" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
-    <state width="1237" height="334" key="GridCell.Tab.0.right" timestamp="1631544158529">
+    <state width="1237" height="139" key="GridCell.Tab.0.right" timestamp="1631804710930">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1493" height="290" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631343517777" />
-    <state width="1237" height="334" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631544158529" />
+    <state width="1237" height="139" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631804710930" />
     <state width="1237" height="198" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1629853327575" />
     <state width="1237" height="125" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1625533419916" />
     <state width="1237" height="424" key="GridCell.Tab.1.bottom" timestamp="1631544158519">
@@ -974,31 +959,31 @@
     </state>
     <state x="53" y="0" key="SettingsEditor/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631455630420" />
     <state x="53" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1625839446567" />
-    <state x="-1486" y="98" width="692" height="635" key="StructurePopup" timestamp="1631199109817">
-      <screen x="-1920" y="0" width="1536" height="824" />
+    <state x="362" y="81" width="576" height="524" key="StructurePopup" timestamp="1631631656228">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1486" y="98" width="692" height="635" key="StructurePopup/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631199109817" />
-    <state x="362" y="81" width="576" height="524" key="StructurePopup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1630851114158" />
+    <state x="362" y="81" width="576" height="524" key="StructurePopup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631631656228" />
     <state x="362" y="81" width="576" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1631019121064" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1627199056641">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1627199056641" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1623940747938" />
-    <state x="-1316" y="83" width="787" height="720" key="find.popup" timestamp="1631342905115">
-      <screen x="-1920" y="0" width="1536" height="824" />
+    <state x="339" y="72" width="781" height="594" key="find.popup" timestamp="1631798137785">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1316" y="83" width="787" height="720" key="find.popup/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631342905115" />
-    <state x="339" y="72" width="781" height="594" key="find.popup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631278758388" />
+    <state x="339" y="72" width="781" height="594" key="find.popup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631798137785" />
     <state x="28" y="1" key="new project wizard" timestamp="1629812666512">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="28" y="1" key="new project wizard/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1629812666512" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1631278767551">
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup" timestamp="1631799879104">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1556" y="1" width="1110" height="822" key="search.everywhere.popup/0.0.1280.680/-1920.0.1536.824@-1920.0.1536.824" timestamp="1631199075842" />
-    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631278767551" />
+    <state x="303" y="1" width="925" height="678" key="search.everywhere.popup/0.0.1280.680/-1920.0.1536.824@0.0.1280.680" timestamp="1631799879104" />
     <state x="321" y="24" key="spring file set editor" timestamp="1629899369764">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
