@@ -1,4 +1,4 @@
 server:
   port: 7070
   servlet:
-    context-path: /api-product
+    context-path: /

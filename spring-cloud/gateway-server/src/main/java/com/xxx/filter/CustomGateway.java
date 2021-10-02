@@ -1,6 +1,7 @@
 package com.xxx.filter;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.filefilter.PrefixFileFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.core.Ordered;
@@ -13,7 +14,7 @@ import reactor.core.publisher.Mono;
  * @Date: 2021-10-02
  * @Description : 自定义网关过滤器
  */
-/*@Slf4j
+@Slf4j
 public class CustomGateway implements GatewayFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -25,4 +26,4 @@ public class CustomGateway implements GatewayFilter, Ordered {
     public int getOrder() {
         return 0;
     }
-}*/
+}

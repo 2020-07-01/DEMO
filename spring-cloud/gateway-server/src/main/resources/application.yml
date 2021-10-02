@@ -13,8 +13,8 @@ spring:
         - id: api-product
           uri: lb://product-service   #从注册中心获取服务地址
           predicates:
-            #- Path=/product/*
-            - Query=1
+            - Path=/product/**
+            #- Query=1
           filters:
             - PrefixPath=/api-product/
 

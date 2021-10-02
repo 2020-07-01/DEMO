@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "product-service")
 public interface ProductService {
 
-    @GetMapping(value = "product-service/product/test")
+    @GetMapping(value = "/product/test")
     String test();
 
     /**
@@ -22,7 +22,7 @@ public interface ProductService {
      * @param id
      * @return
      */
-    @GetMapping(value = "api-product/product/{id}")
+    @GetMapping(value = "/product/{id}")
     Product selectProductById(@PathVariable("id") Integer id);
 
 }
