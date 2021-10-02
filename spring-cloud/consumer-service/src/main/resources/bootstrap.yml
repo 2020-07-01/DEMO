@@ -1,7 +1,4 @@
-server:
-  port: 9090
-  servlet:
-    context-path: /consumer-service
+
 spring:
   application:
     name: consumer-service

@@ -17,7 +17,12 @@ public interface ProductService {
     @GetMapping(value = "product-service/product/test")
     String test();
 
-    @GetMapping(value = "product-service/product/{id}")
+    /**
+     * api-product 服务路径
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "api-product/product/{id}")
     Product selectProductById(@PathVariable("id") Integer id);
 
 }

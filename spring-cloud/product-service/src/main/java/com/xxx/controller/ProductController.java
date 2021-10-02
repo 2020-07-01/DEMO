@@ -3,10 +3,7 @@ package com.xxx.controller;
 import com.bean.Product;
 import com.xxx.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName : ProductApplication
@@ -27,7 +24,8 @@ public class ProductController {
     }
 
     @GetMapping(value = "/{id}")
-    public Product selectById(@PathVariable("id") Integer id) {
+    public Product selectById(@PathVariable("id") Integer id, @RequestParam(value = "flag",required = false) String flag) {
+        System.out.println(flag);
         return productService.findById(id);
     }
 }

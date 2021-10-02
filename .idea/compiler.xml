@@ -15,6 +15,7 @@
         <module name="Sharding-Sphere-Demo" />
         <module name="Spring-Boot-demo" />
         <module name="product-service" />
+        <module name="gateway-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="common-service" target="1.8" />
       <module name="consumer-service" target="1.8" />
       <module name="DEMO" target="1.8" />
+      <module name="gateway-server" target="1.8" />
       <module name="Hystrix-Demo" target="1.8" />
       <module name="JavaExercise" target="1.8" />
       <module name="Lock-Demo" target="1.8" />
@@ -40,6 +42,7 @@
       <module name="Message-Queue-Demo" options="-parameters" />
       <module name="common-service" options="-parameters" />
       <module name="consumer-service" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
       <module name="product-service" options="-parameters" />
     </option>
   </component>

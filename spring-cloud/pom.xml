@@ -12,6 +12,7 @@
         <module>product-service</module>
         <module>consumer-service</module>
         <module>common-service</module>
+        <module>gateway-server</module>
     </modules>
 
     <parent>

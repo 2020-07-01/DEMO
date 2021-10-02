@@ -1,0 +1,20 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: api-product
+          uri: lb://product-service   #从注册中心获取服务地址
+          predicates:
+            #- Path=/product/*
+            - Query=1
+          filters:
+            - PrefixPath=/api-product/
+
