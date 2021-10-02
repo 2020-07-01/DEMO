@@ -8,23 +8,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Lock-Demo" />
+        <module name="common-service" />
         <module name="JavaExercise" />
-        <module name="Spring-Boot-demo" />
-        <module name="Sharding-Sphere-Demo" />
+        <module name="consumer-service" />
         <module name="Mybatis-Demo" />
-        <module name="Cache-Demo" />
+        <module name="Sharding-Sphere-Demo" />
+        <module name="Spring-Boot-demo" />
+        <module name="product-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Cache-Demo" target="1.8" />
+      <module name="common-service" target="1.8" />
+      <module name="consumer-service" target="1.8" />
       <module name="DEMO" target="1.8" />
       <module name="Hystrix-Demo" target="1.8" />
       <module name="JavaExercise" target="1.8" />
       <module name="Lock-Demo" target="1.8" />
       <module name="Message-Queue-Demo" target="1.8" />
       <module name="Mybatis-Demo" target="1.8" />
+      <module name="product-service" target="1.8" />
       <module name="Sharding-Sphere-Demo" target="1.8" />
       <module name="Spring-Boot-demo" target="1.8" />
+      <module name="spring-cloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -32,6 +38,9 @@
       <module name="Cache-Demo" options="-parameters" />
       <module name="Hystrix-Demo" options="-parameters" />
       <module name="Message-Queue-Demo" options="-parameters" />
+      <module name="common-service" options="-parameters" />
+      <module name="consumer-service" options="-parameters" />
+      <module name="product-service" options="-parameters" />
     </option>
   </component>
 </project>
